@@ -11,6 +11,7 @@ export const isSameDay = (a: Date | null, b: Date | null) => {
 }
 
 export const isWithinPeriod = (date: Date, startDate: Date, endDate: Date) => {
+  if (isSameDay(date, startDate) || isSameDay(date, endDate)) return true
   return date >= startDate && date <= endDate
 }
 

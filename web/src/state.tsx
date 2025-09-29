@@ -8,42 +8,65 @@ import { dayStringFromDate } from './utils'
 import { useEffect } from 'react'
 
 export const pb = new Pocketbase(import.meta.env.VITE_API_URL)
-// const IS_PROD = import.meta.env.VITE_API_URL.startsWith('https')
+const IS_PROD = import.meta.env.VITE_API_URL.startsWith('https')
 pb.autoCancellation(false)
+
+const setCookie = (key: string, value: string) =>
+  Cookies.set(key, value, {
+    secure: IS_PROD,
+    sameSite: 'Lax',
+    expires: 180,
+  })
 
 export const authAtom = atomWithStorage<AuthModel | null>(
   'auth',
   null,
   {
     getItem: (key, initialValue) => {
-      const cookie = Cookies.get(key)
-      if (!cookie) return initialValue
+      let stored: string | undefined | null = Cookies.get(key)
+
+      // Fallback to localStorage if cookie is missing
+      if (!stored) {
+        stored = localStorage.getItem(key)
+        if (stored) {
+          setCookie(key, stored)
+        }
+      }
+
+      if (!stored) return initialValue
 
       try {
-        const parsedAuth = JSON.parse(cookie)
+        const parsedAuth = JSON.parse(stored)
         pb.authStore.save(parsedAuth.token, parsedAuth.model)
         return pb.authStore.model
       } catch (error) {
-        console.error('Error parsing auth cookie:', error)
+        console.error('Error parsing auth storage:', error)
         Cookies.remove(key)
+        localStorage.removeItem(key)
         return initialValue
       }
     },
+
     setItem: (key, value) => {
       if (value) {
         const authData = {
           token: pb.authStore.token,
           model: pb.authStore.model,
         }
-        Cookies.set(key, JSON.stringify(authData), {
-          secure: false,
-          expires: 90,
-        })
+
+        const serialized = JSON.stringify(authData)
+
+        setCookie(key, serialized)
+        localStorage.setItem(key, serialized)
       } else {
         Cookies.remove(key)
+        localStorage.removeItem(key)
       }
     },
-    removeItem: (key) => Cookies.remove(key),
+    removeItem: (key) => {
+      Cookies.remove(key)
+      localStorage.removeItem(key)
+    },
   },
   { getOnInit: true }
 )

@@ -166,35 +166,19 @@ const RootPage = () => {
       <div
         style={{
           position: 'fixed',
-          zIndex: -2,
-          left: '-5vw',
-          top: '-5vh',
-          width: '110vw',
-          height: '110vh',
-          backgroundImage: 'url(/vastkust.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'blur(12px)',
-        }}
-      ></div>
-      <div
-        style={{
-          position: 'fixed',
           zIndex: -1,
           left: 0,
           top: 0,
           width: '100vw',
           height: '100vh',
-          background: 'rgba(0, 0, 0, 0.2)',
+          background: '#ffdadb',
         }}
       ></div>
       <div className="flex flex-col items-center justify-center">
         <div
-          className="w-full md:w-1/2 pb-64 pt-12 bg-white"
+          className="w-full md:w-1/2 pb-64 pt-12"
           style={{
             marginTop: '-16px',
-            borderRadius: '1rem',
-            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
           }}
         >
           <Outlet />

@@ -55,6 +55,25 @@ const FormHistoryLoaded = ({
         </BreadcrumbList>
       </Breadcrumb>
 
+      <p className="mt-4">
+        <span className="text-sm">
+          Dagliga formulär: <strong>{startDate?.toLocaleDateString()}</strong>{' '}
+          {endDate && (
+            <>
+              till <strong>{endDate.toLocaleDateString()}</strong>
+            </>
+          )}
+          <br></br>
+          Behandling: <strong>{treatmentStart?.toLocaleDateString()}</strong>
+          {treatmentEnd && (
+            <>
+              {' '}
+              till <strong>{treatmentEnd.toLocaleDateString()}</strong>
+            </>
+          )}
+        </span>
+      </p>
+
       <LargeCalendar
         className="m-0 mt-8 p-0"
         disabled={{ after: new Date(), before: startDate ?? new Date() }}
@@ -76,7 +95,11 @@ const FormHistoryLoaded = ({
             )
           }
 
-          if (isWithinPeriod(props.date, startDate ?? now, now)) {
+          if (
+            startDate != null &&
+            startDate <= now &&
+            isWithinPeriod(props.date, startDate ?? now, now)
+          ) {
             return (
               <CustomDay {...props}>
                 <Button
@@ -97,76 +120,40 @@ const FormHistoryLoaded = ({
             )
           }
 
-          if (isSameDay(props.date, treatmentStart ?? null)) {
-            return (
-              <CustomDay
-                {...props}
-                onClick={() => {}}
-                style={{
-                  color: '#dc2626',
-                  fontWeight: 'bold',
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: '0.8rem',
-                  }}
-                >
+          if (
+            isSameDay(props.date, treatmentStart ?? null) ||
+            isSameDay(props.date, treatmentEnd ?? null) ||
+            isSameDay(props.date, startDate) ||
+            isSameDay(props.date, endDate)
+          ) {
+            let text = <></>
+            if (isSameDay(props.date, treatmentStart ?? null)) {
+              text = (
+                <>
                   Behandling<br></br>start
-                </span>
-              </CustomDay>
-            )
-          }
-
-          if (isSameDay(props.date, treatmentEnd ?? null)) {
-            return (
-              <CustomDay
-                {...props}
-                onClick={() => {}}
-                style={{
-                  color: '#dc2626',
-                  fontWeight: 'bold',
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: '0.8rem',
-                  }}
-                >
+                </>
+              )
+            } else if (isSameDay(props.date, treatmentEnd ?? null)) {
+              text = (
+                <>
                   Behandling<br></br>slut
-                </span>
-              </CustomDay>
-            )
-          }
+                </>
+              )
+            } else if (isSameDay(props.date, startDate)) {
+              text = <>start</>
+            } else if (isSameDay(props.date, endDate)) {
+              text = <>Avslut</>
+            }
 
-          if (isSameDay(props.date, startDate)) {
             return (
               <CustomDay
                 {...props}
-                onClick={() => {}}
                 style={{
                   color: '#dc2626',
                   fontWeight: 'bold',
-                  border: '2px solid #dc2626',
                 }}
               >
-                <span>Start</span>
-              </CustomDay>
-            )
-          }
-
-          if (isSameDay(props.date, endDate)) {
-            return (
-              <CustomDay
-                {...props}
-                onClick={() => {}}
-                style={{
-                  color: '#dc2626',
-                  fontWeight: 'bold',
-                  border: '2px solid #dc2626',
-                }}
-              >
-                <span>Avslut</span>
+                <span className="text-xs">{text}</span>
               </CustomDay>
             )
           }
