@@ -14,7 +14,6 @@ const useQuestions = (questionnaire: Questionnaire) => {
   const values = useWatch()
 
   let questionNumber = 1
-
   const followupQuestions = new Set()
   for (const question of questionnaire.questions) {
     for (const followup of question.followup) {
@@ -67,6 +66,33 @@ const useQuestions = (questionnaire: Questionnaire) => {
 
     if (questionIndex !== -1) {
       questions.splice(questionIndex + 1, 0, question)
+    }
+  }
+
+  for (const fQuestionnaire of questionnaire.followup ?? []) {
+    let anyMatched = false
+    for (const questionId of fQuestionnaire.dependency) {
+      if (compare(values[questionId], fQuestionnaire.dependencyValue)) {
+        anyMatched = true
+      }
+    }
+    if (anyMatched) {
+      for (const question of fQuestionnaire.questions) {
+        if (!question.dependency) {
+          const cloned = { ...question }
+          cloned.id = `followup_${fQuestionnaire.id}_${question.id}`
+          questions.push(cloned)
+        } else if (
+          compare(
+            values[`followup_${fQuestionnaire.id}_${question.dependency}`],
+            question.dependencyValue
+          )
+        ) {
+          const cloned = { ...question }
+          cloned.id = `followup_${fQuestionnaire.id}_${question.id}`
+          questions.push(cloned)
+        }
+      }
     }
   }
 

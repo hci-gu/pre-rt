@@ -41,7 +41,7 @@ const QuestionNavigationList = ({
         <Button
           type="button"
           variant={isMobile ? 'link' : 'outline'}
-          className="text-white md:text-black bg-none"
+          className="text-white md:bg-white md:text-black bg-none"
         >
           <ListBulletIcon className="mr-2" />
           Se alla frågor
@@ -66,7 +66,9 @@ const QuestionNavigationList = ({
                   >
                     <div className="flex items-center justify-between">
                       {question.type !== 'section' && (
-                        <span className="md:mr-2">{question.number}.</span>
+                        <span className="text-foreground">
+                          {question.number}.
+                        </span>
                       )}
                       <Button
                         disabled={disabledAfter < index}

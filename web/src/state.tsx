@@ -171,6 +171,9 @@ export type Questionnaire = {
   description: string
   occurrence: 'daily' | 'weekly' | 'monthly' | 'once'
   questions: Question[]
+  dependency: string[]
+  dependencyValue?: any
+  followup?: Questionnaire[]
 }
 
 export type Answer = {
@@ -240,12 +243,16 @@ const mapQuestion = (question: any): Question => {
 }
 
 const mapQuestionnaire = (questionnaire: any): Questionnaire => {
+  console.log('Mapping questionnaire:', questionnaire)
   return {
     id: questionnaire.id,
     name: questionnaire.name,
     description: questionnaire.description,
     occurrence: questionnaire.occurrence,
     questions: questionnaire.expand?.questions.map(mapQuestion) ?? [],
+    dependency: questionnaire.dependency,
+    dependencyValue: questionnaire.dependencyValue,
+    followup: questionnaire.expand?.followup?.map(mapQuestionnaire),
   }
 }
 
@@ -274,10 +281,12 @@ export const questionnaireAtom = atomFamily((id: string) =>
   atom(async () => {
     const response = await pb.collection('questionnaires').getOne(id, {
       expand:
-        'questions,questions.options,questions.resource,questions.resourceCollection.resources',
+        'questions,questions.options,questions.resource,questions.resourceCollection.resources,followup,followup.questions,followup.questions.options,followup.questions.resource,followup.questions.resourceCollection.resources',
     })
 
-    return mapQuestionnaire(response)
+    let q = mapQuestionnaire(response)
+    console.log('Mapped questionnaire:', q)
+    return q
   })
 )
 

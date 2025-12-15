@@ -46,25 +46,21 @@ function AboutPage() {
       <br></br>
       <h2 className="font-bold">Hur går studien till?</h2>
       <p>
-        Undersökningen är en så kallad randomiserad kontrollerad studie. Det
-        innebär att du som är studiedeltagare kommer att lottas till vilken
-        grupp du kommer att ingå i. Grupp 1 startar med vaginalstavsanvändning
-        före strålbehandlingsstart. Grupp 2 startar med vaginalstavsanvändning
-        efter avslutad strålbehandling. Oavsett vilken grupp du hamnar i kommer
-        du att få samma information och rådgivning och det som skiljer grupperna
-        åt är vid vilken tidpunkt som man startar upp användning av vaginalstav.
+        Undersökningen är en så kallad obervationsstudie. Du som studiedeltagare
+        startar vaginalstavsterapin före strålstart istället för efter avslutad
+        strålbehandling vilket är praxis idag.{' '}
       </p>
       <br></br>
       <p>
-        Under studiens gång kommer du att få svara på enkäter vid fyra
-        tillfällen under sammanlagt ett år samt fylla i dagbok under en
-        åttaveckors-period. Enkäterna innehåller frågor om kvinnohälsa, sexuell
-        hälsa, förlossning, menstruation och andra allmänna frågor. Dagboken
-        innehåller korta frågor om du har använt vaginalstaven, och mätning av
-        vaginal längd. Med hjälp av dina svar kan vi i sjukvården få mer kunskap
-        och förbättra vårdens sätt att informera om och behandla vaginala
-        förändringar samt påverkan på sexualitet i samband med en
-        cancerbehandling.
+        Du kommer få svara på ett större frågeformulär vid två tillfällen, ett
+        före strålbehandlingsstart och ett tre månader efter avslutad
+        strålbehandling. Frågorna handlar om kvinnohälsa, sexuell hälsa,
+        förlossning, menstruation och allmän hälsa. Under strålbehandlingstiden
+        fyller du i ett dagligt formulär med korta frågor om du har använt
+        vaginalstaven och om mätning av vaginal längd. Med hjälp av dina svar
+        kan vi få mer kunskap och förfina metoden för att förebygga vaginala
+        förändringar och påverkan sexuell hälsa i samband med cancerbehandling.
+        Dina svar hjälper oss att förstå förändring och symtom över tid.
       </p>
       <br></br>
       <HeaderSection text="Frågor & Svar" />

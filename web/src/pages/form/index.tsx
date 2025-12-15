@@ -32,7 +32,7 @@ import useFormStateWithCache, {
 } from './hooks/useFormState'
 import AbortButton from '../../components/ui/AbortButton'
 import QuestionNavigationList from './components/QuestionNavigationList'
-import { QUESTIONNAIRE_FOV_ID } from '@/constants'
+import { QUESTIONNAIRE_FOV_ID, QUESTIONNAIRE_PCL5_ID } from '@/constants'
 
 const ProgressBar = ({ questionnaire }: { questionnaire: Questionnaire }) => {
   const questions = useQuestions(questionnaire)
@@ -170,7 +170,11 @@ const SectionHandler = ({
 }) => {
   const section = useCurrentSection(questionnaire)
 
-  if (section && section.id === QUESTIONNAIRE_FOV_ID) {
+  if (
+    section &&
+    (section.id === QUESTIONNAIRE_FOV_ID ||
+      section.id.includes(QUESTIONNAIRE_PCL5_ID))
+  ) {
     return (
       <>
         <div className="fixed top-4 md:top-auto md:bottom-4 md:left-4 p-2">
