@@ -53,7 +53,7 @@ function Calendar({
         day_today: 'bg-accent text-accent-foreground',
         day_outside:
           'day-outside text-muted-foreground opacity-50  aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30',
-        disabled: 'text-muted-foreground opacity-50',
+        day_disabled: 'text-muted-foreground opacity-50',
         day_range_middle:
           'aria-selected:bg-accent aria-selected:text-accent-foreground',
         day_hidden: 'invisible',
@@ -76,7 +76,7 @@ type CustomDayProps = DayProps & {
 }
 
 function CustomDay(props: CustomDayProps) {
-  const buttonRef = useRef<HTMLButtonElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null!)
   const dayRender = useDayRender(props.date, props.displayMonth, buttonRef)
 
   if (dayRender.isHidden) {
@@ -104,7 +104,7 @@ function LargeCalendar({
   onDayRender,
   ...props
 }: CalendarProps & {
-  onDayRender: (props: DayProps) => JSX.Element | null
+  onDayRender: (props: DayProps) => React.JSX.Element | null
 }) {
   return (
     <DayPicker

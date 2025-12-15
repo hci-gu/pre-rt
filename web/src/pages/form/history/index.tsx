@@ -42,7 +42,7 @@ const FormHistoryLoaded = ({
   const now = new Date()
 
   return (
-    <div className="px-8">
+    <div className="px-2">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -89,7 +89,7 @@ const FormHistoryLoaded = ({
                 }}
               >
                 <span>
-                  <CheckIcon className="w-5 h-5" />
+                  <CheckIcon className="w-4 h-4" />
                 </span>
               </CustomDay>
             )

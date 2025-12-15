@@ -98,7 +98,9 @@ export const dailyQuestionnaireScheduleAtom = atom(async () => {
 export const resourcesAtom = atom(async () => {
   const response = await pb.collection('resourceCollection').getFullList({
     expand: 'resources',
+    filter: 'visible_on_questions_and_answers = true',
   })
+  response.sort((a, b) => a.sort - b.sort)
   return response.map(mapResourceCollection)
 })
 
@@ -125,6 +127,7 @@ export type User = {
 }
 
 export type ResourceCollection = {
+  id: string
   name: string
   resources: Resource[]
 }
@@ -201,6 +204,7 @@ const mapResource = (resource: any): Resource => {
 
 const mapResourceCollection = (resourceCollection: any): ResourceCollection => {
   return {
+    id: resourceCollection.id,
     name: resourceCollection.name,
     resources: resourceCollection.expand?.resources.map(mapResource),
   }

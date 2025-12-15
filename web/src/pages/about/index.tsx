@@ -8,7 +8,7 @@ const Resources = () => {
   const collections = useAtomValue(resourcesAtom)
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 border-b border-black">
       {collections.map((collection) => (
         <ResourceAccordion collection={collection} />
       ))}
@@ -18,7 +18,7 @@ const Resources = () => {
 
 const HeaderSection = ({ text }: { text: string }) => {
   return (
-    <div className="mb-8 bg-stone-800 text-center py-4">
+    <div className="mb-8 bg-primary text-center py-4">
       <h2 className="text-2xl font-black text-white">{text.toUpperCase()}</h2>
     </div>
   )

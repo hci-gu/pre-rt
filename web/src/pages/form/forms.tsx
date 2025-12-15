@@ -1,10 +1,4 @@
 import { Button } from '@/components/ui/button'
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-} from '@/components/ui/breadcrumb'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Questionnaire, questionnairesAtom, useAnswers } from '@/state'
 import { useAtomValue } from 'jotai'
@@ -12,10 +6,19 @@ import { useNavigate } from 'react-router-dom'
 import { startTransition } from 'react'
 
 const DailyQuestionnaireCTA = () => {
+  const navigate = useNavigate()
+
   return (
     <div>
-      <Button className="w-full py-8 mb-8 flex flex-col gap-4">
-        <span className="text-2xl font-bold">Hur kändes det idag?</span>
+      <Button
+        className="w-full py-8 mb-8 flex flex-col gap-4"
+        onClick={() => {
+          startTransition(() => {
+            navigate(`/forms/sdzkpd49ndccf5b`)
+          })
+        }}
+      >
+        <span className="text-2xl font-bold">Till dagligt formulär</span>
       </Button>
     </div>
   )
@@ -107,13 +110,6 @@ const FormsPage = () => {
 
   return (
     <div className="p-4">
-      {/* <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbPage>Formulär</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb> */}
       <Introduction />
       <div className="mt-4">
         {questionaires?.map((questionaire: Questionnaire) => (

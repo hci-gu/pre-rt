@@ -13,10 +13,11 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer'
-import { startTransition, useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Resource from './resource'
 import { Button } from './ui/button'
 import { Cross1Icon } from '@radix-ui/react-icons'
+import AbortButton from './ui/AbortButton'
 
 export function ResourceCollectionDrawer({
   collection,
@@ -62,7 +63,7 @@ const titleToSlug = (title: string) =>
 
 const ResourceSection = ({ text }: { text: string }) => {
   return (
-    <div className="mb-4 bg-stone-800 text-center py-2">
+    <div className="mb-4 bg-primary text-center py-2">
       <h2 className="text-md font-bold text-white">{text.toUpperCase()}</h2>
     </div>
   )
@@ -78,45 +79,108 @@ export default function ResourceAccordion({
   const [openResource, setOpenResource] = useState<string>(
     window.location.hash.replace('#', '')
   )
+  const [showAbort, setShowAbort] = useState(false)
+
+  // Log when the element with the specified ID is scrolled into view
+  useEffect(() => {
+    if (collection.id !== 'pa74h4k8j8d8pn3') return
+
+    const slug = collection.resources[0]
+      ? titleToSlug(collection.resources[0].title)
+      : null
+    if (!slug) return
+    const element = document.getElementById(slug)
+    if (!element) return
+
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShowAbort(true)
+          } else {
+            setShowAbort(false)
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+      }
+    )
+    observer.observe(element)
+    return () => {
+      observer.disconnect()
+    }
+  }, [collection])
+
+  const scrollTimeout = useRef<number | null>(null)
+  const isFirstRender = useRef(true)
+
+  const updateUrlHash = (slug: string) => {
+    const url = `${window.location.pathname}${window.location.search}${
+      slug ? `#${slug}` : ''
+    }`
+
+    history.replaceState(null, '', url)
+  }
 
   useEffect(() => {
-    const scrollTo = () => {
-      const hash = window.location.hash.replace('#', '')
-      if (hash) {
-        setTimeout(() => {
-          const element = document.getElementById(hash)
-          if (element) {
-            const headerOffset = 100
-            const elementPosition = element.getBoundingClientRect().top
-            const offsetPosition =
-              elementPosition + window.pageYOffset - headerOffset
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth',
-            })
-          }
-        }, 50)
-      }
-    }
-
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '')
-      startTransition(() => {
-        setOpenResource(hash)
-        scrollTo()
-      })
-    }
 
-    scrollTo()
+      setOpenResource(hash)
+    }
 
     window.addEventListener('hashchange', handleHashChange)
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
 
-  const resourceClicked = (value: string) => {
-    startTransition(() => {
-      window.location.hash = value
-    })
+  useEffect(() => {
+    if (!openResource) {
+      return
+    }
+
+    const behavior = isFirstRender.current ? 'auto' : 'smooth'
+    const delay = isFirstRender.current ? 0 : 220
+
+    if (scrollTimeout.current) {
+      window.clearTimeout(scrollTimeout.current)
+    }
+
+    scrollTimeout.current = window.setTimeout(() => {
+      const element = document.getElementById(openResource)
+
+      if (element) {
+        element.scrollIntoView({
+          behavior,
+          block: 'start',
+          inline: 'nearest',
+        })
+      }
+    }, delay)
+
+    isFirstRender.current = false
+
+    return () => {
+      if (scrollTimeout.current) {
+        window.clearTimeout(scrollTimeout.current)
+      }
+    }
+  }, [openResource])
+
+  useEffect(() => {
+    return () => {
+      if (scrollTimeout.current) {
+        window.clearTimeout(scrollTimeout.current)
+      }
+    }
+  }, [])
+
+  const resourceClicked = (value: string | undefined) => {
+    const nextValue = value ?? ''
+
+    setOpenResource(nextValue)
+
+    updateUrlHash(nextValue)
   }
 
   return (
@@ -133,15 +197,17 @@ export default function ResourceAccordion({
             value={titleToSlug(resource.title)}
             key={`Resource_${index}`}
             id={titleToSlug(resource.title)}
+            className="scroll-mt-24"
           >
             <AccordionTrigger className="text-lg mx-4">
               {resource.title}
             </AccordionTrigger>
-            <AccordionContent className="shadow-inner px-4 py-8">
+            <AccordionContent className="shadow-inner px-4 py-8 bg-card">
               <Resource resource={resource} />
             </AccordionContent>
           </AccordionItem>
         ))}
+        {showAbort && <AbortButton />}
       </Accordion>
     </>
   )

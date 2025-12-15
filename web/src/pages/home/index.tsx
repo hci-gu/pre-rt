@@ -7,6 +7,7 @@ import { useAtomValue } from 'jotai'
 import { readAboutPageAtom, userDataAtom } from '@/state'
 import BaselineForm from './components/BaselineForm'
 import { startTransition } from 'react'
+import { Button } from '@/components/ui/button'
 
 function HomePage() {
   const navigate = useNavigate()
@@ -56,6 +57,17 @@ function HomePage() {
           icon={<CalendarIcon />}
           title="Dagligt formulär"
           description={dailyDescription}
+          action={
+            <Button
+              onClick={() => {
+                startTransition(() =>
+                  navigate(`/forms/sdzkpd49ndccf5b/history`)
+                )
+              }}
+            >
+              Se schema
+            </Button>
+          }
         />
         <HomeTodoItem
           index={4}

@@ -61,7 +61,7 @@ const SelectFollowup = ({
                 </FormControl>
                 <label
                   htmlFor={`${id}_${option}_${index}`}
-                  className="flex items-center justify-center px-1 py-1 border-2 border-gray-300 rounded-lg cursor-pointer peer-checked:border-blue-500 peer-checked:bg-blue-100 peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3"
+                  className="flex items-center justify-center px-1 py-1 border-2 border-foreground rounded-lg cursor-pointer peer-checked:primary peer-checked:primary-100 peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3"
                 >
                   {option}
                 </label>
@@ -234,13 +234,15 @@ export default function Select({
               </FormControl>
               <label
                 htmlFor={`${question.id}-option-${index}`}
-                className="flex items-center justify-center px-2 py-2 border-2 border-gray-300 rounded-lg cursor-pointer peer-checked:border-blue-500 peer-checked:bg-blue-100 peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3"
+                className="bg-card flex items-center justify-center px-2 py-2 border-2 border-foreground rounded-lg cursor-pointer peer-checked:border-primary peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3"
               >
                 {option.split('{AMOUNT}')?.[0]}
                 {option.split('{AMOUNT}')?.[1] && (
                   <SelectNumericalInput
                     initialValue={optionNumericValue}
-                    ref={(el) => (optionInputRefs.current[index] = el)}
+                    ref={(el) => {
+                      optionInputRefs.current[index] = el
+                    }}
                     updateValue={(value) => {
                       const optionWithValue = option.replace(
                         '{AMOUNT}',
