@@ -118,3 +118,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+.resource-content iframe,
+.resource-content video,
+.resource-content embed,
+.resource-content object {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .resource-content iframe,
+  .resource-content video,
+  .resource-content embed,
+  .resource-content object {
+    max-height: 40vh;
+  }
+}

@@ -20,7 +20,6 @@ import { useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import Select from './Select'
 import { ResourceDrawer } from '@/components/resource'
-import { ResourceCollectionDrawer } from '@/components/resourceCollection'
 
 const renderQuestionType = (
   question: Question,
@@ -107,15 +106,6 @@ const renderQuestionType = (
           >
             Gå vidare
           </Button>
-          {question.resourceCollection && (
-            <>
-              <div className="w-4" />
-              <ResourceCollectionDrawer
-                collection={question.resourceCollection}
-                buttonText="Information om våldsfrågor"
-              />
-            </>
-          )}
         </div>
       )
     default:
@@ -138,15 +128,15 @@ const QuestionSelector = ({ question }: { question: Question }) => {
         name={question.id}
         render={({ field }) => (
           <FormItem>
-            <div className="flex gap-2">
+            <div className="flex gap-0.5 sm:gap-2">
               {question.type !== 'section' && (
-                <FormLabel className="text-md sm:text-xl leading-tight sm:leading-normal">
+                <FormLabel className="text-xs sm:text-xl leading-tight sm:leading-normal">
                   {question.number}.
                 </FormLabel>
               )}
               {question.required && <span className="text-red-500">*</span>}
               <FormLabel
-                className="text-md sm:text-xl leading-tight sm:leading-normal max-w-6xl"
+                className="text-xs sm:text-xl leading-tight sm:leading-normal max-w-6xl"
                 dangerouslySetInnerHTML={{
                   __html: `${question.text}`,
                 }}

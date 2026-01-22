@@ -79,16 +79,12 @@ export default function ResourceAccordion({
     window.location.hash.replace('#', '')
   )
   const [showAbort, setShowAbort] = useState(false)
+  const violenceSectionRef = useRef<HTMLDivElement | null>(null)
 
   // Log when the element with the specified ID is scrolled into view
   useEffect(() => {
     if (collection.id !== 'pa74h4k8j8d8pn3') return
-
-    const slug = collection.resources[0]
-      ? titleToSlug(collection.resources[0].title)
-      : null
-    if (!slug) return
-    const element = document.getElementById(slug)
+    const element = violenceSectionRef.current
     if (!element) return
 
     const observer = new window.IntersectionObserver(
@@ -96,8 +92,6 @@ export default function ResourceAccordion({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setShowAbort(true)
-          } else {
-            setShowAbort(false)
           }
         })
       },
@@ -184,7 +178,9 @@ export default function ResourceAccordion({
 
   return (
     <>
-      {showHeader && <ResourceSection text={collection.name} />}
+      <div ref={violenceSectionRef}>
+        {showHeader && <ResourceSection text={collection.name} />}
+      </div>
       <Accordion
         type="single"
         collapsible
@@ -192,7 +188,7 @@ export default function ResourceAccordion({
         onValueChange={resourceClicked}
       >
         <div
-          className="[&_a]:text-primary [&_a]:hover:underline [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2 [&_p]:font-light [&_p]:text-base p-4"
+          className="resource-content [&_a]:text-primary [&_a]:hover:underline [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2 [&_p]:font-light [&_p]:text-base p-4"
           dangerouslySetInnerHTML={{
             __html: collection.description ?? '',
           }}
