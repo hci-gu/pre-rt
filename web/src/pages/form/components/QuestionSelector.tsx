@@ -154,6 +154,11 @@ const QuestionSelector = ({ question }: { question: Question }) => {
               {question.resource && (
                 <ResourceDrawer resource={question.resource} />
               )}
+              {!question.resource && question.resourceCollection && (
+                <ResourceDrawer
+                  resourceCollection={question.resourceCollection}
+                />
+              )}
             </div>
             <FormControl>
               {renderQuestionType(question, field, onAnswer)}

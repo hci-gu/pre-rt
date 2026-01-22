@@ -1,4 +1,8 @@
-import { Resource as ResourceType, userDataAtom } from '@/state'
+import {
+  ResourceCollection,
+  Resource as ResourceType,
+  userDataAtom,
+} from '@/state'
 import {
   Drawer,
   DrawerClose,
@@ -11,8 +15,16 @@ import { Cross1Icon, InfoCircledIcon } from '@radix-ui/react-icons'
 import { Button } from '@/components/ui/button'
 import { useAtomValue } from 'jotai'
 import { Suspense } from 'react'
+import ResourceAccordion from './resourceCollection'
 
-export function ResourceDrawer({ resource }: { resource: ResourceType }) {
+export function ResourceDrawer({
+  resource,
+  resourceCollection,
+}:
+  | { resource: ResourceType; resourceCollection?: undefined }
+  | { resource?: undefined; resourceCollection: ResourceCollection }) {
+  const title = resource ? resource.title : resourceCollection.name
+
   return (
     <Drawer>
       <DrawerTrigger>
@@ -32,12 +44,20 @@ export function ResourceDrawer({ resource }: { resource: ResourceType }) {
                 <Cross1Icon />
               </Button>
             </DrawerClose>
-            <DrawerTitle>{resource.title}</DrawerTitle>
+            <DrawerTitle className="mr-10">{title}</DrawerTitle>
             <div></div>
           </div>
         </DrawerHeader>
         <div className="p-8 flex flex-col justify-center items-center overflow-y-scroll">
-          <Resource resource={resource} />
+          {resource && <Resource resource={resource} />}
+          {resourceCollection && (
+            <div className="w-full h-full">
+              <ResourceAccordion
+                collection={resourceCollection}
+                showHeader={false}
+              />
+            </div>
+          )}
         </div>
       </DrawerContent>
     </Drawer>

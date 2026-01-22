@@ -40,7 +40,6 @@ export function ResourceCollectionDrawer({
               </Button>
             </DrawerClose>
             <DrawerTitle>{collection.name}</DrawerTitle>
-            <div></div>
           </div>
         </DrawerHeader>
         <div className="p-8 overflow-y-scroll">
@@ -192,6 +191,12 @@ export default function ResourceAccordion({
         value={openResource}
         onValueChange={resourceClicked}
       >
+        <div
+          className="[&_a]:text-primary [&_a]:hover:underline [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2 [&_p]:font-light [&_p]:text-base p-4"
+          dangerouslySetInnerHTML={{
+            __html: collection.description ?? '',
+          }}
+        ></div>
         {collection.resources.map((resource, index) => (
           <AccordionItem
             value={titleToSlug(resource.title)}

@@ -1,43 +1,43 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-    name: pre-rt-api
-spec:
-    replicas: 1
-    selector:
-        matchLabels:
-            app: pre-rt-api
-    template:
-        metadata:
-            labels:
-                app: pre-rt-api
-        spec:
-            volumes:
-                - name: pre-rt-api-persistent-storage
-                  persistentVolumeClaim:
-                      claimName: pre-rt-pv-claim
-            containers:
-                - name: pre-rt-api
-                  image: 'registry.k8s.gu.se/appademin/pre-rt-api:0.2.1'
-                  imagePullPolicy: Always
-                  ports:
-                      - containerPort: 8080
-                        name: web
-                        protocol: TCP
-                  env:
-                    - name: ELKS_API_USERNAME
-                      valueFrom:
-                        secretKeyRef:
-                          name: pre-rt-secret
-                          key: 46elks-api-username
-                    - name: ELKS_API_PASSWORD
-                      valueFrom:
-                        secretKeyRef:
-                          name: pre-rt-secret
-                          key: 46elks-api-password
-                  volumeMounts:
-                      - mountPath: /pb/pb_data
-                        name: pre-rt-api-persistent-storage
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#     name: pre-rt-api
+# spec:
+#     replicas: 1
+#     selector:
+#         matchLabels:
+#             app: pre-rt-api
+#     template:
+#         metadata:
+#             labels:
+#                 app: pre-rt-api
+#         spec:
+#             volumes:
+#                 - name: pre-rt-api-persistent-storage
+#                   persistentVolumeClaim:
+#                       claimName: pre-rt-pv-claim
+#             containers:
+#                 - name: pre-rt-api
+#                   image: 'registry.k8s.gu.se/appademin/pre-rt-api:0.4.0'
+#                   imagePullPolicy: Always
+#                   ports:
+#                       - containerPort: 8080
+#                         name: web
+#                         protocol: TCP
+#                   env:
+#                     - name: ELKS_API_USERNAME
+#                       valueFrom:
+#                         secretKeyRef:
+#                           name: pre-rt-secret
+#                           key: 46elks-api-username
+#                     - name: ELKS_API_PASSWORD
+#                       valueFrom:
+#                         secretKeyRef:
+#                           name: pre-rt-secret
+#                           key: 46elks-api-password
+#                   volumeMounts:
+#                       - mountPath: /pb/pb_data
+#                         name: pre-rt-api-persistent-storage
 # ---
 # apiVersion: v1
 # kind: Service
@@ -50,21 +50,21 @@ spec:
 #         - protocol: TCP
 #           port: 8080
 # ---
-# kind: Route
-# apiVersion: route.openshift.io/v1
-# metadata:
-#     name: pre-rt-api
-#     annotations:
-#         kubernetes.io/tls-acme: 'true'
-# spec:
-#     host: pre-rt-api.prod.appadem.in
-#     to:
-#         kind: Service
-#         name: pre-rt-api-service
-#         weight: 100
-#     port:
-#         targetPort: 8080
-#     tls:
-#         termination: edge
-#         insecureEdgeTerminationPolicy: Redirect
-#     wildcardPolicy: None
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+    name: pre-rt-api
+    annotations:
+        kubernetes.io/tls-acme: 'true'
+spec:
+    host: pre-rt-api.prod.appadem.in
+    to:
+        kind: Service
+        name: pre-rt-api-service
+        weight: 100
+    port:
+        targetPort: 8080
+    tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect
+    wildcardPolicy: None

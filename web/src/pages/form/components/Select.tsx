@@ -36,7 +36,7 @@ const SelectFollowup = ({
           value={field.value}
           defaultValue={field.value}
           className={`flex flex-wrap gap-1 sm:gap-2 leading-tight sm:leading-normal justify-end ${
-            disabled && `opacity-50`
+            disabled && `opacity-25`
           }`}
         >
           {options.map((option, index) => {
@@ -61,7 +61,7 @@ const SelectFollowup = ({
                 </FormControl>
                 <label
                   htmlFor={`${id}_${option}_${index}`}
-                  className="flex items-center justify-center px-1 py-1 border-2 border-foreground rounded-lg cursor-pointer peer-checked:primary peer-checked:primary-100 peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3"
+                  className="flex items-center justify-center px-1 py-1 border-2 border-foreground rounded-lg cursor-pointer peer-checked:primary peer-checked:primary-100 peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3 bg-white peer-checked:bg-primary peer-checked:text-primary-foreground"
                 >
                   {option}
                 </label>
@@ -179,8 +179,7 @@ export default function Select({
           }
 
           field.onChange(value)
-          const optionContainsInput =
-            option.includes('{AMOUNT}') || option.includes('{EDITABLE}')
+          const optionContainsInput = option.includes('{AMOUNT}')
 
           if (!optionContainsInput) {
             onAnswer(value)

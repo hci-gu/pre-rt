@@ -130,6 +130,7 @@ export type ResourceCollection = {
   id: string
   name: string
   resources: Resource[]
+  description?: string
 }
 
 export type Resource = {
@@ -209,6 +210,7 @@ const mapResourceCollection = (resourceCollection: any): ResourceCollection => {
   return {
     id: resourceCollection.id,
     name: resourceCollection.name,
+    description: resourceCollection.description,
     resources: resourceCollection.expand?.resources.map(mapResource),
   }
 }
