@@ -8,42 +8,65 @@ import { dayStringFromDate } from './utils'
 import { useEffect } from 'react'
 
 export const pb = new Pocketbase(import.meta.env.VITE_API_URL)
-// const IS_PROD = import.meta.env.VITE_API_URL.startsWith('https')
+const IS_PROD = import.meta.env.VITE_API_URL.startsWith('https')
 pb.autoCancellation(false)
+
+const setCookie = (key: string, value: string) =>
+  Cookies.set(key, value, {
+    secure: IS_PROD,
+    sameSite: 'Lax',
+    expires: 180,
+  })
 
 export const authAtom = atomWithStorage<AuthModel | null>(
   'auth',
   null,
   {
     getItem: (key, initialValue) => {
-      const cookie = Cookies.get(key)
-      if (!cookie) return initialValue
+      let stored: string | undefined | null = Cookies.get(key)
+
+      // Fallback to localStorage if cookie is missing
+      if (!stored) {
+        stored = localStorage.getItem(key)
+        if (stored) {
+          setCookie(key, stored)
+        }
+      }
+
+      if (!stored) return initialValue
 
       try {
-        const parsedAuth = JSON.parse(cookie)
+        const parsedAuth = JSON.parse(stored)
         pb.authStore.save(parsedAuth.token, parsedAuth.model)
         return pb.authStore.model
       } catch (error) {
-        console.error('Error parsing auth cookie:', error)
+        console.error('Error parsing auth storage:', error)
         Cookies.remove(key)
+        localStorage.removeItem(key)
         return initialValue
       }
     },
+
     setItem: (key, value) => {
       if (value) {
         const authData = {
           token: pb.authStore.token,
           model: pb.authStore.model,
         }
-        Cookies.set(key, JSON.stringify(authData), {
-          secure: false,
-          expires: 90,
-        })
+
+        const serialized = JSON.stringify(authData)
+
+        setCookie(key, serialized)
+        localStorage.setItem(key, serialized)
       } else {
         Cookies.remove(key)
+        localStorage.removeItem(key)
       }
     },
-    removeItem: (key) => Cookies.remove(key),
+    removeItem: (key) => {
+      Cookies.remove(key)
+      localStorage.removeItem(key)
+    },
   },
   { getOnInit: true }
 )
@@ -75,7 +98,9 @@ export const dailyQuestionnaireScheduleAtom = atom(async () => {
 export const resourcesAtom = atom(async () => {
   const response = await pb.collection('resourceCollection').getFullList({
     expand: 'resources',
+    filter: 'visible_on_questions_and_answers = true',
   })
+  response.sort((a, b) => a.sort - b.sort)
   return response.map(mapResourceCollection)
 })
 
@@ -102,8 +127,10 @@ export type User = {
 }
 
 export type ResourceCollection = {
+  id: string
   name: string
   resources: Resource[]
+  description?: string
 }
 
 export type Resource = {
@@ -145,6 +172,9 @@ export type Questionnaire = {
   description: string
   occurrence: 'daily' | 'weekly' | 'monthly' | 'once'
   questions: Question[]
+  dependency: string[]
+  dependencyValue?: any
+  followup?: Questionnaire[]
 }
 
 export type Answer = {
@@ -178,7 +208,9 @@ const mapResource = (resource: any): Resource => {
 
 const mapResourceCollection = (resourceCollection: any): ResourceCollection => {
   return {
+    id: resourceCollection.id,
     name: resourceCollection.name,
+    description: resourceCollection.description,
     resources: resourceCollection.expand?.resources.map(mapResource),
   }
 }
@@ -213,12 +245,16 @@ const mapQuestion = (question: any): Question => {
 }
 
 const mapQuestionnaire = (questionnaire: any): Questionnaire => {
+  console.log('Mapping questionnaire:', questionnaire)
   return {
     id: questionnaire.id,
     name: questionnaire.name,
     description: questionnaire.description,
     occurrence: questionnaire.occurrence,
     questions: questionnaire.expand?.questions.map(mapQuestion) ?? [],
+    dependency: questionnaire.dependency,
+    dependencyValue: questionnaire.dependencyValue,
+    followup: questionnaire.expand?.followup?.map(mapQuestionnaire),
   }
 }
 
@@ -247,10 +283,12 @@ export const questionnaireAtom = atomFamily((id: string) =>
   atom(async () => {
     const response = await pb.collection('questionnaires').getOne(id, {
       expand:
-        'questions,questions.options,questions.resource,questions.resourceCollection.resources',
+        'questions,questions.options,questions.resource,questions.resourceCollection.resources,followup,followup.questions,followup.questions.options,followup.questions.resource,followup.questions.resourceCollection.resources',
     })
 
-    return mapQuestionnaire(response)
+    let q = mapQuestionnaire(response)
+    console.log('Mapped questionnaire:', q)
+    return q
   })
 )
 

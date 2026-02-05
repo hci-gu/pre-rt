@@ -97,11 +97,11 @@ const Header = () => {
   const auth = useAtomValue(authAtom)
   const scrollDirection = useScrollDirection()
 
-  const activeClass = 'border-b-2 border-black'
+  const activeClass = 'border-b-2 border-foreground'
 
   return (
     <header
-      className={`sticky top-0 flex h-16 items-center border-b bg-background px-4 md:px-12 transition-transform duration-300 ${
+      className={`sticky top-0 flex h-16 items-center border-b-1 bg-background px-4 md:px-12 transition-transform duration-300 border-foreground ${
         scrollDirection === 'down' ? '-translate-y-16' : 'translate-y-0'
       }`}
     >
@@ -131,7 +131,7 @@ const Header = () => {
         {auth && (
           <a
             href="/profile"
-            className="flex items-center justify-center w-8 h-8 rounded-full border border-stone-800"
+            className="flex items-center justify-center w-8 h-8 rounded-full border-2 border-foreground"
           >
             <PersonIcon className="w-5 h-5" />
           </a>
@@ -166,35 +166,18 @@ const RootPage = () => {
       <div
         style={{
           position: 'fixed',
-          zIndex: -2,
-          left: '-5vw',
-          top: '-5vh',
-          width: '110vw',
-          height: '110vh',
-          backgroundImage: 'url(/vastkust.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'blur(12px)',
-        }}
-      ></div>
-      <div
-        style={{
-          position: 'fixed',
           zIndex: -1,
           left: 0,
           top: 0,
           width: '100vw',
           height: '100vh',
-          background: 'rgba(0, 0, 0, 0.2)',
         }}
       ></div>
       <div className="flex flex-col items-center justify-center">
         <div
-          className="w-full md:w-1/2 pb-64 pt-12 bg-white"
+          className="w-full md:w-1/2 pb-64 pt-12"
           style={{
             marginTop: '-16px',
-            borderRadius: '1rem',
-            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
           }}
         >
           <Outlet />

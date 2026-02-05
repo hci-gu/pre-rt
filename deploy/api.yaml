@@ -18,7 +18,7 @@ spec:
                       claimName: pre-rt-pv-claim
             containers:
                 - name: pre-rt-api
-                  image: 'registry.k8s.gu.se/appademin/pre-rt-api:0.2.1'
+                  image: 'registry.k8s.gu.se/appademin/pre-rt-api:0.4.0'
                   imagePullPolicy: Always
                   ports:
                       - containerPort: 8080
@@ -38,33 +38,33 @@ spec:
                   volumeMounts:
                       - mountPath: /pb/pb_data
                         name: pre-rt-api-persistent-storage
-# ---
-# apiVersion: v1
-# kind: Service
-# metadata:
-#     name: pre-rt-api-service
-# spec:
-#     selector:
-#         app: pre-rt-api
-#     ports:
-#         - protocol: TCP
-#           port: 8080
-# ---
-# kind: Route
-# apiVersion: route.openshift.io/v1
-# metadata:
-#     name: pre-rt-api
-#     annotations:
-#         kubernetes.io/tls-acme: 'true'
-# spec:
-#     host: pre-rt-api.prod.appadem.in
-#     to:
-#         kind: Service
-#         name: pre-rt-api-service
-#         weight: 100
-#     port:
-#         targetPort: 8080
-#     tls:
-#         termination: edge
-#         insecureEdgeTerminationPolicy: Redirect
-#     wildcardPolicy: None
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: pre-rt-api-service
+spec:
+    selector:
+        app: pre-rt-api
+    ports:
+        - protocol: TCP
+          port: 8080
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+    name: pre-rt-api
+    annotations:
+        kubernetes.io/tls-acme: 'true'
+spec:
+    host: pre-rt-api.prod.appadem.in
+    to:
+        kind: Service
+        name: pre-rt-api-service
+        weight: 100
+    port:
+        targetPort: 8080
+    tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect
+    wildcardPolicy: None

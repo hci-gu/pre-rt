@@ -36,7 +36,7 @@ const SelectFollowup = ({
           value={field.value}
           defaultValue={field.value}
           className={`flex flex-wrap gap-1 sm:gap-2 leading-tight sm:leading-normal justify-end ${
-            disabled && `opacity-50`
+            disabled && `opacity-25`
           }`}
         >
           {options.map((option, index) => {
@@ -61,7 +61,7 @@ const SelectFollowup = ({
                 </FormControl>
                 <label
                   htmlFor={`${id}_${option}_${index}`}
-                  className="flex items-center justify-center px-1 py-1 border-2 border-gray-300 rounded-lg cursor-pointer peer-checked:border-blue-500 peer-checked:bg-blue-100 peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3"
+                  className="flex items-center justify-center px-1 py-1 border-2 border-foreground rounded-lg cursor-pointer peer-checked:primary peer-checked:primary-100 peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3 bg-white peer-checked:bg-primary peer-checked:text-primary-foreground"
                 >
                   {option}
                 </label>
@@ -105,7 +105,7 @@ const SelectNumericalInput = forwardRef<
       pattern="[0-9]*"
       min={0}
       placeholder="0"
-      className="w-16 h-6 mx-2"
+      className="w-16 h-6 mx-2 text-foreground"
       disabled={disabled}
       value={value}
       onChange={(e) => {
@@ -234,31 +234,46 @@ export default function Select({
               </FormControl>
               <label
                 htmlFor={`${question.id}-option-${index}`}
-                className="flex items-center justify-center px-2 py-2 border-2 border-gray-300 rounded-lg cursor-pointer peer-checked:border-blue-500 peer-checked:bg-blue-100 peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3"
+                className="bg-card flex items-center justify-center px-2 py-2 border-2 border-foreground rounded-lg cursor-pointer peer-checked:border-primary peer-checked:bg-primary peer-checked:text-primary-foreground peer-checked:font-semibold transition-colors duration-200 sm:px-6 sm:py-3"
               >
-                {option.split('{AMOUNT}')?.[0]}
-                {option.split('{AMOUNT}')?.[1] && (
-                  <SelectNumericalInput
-                    initialValue={optionNumericValue}
-                    ref={(el) => (optionInputRefs.current[index] = el)}
-                    updateValue={(value) => {
-                      const optionWithValue = option.replace(
-                        '{AMOUNT}',
-                        `{${value}}`
-                      )
-                      updateValue(optionWithValue, true)
-                    }}
-                    disabled={
-                      question.type === 'singleChoice'
-                        ? !compareOptionValues(field.value, option)
-                        : !field.value ||
-                          !field.value.some((val: any) =>
-                            compareOptionValues(val, option)
+                {option.includes('{AMOUNT}') ? (
+                  <>
+                    {option.split('{AMOUNT}')?.[0]}
+                    {option.split('{AMOUNT}')?.[1] && (
+                      <SelectNumericalInput
+                        initialValue={optionNumericValue}
+                        ref={(el) => {
+                          optionInputRefs.current[index] = el
+                        }}
+                        updateValue={(value) => {
+                          const optionWithValue = option.replace(
+                            '{AMOUNT}',
+                            `{${value}}`
                           )
-                    }
-                  />
+                          updateValue(optionWithValue, true)
+                        }}
+                        disabled={
+                          question.type === 'singleChoice'
+                            ? !compareOptionValues(field.value, option)
+                            : !field.value ||
+                              !field.value.some((val: any) =>
+                                compareOptionValues(val, option)
+                              )
+                        }
+                      />
+                    )}
+                    {option.split('{AMOUNT}')?.[1]}
+                  </>
+                ) : (
+                  <p>
+                    {option.split('\n').map((line, i) => (
+                      <span key={i}>
+                        {line}
+                        {i < option.split('\n').length - 1 && <br />}
+                      </span>
+                    ))}
+                  </p>
                 )}
-                {option.split('{AMOUNT}')?.[1]}
               </label>
             </FormItem>
             {question.options?.followup && (

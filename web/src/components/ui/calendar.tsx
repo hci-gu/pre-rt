@@ -76,7 +76,7 @@ type CustomDayProps = DayProps & {
 }
 
 function CustomDay(props: CustomDayProps) {
-  const buttonRef = useRef<HTMLButtonElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null!)
   const dayRender = useDayRender(props.date, props.displayMonth, buttonRef)
 
   if (dayRender.isHidden) {
@@ -104,7 +104,7 @@ function LargeCalendar({
   onDayRender,
   ...props
 }: CalendarProps & {
-  onDayRender: (props: DayProps) => JSX.Element | null
+  onDayRender: (props: DayProps) => React.JSX.Element | null
 }) {
   return (
     <DayPicker

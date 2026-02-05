@@ -44,6 +44,7 @@ var notFoundErr = apis.NewNotFoundError("User not found", nil)
 var badRequestErr = apis.NewBadRequestError("Invalid request", nil)
 
 const WEB_URL = "https://pre-rt.prod.appadem.in"
+const API_URL = "https://pre-rt-api.prod.appadem.in"
 
 // const WEB_URL = "http://localhost:5173"
 const TREATMENT_END_FORM_ID = "p8ow7xj8h4uuv43"
@@ -206,8 +207,6 @@ func answeredQuestionnaire(answeredDate time.Time, occurance string) bool {
 	// Get the current date
 	currentDate := time.Now()
 
-	// log.Println("Answered date: " + answeredDate.String())
-	// log.Println("Next due date: " + nextDueDate.String())
 	return nextDueDate.After(currentDate)
 }
 
@@ -243,14 +242,11 @@ func startDateForDailyQuestionnaires(user *core.Record) *time.Time {
 
 	if user.GetString("type") == "PRE" {
 		temp := treatmentStart.AddDate(0, 0, -14)
-		println("user is pre so we return date 14 days before start", temp.String())
 		return &temp
 	}
 
-	// the user is POST so it should be 6 weeks after treatment end
 	if !treatmentEnd.IsZero() {
 		temp := treatmentEnd.AddDate(0, 0, 14)
-		println("user is post so we return date 6 weeks after end", temp.String())
 		return &temp
 	}
 
@@ -291,7 +287,7 @@ func checkAndSendNotification(app *pocketbase.PocketBase, user *core.Record, que
 
 	for _, answer := range answers {
 		if answer != nil && answeredQuestionnaire(answer.Get("date").(types.DateTime).Time(), questionnaire.Get("occurrence").(string)) {
-			log.Println("Already answered")
+			// log.Println("Already answered")
 			return
 		}
 	}
@@ -316,10 +312,17 @@ func main() {
 
 		se.Router.Bind(apis.Gzip())
 
-		se.Router.GET("/data-export", func(e *core.RequestEvent) error {
-			if !e.HasSuperuserAuth() {
-				return apis.NewUnauthorizedError("Unauthorized", nil)
+		se.Router.GET("/data-export/{id}", func(e *core.RequestEvent) error {
+			// if !e.HasSuperuserAuth() {
+			// 	return apis.NewUnauthorizedError("Unauthorized", nil)
+			// }
+
+			exportRecord, err := app.FindRecordById("exports", e.Request.PathValue("id"))
+			if err != nil {
+				return apis.NewNotFoundError("Export not found", nil)
 			}
+			// delete export record
+			defer app.Delete(exportRecord)
 
 			// Fetch all answers records.
 			answers, err := app.FindRecordsByFilter("answers", "", "", 0, 0, nil)
@@ -807,9 +810,7 @@ func main() {
 		}
 
 		treatmentEnd := answers[TREATMENT_END_QUESTION_ID]
-		log.Println("treatmentEnd", treatmentEnd)
 		user.Set("treatmentEnd", treatmentEnd)
-		log.Println("user", user)
 		if err := app.Save(user); err != nil {
 			return badRequestErr
 		}
@@ -817,7 +818,21 @@ func main() {
 		return nil
 	})
 
+	app.OnRecordAfterCreateSuccess("exports").BindFunc(func(e *core.RecordEvent) error {
+		e.Record.Set("link", fmt.Sprintf("%s/data-export/%s", API_URL, e.Record.Id))
+
+		// save
+		if err := e.App.Save(e.Record); err != nil {
+			log.Println("export saved")
+		}
+
+		return e.Next()
+	})
+
+	log.Println("isDevEnv", isDevEnv())
+
 	if err := app.Start(); err != nil {
 		log.Fatal(err)
 	}
+
 }

@@ -16,13 +16,13 @@ function HomeTodoItem({
   done?: boolean
   action?: React.ReactNode
 }) {
-  const background = done ? 'bg-green-100' : 'bg-white'
-  const textClass = done ? 'text-green-800 font-medium' : 'text-black'
+  const background = done ? 'bg-green-100' : 'bg-card'
+  const textClass = done ? 'text-green-800 font-medium' : 'text-foreground'
 
   return (
     <div
       className={cn(
-        `flex items-center space-x-2 p-4 rounded-md border border-transparent hover:border hover:border-gray-300 ${background}`
+        `flex items-center space-x-2 p-4 rounded-md border border-transparent hover:border hover:border-foreground ${background}`
       )}
     >
       <strong className={textClass}>{index}.</strong>

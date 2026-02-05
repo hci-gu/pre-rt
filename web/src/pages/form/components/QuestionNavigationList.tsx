@@ -41,7 +41,7 @@ const QuestionNavigationList = ({
         <Button
           type="button"
           variant={isMobile ? 'link' : 'outline'}
-          className="text-white md:text-black"
+          className="text-white md:bg-white md:text-black bg-none"
         >
           <ListBulletIcon className="mr-2" />
           Se alla frågor
@@ -50,7 +50,7 @@ const QuestionNavigationList = ({
       <DialogContent className="w-[95vw] sm:w-[80vw] md:w-[50vw] max-w-3xl max-h-[80vh] overflow-hidden">
         <DialogHeader className="flex flex-col gap-2 mb-4 w-80">
           <h2 className="text-2xl font-semibold">Frågor</h2>
-          <span className="text-md text-gray-500 font-light">
+          <span className="text-md font-light">
             Klicka på en fråga för att hoppa till den.
           </span>
         </DialogHeader>
@@ -66,7 +66,7 @@ const QuestionNavigationList = ({
                   >
                     <div className="flex items-center justify-between">
                       {question.type !== 'section' && (
-                        <span className="text-gray-400 md:mr-2">
+                        <span className="text-foreground">
                           {question.number}.
                         </span>
                       )}
@@ -74,12 +74,8 @@ const QuestionNavigationList = ({
                         disabled={disabledAfter < index}
                         variant="link"
                         className={`
-                          w-full text-left justify-start text-foreground hover:no-underline overflow-hidden text-ellipsis whitespace-nowrap
-                          ${
-                            index === page
-                              ? 'font-black text-blue-500'
-                              : 'font-regular'
-                          }
+                          w-full text-left justify-start text-foreground hover:no-underline overflow-hidden text-ellipsis whitespace-nowrap cursor-pointer
+                          ${index === page ? 'font-black' : 'font-regular'}
                         `}
                         dangerouslySetInnerHTML={{
                           __html: `${question.text}`,

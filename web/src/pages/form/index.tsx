@@ -30,9 +30,9 @@ import useFormStateWithCache, {
   SyncFormStateToLocalStorage,
   useScrollToLastAnsweredQuestion,
 } from './hooks/useFormState'
-import AbortButton from './components/AbortButton'
+import AbortButton from '../../components/ui/AbortButton'
 import QuestionNavigationList from './components/QuestionNavigationList'
-import { QUESTIONNAIRE_FOV_ID } from '@/constants'
+import { QUESTIONNAIRE_FOV_ID, QUESTIONNAIRE_PCL5_ID } from '@/constants'
 
 const ProgressBar = ({ questionnaire }: { questionnaire: Questionnaire }) => {
   const questions = useQuestions(questionnaire)
@@ -40,9 +40,9 @@ const ProgressBar = ({ questionnaire }: { questionnaire: Questionnaire }) => {
   const scaleX = interpolate([0, questions.length - 1], [0.01, 1])
 
   return (
-    <div className="fixed top-0 left-0 h-8 w-screen bg-blue-500">
+    <div className="fixed top-0 left-0 h-8 w-screen bg-primary">
       <motion.div
-        className="fixed top-8 left-0 h-2 w-screen bg-blue-500 z-10"
+        className="fixed top-8 left-0 h-2 w-screen bg-primary z-10"
         animate={{ scaleX: scaleX(page) }}
         transition={{ type: 'spring', duration: 0.4 }}
         style={{ originX: 0 }}
@@ -81,7 +81,7 @@ const NavigationButtons = ({
   return (
     <div className="fixed bottom-4 right-4 flex space-x-2">
       <Button
-        className="bg-blue-500 text-white py-6 rounded shadow-md"
+        className="text-white py-6 rounded shadow-md"
         disabled={page === 0}
         onClick={(e) => {
           e.preventDefault()
@@ -91,7 +91,7 @@ const NavigationButtons = ({
         <ChevronUpIcon />
       </Button>
       <Button
-        className="bg-blue-500 text-white py-6 rounded shadow-md"
+        className="text-white py-6 rounded shadow-md"
         disabled={canProceed}
         onClick={(e) => {
           e.preventDefault()
@@ -101,7 +101,7 @@ const NavigationButtons = ({
         <ChevronDownIcon />
       </Button>
       <Button
-        className="bg-blue-500 text-white py-6 rounded shadow-md"
+        className="text-white py-6 rounded shadow-md"
         disabled={canProceed}
         onClick={(e) => {
           e.preventDefault()
@@ -138,14 +138,17 @@ const Questions = ({
       style={{ position: 'absolute', overflow: 'hidden' }}
     >
       <ReactPageScroller
+        containerHeight={'100vh'}
         pageOnChange={handlePageChange}
         customPageNumber={currentPage ?? 0}
+        transitionTimingFunction="ease-in-out"
         animationTimer={200}
+        animationTimerBuffer={200}
       >
         {questions.map((q, i) => (
           <QuestionSelector key={`Question_${q.id}_${i}`} question={q} />
         ))}
-        <div className="h-full w-full flex items-center justify-center">
+        <div className="h-full w-full flex items-center justify-center bg-red">
           <Button
             type="submit"
             disabled={loading}
@@ -167,11 +170,15 @@ const SectionHandler = ({
 }) => {
   const section = useCurrentSection(questionnaire)
 
-  if (section && section.id === QUESTIONNAIRE_FOV_ID) {
+  if (
+    section &&
+    (section.id === QUESTIONNAIRE_FOV_ID ||
+      section.id.includes(QUESTIONNAIRE_PCL5_ID))
+  ) {
     return (
       <>
         <div className="fixed top-4 md:top-auto md:bottom-4 md:left-4 p-2">
-          <p className="text-xs text-gray-500 text-center pb-2 invisible md:visible">
+          <p className="text-xs text-center pb-2 invisible md:visible">
             Skapat av
           </p>
           <img

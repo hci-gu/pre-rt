@@ -1,4 +1,8 @@
-import { Resource as ResourceType, userDataAtom } from '@/state'
+import {
+  ResourceCollection,
+  Resource as ResourceType,
+  userDataAtom,
+} from '@/state'
 import {
   Drawer,
   DrawerClose,
@@ -11,8 +15,16 @@ import { Cross1Icon, InfoCircledIcon } from '@radix-ui/react-icons'
 import { Button } from '@/components/ui/button'
 import { useAtomValue } from 'jotai'
 import { Suspense } from 'react'
+import ResourceAccordion from './resourceCollection'
 
-export function ResourceDrawer({ resource }: { resource: ResourceType }) {
+export function ResourceDrawer({
+  resource,
+  resourceCollection,
+}:
+  | { resource: ResourceType; resourceCollection?: undefined }
+  | { resource?: undefined; resourceCollection: ResourceCollection }) {
+  const title = resource ? resource.title : resourceCollection.name
+
   return (
     <Drawer>
       <DrawerTrigger>
@@ -24,16 +36,28 @@ export function ResourceDrawer({ resource }: { resource: ResourceType }) {
         <DrawerHeader>
           <div className="flex items-center justify-between">
             <DrawerClose>
-              <Button variant="outline" size="icon">
+              <Button
+                variant="outline"
+                size="icon"
+                className="border-foreground"
+              >
                 <Cross1Icon />
               </Button>
             </DrawerClose>
-            <DrawerTitle>{resource.title}</DrawerTitle>
+            <DrawerTitle className="mr-10">{title}</DrawerTitle>
             <div></div>
           </div>
         </DrawerHeader>
         <div className="p-8 flex flex-col justify-center items-center overflow-y-scroll">
-          <Resource resource={resource} />
+          {resource && <Resource resource={resource} />}
+          {resourceCollection && (
+            <div className="w-full h-full">
+              <ResourceAccordion
+                collection={resourceCollection}
+                showHeader={false}
+              />
+            </div>
+          )}
         </div>
       </DrawerContent>
     </Drawer>
@@ -81,7 +105,7 @@ export default function Resource({ resource }: { resource: ResourceType }) {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div
-        className="[&_a]:text-blue-500 [&_a]:hover:underline [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2 [&_p]:font-light [&_p]:text-base"
+        className="resource-content [&_a]:text-primary [&_a]:hover:underline [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2 [&_p]:font-light [&_p]:text-base"
         dangerouslySetInnerHTML={{
           __html: description,
         }}

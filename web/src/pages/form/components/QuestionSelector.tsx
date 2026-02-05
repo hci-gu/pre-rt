@@ -20,7 +20,6 @@ import { useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import Select from './Select'
 import { ResourceDrawer } from '@/components/resource'
-import { ResourceCollectionDrawer } from '@/components/resourceCollection'
 
 const renderQuestionType = (
   question: Question,
@@ -107,15 +106,6 @@ const renderQuestionType = (
           >
             Gå vidare
           </Button>
-          {question.resourceCollection && (
-            <>
-              <div className="w-4" />
-              <ResourceCollectionDrawer
-                collection={question.resourceCollection}
-                buttonText="Information om våldsfrågor"
-              />
-            </>
-          )}
         </div>
       )
     default:
@@ -126,6 +116,11 @@ const renderQuestionType = (
 const QuestionSelector = ({ question }: { question: Question }) => {
   const { control } = useFormContext()
   const setPage = useSetAtom(formPageAtom)
+  const plainTextLength = question.text
+    .replace(/<[^>]*>/g, '')
+    .replace(/&[^;\s]+;/g, ' ')
+    .trim().length
+  const useCompactText = plainTextLength > 250
 
   const onAnswer = (_: any) => {
     setTimeout(() => setPage((page) => page + 1), 400)
@@ -138,21 +133,40 @@ const QuestionSelector = ({ question }: { question: Question }) => {
         name={question.id}
         render={({ field }) => (
           <FormItem>
-            <div className="flex gap-2">
+            <div
+              className={`flex ${
+                useCompactText ? 'gap-0.5 sm:gap-2' : 'gap-1 sm:gap-2'
+              }`}
+            >
               {question.type !== 'section' && (
-                <FormLabel className="text-md sm:text-xl leading-tight sm:leading-normal">
+                <FormLabel
+                  className={
+                    useCompactText
+                      ? 'text-xs sm:text-xl leading-tight sm:leading-normal'
+                      : 'text-sm sm:text-xl leading-snug sm:leading-normal'
+                  }
+                >
                   {question.number}.
                 </FormLabel>
               )}
               {question.required && <span className="text-red-500">*</span>}
               <FormLabel
-                className="text-md sm:text-xl leading-tight sm:leading-normal max-w-6xl"
+                className={`max-w-6xl ${
+                  useCompactText
+                    ? 'text-xs sm:text-xl leading-tight sm:leading-normal'
+                    : 'text-sm sm:text-xl leading-snug sm:leading-normal'
+                }`}
                 dangerouslySetInnerHTML={{
                   __html: `${question.text}`,
                 }}
               />
               {question.resource && (
                 <ResourceDrawer resource={question.resource} />
+              )}
+              {!question.resource && question.resourceCollection && (
+                <ResourceDrawer
+                  resourceCollection={question.resourceCollection}
+                />
               )}
             </div>
             <FormControl>
