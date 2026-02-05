@@ -38,7 +38,7 @@ function BaselineForm() {
         index={1}
         icon={<BoxIcon />}
         title="Fyll i formulär om dig själv"
-        description="Tar ca 10 minuter att fylla i."
+        description="Tar ca 20 minuter att fylla i."
       />
     </Link>
   )
