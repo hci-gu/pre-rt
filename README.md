@@ -1,4 +1,4 @@
-# Cancer Pain App (Pre-RT Study)
+# Pre-RT App
 
 Full-stack web app for the Pre-RT research study run by the University of Gothenburg and Sahlgrenska. The app collects questionnaires, provides study resources, and sends SMS-based OTP login links and reminders for participants.
 
