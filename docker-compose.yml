@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: appademin/pre-rt-web:0.0.4
+    ports:
+      - "8080:8080"
+    networks:
+      - webnet
+
+networks:
+  webnet:
