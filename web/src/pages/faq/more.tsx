@@ -1,13 +1,11 @@
 import { Button } from '@/components/ui/button'
 import ResourceAccordion from '@/components/resourceCollection'
-import { resourcesAtom } from '@/state'
-import { useAtomValue } from 'jotai'
+import FaqCollections from '@/components/faq-collections'
 import { Link } from 'react-router-dom'
 
 export default function FaqMorePage() {
-  const collections = useAtomValue(resourcesAtom)
-
   return (
+    <FaqCollections>{(collections) => (
     <div className="space-y-7">
       <div className="space-y-2">
         <h1 className="text-4xl font-black md:text-5xl">Om du vill veta mer</h1>
@@ -24,5 +22,6 @@ export default function FaqMorePage() {
         <Link to="/faq">Tillbaka till frågor och svar</Link>
       </Button>
     </div>
+    )}</FaqCollections>
   )
 }

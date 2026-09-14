@@ -25,19 +25,6 @@ import { cn } from '@/lib/utils'
 const answerChipClassName =
   'flex min-h-14 min-w-14 cursor-pointer items-center justify-center rounded-xl bg-primary px-5 py-3 text-base font-bold text-foreground transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-card peer-data-[state=checked]:bg-study-teal-dark peer-data-[state=checked]:text-white sm:min-w-16'
 
-const isLengthMeasurementHelp = (question: Question) => {
-  const text = `${question.text} ${question.resource?.title ?? ''} ${
-    question.resource?.description ?? ''
-  } ${question.resourceCollection?.name ?? ''}`.toLowerCase()
-
-  return (
-    text.includes('vilken längd') ||
-    text.includes('längd på stav') ||
-    text.includes('längden') ||
-    text.includes('length measurement')
-  )
-}
-
 const renderQuestionType = (
   question: Question,
   field: ControllerRenderProps<FieldValues, string>,
@@ -205,12 +192,11 @@ const QuestionSelector = ({ question }: { question: Question }) => {
                     : `Fråga ${question.number}`}
                 </FormLabel>
                 <div className="absolute right-0 top-0">
-                  {question.resource && isLengthMeasurementHelp(question) && (
+                  {question.resource && (
                     <ResourceDrawer resource={question.resource} />
                   )}
                   {!question.resource &&
-                    question.resourceCollection &&
-                    isLengthMeasurementHelp(question) && (
+                    question.resourceCollection && (
                     <ResourceDrawer
                       resourceCollection={question.resourceCollection}
                     />

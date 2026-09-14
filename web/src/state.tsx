@@ -1,11 +1,13 @@
 import Pocketbase, { AuthModel } from 'pocketbase'
-import { atomFamily, atomWithStorage, unwrap } from 'jotai/utils'
+import { atomFamily, atomWithRefresh, atomWithStorage, unwrap } from 'jotai/utils'
 // @ts-ignore
 import Cookies from 'js-cookie'
 import { atom, useAtom } from 'jotai'
 import { z } from 'zod'
 import { dayStringFromDate } from './utils'
 import { useEffect } from 'react'
+import { ResourceSessionError } from './lib/resource-errors'
+import { studySettingsSchema } from './lib/study-settings'
 
 export const pb = new Pocketbase(import.meta.env.VITE_API_URL)
 const IS_PROD = import.meta.env.VITE_API_URL.startsWith('https')
@@ -95,22 +97,33 @@ export const dailyQuestionnaireScheduleAtom = atom(async () => {
   }
 })
 
-export const resourcesAtom = atom(async () => {
+export const resourcesAtom = atomWithRefresh(async (get) => {
+  const auth = get(authAtom)
+  if (!auth) throw new ResourceSessionError()
+
+  // PocketBase returns an empty list when an auth-based list rule fails,
+  // even if a locally stored JWT still has a future expiration date.
   try {
-    const response = await pb.collection('resourceCollection').getFullList({
-      expand: 'resources',
-      filter: 'visible_on_questions_and_answers = true',
-    })
-    response.sort((a, b) => (a.sort ?? 999) - (b.sort ?? 999))
-    return response.map(mapResourceCollection)
-  } catch (e) {
-    console.error(e)
-    return []
+    await pb.collection('users').getOne(auth.id)
+  } catch (error) {
+    const status = (error as { status?: number }).status
+    if (status === 401 || status === 403 || status === 404) {
+      throw new ResourceSessionError()
+    }
+    throw error
   }
+
+  const response = await pb.collection('resourceCollection').getFullList({
+    expand: 'resources',
+    filter: 'visible_on_questions_and_answers = true',
+  })
+  response.sort((a, b) => (a.sort ?? 999) - (b.sort ?? 999))
+  return response.map(mapResourceCollection)
 })
 
 export const resourceCollectionAtom = atomFamily((id: string) => {
-  return atom(async () => {
+  return atom(async (get): Promise<ResourceCollection | null> => {
+    if (!get(authAtom)) return null
     try {
       const response = await pb.collection('resourceCollection').getOne(id, {
         expand: 'resources',
@@ -118,11 +131,7 @@ export const resourceCollectionAtom = atomFamily((id: string) => {
       return mapResourceCollection(response)
     } catch (e) {
       console.error(e)
-      return {
-        id,
-        name: 'Frågor och svar',
-        resources: [],
-      }
+      return null
     }
   })
 })
@@ -131,6 +140,17 @@ export const readAboutPageAtom = atomWithStorage<boolean>(
   'readAboutPage',
   false
 )
+
+export const studySettingsAtom = atomWithRefresh(async (get) => {
+  if (!get(authAtom)) throw new ResourceSessionError()
+  const record = await pb.collection('studySettings').getFirstListItem('key = "default"')
+  return studySettingsSchema.parse(record)
+})
+
+export const aboutCollectionAtom = atom(async (get) => {
+  const settings = await get(studySettingsAtom)
+  return get(resourceCollectionAtom(settings.aboutCollection))
+})
 
 export type User = {
   id: string
@@ -146,6 +166,10 @@ export type ResourceCollection = {
   resources: Resource[]
   description?: string
   image?: string
+  imageCompact?: string
+  pageTitle?: string
+  footerContent?: string
+  showQuickExit?: boolean
   sort?: number
 }
 
@@ -233,8 +257,19 @@ const mapResourceCollection = (resourceCollection: any): ResourceCollection => {
     name: resourceCollection.name,
     description: resourceCollection.description,
     image: image ? pb.files.getURL(resourceCollection, image) : undefined,
+    imageCompact: resourceCollection.imageCompact
+      ? pb.files.getURL(resourceCollection, resourceCollection.imageCompact)
+      : undefined,
+    pageTitle: resourceCollection.pageTitle,
+    footerContent: resourceCollection.footerContent,
+    showQuickExit: resourceCollection.showQuickExit,
     sort: resourceCollection.sort,
-    resources: resourceCollection.expand?.resources?.map(mapResource) ?? [],
+    resources: (resourceCollection.resources ?? []).flatMap((id: string) => {
+      const resource = resourceCollection.expand?.resources?.find(
+        (resource: Resource) => resource.id === id
+      )
+      return resource ? [mapResource(resource)] : []
+    }),
   }
 }
 

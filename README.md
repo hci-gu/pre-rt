@@ -20,7 +20,7 @@ Full-stack web app for the Pre-RT research study run by the University of Gothen
 
 **Local Development**
 1. Backend (PocketBase):
-Run `cd pocketbase` then `go run .`. This serves PocketBase at `http://127.0.0.1:8090` by default, auto-applies migrations when using `go run`, and exposes the admin UI at `http://127.0.0.1:8090/_/`.
+Run `cd pocketbase` then `./dev.sh`. This starts PocketBase in local test mode at `http://127.0.0.1:8090`, auto-applies migrations, and exposes the admin UI at `http://127.0.0.1:8090/_/`. The login page includes **Prova med testkonto**, using the existing `publictestuser1` account without SMS. Use this script for subsequent local restarts to keep test login enabled.
 2. Frontend (Vite):
 Run `cd web`, `pnpm install`, then `VITE_API_URL=http://127.0.0.1:8090 pnpm dev`. The app will be at `http://localhost:5173`.
 

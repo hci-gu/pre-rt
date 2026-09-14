@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"myapp/internal/studysettings"
 	_ "myapp/migrations"
 	"net/http"
 	"net/url"
@@ -43,8 +44,6 @@ const WEB_URL = "https://pre-rt.test.appadem.in"
 const API_URL = "https://pre-rt-api.test.appadem.in"
 
 // const WEB_URL = "http://localhost:5173"
-const TREATMENT_END_FORM_ID = "p8ow7xj8h4uuv43"
-const TREATMENT_END_QUESTION_ID = "242u8ha0yn8m06d"
 
 func testLoginUserID() (string, bool) {
 	if !strings.EqualFold(strings.TrimSpace(os.Getenv("APP_ENV")), "test") {
@@ -279,7 +278,12 @@ func sendText(phoneNumber string, text string) error {
 }
 
 func sendTreatmentEndReminder(app *pocketbase.PocketBase, user *core.Record) {
-	link := WEB_URL + "/forms/" + TREATMENT_END_FORM_ID
+	settings, err := studysettings.Load(app)
+	if err != nil {
+		app.Logger().Error("Skipping treatment-end reminder: invalid study settings", "error", err)
+		return
+	}
+	link := WEB_URL + "/forms/" + settings.TreatmentEndQuestionnaire
 
 	sendText(user.GetString("phoneNumber"), "Hej! Det är nu 5 veckor efter behandlingsstart, du kan fylla i slutdatum här: "+link)
 }
@@ -959,34 +963,7 @@ func main() {
 	})
 
 	app.OnRecordAfterCreateSuccess("answers").BindFunc(func(e *core.RecordEvent) error {
-		questionnaireId := e.Record.GetString("questionnaire")
-
-		if questionnaireId != TREATMENT_END_FORM_ID {
-			return nil
-		}
-
-		userId := e.Record.GetString("user")
-
-		user, err := app.FindRecordById("users", userId)
-
-		if err != nil {
-			return notFoundErr
-		}
-
-		answersString := e.Record.GetString("answers")
-		// parse json string to map
-		var answers map[string]interface{}
-		if err := json.Unmarshal([]byte(answersString), &answers); err != nil {
-			return badRequestErr
-		}
-
-		treatmentEnd := answers[TREATMENT_END_QUESTION_ID]
-		user.Set("treatmentEnd", treatmentEnd)
-		if err := app.Save(user); err != nil {
-			return badRequestErr
-		}
-
-		return nil
+		return studysettings.SyncTreatmentEnd(e.App, e.Record)
 	})
 
 	app.OnRecordAfterCreateSuccess("exports").BindFunc(func(e *core.RecordEvent) error {

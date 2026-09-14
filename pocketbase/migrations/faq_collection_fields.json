@@ -1,0 +1,13 @@
+[
+  { "name": "pageTitle", "type": "text" },
+  { "name": "footerContent", "type": "editor", "convertURLs": false },
+  { "name": "showQuickExit", "type": "bool" },
+  {
+    "name": "imageCompact",
+    "type": "file",
+    "maxSelect": 1,
+    "maxSize": 5242880,
+    "mimeTypes": ["image/svg+xml", "image/png", "image/jpeg", "image/webp"],
+    "protected": false
+  }
+]

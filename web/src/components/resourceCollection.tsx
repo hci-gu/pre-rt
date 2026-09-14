@@ -81,9 +81,9 @@ export default function ResourceAccordion({
   const [showAbort, setShowAbort] = useState(false)
   const violenceSectionRef = useRef<HTMLDivElement | null>(null)
 
-  // Log when the element with the specified ID is scrolled into view
   useEffect(() => {
-    if (collection.id !== 'pa74h4k8j8d8pn3') return
+    setShowAbort(false)
+    if (!collection.showQuickExit) return
     const element = violenceSectionRef.current
     if (!element) return
 
@@ -196,10 +196,10 @@ export default function ResourceAccordion({
             }}
           />
         )}
-        {(collection.resources ?? []).map((resource, index) => (
+        {(collection.resources ?? []).map((resource) => (
           <AccordionItem
             value={titleToSlug(resource.title)}
-            key={`Resource_${index}`}
+            key={resource.id}
             id={titleToSlug(resource.title)}
             className="scroll-mt-24 border-0"
           >

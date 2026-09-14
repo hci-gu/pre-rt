@@ -1,6 +1,18 @@
 package main
 
-import "testing"
+import (
+	"os/exec"
+	"testing"
+)
+
+func TestSingleFileEntrypoint(t *testing.T) {
+	// --help compiles the user's entrypoint without starting a second server
+	// or touching the local database.
+	output, err := exec.Command("go", "run", "main.go", "serve", "--help").CombinedOutput()
+	if err != nil {
+		t.Fatalf("single-file startup failed: %v\n%s", err, output)
+	}
+}
 
 func TestTestLoginUserID(t *testing.T) {
 	tests := []struct {

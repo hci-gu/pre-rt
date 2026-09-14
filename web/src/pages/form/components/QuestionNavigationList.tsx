@@ -15,13 +15,12 @@ import useQuestions from '../hooks/useQuestions'
 import { Separator } from '@/components/ui/separator'
 import { useAtom } from 'jotai'
 import { formPageAtom } from '../state'
-import { useWatch } from 'react-hook-form'
 
 const stripHtml = (html: string) => {
   const text =
     new DOMParser()
-    .parseFromString(html, 'text/html')
-    .documentElement.textContent ?? ''
+      .parseFromString(html, 'text/html')
+      .documentElement.textContent ?? ''
 
   return text
     .replace(/&nbsp;/g, ' ')
@@ -30,21 +29,6 @@ const stripHtml = (html: string) => {
     .trim()
 }
 
-const isFollowupQuestion = (id: string) =>
-  id.startsWith('followup_') || id.split('_').length > 1
-
-const DAILY_FORM_ID = 'sdzkpd49ndccf5b'
-const DAILY_NAVIGATION_QUESTION_IDS = [
-  'v3pcgtlpz9w3oh1',
-  'lf5ya5abfuyb5uo',
-  'mnp346hxbzcvy48',
-  '1ztexj9r49nliqc',
-  'yeea9whxqv2c1kq',
-  '35loke6slz37910',
-  'z39l2ubdri1evdx',
-  'xxye1so1puvkwqd',
-]
-
 const QuestionNavigationList = ({
   questionnaire,
 }: {
@@ -52,14 +36,6 @@ const QuestionNavigationList = ({
 }) => {
   const questions = useQuestions(questionnaire)
   const [currentPage, setCurrentPage] = useAtom(formPageAtom)
-  useWatch()
-  let hasRenderedFollowupHeading = false
-  const navigationQuestions =
-    questionnaire.id === DAILY_FORM_ID
-      ? DAILY_NAVIGATION_QUESTION_IDS.map((id) =>
-        questionnaire.questions.find((question) => question.id === id)
-      ).filter(Boolean)
-      : questions
 
   return (
     <Dialog>
@@ -90,36 +66,9 @@ const QuestionNavigationList = ({
           data-question-navigation-scroll
         >
           <ul className="min-w-0 space-y-2 pr-2 text-foreground">
-            {questionnaire.id === DAILY_FORM_ID && (
-              <li className="px-3 pt-5 text-lg font-black text-foreground">
-                Användning av vaginalstav
-              </li>
-            )}
-            {navigationQuestions.map((question, index) => {
-              if (!question) return null
-
-              const visibleIndex = questions.findIndex(
-                (visibleQuestion) =>
-                  visibleQuestion.id === question.id ||
-                  visibleQuestion.id.endsWith(`_${question.id}`)
-              )
-              const canNavigate = visibleIndex !== -1
-              const disabled = false
+            {questions.map((question, index) => {
               const text = stripHtml(question.text)
-              const isFollowup = isFollowupQuestion(question.id)
-              const showFollowupHeading =
-                questionnaire.id === DAILY_FORM_ID
-                  ? index === 2
-                  : isFollowup && !hasRenderedFollowupHeading
-              const isSelected = visibleIndex === currentPage
-              const displayNumber =
-                questionnaire.id === DAILY_FORM_ID
-                  ? index + 1
-                  : question.number
-
-              if (showFollowupHeading) {
-                hasRenderedFollowupHeading = true
-              }
+              const isSelected = index === currentPage
 
               if (question.type === 'section') {
                 return (
@@ -132,41 +81,27 @@ const QuestionNavigationList = ({
                 )
               }
 
-              const row = (
+              return (
                 <li
                   className="min-w-0"
                   key={`QuestionNavigator_${question.id}`}
                 >
-                  {showFollowupHeading && (
-                    <div className="px-3 pb-2 pt-5 text-lg font-black text-foreground">
-                      Följdfrågor
-                    </div>
-                  )}
-                  <Button
-                    type="button"
-                    disabled={disabled}
-                    variant="link"
-                    className={cn(
-                      'h-auto w-full min-w-0 max-w-full justify-start overflow-hidden rounded-xl px-3 py-2 text-left text-base font-bold text-foreground hover:no-underline disabled:cursor-not-allowed disabled:opacity-40',
-                      isSelected && 'bg-study-header'
-                    )}
-                    onClick={() => {
-                      if (canNavigate) setCurrentPage(visibleIndex)
-                    }}
-                  >
-                    <span className="mr-2 shrink-0">{displayNumber}.</span>
-                    <span className="min-w-0 flex-1 truncate">{text}</span>
-                  </Button>
+                  <DialogClose asChild>
+                    <Button
+                      type="button"
+                      variant="link"
+                      className={cn(
+                        'h-auto w-full min-w-0 max-w-full justify-start overflow-hidden rounded-xl px-3 py-2 text-left text-base font-bold text-foreground hover:no-underline',
+                        isSelected && 'bg-study-header'
+                      )}
+                      onClick={() => setCurrentPage(index)}
+                    >
+                      <span className="mr-2 shrink-0">{question.number}.</span>
+                      <span className="min-w-0 flex-1 truncate">{text}</span>
+                    </Button>
+                  </DialogClose>
                   <Separator className="mt-2" />
                 </li>
-              )
-
-              if (disabled) return row
-
-              return (
-                <DialogClose asChild key={`QuestionNavigator_${question.id}`}>
-                  {row}
-                </DialogClose>
               )
             })}
           </ul>

@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Questionnaire, questionnairesAtom, useAnswers } from '@/state'
+import { Questionnaire, questionnairesAtom, studySettingsAtom, useAnswers } from '@/state'
 import { useAtomValue } from 'jotai'
 import { useNavigate } from 'react-router-dom'
 import { startTransition } from 'react'
 
 const DailyQuestionnaireCTA = () => {
+  const { dailyQuestionnaire } = useAtomValue(studySettingsAtom)
   const navigate = useNavigate()
 
   return (
@@ -14,7 +15,7 @@ const DailyQuestionnaireCTA = () => {
         className="w-full py-8 mb-8 flex flex-col gap-4"
         onClick={() => {
           startTransition(() => {
-            navigate(`/forms/sdzkpd49ndccf5b`)
+            navigate(`/forms/${dailyQuestionnaire}`)
           })
         }}
       >
@@ -30,11 +31,12 @@ const QuestionnaireCard = ({
   questionaire: Questionnaire
 }) => {
   const answers = useAnswers(questionaire.id)
+  const { dailyQuestionnaire } = useAtomValue(studySettingsAtom)
   const navigate = useNavigate()
 
   const answered = questionaire.occurrence == 'once' && answers.length > 0
 
-  if (questionaire.id === 'sdzkpd49ndccf5b') {
+  if (questionaire.id === dailyQuestionnaire) {
     return <DailyQuestionnaireCTA />
   }
 

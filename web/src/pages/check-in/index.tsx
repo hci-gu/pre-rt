@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useAtomValue } from 'jotai'
-import { useAnswers, userDataAtom } from '@/state'
+import { studySettingsAtom, useAnswers, userDataAtom } from '@/state'
 import { cn } from '@/lib/utils'
 import { isSameDay } from '@/utils'
 import registrationArtMobile from '@/assets/redesign/dashboard-cards/registration-card-square--p64.svg'
@@ -11,9 +11,6 @@ import cloudsArt from '@/assets/redesign/dashboard-cards/clouds-card-pink-wide--
 import flagArtMobile from '@/assets/redesign/dashboard-cards/flag-card-blue-alt-wide--p77.svg'
 import flagArt from '@/assets/redesign/dashboard-cards/flag-card-blue-wide--p73.svg'
 import successIcon from '@/assets/redesign/status/success-check-circle--p55.svg'
-
-const DAILY_FORM_ID = 'sdzkpd49ndccf5b'
-const TREATMENT_END_FORM_ID = 'p8ow7xj8h4uuv43'
 
 type CheckInCardProps = {
   title: string
@@ -101,9 +98,10 @@ function CheckInCard({
 }
 
 export default function CheckInPage() {
+  const { dailyQuestionnaire, treatmentEndQuestionnaire } = useAtomValue(studySettingsAtom)
   const user = useAtomValue(userDataAtom)
-  const dailyAnswers = useAnswers(DAILY_FORM_ID)
-  const treatmentEndAnswers = useAnswers(TREATMENT_END_FORM_ID)
+  const dailyAnswers = useAnswers(dailyQuestionnaire)
+  const treatmentEndAnswers = useAnswers(treatmentEndQuestionnaire)
   const treatmentStart = user?.treatmentStart
   const treatmentStartLabel = treatmentStart
     ? treatmentStart.toLocaleDateString('sv-SE')
@@ -137,7 +135,7 @@ export default function CheckInPage() {
       >
         <CheckInCard
           title="Fyll i formulär - idag"
-          href={`/forms/${DAILY_FORM_ID}`}
+          href={`/forms/${dailyQuestionnaire}`}
           mobileArt={registrationArtMobile}
           art={registrationArt}
           complete={dailyComplete}
@@ -145,7 +143,7 @@ export default function CheckInPage() {
         />
         <CheckInCard
           title="Fyll i formulär - annan dag"
-          href={`/forms/${DAILY_FORM_ID}/history`}
+          href={`/forms/${dailyQuestionnaire}/history`}
           mobileArt={calendarArtMobile}
           art={calendarArt}
           titleClassName="max-w-[84%]"
@@ -159,7 +157,7 @@ export default function CheckInPage() {
         />
         <CheckInCard
           title="Slutdatum strålbehandling:"
-          href={`/forms/${TREATMENT_END_FORM_ID}`}
+          href={`/forms/${treatmentEndQuestionnaire}`}
           mobileArt={flagArtMobile}
           art={flagArt}
           complete={treatmentEndComplete}

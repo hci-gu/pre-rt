@@ -165,6 +165,28 @@
   max-width: 100%;
 }
 
+.resource-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.resource-content picture,
+.resource-content picture img {
+  display: block;
+  width: 100%;
+}
+
+.resource-content .resource-gallery {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .resource-content .resource-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 640px) {
   .resource-content iframe,
   .resource-content video,

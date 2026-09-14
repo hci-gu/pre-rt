@@ -1,5 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import { Fragment, ReactNode } from 'react'
+import { Fragment, ReactNode, Suspense } from 'react'
+import { useAtomValue } from 'jotai'
+import { resourceCollectionAtom } from '@/state'
 import preRtLogo from '@/assets/redesign/logos/pre-rt-logo--p56.svg'
 import guSeal from '@/assets/redesign/logos/gothenburg-university-seal--p57.svg'
 import { cn } from '@/lib/utils'
@@ -31,23 +33,17 @@ const headerItemsForPath = (pathname: string): BreadcrumbItemType[] => {
   if (pathname.startsWith('/about')) {
     return [{ label: 'Start', href: '/' }, { label: 'Om studien' }]
   }
+  if (pathname.startsWith('/after-treatment')) {
+    return [{ label: 'Start', href: '/' }, { label: 'Efter strålbehandlingen' }]
+  }
   if (pathname === '/faq') {
     return [{ label: 'Start', href: '/' }, { label: 'Frågor och svar' }]
   }
   if (pathname.startsWith('/faq/')) {
-    const collectionTitleById: Record<string, string> = {
-      '85071a5innq3o43': 'Om strålbehandling och biverkningar',
-      '1ei3zjui10q8q91': 'Användning av vaginalstav',
-      '94ze51rc8dz5oh6': 'Om sexuell hälsa',
-      '23s6oyiql5gc9qi': 'Om intimvård',
-      '7d5griw67n84z36': 'Om våld',
-    }
-    const collectionId = pathname.split('/').filter(Boolean)[1]
-
     return [
       { label: 'Start', href: '/' },
       { label: 'Frågor och svar', href: '/faq' },
-      { label: collectionTitleById[collectionId] ?? 'Frågor och svar' },
+      { label: pathname === '/faq/mer' ? 'Om du vill veta mer' : 'Frågor och svar' },
     ]
   }
   if (pathname.startsWith('/profile')) {
@@ -125,6 +121,17 @@ function StudyBreadcrumbs({ items }: { items: BreadcrumbItemType[] }) {
   )
 }
 
+function FaqBreadcrumbs({ collectionId }: { collectionId: string }) {
+  const collection = useAtomValue(resourceCollectionAtom(collectionId))
+  return (
+    <StudyBreadcrumbs items={[
+      { label: 'Start', href: '/' },
+      { label: 'Frågor och svar', href: '/faq' },
+      { label: collection?.pageTitle || collection?.name || 'Frågor och svar' },
+    ]} />
+  )
+}
+
 export function StudyAppShell({
   children,
   breadcrumbs = [],
@@ -135,6 +142,10 @@ export function StudyAppShell({
     ? breadcrumbs
     : headerItemsForPath(location.pathname)
   const isHome = location.pathname === '/'
+  const faqCollectionId = !breadcrumbs.length &&
+    location.pathname.startsWith('/faq/') && location.pathname !== '/faq/mer'
+      ? location.pathname.split('/')[2]
+      : undefined
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -160,6 +171,10 @@ export function StudyAppShell({
             <h1 className="mx-auto text-3xl font-black leading-none text-foreground md:text-4xl">
               {headerItems[0]?.label}
             </h1>
+          ) : faqCollectionId ? (
+            <Suspense fallback={<StudyBreadcrumbs items={headerItems} />}>
+              <FaqBreadcrumbs collectionId={faqCollectionId} />
+            </Suspense>
           ) : (
             <StudyBreadcrumbs items={headerItems} />
           )}

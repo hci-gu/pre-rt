@@ -15,11 +15,13 @@ import FormPage from './pages/form/index.tsx'
 import ProfilePage from './pages/profile/index.tsx'
 import FormHistoryPage from './pages/form/history/index.tsx'
 import AboutPage from './pages/about/index.tsx'
+import AfterTreatmentPage from './pages/after-treatment/index.tsx'
 import CheckInPage from './pages/check-in/index.tsx'
 import FormSuccessPage from './pages/form/success.tsx'
 import FaqPage from './pages/faq/index.tsx'
 import FaqMorePage from './pages/faq/more.tsx'
 import FaqResourcePage from './pages/faq/resource.tsx'
+import StudySettingsGate from './components/study-settings-gate.tsx'
 
 const WithAuthLayout = ({ children }: { children: ReactNode }) => {
   const auth = useAtomValue(authAtom)
@@ -39,7 +41,7 @@ const router = createBrowserRouter([
         path: '',
         element: (
           <WithAuthLayout>
-            <HomePage />
+            <StudySettingsGate><HomePage /></StudySettingsGate>
           </WithAuthLayout>
         ),
       },
@@ -55,7 +57,7 @@ const router = createBrowserRouter([
         path: 'check-in',
         element: (
           <WithAuthLayout>
-            <CheckInPage />
+            <StudySettingsGate><CheckInPage /></StudySettingsGate>
           </WithAuthLayout>
         ),
       },
@@ -119,7 +121,15 @@ const router = createBrowserRouter([
         path: 'about',
         element: (
           <WithAuthLayout>
-            <AboutPage />
+            <StudySettingsGate><AboutPage /></StudySettingsGate>
+          </WithAuthLayout>
+        ),
+      },
+      {
+        path: 'after-treatment',
+        element: (
+          <WithAuthLayout>
+            <AfterTreatmentPage />
           </WithAuthLayout>
         ),
       },

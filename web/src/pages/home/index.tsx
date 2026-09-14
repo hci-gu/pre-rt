@@ -1,7 +1,7 @@
 import { StudyTaskCard } from '@/components/study-task-card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { authAtom, pb, useAnswers, userDataAtom } from '@/state'
+import { authAtom, pb, studySettingsAtom, useAnswers, userDataAtom } from '@/state'
 import { useAtomValue } from 'jotai'
 import { useEffect, useState } from 'react'
 import registrationArtSquare from '@/assets/redesign/dashboard-cards/registration-card-square--p64.svg'
@@ -17,12 +17,11 @@ import dailyFormArtWide from '@/assets/redesign/dashboard-cards/daily-form-card-
 import afterTreatmentArtSquare from '@/assets/redesign/dashboard-cards/after-treatment-card-square--p69.svg'
 import afterTreatmentArtWide from '@/assets/redesign/dashboard-cards/after-treatment-card-wide--p63.svg'
 
-const BASELINE_FORM_ID = 'u6917wm639q1d01'
-
 function HomePage() {
+  const { baselineQuestionnaire } = useAtomValue(studySettingsAtom)
   const user = useAtomValue(userDataAtom)
   const auth = useAtomValue(authAtom)
-  const baselineAnswers = useAnswers(BASELINE_FORM_ID)
+  const baselineAnswers = useAnswers(baselineQuestionnaire)
   const baselineAnswered = baselineAnswers.length > 0
   const treatmentStart = user?.treatmentStart
   const [isTestAccount, setIsTestAccount] = useState(false)
@@ -104,7 +103,7 @@ function HomePage() {
           illustration={initialQuestionnaireArtSquare}
           desktopIllustration={initialQuestionnaireArtWide}
           complete={baselineAnswered}
-          href={baselineAnswered ? undefined : `/forms/${BASELINE_FORM_ID}`}
+          href={baselineAnswered ? undefined : `/forms/${baselineQuestionnaire}`}
           titleClassName="max-w-[70%]"
         />
 
@@ -134,7 +133,7 @@ function HomePage() {
           title="Efter strålbehandlingen"
           illustration={afterTreatmentArtSquare}
           desktopIllustration={afterTreatmentArtWide}
-          disabled
+          href="/after-treatment"
           titleClassName="max-w-[76%] text-foreground"
         />
       </section>

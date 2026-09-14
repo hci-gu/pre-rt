@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { userDataAtom } from '@/state'
+import { studySettingsAtom, userDataAtom } from '@/state'
 import { CheckCircledIcon, ClockIcon } from '@radix-ui/react-icons'
 import { startTransition } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -7,6 +7,7 @@ import HomeTodoItem from './HomeTodoItem'
 import { useAtomValue } from 'jotai'
 
 function InitialForm() {
+  const { dailyQuestionnaire } = useAtomValue(studySettingsAtom)
   const navigate = useNavigate()
   const user = useAtomValue(userDataAtom)
 
@@ -22,7 +23,7 @@ function InitialForm() {
         action={
           <Button
             onClick={() => {
-              startTransition(() => navigate(`/forms/sdzkpd49ndccf5b/history`))
+              startTransition(() => navigate(`/forms/${dailyQuestionnaire}/history`))
             }}
           >
             Se schema
