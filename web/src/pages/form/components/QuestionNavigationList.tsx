@@ -3,18 +3,19 @@ import { cn } from '@/lib/utils'
 import {
   Dialog,
   DialogClose,
-  DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { Questionnaire } from '@/state'
-import { ListBulletIcon } from '@radix-ui/react-icons'
+import { ArrowLeftIcon, ListBulletIcon } from '@radix-ui/react-icons'
 import useQuestions from '../hooks/useQuestions'
 import { Separator } from '@/components/ui/separator'
 import { useAtom } from 'jotai'
 import { formPageAtom } from '../state'
+import QuestionnaireDialogContent from './QuestionnaireDialogContent'
+import { useNavigate } from 'react-router-dom'
 
 const stripHtml = (html: string) => {
   const text =
@@ -35,6 +36,7 @@ const QuestionNavigationList = ({
   questionnaire: Questionnaire
 }) => {
   const questions = useQuestions(questionnaire)
+  const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useAtom(formPageAtom)
 
   return (
@@ -43,16 +45,23 @@ const QuestionNavigationList = ({
         <Button
           type="button"
           variant="ghost"
-          className="fixed left-6 top-0 z-50 h-20 gap-3 bg-transparent px-0 text-base font-bold leading-none text-foreground hover:bg-white/30 lg:left-4 lg:gap-2 lg:px-4 lg:text-sm"
+          className="questionnaire-menu-trigger bg-transparent font-bold leading-tight text-foreground hover:bg-white/30"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-study-teal-dark text-white lg:h-8 lg:w-8">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-study-teal-dark text-white">
             <ListBulletIcon className="h-7 w-7 lg:h-5 lg:w-5" />
           </span>
           Se alla frågor
         </Button>
       </DialogTrigger>
-      <DialogContent className="bottom-3 top-auto flex h-[calc(100vh-5.25rem)] w-[calc(100vw-1.25rem)] max-w-md translate-y-0 flex-col overflow-hidden rounded-xl border-0 bg-background px-4 py-8 text-foreground sm:px-6 md:bottom-auto md:top-1/2 md:h-[min(42rem,calc(100vh-7rem))] md:w-[28.75rem] md:-translate-y-1/2">
-        <DialogHeader className="mb-4 flex shrink-0 flex-col items-center gap-2 text-center">
+      <QuestionnaireDialogContent leadingAction={
+        <DialogClose asChild>
+          <Button type="button" variant="ghost" onClick={() => navigate(-1)}>
+            <ArrowLeftIcon aria-hidden="true" className="mr-2 h-4 w-4 shrink-0" />
+            <span className="min-w-0">Lämna formuläret</span>
+          </Button>
+        </DialogClose>
+      }>
+        <DialogHeader className="mb-4 flex flex-col items-center gap-2 px-8 text-center">
           <DialogTitle className="text-3xl font-black leading-tight text-foreground">
             Frågor
           </DialogTitle>
@@ -62,7 +71,7 @@ const QuestionNavigationList = ({
           </DialogDescription>
         </DialogHeader>
         <div
-          className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden"
+          className="min-w-0"
           data-question-navigation-scroll
         >
           <ul className="min-w-0 space-y-2 pr-2 text-foreground">
@@ -97,7 +106,7 @@ const QuestionNavigationList = ({
                       onClick={() => setCurrentPage(index)}
                     >
                       <span className="mr-2 shrink-0">{question.number}.</span>
-                      <span className="min-w-0 flex-1 truncate">{text}</span>
+                      <span className="min-w-0 flex-1 whitespace-normal [overflow-wrap:anywhere]">{text}</span>
                     </Button>
                   </DialogClose>
                   <Separator className="mt-2" />
@@ -106,7 +115,7 @@ const QuestionNavigationList = ({
             })}
           </ul>
         </div>
-      </DialogContent>
+      </QuestionnaireDialogContent>
     </Dialog>
   )
 }

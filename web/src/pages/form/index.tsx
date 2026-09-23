@@ -22,7 +22,6 @@ import {
 } from '@radix-ui/react-icons'
 import { useToast } from '@/hooks/use-toast'
 import useQuestions, { useCurrentSection } from './hooks/useQuestions'
-import ReactPageScroller from 'react-page-scroller'
 import { answeredUpTo, canProceedAtom, formPageAtom } from './state'
 import { questionnaireAnswered } from '@/utils'
 import useFormStateWithCache, {
@@ -34,6 +33,9 @@ import useFormStateWithCache, {
 import AbortButton from '../../components/ui/AbortButton'
 import QuestionNavigationList from './components/QuestionNavigationList'
 import { QUESTIONNAIRE_FOV_ID, QUESTIONNAIRE_PCL5_ID } from '@/constants'
+import AdaptiveQuestionPanel from './components/AdaptiveQuestionPanel'
+import useVisualViewport from './hooks/useVisualViewport'
+import './questionnaire.css'
 
 const ProgressBar = ({ questionnaire }: { questionnaire: Questionnaire }) => {
   const questions = useQuestions(questionnaire)
@@ -47,42 +49,21 @@ const ProgressBar = ({ questionnaire }: { questionnaire: Questionnaire }) => {
   const scaleX = interpolate([0, Math.max(totalQuestions - 1, 1)], [0.01, 1])
   const showProgress = page >= 0
 
-  return (
-    <>
-      <div className="fixed left-0 top-0 z-40 h-20 w-screen bg-study-header" />
-      {showProgress && (
-        <>
-          <motion.div
-            className="fixed left-1/2 top-28 z-40 h-4 w-64 -translate-x-1/2 overflow-hidden rounded-full bg-primary"
-            data-testid="questionnaire-progress-bar"
-            role="progressbar"
-            aria-label="Framsteg"
-            aria-valuemin={1}
-            aria-valuemax={totalQuestions}
-            aria-valuenow={Math.min(
-              Math.max(currentQuestionNumber, 1),
-              totalQuestions
-            )}
-          >
-            <motion.div
-              className="h-full rounded-full bg-study-teal-dark"
-              animate={{ scaleX: scaleX(Math.max(currentQuestionNumber - 1, 0)) }}
-              transition={{ type: 'spring', duration: 0.4 }}
-              style={{ originX: 0 }}
-            />
-          </motion.div>
-          <motion.span
-            className="fixed right-7 top-6 z-50 text-lg font-black text-foreground"
-            data-testid="questionnaire-progress"
-            aria-label="Framsteg"
-          >
-            {Math.min(Math.max(currentQuestionNumber, 1), totalQuestions)}/
-            {totalQuestions}
-          </motion.span>
-        </>
-      )}
-    </>
-  )
+  return showProgress ? (
+    <div className="questionnaire-progress">
+      <span className="text-base font-black" data-testid="questionnaire-progress" aria-label="Framsteg">
+        {Math.min(Math.max(currentQuestionNumber, 1), totalQuestions)}/{totalQuestions}
+      </span>
+      <div className="h-2 w-full overflow-hidden rounded-full bg-primary"
+        data-testid="questionnaire-progress-bar" role="progressbar" aria-label="Framsteg"
+        aria-valuemin={0} aria-valuemax={totalQuestions}
+        aria-valuenow={Math.min(currentQuestionNumber, totalQuestions)}>
+        <motion.div className="h-full rounded-full bg-study-teal-dark"
+          animate={{ scaleX: scaleX(Math.max(currentQuestionNumber - 1, 0)) }}
+          transition={{ duration: 0.2 }} style={{ originX: 0 }} />
+      </div>
+    </div>
+  ) : null
 }
 
 const NavigationButtons = ({
@@ -107,7 +88,7 @@ const NavigationButtons = ({
   )
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex space-x-2">
+    <div className="questionnaire-navigation">
       <Button
         className="h-9 w-9 rounded-lg bg-study-coral p-0 text-white shadow-md hover:bg-study-coral/90"
         disabled={page === 0}
@@ -157,46 +138,28 @@ const Questions = ({
   loading: boolean
   onSubmit: (data: FieldValues) => void
 }) => {
-  const [currentPage, setCurrentPage] = useAtom(formPageAtom)
+  const currentPage = useAtomValue(formPageAtom)
   const questions = useQuestions(questionnaire)
   const answers = useWatch()
-
-  const handlePageChange = (page: number) => {
-    if (currentPage === -1 && page === 0) return
-    setCurrentPage(page)
-  }
+  const canProceed = useAtomValue(canProceedAtom({ questions, answers }))
+  const question = questions[currentPage]
 
   return (
-    <div
-      className="h-screen w-screen bg-background"
-      style={{ position: 'absolute', overflow: 'hidden' }}
-      data-testid="questionnaire-pages"
-      data-current-page={currentPage}
-      data-question-count={questions.length}
-    >
-      <ReactPageScroller
-        containerHeight={'100vh'}
-        pageOnChange={handlePageChange}
-        customPageNumber={currentPage ?? 0}
-        transitionTimingFunction="ease-in-out"
-        animationTimer={200}
-        animationTimerBuffer={200}
-      >
-        {questions.map((q, i) => (
-          <QuestionSelector key={`Question_${q.id}_${i}`} question={q} />
-        ))}
-        <div className="flex h-full w-full items-center justify-center bg-background px-4 pt-24">
-          <Button
-            type="submit"
-            disabled={loading}
-            data-testid="questionnaire-submit"
-            onClick={() => onSubmit(answers)}
-          >
-            {loading && <UpdateIcon className="animate-spin mr-2" />}
-            Skicka in
-          </Button>
-        </div>
-      </ReactPageScroller>
+    <div className="questionnaire-pages" data-testid="questionnaire-pages"
+      data-current-page={currentPage} data-question-count={questions.length}>
+      {question ? (
+        <QuestionSelector key={question.id} question={question} canProceed={canProceed} />
+      ) : (
+        <AdaptiveQuestionPanel>
+          <div className="question-card">
+            <Button type="submit" disabled={loading} data-testid="questionnaire-submit"
+              onClick={() => onSubmit(answers)}>
+              {loading && <UpdateIcon className="animate-spin mr-2" />}
+              Skicka in
+            </Button>
+          </div>
+        </AdaptiveQuestionPanel>
+      )}
     </div>
   )
 }
@@ -213,14 +176,14 @@ const QuestionnaireIntro = ({
       : questionnaire.description
 
   return (
-    <section className="flex min-h-screen w-screen items-start justify-center bg-background px-4 pt-[12.5rem]">
-      <div className="flex min-h-[21.875rem] w-full flex-col justify-center bg-card px-6 py-10 text-center shadow-sm sm:px-16 md:max-w-[38.75rem]">
-        <h1 className="text-3xl font-black text-foreground">
+    <AdaptiveQuestionPanel>
+      <div className="question-card">
+        <h1 className="question-heading">
           {questionnaire.name}
         </h1>
         <div className="my-6 h-px w-full bg-foreground" />
         <div
-          className="resource-content mx-auto max-w-xl text-lg font-bold leading-snug text-foreground [&_p]:mb-4"
+          className="question-text resource-content [&_p]:mb-4"
           dangerouslySetInnerHTML={{ __html: introHtml }}
         />
         <Button
@@ -234,7 +197,7 @@ const QuestionnaireIntro = ({
           Gå vidare
         </Button>
       </div>
-    </section>
+    </AdaptiveQuestionPanel>
   )
 }
 
@@ -252,8 +215,8 @@ const SectionHandler = ({
   ) {
     return (
       <>
-        <div className="fixed top-4 md:top-auto md:bottom-4 md:left-4 p-2">
-          <p className="text-xs text-center pb-2 invisible md:visible">
+        <div className="questionnaire-attribution">
+          <p className="sr-only">
             Skapat av
           </p>
           <img
@@ -262,7 +225,7 @@ const SectionHandler = ({
             className="h-6 md:h-8"
           />
         </div>
-        <AbortButton questionnaire={questionnaire} />
+        <AbortButton questionnaire={questionnaire} inline />
       </>
     )
   }
@@ -287,6 +250,7 @@ const LoadedForm = ({
   questionnaire: Questionnaire
   formSchema: QuestionnaireFormSchema
 }) => {
+  useVisualViewport()
   const navigate = useNavigate()
   const { toast } = useToast()
 
@@ -324,14 +288,15 @@ const LoadedForm = ({
   return (
     <Form {...form}>
       <form
-        className="min-h-screen bg-background text-foreground"
+        className="questionnaire-shell bg-background text-foreground"
         onSubmit={(e) => e.preventDefault()}
       >
         <InitiallyScrollToLastAnsweredQuestion questionnaire={questionnaire} />
         <SyncFormStateToLocalStorage questionnaire={questionnaire} />
-        <ProgressBar questionnaire={questionnaire} />
-        <QuestionNavigationList questionnaire={questionnaire} />
-        <SectionHandler questionnaire={questionnaire} />
+        <header className="questionnaire-header">
+          <QuestionNavigationList questionnaire={questionnaire} />
+          <ProgressBar questionnaire={questionnaire} />
+        </header>
         {page < 0 ? (
           <QuestionnaireIntro questionnaire={questionnaire} />
         ) : (
@@ -341,7 +306,10 @@ const LoadedForm = ({
             onSubmit={onSubmit}
           />
         )}
-        {page >= 0 && <NavigationButtons questionnaire={questionnaire} />}
+        <footer className="questionnaire-footer">
+          <SectionHandler questionnaire={questionnaire} />
+          {page >= 0 && <NavigationButtons questionnaire={questionnaire} />}
+        </footer>
       </form>
     </Form>
   )

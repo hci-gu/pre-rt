@@ -46,7 +46,7 @@ export function DatePicker({
           type="button"
           variant="outline"
           className={cn(
-            'w-[240px] justify-start text-left font-normal',
+            'h-auto min-h-11 w-[240px] max-w-full justify-start whitespace-normal text-left text-base font-normal',
             !selectedDate && 'text-muted-foreground'
           )}
         >
@@ -58,7 +58,7 @@ export function DatePicker({
           )}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0" align="start">
+      <PopoverContent className="w-auto max-w-[calc(100vw-1rem)] overflow-auto p-0" style={{ maxHeight: 'var(--radix-popover-content-available-height)' }} collisionPadding={8} align="start">
         <Calendar
           mode="single"
           selected={selectedDate}

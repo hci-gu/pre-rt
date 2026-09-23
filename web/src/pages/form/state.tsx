@@ -4,6 +4,15 @@ import { atomFamily } from 'jotai/utils'
 
 export const formPageAtom = atom(-1)
 
+// Some single-choice questions also allow a typed amount instead of an
+// immediately complete answer. Keep a manual path available for those too.
+export const needsContinueButton = (question: Question) =>
+  question.type === 'multipleChoice' ||
+  question.type === 'text' ||
+  question.type === 'number' ||
+  (question.type === 'singleChoice' &&
+    Boolean(question.options?.value?.some(option => option.includes('{AMOUNT}'))))
+
 export const getAnsweredUpTo = ({
   questions,
   answers,

@@ -1,76 +1,35 @@
 import { Button } from '@/components/ui/button'
 import successIcon from '@/assets/redesign/status/success-check-circle--p55.svg'
 import { Link } from 'react-router-dom'
-import {
-  ChevronDownIcon,
-  ChevronUpIcon,
-  ListBulletIcon,
-} from '@radix-ui/react-icons'
-import { PinBottomIcon } from '@radix-ui/react-icons'
+import AdaptiveQuestionPanel from './components/AdaptiveQuestionPanel'
+import useVisualViewport from './hooks/useVisualViewport'
+import './questionnaire.css'
 
 export default function FormSuccessPage() {
+  useVisualViewport()
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <div className="fixed left-0 top-0 z-40 flex h-20 w-screen items-center justify-between bg-study-header px-6 lg:h-[2.8125rem] lg:px-4">
-        <div className="flex items-center gap-4 text-base font-bold lg:gap-2 lg:text-sm">
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-study-teal-dark text-white lg:h-8 lg:w-8">
-            <ListBulletIcon className="h-7 w-7 lg:h-5 lg:w-5" />
-          </span>
-          Se alla frågor
-        </div>
-      </div>
-
-      <section className="flex min-h-screen w-full items-start justify-center px-0 pt-44 sm:px-8 lg:px-16 lg:pt-[10.5rem]">
-        <div className="min-h-[24rem] w-full max-w-[38.75rem] bg-white px-6 py-10 text-center sm:px-12">
-          <h1 className="text-3xl font-black leading-tight text-foreground">
-            Tack för ditt svar!
-          </h1>
+    <main className="questionnaire-shell bg-background text-foreground">
+      <header className="questionnaire-header">
+        <p className="p-2 text-base font-bold">Formuläret är inskickat</p>
+      </header>
+      <AdaptiveQuestionPanel>
+        <div className="question-card">
+          <h1 className="question-heading">Tack för ditt svar!</h1>
           <div className="my-5 h-px w-full bg-foreground" />
-          <div className="flex flex-col items-center gap-5">
-            <p className="text-xl font-black">Din rapport är nu inskickad.</p>
-            <img
-              src={successIcon}
-              alt=""
-              aria-hidden="true"
-              className="h-20 w-20"
-            />
-            <p className="max-w-lg text-xl font-black leading-snug">
+          <div className="question-heading-group">
+            <p className="question-text">Din rapport är nu inskickad.</p>
+            <img src={successIcon} alt="" aria-hidden="true" className="h-16 w-16" />
+            <p className="question-text">
               Tack för att du rapporterat in din dagliga användning. Dina svar
               bidrar till viktig kunskap inom studien.
             </p>
-            <Button asChild className="min-h-12 rounded-xl bg-primary px-6 text-base font-black text-foreground hover:bg-study-teal-dark hover:text-white">
+            <Button asChild className="question-action min-h-12 rounded-xl bg-primary px-6 text-base font-black text-foreground hover:bg-study-teal-dark hover:text-white">
               <Link to="/check-in">Stäng formuläret</Link>
             </Button>
           </div>
         </div>
-      </section>
-
-      <div className="fixed bottom-4 right-4 z-50 flex space-x-2">
-        <Button
-          type="button"
-          disabled
-          className="h-9 w-9 rounded-lg bg-study-coral p-0 text-white shadow-md disabled:opacity-100"
-          aria-label="Föregående fråga"
-        >
-          <ChevronUpIcon />
-        </Button>
-        <Button
-          type="button"
-          disabled
-          className="h-9 w-9 rounded-lg bg-study-header p-0 text-white shadow-md disabled:opacity-50"
-          aria-label="Nästa fråga"
-        >
-          <ChevronDownIcon />
-        </Button>
-        <Button
-          type="button"
-          disabled
-          className="h-9 w-9 rounded-lg bg-study-header p-0 text-white shadow-md disabled:opacity-50"
-          aria-label="Sista frågan"
-        >
-          <PinBottomIcon />
-        </Button>
-      </div>
+      </AdaptiveQuestionPanel>
+      <footer className="questionnaire-footer" />
     </main>
   )
 }

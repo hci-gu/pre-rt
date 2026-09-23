@@ -5,17 +5,16 @@ import {
 } from '@/state'
 import {
   Dialog,
-  DialogClose,
-  DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
-import { Cross1Icon, InfoCircledIcon } from '@radix-ui/react-icons'
+import { InfoCircledIcon } from '@radix-ui/react-icons'
 import { Button } from '@/components/ui/button'
 import { useAtomValue } from 'jotai'
 import { Suspense } from 'react'
 import ResourceAccordion from './resourceCollection'
+import QuestionnaireDialogContent from '@/pages/form/components/QuestionnaireDialogContent'
 
 export function ResourceDrawer({
   resource,
@@ -37,28 +36,14 @@ export function ResourceDrawer({
           <InfoCircledIcon />
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-h-[90vh] w-[95vw] max-w-3xl overflow-hidden rounded-xl border-0 bg-white p-5 text-foreground sm:p-7">
+      <QuestionnaireDialogContent closeLabel="Stäng hjälp" aria-describedby={undefined} className="bg-white">
         <DialogHeader>
-          <div className="flex items-center justify-between">
-            <div className="h-9 w-9" />
-            <DialogTitle className="text-center text-2xl font-black leading-tight sm:text-3xl">
-              {title}
-            </DialogTitle>
-            <DialogClose asChild>
-              <Button
-                type="button"
-                variant="ghost"
-                size="icon"
-                className="text-foreground hover:bg-primary"
-                aria-label="Stäng hjälp"
-              >
-                <Cross1Icon />
-              </Button>
-            </DialogClose>
-          </div>
+          <DialogTitle className="min-w-0 text-center text-xl font-black leading-tight">
+            {title}
+          </DialogTitle>
           <div className="mt-3 h-px w-full bg-foreground" />
         </DialogHeader>
-        <div className="flex max-h-[74vh] flex-col items-center overflow-y-auto pt-4">
+        <div className="min-w-0 pt-4">
           {resource && <Resource resource={resource} />}
           {resourceCollection && (
             <div className="h-full w-full">
@@ -69,7 +54,7 @@ export function ResourceDrawer({
             </div>
           )}
         </div>
-      </DialogContent>
+      </QuestionnaireDialogContent>
     </Dialog>
   )
 }

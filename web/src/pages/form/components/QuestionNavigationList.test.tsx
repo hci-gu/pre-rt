@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { FormProvider, useForm } from 'react-hook-form'
 import type { ReactNode } from 'react'
+import { MemoryRouter } from 'react-router-dom'
 import type { Questionnaire } from '@/state'
 import QuestionNavigationList from './QuestionNavigationList'
 
@@ -38,13 +39,14 @@ describe('question menu follows the resolved questionnaire', () => {
       }
       function Form({ answer }: { answer: string }) {
         const form = useForm({ defaultValues: { gate: answer } })
-        return <FormProvider {...form}><QuestionNavigationList questionnaire={questionnaire} /></FormProvider>
+        return <MemoryRouter><FormProvider {...form}><QuestionNavigationList questionnaire={questionnaire} /></FormProvider></MemoryRouter>
       }
       const no = renderToStaticMarkup(<Form answer="Nej" />)
       expect(no).toContain('First no follow-up')
       expect(no).toContain('Second no follow-up')
       expect(no).not.toContain('Yes follow-up')
       expect(no).toContain('Stored section heading')
+      expect(no).toContain('Lämna formuläret')
       expect(no).toContain('Newly added question')
       expect(no.indexOf('First no follow-up')).toBeLessThan(no.indexOf('Second no follow-up'))
       expect(no).not.toContain('Användning av vaginalstav')

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { Question } from '@/state'
-import { getAnsweredUpTo, getCanProceed } from './state'
+import { getAnsweredUpTo, getCanProceed, needsContinueButton } from './state'
 
 const question = (id: string, type: Question['type']): Question => ({
   id,
@@ -12,6 +12,19 @@ const question = (id: string, type: Question['type']): Question => ({
 })
 
 describe('questionnaire navigation state helpers', () => {
+  it.each([
+    ['multipleChoice', true], ['text', true], ['number', true],
+    ['singleChoice', false], ['painScale', false], ['date', false], ['section', false],
+  ] as const)('shows a continue button for %s: %s', (type, expected) => {
+    expect(needsContinueButton(question('test', type))).toBe(expected)
+  })
+
+  it('provides a manual path for single-choice answers containing a typed amount', () => {
+    expect(needsContinueButton({
+      ...question('amount', 'singleChoice'),
+      options: { value: ['Inga', 'Använt {AMOUNT} gånger'], followup: [] },
+    })).toBe(true)
+  })
   const questions = [
     question('intro_text', 'text'),
     question('intro_section', 'section'),

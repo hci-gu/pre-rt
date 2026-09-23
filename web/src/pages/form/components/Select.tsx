@@ -20,18 +20,16 @@ const compareOptionValues = (str1: string, str2: string) => {
 }
 
 const chipClassName =
-  'flex min-h-14 min-w-20 max-w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-5 py-3 text-center text-base font-bold leading-tight text-foreground transition-colors duration-200 peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-card peer-disabled:cursor-not-allowed peer-disabled:opacity-40 peer-checked:bg-study-teal-dark peer-checked:text-white sm:min-w-24 sm:px-7'
+  'question-chip cursor-pointer rounded-xl bg-primary text-center font-bold text-foreground transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-card peer-disabled:cursor-not-allowed peer-disabled:opacity-40 peer-checked:bg-study-teal-dark peer-checked:text-white'
 
 const SelectFollowup = ({
   question,
   index,
   disabled,
-  dense = false,
 }: {
   question: Question
   index: number
   disabled: boolean
-  dense?: boolean
 }) => {
   const { control } = useFormContext()
   const id = `${question.id}_${index}`
@@ -48,15 +46,14 @@ const SelectFollowup = ({
           value={field.value}
           defaultValue={field.value}
           className={cn(
-            'flex flex-wrap justify-end leading-tight sm:leading-normal',
-            dense ? 'gap-1.5 sm:gap-2' : 'gap-2 sm:gap-3',
+            'question-choice-followups',
             disabled && 'opacity-25'
           )}
         >
           {options.map((option, index) => {
             return (
               <FormItem
-                className="flex items-center"
+                className="question-choice-item"
                 key={`${id}_${option}_${index}`}
               >
                 <FormControl>
@@ -66,6 +63,7 @@ const SelectFollowup = ({
                     value={option}
                     id={`${id}_${option}_${index}`}
                     className="peer sr-only"
+                    disabled={disabled}
                     onChange={() => {
                       if (disabled) return
                       field.onChange(option)
@@ -75,11 +73,7 @@ const SelectFollowup = ({
                 </FormControl>
                 <label
                   htmlFor={`${id}_${option}_${index}`}
-                  className={cn(
-                    chipClassName,
-                    dense &&
-                      'min-h-10 min-w-14 rounded-lg px-4 py-2 text-sm leading-snug sm:min-h-11 sm:min-w-16 sm:px-5 sm:py-2.5 sm:text-base'
-                  )}
+                  className={chipClassName}
                 >
                   {option}
                 </label>
@@ -128,7 +122,7 @@ const SelectNumericalInput = forwardRef<
       pattern="[0-9]*"
       min={0}
       placeholder="0"
-      className="mx-2 h-8 w-16 border-foreground bg-white text-center text-foreground"
+      className="mx-2 w-20 max-w-full shrink-0 border-foreground bg-white text-center text-foreground"
       disabled={disabled}
       value={value}
       onChange={(e) => {
@@ -145,13 +139,11 @@ export default function Select({
   field,
   onAnswer,
   optionInputRefs,
-  dense = false,
 }: {
   question: Question
   field: ControllerRenderProps<FieldValues, string>
   onAnswer: (value: unknown) => void
   optionInputRefs: React.MutableRefObject<(HTMLInputElement | null)[]>
-  dense?: boolean
 }) {
   const { control } = useFormContext()
   const options = question.options?.value ?? []
@@ -162,15 +154,14 @@ export default function Select({
   return (
     <RadioGroup
       name={question.id}
+      data-can-grid={stackOptions && !hasFollowupOptions}
       value={field.value}
       defaultValue={field.value}
       className={cn(
-        'flex max-w-full leading-tight sm:leading-normal',
-        dense && stackRows ? 'gap-2.5 sm:gap-3' : 'gap-3 sm:gap-4',
+        'question-choices flex',
         stackRows
           ? 'w-full flex-col items-stretch'
           : 'flex-wrap justify-center',
-        hasFollowupOptions && 'items-start'
       )}
     >
       {options.map((option, index) => {
@@ -244,16 +235,15 @@ export default function Select({
           <div
             key={`${question.id}_${option}_${index}`}
             className={cn(
-              'flex max-w-full items-center',
-              dense ? 'gap-3 sm:gap-4' : 'gap-4',
-              stackRows && 'w-full',
-              hasFollowupOptions ? 'justify-between' : 'justify-center'
+              'question-choice-row',
+              stackRows && 'w-full'
             )}
+            data-followups={hasFollowupOptions}
           >
             <FormItem
               className={cn(
-                'flex items-center',
-                stackOptions && !hasFollowupOptions && 'w-full'
+                'question-choice-item',
+                stackRows && 'w-full'
               )}
               key={`${question.id}_${option}_${index}`}
             >
@@ -274,16 +264,12 @@ export default function Select({
                 htmlFor={`${question.id}-option-${index}`}
                 className={cn(
                   chipClassName,
-                  stackOptions && !hasFollowupOptions && 'w-full',
-                  dense &&
-                    stackOptions &&
-                    'min-h-10 rounded-lg px-4 py-2 text-sm leading-snug sm:min-h-11 sm:px-5 sm:py-2.5 sm:text-base'
+                  stackRows && 'w-full'
                 )}
               >
                 {option.includes('{AMOUNT}') ? (
                   <>
-                    {option.split('{AMOUNT}')?.[0]}
-                    {option.split('{AMOUNT}')?.[1] && (
+                    <span>{option.split('{AMOUNT}')?.[0]}</span>
                       <SelectNumericalInput
                         initialValue={optionNumericValue}
                         ref={(el) => {
@@ -307,11 +293,10 @@ export default function Select({
                               )
                         }
                       />
-                    )}
-                    {option.split('{AMOUNT}')?.[1]}
+                    <span>{option.split('{AMOUNT}')?.[1]}</span>
                   </>
                 ) : (
-                  <p className="max-w-full break-words">
+                  <p>
                     {option.split('\n').map((line, i) => (
                       <span key={i}>
                         {line}
@@ -327,7 +312,6 @@ export default function Select({
                 question={question}
                 index={index}
                 disabled={!isChecked}
-                dense={dense}
               />
             )}
           </div>
