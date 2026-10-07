@@ -14,6 +14,9 @@ import { Button } from '@/components/ui/button'
 import { useAtomValue } from 'jotai'
 import { Suspense } from 'react'
 import ResourceAccordion from './resourceCollection'
+import ConnectedResourceContent from './resource-content/connected'
+import { audienceMatches } from './resource-content/model'
+import { sanitizeLegacyResourceHTML } from './resource-content/legacy-html'
 import QuestionnaireDialogContent from '@/pages/form/components/QuestionnaireDialogContent'
 
 export function ResourceDrawer({
@@ -22,6 +25,9 @@ export function ResourceDrawer({
 }:
   | { resource: ResourceType; resourceCollection?: undefined }
   | { resource?: undefined; resourceCollection: ResourceCollection }) {
+  const user = useAtomValue(userDataAtom)
+  const item = resource || resourceCollection
+  if (item?.archived || !audienceMatches(item?.content?.audience, user)) return null
   const title = resource?.title ?? resourceCollection!.name
 
   return (
@@ -92,6 +98,9 @@ const replaceTextForUserType = (description: string, type: string) => {
 export default function Resource({ resource }: { resource: ResourceType }) {
   const userData = useAtomValue(userDataAtom)
 
+  if (resource.archived || !audienceMatches(resource.content?.audience, userData)) return null
+  if (resource.content) return <Suspense fallback={<p>Laddar innehåll…</p>}><ConnectedResourceContent content={resource.content} bindings={resource.bindings} /></Suspense>
+
   const description = replaceTextForUserType(
     resource.description,
     userData?.type ?? ''
@@ -102,7 +111,7 @@ export default function Resource({ resource }: { resource: ResourceType }) {
       <div
         className="resource-content [&_a]:text-study-link-blue [&_a]:underline [&_a]:decoration-study-link-blue/60 [&_a]:underline-offset-2 [&_a]:hover:decoration-study-link-blue [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2 [&_p]:font-light [&_p]:text-base"
         dangerouslySetInnerHTML={{
-          __html: description,
+          __html: sanitizeLegacyResourceHTML(description),
         }}
       ></div>
     </Suspense>

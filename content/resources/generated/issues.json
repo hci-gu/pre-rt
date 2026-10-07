@@ -1,0 +1,268 @@
+[
+  {
+    "id": "a16e7bb5d52c620f2e7415194b7f864153e5c29fab079c691ca5ad0630b8d70a",
+    "code": "video-placeholder",
+    "message": "Video link pending; approved placeholder",
+    "source": {
+      "paragraph": 88,
+      "paraId": "6345D856"
+    },
+    "resource": "radiation.dry-mucosa",
+    "blocking": false,
+    "resolution": "",
+    "evidence": {
+      "asset": "fd6cf1b539a90b240983b0fe3b0e713aa564cd57bace1e3c57ba63d6f1d76676"
+    }
+  },
+  {
+    "id": "c2ede1a5f810c388279d997e8bdbcbeb70fe95da147fe7073bb92a9180fbc8e0",
+    "code": "video-placeholder",
+    "message": "Video link pending; approved placeholder",
+    "source": {
+      "paragraph": 200,
+      "paraId": "24DBA5E7"
+    },
+    "resource": "dilator.how-to",
+    "blocking": false,
+    "resolution": "",
+    "evidence": {
+      "asset": "2eb31f2663d2acec06ec9819e1047812fcf330eae3f389ede83823ddb4df3b28"
+    }
+  },
+  {
+    "id": "3ca40800b4736002c1c68ba1e7f4946a5adc4e95ef520573cdaafdc823c0df0d",
+    "code": "video-placeholder",
+    "message": "Video link pending; approved placeholder",
+    "source": {
+      "paragraph": 357,
+      "paraId": "688B2EC0"
+    },
+    "resource": "sexual-health.definition",
+    "blocking": false,
+    "resolution": "",
+    "evidence": {
+      "asset": "c6f37ef0b63146d00277f1ccc39acdd2e4e4d9b464c8aadad9687c3a94eafb5b"
+    }
+  },
+  {
+    "id": "eb97e9ba18ebe87b73a9104df6d03deef504b291de22101854868109bbfe0ba1",
+    "code": "video-placeholder",
+    "message": "Video link pending; approved placeholder",
+    "source": {
+      "paragraph": 373,
+      "paraId": "7528238E"
+    },
+    "resource": "sexual-health.treatment-effects",
+    "blocking": false,
+    "resolution": "",
+    "evidence": {
+      "asset": "f646309761c301694e91209b2593c38675d2164870ec6639772096ae6d051d8b"
+    }
+  },
+  {
+    "id": "e4fbfa1efee9af9dc8e768ad95e561a10b38facbb456fbceb7fe4d909f6356f9",
+    "code": "video-placeholder",
+    "message": "Video link pending; approved placeholder",
+    "source": {
+      "paragraph": 384,
+      "paraId": "3082673B"
+    },
+    "resource": "sexual-health.relationships",
+    "blocking": false,
+    "resolution": "",
+    "evidence": {
+      "asset": "b960ae331ce2b12e15e8e7c78dd9b16aeb19ebc4e4768eeba3ec679adc252f1a"
+    }
+  },
+  {
+    "id": "e7ecbb2720599ca16e2195f91f286f0f8b4dfc18bdc7d9289c13ead3cf1372b4",
+    "code": "video-placeholder",
+    "message": "Video link pending; approved placeholder",
+    "source": {
+      "paragraph": 399,
+      "paraId": "605BCD14"
+    },
+    "resource": "sexual-health.support",
+    "blocking": false,
+    "resolution": "",
+    "evidence": {
+      "asset": "003efd7f12a9a47812a3206cf1b43a50820415a38f75b5d878cf1206d8ef7ef5"
+    }
+  },
+  {
+    "id": "b83268f47836409bcdf24232b55dce7ba4ec23ff760093178d9f2d8dcdd4b77d",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Rätt?",
+    "source": {
+      "paragraph": 554,
+      "paraId": "139960ED"
+    },
+    "resource": "after-treatment.study-follow-up",
+    "blocking": false,
+    "resolution": "2026-09-30: User confirmed: retain three-month follow-up and SMS wording for now.",
+    "evidence": {
+      "id": "1978030157",
+      "text": "Rätt?"
+    }
+  },
+  {
+    "id": "96197896a385a1cdf6521a225efc7f48df4698bc9a236f0dd36c76db2e7e8868",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Här behöver vi diskutera hur vi ska formulera oss. Kan vi göra diagnosspecifikt innehåll eller pre/post så att det anpassas utefter deltagarna?",
+    "source": {
+      "paragraph": 222,
+      "paraId": "47BC84B6"
+    },
+    "resource": "dilator.timing",
+    "blocking": false,
+    "resolution": "2026-09-30: User confirmed PRE/POST filtering only; explicit paragraph ranges implemented.",
+    "evidence": {
+      "id": "151723897",
+      "text": "Här behöver vi diskutera hur vi ska formulera oss. Kan vi göra diagnosspecifikt innehåll eller pre/post så att det anpassas utefter deltagarna?"
+    }
+  },
+  {
+    "id": "a59396befdb1a5eaba0de560f462122a8c0afee677aa7e638618f4ce13c77c4e",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: lagt till nummer 11",
+    "source": {
+      "paragraph": 4,
+      "paraId": "1B41D483"
+    },
+    "resource": "radiation.healthy-organs-why",
+    "blocking": false,
+    "resolution": "2026-09-30: The updated source includes number 11 in its text legend.",
+    "evidence": {
+      "id": "1873399859",
+      "text": "lagt till nummer 11"
+    }
+  },
+  {
+    "id": "96da68ba22f6129d0fe0ce942cdc37392e8dd8fe4f7e1ffca0e6a7d826e25546",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Stor bokstav i punktlistan ",
+    "source": {
+      "paragraph": 85,
+      "paraId": "12087F67"
+    },
+    "resource": "radiation.dry-mucosa",
+    "blocking": false,
+    "resolution": "2026-09-30: Capitalized the Word callout bullet starts.",
+    "evidence": {
+      "id": "344862718",
+      "text": "Stor bokstav i punktlistan "
+    }
+  },
+  {
+    "id": "683bb91fd3f64332bf30507b6b0a1d7e0526785e943e3017581702b303fc1d84",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Gäller deltagare som är PRE",
+    "source": {
+      "paragraph": 223,
+      "paraId": "200B8A3A"
+    },
+    "resource": "dilator.timing",
+    "blocking": false,
+    "resolution": "2026-09-30: Implemented PRE audience range in dilator.timing.",
+    "evidence": {
+      "id": "206421416",
+      "text": "Gäller deltagare som är PRE"
+    }
+  },
+  {
+    "id": "874cfae0a15d4716cfb6cf84f307118f49733f2ba1294d409c8fcef29b941271",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Per vecka, INTE dagligen! ",
+    "source": {
+      "paragraph": 232,
+      "paraId": "3EEDB76F"
+    },
+    "resource": "dilator.timing",
+    "blocking": false,
+    "resolution": "2026-09-30: Updated Word body says 2–3 times per week. The timeline illustration remains separately flagged for correction.",
+    "evidence": {
+      "id": "607641270",
+      "text": "Per vecka, INTE dagligen! "
+    }
+  },
+  {
+    "id": "aa0548c6abf24b6eef50c790534aafab53721de7b81ed83c043b9127245d5b24",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Gäller deltagare som är POST",
+    "source": {
+      "paragraph": 236,
+      "paraId": "55C389CA"
+    },
+    "resource": "dilator.timing",
+    "blocking": false,
+    "resolution": "2026-09-30: Implemented POST audience range in dilator.timing.",
+    "evidence": {
+      "id": "608751973",
+      "text": "Gäller deltagare som är POST"
+    }
+  },
+  {
+    "id": "35a3a3690ecbd2990542ae88813dd364e71d1092c0889a600c8a91525c9a146f",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Länkar för de olika organisationerna eller att numret går att klicka på ",
+    "source": {
+      "paragraph": 502,
+      "paraId": "2F64C552"
+    },
+    "resource": "violence.support",
+    "blocking": false,
+    "resolution": "2026-09-30: Verified the updated Word organization hyperlinks and emergency telephone links are retained.",
+    "evidence": {
+      "id": "1028592312",
+      "text": "Länkar för de olika organisationerna eller att numret går att klicka på "
+    }
+  },
+  {
+    "id": "e5d6ef91c41cf5b7f7e08590c7e9996e72dd26c12b728338fab20cce0c354a15",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Gäller deltagare som är POST",
+    "source": {
+      "paragraph": 544,
+      "paraId": "3D563F81"
+    },
+    "resource": "after-treatment.dilator-use",
+    "blocking": false,
+    "resolution": "2026-09-30: Implemented POST audience range in after-treatment.dilator-use.",
+    "evidence": {
+      "id": "584976450",
+      "text": "Gäller deltagare som är POST"
+    }
+  },
+  {
+    "id": "28a8afde1851e059dd6dfa89a342e4306b36f8bfd9fe0cb526ecb61fad90cde2",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Gäller deltagare som är PRE",
+    "source": {
+      "paragraph": 537,
+      "paraId": "5099BDC0"
+    },
+    "resource": "after-treatment.dilator-use",
+    "blocking": false,
+    "resolution": "2026-09-30: Implemented PRE audience range in after-treatment.dilator-use.",
+    "evidence": {
+      "id": "290536323",
+      "text": "Gäller deltagare som är PRE"
+    }
+  },
+  {
+    "id": "5a0e01b3eb0ed0a5ae9d6cbe629673b9ee7cf88602137761d74dbf90c83d916f",
+    "code": "editorial-comment",
+    "message": "Unresolved editorial comment: Kan eventuellt skrivas om till en text, överlämning till team 2 på gång. ",
+    "source": {
+      "paragraph": 551,
+      "paraId": "1FF7AD9D"
+    },
+    "resource": "after-treatment.follow-up",
+    "blocking": false,
+    "resolution": "2026-09-30: User confirmed retaining the current anal/gynaecological follow-up paragraphs for now.",
+    "evidence": {
+      "id": "196757189",
+      "text": "Kan eventuellt skrivas om till en text, överlämning till team 2 på gång. "
+    }
+  }
+]

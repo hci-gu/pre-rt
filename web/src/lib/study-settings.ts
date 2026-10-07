@@ -7,6 +7,7 @@ export const studySettingsSchema = z.object({
   treatmentEndQuestionnaire: z.string().min(1),
   treatmentEndQuestion: z.string().min(1),
   aboutCollection: z.string().min(1),
+  afterTreatmentCollection: z.string().optional(),
 })
 
 export type StudySettings = z.infer<typeof studySettingsSchema>

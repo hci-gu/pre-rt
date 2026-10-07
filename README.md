@@ -50,7 +50,12 @@ New users are assigned `PRE` or `POST` based on diagnosis and the last created u
 - Fetching that link returns a zip of CSV files per questionnaire plus a question lookup table, then deletes the export record.
 - `web/export.js` currently targets `/data-export` without an id and will need updating if you want a scripted export.
 
+**Resource Content**
+
+`resources.docx` is the editorial source for resource text and layout. Run `scripts/resources/resources extract` and `scripts/resources/resources preview` to review the generated content. The repeatable PocketBase import supports dry-run plans, stable IDs, conflict detection and rollback; publication is blocked until source and all-resource coverage issues are resolved. See the [workflow guide](docs/resource-content-workflow.md) and [implementation/review report](docs/resource-content-implementation.md). The old `web/scripts/seed-faq.mjs` has been retired.
+
 **Deployment**
+- Deploy to test with `scripts/deploy/test.sh` (build, push, deploy and import resources automatically). Test data is disposable. See [the short test guide](deploy/test/README.md); production uses a separate process.
 - `deploy/api.yaml` and `deploy/web.yaml` define OpenShift deployments + routes.
 - `deploy/secrets.yaml` stores 46elks credentials.
 - `pocketbase/pb_data` is expected to be persisted; the API deployment mounts a PVC at `/pb/pb_data`.

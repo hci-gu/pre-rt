@@ -1,1 +1,9 @@
 .DS_Store
+
+# Local resource review and Python caches
+.playwright-cli/
+output/playwright/
+__pycache__/
+*.pyc
+content/resources/generated/review-report.json
+content/resources/generated/review-report.md

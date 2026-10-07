@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { createStore, Provider } from 'jotai'
@@ -16,6 +17,8 @@ vi.mock('@/state', async () => {
     userDataAtom: atom({ type: 'PRE' }),
     readAboutPageAtom: atom(false),
     aboutCollectionAtom: atom(null),
+    afterTreatmentCollectionAtom: atom(null),
+    resourceAssetsAtom: atom({}),
     resourceCollectionAtom: () => atom(null),
     studySettingsAtom: atom({
       baselineQuestionnaire: 'configured-baseline',

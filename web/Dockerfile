@@ -1,5 +1,5 @@
 # Use a Node.js image to build the Vite project
-FROM node:22-slim AS build-stage
+FROM --platform=$BUILDPLATFORM node:22-slim AS build-stage
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable && corepack prepare pnpm@8.15.9 --activate
@@ -18,6 +18,9 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 
 # Build the project (this will create the 'dist' folder)
+ARG VITE_API_URL
+RUN test -n "$VITE_API_URL"
+ENV VITE_API_URL=$VITE_API_URL
 RUN pnpm run build
 
 # Use an NGINX image to serve the built project

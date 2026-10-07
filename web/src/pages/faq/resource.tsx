@@ -1,13 +1,15 @@
 import ResourceAccordion from '@/components/resourceCollection'
-import { resourceCollectionAtom } from '@/state'
+import { resourceCollectionAtom, userDataAtom } from '@/state'
 import { useAtomValue } from 'jotai'
 import { useParams } from 'react-router-dom'
+import { audienceMatches } from '@/components/resource-content/model'
 
 export default function FaqResourcePage() {
   const { collectionId } = useParams()
   const collection = useAtomValue(resourceCollectionAtom(collectionId ?? ''))
 
-  if (!collection) {
+  const user = useAtomValue(userDataAtom)
+  if (!collection || collection.archived || !audienceMatches(collection.content?.audience, user)) {
     return <p role="status">Det gick inte att hämta kategorin.</p>
   }
 
@@ -19,12 +21,7 @@ export default function FaqResourcePage() {
         </h1>
       </div>
       <ResourceAccordion collection={collection} showHeader={false} />
-      {collection.footerContent && (
-        <div
-          className="resource-content"
-          dangerouslySetInnerHTML={{ __html: collection.footerContent }}
-        />
-      )}
+
     </div>
   )
 }

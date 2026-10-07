@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-30",
+  "corrections": [
+    {
+      "previousAssetKey": "38a7a9a7cd3d313660fbde0c1c9ae619f894c203f2df0d6ef86115d59d74b409",
+      "assetKey": "a7909e67df5e3559a7f1d1e390928d64e6384776cfdf282b10f6a5be1c44a7c4",
+      "tool": "built-in image_gen",
+      "edit": "Change only the lower duplicate 6 marking the vagina to 7; retain the upper bladder 6 and all other labels and anatomy.",
+      "approvedAltRetained": true
+    },
+    {
+      "previousAssetKey": "e67c7918c4de8c6fb6487a89ce48f670f14405b632fcd9002c34f68a8229b88d",
+      "assetKey": "87423497bfce691038b8e171d51d2ea1049908d08991960291663e8d619497ee",
+      "tool": "built-in image_gen",
+      "edit": "Rightmost Efter card: FREKVENS: / Varje dag i 6 v. / Sedan 2–3 ggr / per vecka / i 2–3 år. Keep other Swedish text, timeline, icons, colors and layout.",
+      "approvedAltRetained": true
+    }
+  ]
+}

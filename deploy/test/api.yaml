@@ -4,6 +4,8 @@ metadata:
     name: pre-rt-api-test
 spec:
     replicas: 1
+    strategy:
+        type: Recreate
     selector:
         matchLabels:
             app: pre-rt-api-test
@@ -16,10 +18,33 @@ spec:
                 - name: pre-rt-api-persistent-storage-test
                   persistentVolumeClaim:
                       claimName: pre-rt-pv-claim-test
+            initContainers:
+                - name: resource-import
+                  image: 'registry.k8s.gu.se/appademin/pre-rt-api:1.1.0-test.resources-20260930'
+                  imagePullPolicy: Always
+                  command: ["sh", "-ec"]
+                  args:
+                    - |
+                      /pb/resources --dir /pb/pb_data migrate
+                      /pb/resources --dir /pb/pb_data --bundle /pb/content/bundle.json --out /tmp/resources.json plan
+                      result=$(/pb/resources --dir /pb/pb_data --plan /tmp/resources.json apply)
+                      echo "$result"
+                      run_id=$(echo "$result" | sed -n 's/^Run: //p')
+                      if [ "$run_id" != unchanged ]; then
+                        /pb/resources --dir /pb/pb_data --run "$run_id" verify
+                      fi
+                  volumeMounts:
+                      - mountPath: /pb/pb_data
+                        name: pre-rt-api-persistent-storage-test
             containers:
                 - name: pre-rt-api-test
-                  image: 'registry.k8s.gu.se/appademin/pre-rt-api:1.0.3'
+                  image: 'registry.k8s.gu.se/appademin/pre-rt-api:1.1.0-test.resources-20260930'
                   imagePullPolicy: Always
+                  readinessProbe:
+                      httpGet:
+                          path: /api/health
+                          port: 8080
+                      periodSeconds: 5
                   ports:
                       - containerPort: 8080
                         name: web

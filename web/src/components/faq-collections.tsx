@@ -2,7 +2,8 @@ import { ReactNode } from 'react'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { loadable } from 'jotai/utils'
 import { useNavigate } from 'react-router-dom'
-import { authAtom, pb, ResourceCollection, resourcesAtom } from '@/state'
+import { authAtom, pb, ResourceCollection, resourcesAtom, userDataAtom } from '@/state'
+import { audienceMatches } from './resource-content/model'
 import { ResourceSessionError } from '@/lib/resource-errors'
 import { Button } from './ui/button'
 
@@ -13,6 +14,7 @@ export default function FaqCollections({
 }: {
   children: (collections: ResourceCollection[]) => ReactNode
 }) {
+  const user = useAtomValue(userDataAtom)
   const result = useAtomValue(collectionsLoadable)
   const retry = useSetAtom(resourcesAtom)
   const setAuth = useSetAtom(authAtom)
@@ -46,9 +48,10 @@ export default function FaqCollections({
     )
   }
 
-  if (result.data.length === 0) {
+  const visible = result.data.filter(collection => !collection.archived && audienceMatches(collection.content?.audience, user))
+  if (visible.length === 0) {
     return <p role="status">Det finns inga frågor och svar att visa just nu.</p>
   }
 
-  return children(result.data)
+  return children(visible)
 }

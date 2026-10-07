@@ -1,0 +1,345 @@
+{
+  "status": "approved",
+  "items": [
+    {
+      "number": 1,
+      "key": "a7909e67df5e3559a7f1d1e390928d64e6384776cfdf282b10f6a5be1c44a7c4",
+      "resource": "radiation.healthy-organs-why",
+      "title": "Varför påverkas mina friska organ av strålningen?",
+      "kind": "image",
+      "draftAlt": "Genomskärning av bäckenet med numrerade markeringar för bland annat urinblåsa, livmoder, slida och ändtarm.",
+      "status": "approved",
+      "previousAssetKey": "38a7a9a7cd3d313660fbde0c1c9ae619f894c203f2df0d6ef86115d59d74b409"
+    },
+    {
+      "number": 2,
+      "key": "8de1dbc373dd245bf02357e88837c0a25e31c70f1e02ea3d6af90bc69729016a",
+      "resource": "radiation.healthy-organs-how",
+      "title": "Hur påverkas mina friska organ av strålningen?",
+      "kind": "image",
+      "draftAlt": "Ett förstoringsglas med ett frågetecken framför färgade vågor.",
+      "status": "approved"
+    },
+    {
+      "number": 3,
+      "key": "28246d2ef660cf3c24e9591a930a60a658c2ea41c2ee7279d40d3d456ae73ae4",
+      "resource": "radiation.stenosis-explained",
+      "title": "Vad innebär sammanläkning och ärrbildning i vagina (vaginal stenos)?",
+      "kind": "image",
+      "draftAlt": "Genomskärning av bäckenet där slidans område är markerat med en cirkel.",
+      "status": "approved"
+    },
+    {
+      "number": 4,
+      "key": "7993469c86d7afa032c9b0c8696da180a1976e5f071bed8b88cac4640f6f52b2",
+      "resource": "radiation.stenosis-frequency",
+      "title": "Hur vanligt är det att få vaginal stenos?",
+      "kind": "image",
+      "draftAlt": "Schematisk kurva över graden av vaginal stenos, från lindrig till uttalad påverkan. Antal och procent anges inte.",
+      "status": "approved"
+    },
+    {
+      "number": 5,
+      "key": "fd6cf1b539a90b240983b0fe3b0e713aa564cd57bace1e3c57ba63d6f1d76676",
+      "resource": "radiation.dry-mucosa",
+      "title": "Vad kan jag göra åt torra och sköra slemhinnor?",
+      "kind": "video",
+      "draftAlt": "Förhandsbild till filmen om torra och sköra slemhinnor, med en person framför blå bakgrund.",
+      "status": "approved"
+    },
+    {
+      "number": 6,
+      "key": "20f78c7c0acb296dcc0bd246ce57afa95ea65b6a2aadd500e34b46e557650e30",
+      "resource": "radiation.estrogen",
+      "title": "Östrogen – vad är det och vad är det bra för?",
+      "kind": "image",
+      "draftAlt": "En kemisk strukturformel och ett förstoringsglas.",
+      "status": "approved"
+    },
+    {
+      "number": 7,
+      "key": "2ddb8a821f7d4088ca16bd6cbd833a70f52fe07c4955750a3e33a56aabd4cd94",
+      "resource": "radiation.iud",
+      "title": "Jag har en spiral. Kan den vara kvar?",
+      "kind": "image",
+      "draftAlt": "En spiral med trådar.",
+      "status": "approved"
+    },
+    {
+      "number": 8,
+      "key": "74a320b9679be3b2d6f511853a3a2141daf7d15ce5304fe310e8160c4c6651ca",
+      "resource": "radiation.fertility",
+      "title": "Hur påverkas mina möjligheter att bli gravid?",
+      "kind": "image",
+      "draftAlt": "Ett graviditetstest med två streck och ett frågetecken.",
+      "status": "approved"
+    },
+    {
+      "number": 9,
+      "key": "2eb31f2663d2acec06ec9819e1047812fcf330eae3f389ede83823ddb4df3b28",
+      "resource": "dilator.how-to",
+      "title": "Hur gör jag när jag använder vaginalstav?",
+      "kind": "video",
+      "draftAlt": "Förhandsbild till den animerade filmen om att använda vaginalstav.",
+      "status": "approved"
+    },
+    {
+      "number": 10,
+      "key": "2b4fdc32c049bbf908374262a1789c5edaabc6da88d077252f26f08d46a5479f",
+      "resource": "dilator.how-to",
+      "title": "Hur gör jag när jag använder vaginalstav?",
+      "kind": "image",
+      "draftAlt": "En person vilar bakåtlutad i en soffa med böjda ben.",
+      "status": "approved"
+    },
+    {
+      "number": 11,
+      "key": "432c1322b0db89bff7abb0d662929b9efcea17b17bddd7dcf610d8ad385bdac1",
+      "resource": "dilator.how-to",
+      "title": "Hur gör jag när jag använder vaginalstav?",
+      "kind": "image",
+      "draftAlt": "En tub glidmedel och en flaska intimolja.",
+      "status": "approved"
+    },
+    {
+      "number": 12,
+      "key": "fe79c1d7579422d9702e48f83b9d0b084187aff123959522e3310060e6277c9e",
+      "resource": "dilator.how-to",
+      "title": "Hur gör jag när jag använder vaginalstav?",
+      "kind": "image",
+      "draftAlt": "Genomskärning som visar vaginalstaven införd i slidan.",
+      "status": "approved"
+    },
+    {
+      "number": 13,
+      "key": "49421cac412e6b34c68aa9dba12d6c31fcfd39bcba7ba6927fa334c8aacd4f13",
+      "resource": "dilator.how-to",
+      "title": "Hur gör jag när jag använder vaginalstav?",
+      "kind": "image",
+      "draftAlt": "En pil visar vaginalstavens riktning in i slidan.",
+      "status": "approved"
+    },
+    {
+      "number": 14,
+      "key": "b0a01f1b2fdf662fa768a2fbbc8cfadcf1e3561fa113b70e9fbdf5fa9c2ca44c",
+      "resource": "dilator.how-to",
+      "title": "Hur gör jag när jag använder vaginalstav?",
+      "kind": "image",
+      "draftAlt": "Vaginalstaven ligger i slidan. Bilden anger 5–10 minuter.",
+      "status": "approved"
+    },
+    {
+      "number": 15,
+      "key": "b8614be2c29e78b2bd074c40093de7e17469c1013c48cf5810921b6fde29a46c",
+      "resource": "dilator.how-to",
+      "title": "Hur gör jag när jag använder vaginalstav?",
+      "kind": "image",
+      "draftAlt": "Tre vaginalstavar märkta mindre, mellan och stor.",
+      "status": "approved"
+    },
+    {
+      "number": 16,
+      "key": "df66e36f7e47183c8329a0c603bd5a0921396a3aeb6b0f491c7beadba3163a43",
+      "resource": "dilator.how-to",
+      "title": "Hur gör jag när jag använder vaginalstav?",
+      "kind": "image",
+      "draftAlt": "En hand håller vaginalstaven under en vattenkran för rengöring.",
+      "status": "approved"
+    },
+    {
+      "number": 17,
+      "key": "87423497bfce691038b8e171d51d2ea1049908d08991960291663e8d619497ee",
+      "resource": "dilator.timing",
+      "title": "När ska jag använda vaginalstaven?",
+      "kind": "image",
+      "draftAlt": "Tidslinje för PRE-gruppens användning av vaginalstav före, under och efter strålbehandling. De fullständiga instruktionerna finns i texten intill.",
+      "status": "approved",
+      "previousAssetKey": "e67c7918c4de8c6fb6487a89ce48f670f14405b632fcd9002c34f68a8229b88d"
+    },
+    {
+      "number": 18,
+      "key": "873faf0ab2235efb2fe9b090e44b7cd32eb7b4f3fda458275d465b1673350da8",
+      "resource": "dilator.size",
+      "title": "Vilken storlek på stav?",
+      "kind": "image",
+      "draftAlt": "Tre storlekar på vaginalstav med längdmarkeringar i centimeter.",
+      "status": "approved"
+    },
+    {
+      "number": 19,
+      "key": "99a1b1ab4fe5b5caf10aa767dc9bd83235ebd15e17933a2e74a7e5704f3b9265",
+      "resource": "dilator.measure-length",
+      "title": "Hur mäter jag längden?",
+      "kind": "image",
+      "draftAlt": "Vaginalstav med markeringarna 2 cm eller kortare, 4 cm, 6 cm, 8 cm och 10 cm eller längre.",
+      "status": "approved"
+    },
+    {
+      "number": 20,
+      "key": "3b6851ac98ecdca29bb156f61bd1e578bf91b451b2bd092fbdc7ab6952696836",
+      "resource": "dilator.pain-discomfort",
+      "title": "Hur hanterar jag smärta och obehag?",
+      "kind": "image",
+      "draftAlt": "Genomskärning som visar vaginalstavens spets vid slidöppningen.",
+      "status": "approved"
+    },
+    {
+      "number": 21,
+      "key": "4e6b957427407b6c938aaff46a187a83fc542f6050cd710f64ce3f60d46b18a5",
+      "resource": "dilator.pain-discomfort",
+      "title": "Hur hanterar jag smärta och obehag?",
+      "kind": "image",
+      "draftAlt": "En pil pekar på knappen som startar vaginalstavens vibration.",
+      "status": "approved"
+    },
+    {
+      "number": 22,
+      "key": "1fc3f7f7447a6644d5734790c999bcfc32e509fd48a2e5a4f092d200ead38da9",
+      "resource": "intimate-care.routine",
+      "title": "Hur sköter jag bäst min intimvård?",
+      "kind": "image",
+      "draftAlt": "En pumpflaska, tvål och ett frågetecken som illustrerar frågor om intimvård.",
+      "status": "approved"
+    },
+    {
+      "number": 23,
+      "key": "e145a186221918217e6808a1619afe5e3f75f1e2f8eba2e2cc1cf2130a3518a6",
+      "resource": "intimate-care.wounds",
+      "title": "Hur gör jag om jag får blåsor eller sår?",
+      "kind": "image",
+      "draftAlt": "Ett varningstecken över underlivet på en person i underkläder.",
+      "status": "approved"
+    },
+    {
+      "number": 24,
+      "key": "8d0ecd30e372d1d45649ea3829e967f7a46841ca003cc25d1168bd20586e3592",
+      "resource": "intimate-care.hair",
+      "title": "Hur sköter jag könshåret under strålbehandling?",
+      "kind": "image",
+      "draftAlt": "En rakhyvel intill ett frågetecken.",
+      "status": "approved"
+    },
+    {
+      "number": 25,
+      "key": "c6f37ef0b63146d00277f1ccc39acdd2e4e4d9b464c8aadad9687c3a94eafb5b",
+      "resource": "sexual-health.definition",
+      "title": "Vad är sexuell hälsa?",
+      "kind": "video",
+      "draftAlt": "Förhandsbild till filmen ”Vad är sexualitet?”.",
+      "status": "approved"
+    },
+    {
+      "number": 26,
+      "key": "d60eab38430277d93cdd505704749b17b480c07a576da02553a1ca62a864b382",
+      "resource": "sexual-health.definition",
+      "title": "Vad är sexuell hälsa?",
+      "kind": "image",
+      "draftAlt": "Fyra sammanfogade pusselbitar märkta mental, fysisk, social och emotionell.",
+      "status": "approved"
+    },
+    {
+      "number": 27,
+      "key": "bc917f683b43415bf821ebff59539c92b830a3533d986f221fccd83537a580bc",
+      "resource": "sexual-health.treatment-effects",
+      "title": "Hur påverkas sexualiteten av strålbehandling?",
+      "kind": "image",
+      "draftAlt": "Två hjärtformade blommor med plåster.",
+      "status": "approved"
+    },
+    {
+      "number": 28,
+      "key": "f646309761c301694e91209b2593c38675d2164870ec6639772096ae6d051d8b",
+      "resource": "sexual-health.treatment-effects",
+      "title": "Hur påverkas sexualiteten av strålbehandling?",
+      "kind": "video",
+      "draftAlt": "Förhandsbild till filmen ”Så påverkar cancern din sexualitet”.",
+      "status": "approved"
+    },
+    {
+      "number": 29,
+      "key": "92b730de81606daad68ae9594a53a64c292055ddab17db1ebf29595384a7dde0",
+      "resource": "sexual-health.relationships",
+      "title": "Hur påverkas relationer och närhet?",
+      "kind": "image",
+      "draftAlt": "Två händer som håller varandra framför ett hjärta och en hjärtformad blomma med plåster.",
+      "status": "approved"
+    },
+    {
+      "number": 30,
+      "key": "b960ae331ce2b12e15e8e7c78dd9b16aeb19ebc4e4768eeba3ec679adc252f1a",
+      "resource": "sexual-health.relationships",
+      "title": "Hur påverkas relationer och närhet?",
+      "kind": "video",
+      "draftAlt": "Förhandsbild till filmen ”Tips och råd för ökad lust”.",
+      "status": "approved"
+    },
+    {
+      "number": 31,
+      "key": "dd6974f4824437ff9e347ad5fe68dbdcdc1d05345d8155a5fd87fe3fdbc5c5e8",
+      "resource": "radiation.partner-conversation",
+      "title": "Hur pratar jag med min partner om strålbehandlingens och cancerns påverkan på sexuella hälsan?",
+      "kind": "image",
+      "draftAlt": "Två händer som håller varandra, omgivna av hjärtan och en blomma med plåster.",
+      "status": "approved"
+    },
+    {
+      "number": 32,
+      "key": "003efd7f12a9a47812a3206cf1b43a50820415a38f75b5d878cf1206d8ef7ef5",
+      "resource": "sexual-health.support",
+      "title": "Var kan jag få stöd och hjälp?",
+      "kind": "video",
+      "draftAlt": "Förhandsbild till filmen ”Sexuella hjälpmedel vid rehabilitering”.",
+      "status": "approved"
+    },
+    {
+      "number": 33,
+      "key": "5992674dda152b4099713935b21ce07f1bf9df35cded21a2aa6230cfe56c6e2f",
+      "resource": "sexual-health.support",
+      "title": "Var kan jag få stöd och hjälp?",
+      "kind": "image",
+      "draftAlt": "Ett frågetecken intill en hjärtformad blomma med plåster.",
+      "status": "approved"
+    },
+    {
+      "number": 34,
+      "key": "d9b10e17b05480ce64c4284842dce103e70856e2db18726a21709802712f1476",
+      "resource": "violence.why-asked",
+      "title": "Varför frågar ni om övergrepp och våld?",
+      "kind": "image",
+      "draftAlt": "Ett sprucket hjärta bredvid ett mindre hjärta och en blomma med plåster.",
+      "status": "approved"
+    },
+    {
+      "number": 35,
+      "key": "87ab620935e95c565da307423f7c7cc62e5531242d0d0191b2b8abfbeab95935",
+      "resource": "violence.definition",
+      "title": "Vad menas med övergrepp och våld?",
+      "kind": "image",
+      "draftAlt": "En öppen hand hålls upp framför en knuten näve.",
+      "status": "approved"
+    },
+    {
+      "number": 36,
+      "key": "cc0ab36466bddfd5dfb6e1133a4c6c97276c6efe3fed999da0e29acf9fdd2397",
+      "resource": "violence.effects",
+      "title": "Hur kan våld och övergrepp påverka mig?",
+      "kind": "image",
+      "draftAlt": "Två människosiluetter framför sprickor och konturen av ett brustet hjärta.",
+      "status": "approved"
+    },
+    {
+      "number": 37,
+      "key": "1d7739e488700923baab4dfe238de100ebadeea3691033f440accdc8667ba94c",
+      "resource": "violence.answering-yes",
+      "title": "Vad händer om jag svarar ja på frågor om våld i formuläret?",
+      "kind": "image",
+      "draftAlt": "Ett frågeformulär och en penna intill ett hjärta med sprickor och ett frågetecken.",
+      "status": "approved"
+    }
+  ],
+  "approval": {
+    "date": "2026-09-30",
+    "by": "user",
+    "scope": "All 37 proposed alternative texts approved in chat."
+  }
+}

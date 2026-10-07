@@ -8,6 +8,7 @@ import { dayStringFromDate } from './utils'
 import { useEffect } from 'react'
 import { ResourceSessionError } from './lib/resource-errors'
 import { studySettingsSchema } from './lib/study-settings'
+import { parseContent, type Content, type Bindings } from './components/resource-content/model'
 
 export const pb = new Pocketbase(import.meta.env.VITE_API_URL)
 const IS_PROD = import.meta.env.VITE_API_URL.startsWith('https')
@@ -118,7 +119,7 @@ export const resourcesAtom = atomWithRefresh(async (get) => {
     filter: 'visible_on_questions_and_answers = true',
   })
   response.sort((a, b) => (a.sort ?? 999) - (b.sort ?? 999))
-  return response.map(mapResourceCollection)
+  return response.filter(record => !record.archived).map(mapResourceCollection)
 })
 
 export const resourceCollectionAtom = atomFamily((id: string) => {
@@ -128,7 +129,7 @@ export const resourceCollectionAtom = atomFamily((id: string) => {
       const response = await pb.collection('resourceCollection').getOne(id, {
         expand: 'resources',
       })
-      return mapResourceCollection(response)
+      return response.archived ? null : mapResourceCollection(response)
     } catch (e) {
       console.error(e)
       return null
@@ -152,15 +153,31 @@ export const aboutCollectionAtom = atom(async (get) => {
   return get(resourceCollectionAtom(settings.aboutCollection))
 })
 
+export const resourceAssetsAtom = atomWithRefresh(async (get) => {
+  if (!get(authAtom)) return {}
+  const records = await pb.collection('resourceAsset').getFullList()
+  return Object.fromEntries(records.map(record => [record.sourceKey, pb.files.getURL(record, record.file)])) as Record<string, string>
+})
+
+export const afterTreatmentCollectionAtom = atom(async (get) => {
+  const settings = await get(studySettingsAtom)
+  return settings.afterTreatmentCollection ? get(resourceCollectionAtom(settings.afterTreatmentCollection)) : null
+})
+
 export type User = {
   id: string
   type: 'PRE' | 'POST'
+  diagnosis?: string
   phoneNumber: string
   treatmentStart?: Date
   treatmentEnd?: Date
 }
 
 export type ResourceCollection = {
+  sourceKey?: string
+  content?: Content
+  bindings?: Bindings
+  archived?: boolean
   id: string
   name: string
   resources: Resource[]
@@ -174,6 +191,11 @@ export type ResourceCollection = {
 }
 
 export type Resource = {
+  sourceKey?: string
+  content?: Content
+  bindings?: Bindings
+  aliases?: string[]
+  archived?: boolean
   id: string
   title: string
   description: string
@@ -231,6 +253,7 @@ const mapUser = (user: any): User => {
   return {
     id: user.id,
     type: user.type,
+    diagnosis: user.diagnosis,
     phoneNumber: user.phoneNumber,
     treatmentStart: user.treatmentStart
       ? new Date(user.treatmentStart)
@@ -242,6 +265,11 @@ const mapUser = (user: any): User => {
 const mapResource = (resource: any): Resource => {
   return {
     id: resource.id,
+    sourceKey: resource.sourceKey,
+    content: parseContent(resource.content),
+    bindings: resource.bindings,
+    aliases: resource.aliases,
+    archived: resource.archived,
     title: resource.title,
     description: resource.description,
   }
@@ -254,6 +282,10 @@ const mapResourceCollection = (resourceCollection: any): ResourceCollection => {
 
   return {
     id: resourceCollection.id,
+    sourceKey: resourceCollection.sourceKey,
+    content: parseContent(resourceCollection.content),
+    bindings: resourceCollection.bindings,
+    archived: resourceCollection.archived,
     name: resourceCollection.name,
     description: resourceCollection.description,
     image: image ? pb.files.getURL(resourceCollection, image) : undefined,
@@ -268,7 +300,7 @@ const mapResourceCollection = (resourceCollection: any): ResourceCollection => {
       const resource = resourceCollection.expand?.resources?.find(
         (resource: Resource) => resource.id === id
       )
-      return resource ? [mapResource(resource)] : []
+      return resource && !resource.archived ? [mapResource(resource)] : []
     }),
   }
 }
@@ -294,8 +326,8 @@ const mapQuestion = (question: any): Question => {
     dependency: question.dependency,
     dependencyValue: question.dependencyValue,
     followup: question.followup,
-    resource: question.expand?.resource,
-    resourceCollection: question.expand?.resourceCollection
+    resource: question.expand?.resource && !question.expand.resource.archived ? mapResource(question.expand.resource) : undefined,
+    resourceCollection: question.expand?.resourceCollection && !question.expand.resourceCollection.archived
       ? mapResourceCollection(question.expand?.resourceCollection)
       : undefined,
     number: -1,

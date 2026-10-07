@@ -1,30 +1,21 @@
-FROM alpine:latest
+# Build from the repository root: docker build -f pocketbase/Dockerfile .
+FROM --platform=$BUILDPLATFORM golang:1.23.4-alpine AS build
+ARG TARGETOS
+ARG TARGETARCH
+WORKDIR /src
+COPY pocketbase/go.mod pocketbase/go.sum ./
+RUN go mod download
+COPY pocketbase/ ./
+RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -trimpath -o /out/app . \
+    && CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -trimpath -o /out/resources ./cmd/resources
 
-ARG GOLANG_VERSION=1.23.4
-
-RUN apk update && apk add go gcc bash musl-dev openssl-dev ca-certificates && update-ca-certificates
-
-RUN wget https://dl.google.com/go/go$GOLANG_VERSION.src.tar.gz && tar -C /usr/local -xzf go$GOLANG_VERSION.src.tar.gz
-RUN cd /usr/local/go/src && ./make.bash
-ENV PATH=$PATH:/usr/local/go/bin
-RUN rm go$GOLANG_VERSION.src.tar.gz
-
-#we delete the apk installed version to avoid conflict
-RUN apk del go
-
-# add go files
-ADD main.go /pb/main.go
-ADD go.mod /pb/go.mod
-ADD go.sum /pb/go.sum
-COPY ./migrations /pb/migrations
-
-# build binary
-RUN cd /pb && go build -o app
-
-# uncomment to copy the local pb_hooks dir into the image
-# COPY ./pb_hooks /pb/pb_hooks
-
+FROM alpine:3.21
+RUN apk add --no-cache ca-certificates tzdata \
+    && mkdir -p /pb/pb_data && chgrp -R 0 /pb && chmod -R g=u /pb
+WORKDIR /pb
+COPY --from=build /out/app /out/resources /pb/
+COPY content/resources/generated/bundle.json /pb/content/bundle.json
+COPY content/resources/generated/assets/ /pb/content/assets/
 EXPOSE 8080
-
-# start PocketBase
-CMD ["/pb/app", "serve", "--http=0.0.0.0:8080"]
+USER 1001
+CMD ["/pb/app", "serve", "--dir=/pb/pb_data", "--http=0.0.0.0:8080"]

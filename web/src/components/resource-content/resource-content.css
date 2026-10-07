@@ -1,0 +1,23 @@
+.document-content { min-width: 0; overflow-wrap: anywhere; line-height: 1.65; font-weight: 400; }
+.document-content > * + * { margin-top: 1rem; }
+.document-content p { white-space: pre-wrap; }
+.document-content strong, .document-content h3 { font-weight: 700; }
+.document-content h3 { font-size: 1.08em; }
+.document-content a { color: #245f72; text-decoration: underline; text-underline-offset: .2em; }
+.document-content ul, .document-content ol { padding-left: 1.5rem; }
+.document-content ul { list-style: disc; }
+.document-content ol { list-style: decimal; }
+.document-content li + li { margin-top: .8rem; }
+.document-content figure { max-width: 100%; margin-left: 0; }
+.document-content figure img { max-width: 100%; height: auto; display: block; }
+.document-content .document-image-crop { position: relative; overflow: hidden; }
+.document-content .document-link-button { display: inline-block; background: #ffc0c0; padding: .65rem 1rem; border-radius: .3rem; color: #242424; text-decoration: none; font-weight: 700; }
+.document-callout { padding: 1.25rem; }
+.document-callout-advice { background: #fbeee5; }
+.document-callout-emergency { background: #ffffd5; }
+.document-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .15rem; }
+.document-columns > div > .document-content, .document-columns .document-callout { height: 100%; }
+.document-review-note { display: block; font: 12px/1.5 system-ui, sans-serif; color: #855300; background: #fff6d9; padding: .4rem .6rem; }
+.document-video-link { display: block; margin-top: .4rem; }
+.document-content a:focus-visible { outline: 3px solid #245f72; outline-offset: 3px; }
+@media (max-width: 600px) { .document-columns { grid-template-columns: minmax(0, 1fr); gap: .5rem; } }

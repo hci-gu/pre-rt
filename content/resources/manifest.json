@@ -1,0 +1,598 @@
+{
+  "schemaVersion": 1,
+  "source": "resources.docx",
+  "collections": [
+    {
+      "sourceKey": "radiation",
+      "paraId": "5772F053",
+      "titleHistory": [
+        "Strålbehandling och biverkningar"
+      ],
+      "existingId": "85071a5innq3o43"
+    },
+    {
+      "sourceKey": "dilator",
+      "paraId": "6C5B4106",
+      "titleHistory": [
+        "Användning av vaginalstav"
+      ],
+      "existingId": "1ei3zjui10q8q91"
+    },
+    {
+      "sourceKey": "intimate-care",
+      "paraId": "48213B0D",
+      "titleHistory": [
+        "Om intimvård"
+      ],
+      "existingId": "23s6oyiql5gc9qi"
+    },
+    {
+      "sourceKey": "sexual-health",
+      "paraId": "60D5593F",
+      "titleHistory": [
+        "Om sexuell hälsa"
+      ],
+      "existingId": "94ze51rc8dz5oh6"
+    },
+    {
+      "sourceKey": "violence",
+      "paraId": "7AC9D002",
+      "titleHistory": [
+        "Frågor om våld"
+      ],
+      "existingId": "7d5griw67n84z36",
+      "showQuickExit": true
+    },
+    {
+      "sourceKey": "after-treatment",
+      "paraId": "177C6006",
+      "titleHistory": [
+        "För Pre-RT-armen, EFTER strålbehandlingen",
+        "Efter strålbehandlingen"
+      ],
+      "audience": {
+        "phases": [
+          "after"
+        ]
+      },
+      "visible": false
+    },
+    {
+      "sourceKey": "study",
+      "paraId": "F2000001",
+      "titleHistory": [
+        "Information om studien"
+      ],
+      "existingId": "2c44uc062ek2y04",
+      "visible": false
+    }
+  ],
+  "resources": [
+    {
+      "sourceKey": "radiation.healthy-organs-why",
+      "paraId": "60C1FBBD",
+      "titleHistory": [
+        "Varför påverkas mina friska organ av strålningen?"
+      ]
+    },
+    {
+      "sourceKey": "radiation.healthy-organs-how",
+      "paraId": "208C4E95",
+      "titleHistory": [
+        "Hur påverkas mina friska organ av strålningen?"
+      ]
+    },
+    {
+      "sourceKey": "radiation.stenosis-explained",
+      "paraId": "6607AE40",
+      "titleHistory": [
+        "Vad innebär sammanläkning och ärrbildning i vagina (vaginal stenos)?"
+      ],
+      "existingId": "ga2hfydaa24992l"
+    },
+    {
+      "sourceKey": "radiation.stenosis-frequency",
+      "paraId": "72F2FC17",
+      "titleHistory": [
+        "Hur vanligt är det att få vaginal stenos?"
+      ],
+      "existingId": "88tyxd7t70011ia"
+    },
+    {
+      "sourceKey": "radiation.dry-mucosa",
+      "paraId": "3E58D908",
+      "titleHistory": [
+        "Vad kan jag göra åt torra och sköra slemhinnor?"
+      ],
+      "existingId": "qr5k2z9jq3ej34a"
+    },
+    {
+      "sourceKey": "radiation.estrogen",
+      "paraId": "1297AC5A",
+      "titleHistory": [
+        "Östrogen – vad är det och vad är det bra för?"
+      ],
+      "existingId": "wm0y26gi597no8d"
+    },
+    {
+      "sourceKey": "radiation.menopause",
+      "paraId": "370A32AB",
+      "titleHistory": [
+        "Varför får jag klimakteriebesvär vid strålbehandling?"
+      ],
+      "existingId": "9ej7u80e4kt80qq"
+    },
+    {
+      "sourceKey": "radiation.iud",
+      "paraId": "2C2C5A75",
+      "titleHistory": [
+        "Jag har en spiral. Kan den vara kvar?"
+      ],
+      "existingId": "7135999d1s070zy"
+    },
+    {
+      "sourceKey": "radiation.fertility",
+      "paraId": "3084BFAE",
+      "titleHistory": [
+        "Hur påverkas mina möjligheter att bli gravid?"
+      ],
+      "existingId": "35qe72htpj7xs41"
+    },
+    {
+      "sourceKey": "radiation.partner-conversation",
+      "paraId": "6378C941",
+      "titleHistory": [
+        "Hur pratar jag med min partner om strålbehandlingens och cancerns påverkan på sexuella hälsan?"
+      ],
+      "existingId": "5vq112xffyq489o"
+    },
+    {
+      "sourceKey": "dilator.purpose",
+      "paraId": "74D2A0B9",
+      "titleHistory": [
+        "Varför ska jag använda vaginalstav?"
+      ],
+      "existingId": "8vegqnt3c9mpnu7"
+    },
+    {
+      "sourceKey": "dilator.how-to",
+      "paraId": "67A3236D",
+      "titleHistory": [
+        "Hur gör jag när jag använder vaginalstav?"
+      ],
+      "existingId": "4mv1csl1xq95j2w"
+    },
+    {
+      "sourceKey": "dilator.timing",
+      "paraId": "47BC84B6",
+      "titleHistory": [
+        "När ska jag använda vaginalstaven?"
+      ],
+      "existingId": "faq000000000001",
+      "audienceRanges": [
+        {
+          "start": "200B8A3A",
+          "end": "443FA5FF",
+          "audience": {
+            "arms": [
+              "PRE"
+            ]
+          }
+        },
+        {
+          "start": "55C389CA",
+          "end": "3FC64996",
+          "audience": {
+            "arms": [
+              "POST"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceKey": "dilator.size",
+      "paraId": "35A944CB",
+      "titleHistory": [
+        "Vilken storlek på stav?"
+      ],
+      "existingId": "540wnc1pz0k7v44"
+    },
+    {
+      "sourceKey": "dilator.measure-length",
+      "paraId": "5CE36530",
+      "titleHistory": [
+        "Hur mäter jag längden?"
+      ],
+      "existingId": "v6uaw2lwupb43k1"
+    },
+    {
+      "sourceKey": "dilator.pain-discomfort",
+      "paraId": "426592A8",
+      "titleHistory": [
+        "Hur hanterar jag smärta och obehag?"
+      ],
+      "existingId": "faq000000000002"
+    },
+    {
+      "sourceKey": "intimate-care.routine",
+      "paraId": "3CD31977",
+      "titleHistory": [
+        "Hur sköter jag bäst min intimvård?"
+      ],
+      "existingId": "8507djoit323dac"
+    },
+    {
+      "sourceKey": "intimate-care.wounds",
+      "paraId": "5EB14B92",
+      "titleHistory": [
+        "Hur gör jag om jag får blåsor eller sår?"
+      ],
+      "existingId": "faq000000000003"
+    },
+    {
+      "sourceKey": "intimate-care.hair",
+      "paraId": "52A46B45",
+      "titleHistory": [
+        "Hur sköter jag könshåret under strålbehandling?"
+      ],
+      "existingId": "faq000000000004"
+    },
+    {
+      "sourceKey": "sexual-health.definition",
+      "paraId": "6C67BF5D",
+      "titleHistory": [
+        "Vad är sexuell hälsa?"
+      ],
+      "existingId": "2m43w22dg11hw9x"
+    },
+    {
+      "sourceKey": "sexual-health.treatment-effects",
+      "paraId": "0AC08D0C",
+      "titleHistory": [
+        "Hur påverkas sexualiteten av strålbehandling?"
+      ],
+      "existingId": "i0y07b2txpy01z0"
+    },
+    {
+      "sourceKey": "sexual-health.relationships",
+      "paraId": "7A81B1A2",
+      "titleHistory": [
+        "Hur påverkas relationer och närhet?"
+      ],
+      "existingId": "ku6a9k3a5p2623e"
+    },
+    {
+      "sourceKey": "sexual-health.support",
+      "paraId": "518141DC",
+      "titleHistory": [
+        "Var kan jag få stöd och hjälp?"
+      ]
+    },
+    {
+      "sourceKey": "violence.why-asked",
+      "paraId": "4AEDCA63",
+      "titleHistory": [
+        "Varför frågar ni om övergrepp och våld?"
+      ],
+      "existingId": "s1z0r1on21sqd8l"
+    },
+    {
+      "sourceKey": "violence.definition",
+      "paraId": "4EE27802",
+      "titleHistory": [
+        "Vad räknas som våld?",
+        "Vad menas med övergrepp och våld?"
+      ],
+      "existingId": "t00ym96lk6jvx04"
+    },
+    {
+      "sourceKey": "violence.effects",
+      "paraId": "59C8BB73",
+      "titleHistory": [
+        "Hur kan våld och övergrepp påverka mig?"
+      ],
+      "existingId": "u19447zk1s9396q"
+    },
+    {
+      "sourceKey": "violence.answering-yes",
+      "paraId": "678E3C91",
+      "titleHistory": [
+        "Vad händer om jag svarar ja på frågor om våld i formuläret?"
+      ],
+      "existingId": "lreyvqn920x4x1s"
+    },
+    {
+      "sourceKey": "violence.support",
+      "paraId": "2F64C552",
+      "titleHistory": [
+        "Var kan jag få hjälp och stöd?"
+      ]
+    },
+    {
+      "sourceKey": "after-treatment.dilator-use",
+      "paraId": "5099BDC0",
+      "titleHistory": [
+        "Att använda vaginalstav efter avslutad strålbehandling"
+      ],
+      "audienceRanges": [
+        {
+          "start": "0334376E",
+          "end": "3CF65EEA",
+          "audience": {
+            "arms": [
+              "PRE"
+            ]
+          }
+        },
+        {
+          "start": "3D563F81",
+          "end": "20196657",
+          "audience": {
+            "arms": [
+              "POST"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceKey": "after-treatment.follow-up",
+      "paraId": "738A424C",
+      "titleHistory": [
+        "Uppföljning vaginalstav"
+      ]
+    },
+    {
+      "sourceKey": "after-treatment.study-follow-up",
+      "paraId": "1E03511E",
+      "titleHistory": [
+        "Vad händer i studien efter avslutad strålbehandling?"
+      ]
+    },
+    {
+      "sourceKey": "after-treatment.contact",
+      "paraId": "216C622D",
+      "titleHistory": [
+        "Vart vänder jag mig om jag har frågor?"
+      ]
+    },
+    {
+      "sourceKey": "dilator.bleeding",
+      "paraId": "F1000001",
+      "titleHistory": [
+        "Uppstod blödning?"
+      ],
+      "existingId": "8404gl231koqp8u"
+    },
+    {
+      "sourceKey": "study.questionnaire",
+      "paraId": "F2000002",
+      "titleHistory": [
+        "Varför ska jag svara på frågorna?"
+      ],
+      "existingId": "5l904a7395842iu"
+    },
+    {
+      "sourceKey": "study.contacts",
+      "paraId": "F2000003",
+      "titleHistory": [
+        "Hur kommer jag i kontakt med ansvariga för studien?"
+      ],
+      "existingId": "yy98yjvj54e732h"
+    }
+  ],
+  "footerParaIds": [],
+  "internalLinks": {
+    "0DA23205": "radiation.estrogen",
+    "2F984646": "intimate-care",
+    "7319E622": "radiation.dry-mucosa",
+    "3BB1614D": "radiation.dry-mucosa"
+  },
+  "assets": {
+    "fd6cf1b539a90b240983b0fe3b0e713aa564cd57bace1e3c57ba63d6f1d76676": {
+      "kind": "video",
+      "url": "",
+      "alt": "Förhandsbild till filmen om torra och sköra slemhinnor, med en person framför blå bakgrund.",
+      "placeholder": true
+    },
+    "2eb31f2663d2acec06ec9819e1047812fcf330eae3f389ede83823ddb4df3b28": {
+      "kind": "video",
+      "url": "",
+      "alt": "Förhandsbild till den animerade filmen om att använda vaginalstav.",
+      "placeholder": true
+    },
+    "c6f37ef0b63146d00277f1ccc39acdd2e4e4d9b464c8aadad9687c3a94eafb5b": {
+      "kind": "video",
+      "url": "",
+      "alt": "Förhandsbild till filmen ”Vad är sexualitet?”.",
+      "placeholder": true
+    },
+    "f646309761c301694e91209b2593c38675d2164870ec6639772096ae6d051d8b": {
+      "kind": "video",
+      "url": "",
+      "alt": "Förhandsbild till filmen ”Så påverkar cancern din sexualitet”.",
+      "placeholder": true
+    },
+    "b960ae331ce2b12e15e8e7c78dd9b16aeb19ebc4e4768eeba3ec679adc252f1a": {
+      "kind": "video",
+      "url": "",
+      "alt": "Förhandsbild till filmen ”Tips och råd för ökad lust”.",
+      "placeholder": true
+    },
+    "003efd7f12a9a47812a3206cf1b43a50820415a38f75b5d878cf1206d8ef7ef5": {
+      "kind": "video",
+      "url": "",
+      "alt": "Förhandsbild till filmen ”Sexuella hjälpmedel vid rehabilitering”.",
+      "placeholder": true
+    },
+    "8de1dbc373dd245bf02357e88837c0a25e31c70f1e02ea3d6af90bc69729016a": {
+      "alt": "Ett förstoringsglas med ett frågetecken framför färgade vågor."
+    },
+    "28246d2ef660cf3c24e9591a930a60a658c2ea41c2ee7279d40d3d456ae73ae4": {
+      "alt": "Genomskärning av bäckenet där slidans område är markerat med en cirkel."
+    },
+    "7993469c86d7afa032c9b0c8696da180a1976e5f071bed8b88cac4640f6f52b2": {
+      "alt": "Schematisk kurva över graden av vaginal stenos, från lindrig till uttalad påverkan. Antal och procent anges inte."
+    },
+    "20f78c7c0acb296dcc0bd246ce57afa95ea65b6a2aadd500e34b46e557650e30": {
+      "alt": "En kemisk strukturformel och ett förstoringsglas."
+    },
+    "2ddb8a821f7d4088ca16bd6cbd833a70f52fe07c4955750a3e33a56aabd4cd94": {
+      "alt": "En spiral med trådar."
+    },
+    "74a320b9679be3b2d6f511853a3a2141daf7d15ce5304fe310e8160c4c6651ca": {
+      "alt": "Ett graviditetstest med två streck och ett frågetecken."
+    },
+    "2b4fdc32c049bbf908374262a1789c5edaabc6da88d077252f26f08d46a5479f": {
+      "alt": "En person vilar bakåtlutad i en soffa med böjda ben."
+    },
+    "432c1322b0db89bff7abb0d662929b9efcea17b17bddd7dcf610d8ad385bdac1": {
+      "alt": "En tub glidmedel och en flaska intimolja."
+    },
+    "fe79c1d7579422d9702e48f83b9d0b084187aff123959522e3310060e6277c9e": {
+      "alt": "Genomskärning som visar vaginalstaven införd i slidan."
+    },
+    "49421cac412e6b34c68aa9dba12d6c31fcfd39bcba7ba6927fa334c8aacd4f13": {
+      "alt": "En pil visar vaginalstavens riktning in i slidan."
+    },
+    "b0a01f1b2fdf662fa768a2fbbc8cfadcf1e3561fa113b70e9fbdf5fa9c2ca44c": {
+      "alt": "Vaginalstaven ligger i slidan. Bilden anger 5–10 minuter."
+    },
+    "b8614be2c29e78b2bd074c40093de7e17469c1013c48cf5810921b6fde29a46c": {
+      "alt": "Tre vaginalstavar märkta mindre, mellan och stor."
+    },
+    "df66e36f7e47183c8329a0c603bd5a0921396a3aeb6b0f491c7beadba3163a43": {
+      "alt": "En hand håller vaginalstaven under en vattenkran för rengöring."
+    },
+    "873faf0ab2235efb2fe9b090e44b7cd32eb7b4f3fda458275d465b1673350da8": {
+      "alt": "Tre storlekar på vaginalstav med längdmarkeringar i centimeter."
+    },
+    "99a1b1ab4fe5b5caf10aa767dc9bd83235ebd15e17933a2e74a7e5704f3b9265": {
+      "alt": "Vaginalstav med markeringarna 2 cm eller kortare, 4 cm, 6 cm, 8 cm och 10 cm eller längre."
+    },
+    "3b6851ac98ecdca29bb156f61bd1e578bf91b451b2bd092fbdc7ab6952696836": {
+      "alt": "Genomskärning som visar vaginalstavens spets vid slidöppningen."
+    },
+    "4e6b957427407b6c938aaff46a187a83fc542f6050cd710f64ce3f60d46b18a5": {
+      "alt": "En pil pekar på knappen som startar vaginalstavens vibration."
+    },
+    "1fc3f7f7447a6644d5734790c999bcfc32e509fd48a2e5a4f092d200ead38da9": {
+      "alt": "En pumpflaska, tvål och ett frågetecken som illustrerar frågor om intimvård."
+    },
+    "e145a186221918217e6808a1619afe5e3f75f1e2f8eba2e2cc1cf2130a3518a6": {
+      "alt": "Ett varningstecken över underlivet på en person i underkläder."
+    },
+    "8d0ecd30e372d1d45649ea3829e967f7a46841ca003cc25d1168bd20586e3592": {
+      "alt": "En rakhyvel intill ett frågetecken."
+    },
+    "d60eab38430277d93cdd505704749b17b480c07a576da02553a1ca62a864b382": {
+      "alt": "Fyra sammanfogade pusselbitar märkta mental, fysisk, social och emotionell."
+    },
+    "bc917f683b43415bf821ebff59539c92b830a3533d986f221fccd83537a580bc": {
+      "alt": "Två hjärtformade blommor med plåster."
+    },
+    "92b730de81606daad68ae9594a53a64c292055ddab17db1ebf29595384a7dde0": {
+      "alt": "Två händer som håller varandra framför ett hjärta och en hjärtformad blomma med plåster."
+    },
+    "dd6974f4824437ff9e347ad5fe68dbdcdc1d05345d8155a5fd87fe3fdbc5c5e8": {
+      "alt": "Två händer som håller varandra, omgivna av hjärtan och en blomma med plåster."
+    },
+    "5992674dda152b4099713935b21ce07f1bf9df35cded21a2aa6230cfe56c6e2f": {
+      "alt": "Ett frågetecken intill en hjärtformad blomma med plåster."
+    },
+    "d9b10e17b05480ce64c4284842dce103e70856e2db18726a21709802712f1476": {
+      "alt": "Ett sprucket hjärta bredvid ett mindre hjärta och en blomma med plåster."
+    },
+    "87ab620935e95c565da307423f7c7cc62e5531242d0d0191b2b8abfbeab95935": {
+      "alt": "En öppen hand hålls upp framför en knuten näve."
+    },
+    "cc0ab36466bddfd5dfb6e1133a4c6c97276c6efe3fed999da0e29acf9fdd2397": {
+      "alt": "Två människosiluetter framför sprickor och konturen av ett brustet hjärta."
+    },
+    "1d7739e488700923baab4dfe238de100ebadeea3691033f440accdc8667ba94c": {
+      "alt": "Ett frågeformulär och en penna intill ett hjärta med sprickor och ett frågetecken."
+    },
+    "a7909e67df5e3559a7f1d1e390928d64e6384776cfdf282b10f6a5be1c44a7c4": {
+      "alt": "Genomskärning av bäckenet med numrerade markeringar för bland annat urinblåsa, livmoder, slida och ändtarm."
+    },
+    "87423497bfce691038b8e171d51d2ea1049908d08991960291663e8d619497ee": {
+      "alt": "Tidslinje för PRE-gruppens användning av vaginalstav före, under och efter strålbehandling. De fullständiga instruktionerna finns i texten intill."
+    }
+  },
+  "resolutions": {
+    "b83268f47836409bcdf24232b55dce7ba4ec23ff760093178d9f2d8dcdd4b77d": "2026-09-30: User confirmed: retain three-month follow-up and SMS wording for now.",
+    "96197896a385a1cdf6521a225efc7f48df4698bc9a236f0dd36c76db2e7e8868": "2026-09-30: User confirmed PRE/POST filtering only; explicit paragraph ranges implemented.",
+    "a59396befdb1a5eaba0de560f462122a8c0afee677aa7e638618f4ce13c77c4e": "2026-09-30: The updated source includes number 11 in its text legend.",
+    "96da68ba22f6129d0fe0ce942cdc37392e8dd8fe4f7e1ffca0e6a7d826e25546": "2026-09-30: Capitalized the Word callout bullet starts.",
+    "683bb91fd3f64332bf30507b6b0a1d7e0526785e943e3017581702b303fc1d84": "2026-09-30: Implemented PRE audience range in dilator.timing.",
+    "874cfae0a15d4716cfb6cf84f307118f49733f2ba1294d409c8fcef29b941271": "2026-09-30: Updated Word body says 2–3 times per week. The timeline illustration remains separately flagged for correction.",
+    "aa0548c6abf24b6eef50c790534aafab53721de7b81ed83c043b9127245d5b24": "2026-09-30: Implemented POST audience range in dilator.timing.",
+    "35a3a3690ecbd2990542ae88813dd364e71d1092c0889a600c8a91525c9a146f": "2026-09-30: Verified the updated Word organization hyperlinks and emergency telephone links are retained.",
+    "e5d6ef91c41cf5b7f7e08590c7e9996e72dd26c12b728338fab20cce0c354a15": "2026-09-30: Implemented POST audience range in after-treatment.dilator-use.",
+    "28a8afde1851e059dd6dfa89a342e4306b36f8bfd9fe0cb526ecb61fad90cde2": "2026-09-30: Implemented PRE audience range in after-treatment.dilator-use.",
+    "5a0e01b3eb0ed0a5ae9d6cbe629673b9ee7cf88602137761d74dbf90c83d916f": "2026-09-30: User confirmed retaining the current anal/gynaecological follow-up paragraphs for now."
+  },
+  "retirements": [
+    {
+      "collection": "resource",
+      "id": "0mo0p6jq95s71k0"
+    },
+    {
+      "collection": "resource",
+      "id": "971931xhdhac75z"
+    },
+    {
+      "collection": "resource",
+      "id": "3ws3117l02f50sb"
+    },
+    {
+      "collection": "resource",
+      "id": "1m57av0v5v9s212"
+    },
+    {
+      "collection": "resource",
+      "id": "sg7r3u1z24c50y9"
+    },
+    {
+      "collection": "resource",
+      "id": "y30d5j8mhr97b4x"
+    },
+    {
+      "collection": "resourceCollection",
+      "id": "417f26j6i21zuk2"
+    }
+  ],
+  "relationRemaps": [
+    {
+      "collection": "questions",
+      "id": "z39l2ubdri1evdx",
+      "field": "resource",
+      "target": "dilator.pain-discomfort"
+    },
+    {
+      "collection": "questions",
+      "id": "yeea9whxqv2c1kq",
+      "field": "resource",
+      "target": "dilator.pain-discomfort"
+    },
+    {
+      "collection": "questions",
+      "id": "vxhvj3xhwuj9gmx",
+      "field": "resource",
+      "target": "dilator.pain-discomfort"
+    },
+    {
+      "collection": "questions",
+      "id": "jzzot4gxpb1pppa",
+      "field": "resource",
+      "target": "dilator.pain-discomfort"
+    },
+    {
+      "collection": "questions",
+      "id": "v3pcgtlpz9w3oh1",
+      "field": "resource",
+      "target": "sexual-health.treatment-effects"
+    }
+  ]
+}

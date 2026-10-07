@@ -1,0 +1,5105 @@
+{
+  "counts": {
+    "collections": 7,
+    "resources": 35,
+    "images": 37,
+    "textBoxes": 17,
+    "comments": 24,
+    "alternateContent": 16,
+    "rawTextNodes": 757,
+    "selectedTextNodes": 692,
+    "bodyParagraphs": 589
+  },
+  "paragraphs": [
+    {
+      "paragraph": 0,
+      "paraId": "5772F053",
+      "disposition": "collection-heading",
+      "textNodeCount": 2,
+      "text": "Strålbehandling och biverkningar",
+      "images": 0
+    },
+    {
+      "paragraph": 1,
+      "paraId": "60C1FBBD",
+      "disposition": "resource-heading",
+      "textNodeCount": 2,
+      "text": "Varför påverkas mina friska organ av strålningen?",
+      "images": 0
+    },
+    {
+      "paragraph": 2,
+      "paraId": "0A148559",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Här är en bild i genomskärning av bäckenområdet. Det är många viktiga organ som trängs om utrymmet och ligger nära varandra:",
+      "images": 0
+    },
+    {
+      "paragraph": 3,
+      "paraId": "0372E216",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 4,
+      "paraId": "1B41D483",
+      "disposition": "blocks",
+      "textNodeCount": 36,
+      "text": "1. Äggledare/ 2. Äggstockar/ 3. Livmoder/ 4. Livmoderhals/ 5. Blygdben/ 6. Urinblåsa/ 7. Slida/ 8. Ändtarm/ 9. Venusberg/ 10. Klitoris/ 11.Yttre blygdläppar/ 12. Inre blygdläppar/ 13. Bäckenbottenmuskulatur/ 14. Mellangård/ ",
+      "images": 0
+    },
+    {
+      "paragraph": 5,
+      "paraId": "3FEF9306",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Målet är att ge strålbehandling med en hög stråldos till tumör/tumörområde samtidigt som frisk vävnad skonas. Men det går inte att helt undvika att även frisk vävnad får stråldos och därför uppstår biverkningar. ",
+      "images": 0
+    },
+    {
+      "paragraph": 6,
+      "paraId": "669A2917",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Läs mer här: ",
+      "images": 0
+    },
+    {
+      "paragraph": 7,
+      "paraId": "F3000001",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Strålbehandling | Cancerfonden",
+      "images": 0
+    },
+    {
+      "paragraph": 8,
+      "paraId": "290EF7AF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 9,
+      "paraId": "56A610E7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 10,
+      "paraId": "0AFF4E46",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 11,
+      "paraId": "336A739A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 12,
+      "paraId": "0ED01578",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 13,
+      "paraId": "72B3EA4E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 14,
+      "paraId": "174C5DBA",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 15,
+      "paraId": "0DA9451F",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 16,
+      "paraId": "4EF7EF40",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 17,
+      "paraId": "26769CDF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 18,
+      "paraId": "2FD44F8A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 19,
+      "paraId": "208C4E95",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur påverkas mina friska organ av strålningen?",
+      "images": 0
+    },
+    {
+      "paragraph": 20,
+      "paraId": "41AF7A3A",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Det finns flera effekter på organ och kroppen till följd av strålbehandling. En av dem är det som denna studie handlar om, nämligen att det kan uppstå sammanläkning och ärrbildning i vaginan (vaginal stenos och fibros)",
+      "images": 0
+    },
+    {
+      "paragraph": 21,
+      "paraId": "228DDB70",
+      "disposition": "blocks",
+      "textNodeCount": 13,
+      "text": "En annan bieffekt är att äggstockarna slås ut vilket leder till både utebliven ägglossning och menstruation. Även östrogenproduktionen påverkas kraftigt vilket genererar för tidigt eller förstärkt klimakterium. ",
+      "images": 0
+    },
+    {
+      "paragraph": 22,
+      "paraId": "7A260B4C",
+      "disposition": "blocks",
+      "textNodeCount": 5,
+      "text": "Mer information om respektive biverkning finns i kommande frågor. Där går vi även in på hur biverkningar kan behandlas.",
+      "images": 0
+    },
+    {
+      "paragraph": 23,
+      "paraId": "3497156A",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 24,
+      "paraId": "64008057",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 25,
+      "paraId": "3174778C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 26,
+      "paraId": "1513B042",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 27,
+      "paraId": "325E9C19",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 28,
+      "paraId": "2EB21520",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 29,
+      "paraId": "5BA9E84D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 30,
+      "paraId": "12FEA0FA",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 31,
+      "paraId": "35B5AA7B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 32,
+      "paraId": "369B1329",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 33,
+      "paraId": "49EE6D1A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 34,
+      "paraId": "525078E6",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 35,
+      "paraId": "129A1F0F",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 36,
+      "paraId": "2AD1A965",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 37,
+      "paraId": "17F75409",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 38,
+      "paraId": "1A664AE4",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 39,
+      "paraId": "6607AE40",
+      "disposition": "resource-heading",
+      "textNodeCount": 3,
+      "text": "Vad innebär sammanläkning och ärrbildning i vagina (vaginal stenos)?",
+      "images": 0
+    },
+    {
+      "paragraph": 40,
+      "paraId": "31D65B41",
+      "disposition": "blocks",
+      "textNodeCount": 6,
+      "text": "Sammanläkning eller sammanväxning  är en konsekvens av att kroppen vill läka. Strålbehandling gör att slemhinnan i slidan blir skör och inflammation uppstår. När slemhinnan sedan läker riskerar slidväggarna att växa samman. Andra ord för detta är vaginal stenos och fibros.",
+      "images": 0
+    },
+    {
+      "paragraph": 41,
+      "paraId": "735C7BD7",
+      "disposition": "blocks",
+      "textNodeCount": 10,
+      "text": "Sammanläkningen kan ske var som helst i slidan, från längre upp i slidan till längre ner nära slidmynningen. För vissa kan det alltså leda till förkortad och försnävad vagina. Ärrbildning i vävnaden kan även göra slemhinnan stelare och mindre töjbar. Om detta inte besvärar dig och om du känner dig okej med det är det sällan farligt. ",
+      "images": 0
+    },
+    {
+      "paragraph": 42,
+      "paraId": "3F7054D8",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 43,
+      "paraId": "4D815335",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Vaginal stenos kan göra det svårare att genomföra gynekologiska undersökningar och kan också orsaka obehag eller svårigheter vid vaginala samlag. Om livmodern finns kvar kan en kraftig förträngning även göra att vätska från livmodern får svårare att passera, vilket kan öka risken för infektion.",
+      "images": 0
+    },
+    {
+      "paragraph": 44,
+      "paraId": "606AB1F0",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Därför får du råd om att använda vaginalstav. Det kan hjälpa till att hålla slidans väggar isär, bibehålla elasticitet och minska risken för sammanläkning och förträngning. ",
+      "images": 0
+    },
+    {
+      "paragraph": 45,
+      "paraId": "6089E2AD",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Läs mer här:",
+      "images": 0
+    },
+    {
+      "paragraph": 46,
+      "paraId": "F3000002",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Användning av vaginalstav | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 47,
+      "paraId": "74B6F851",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 48,
+      "paraId": "1D095C8A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 49,
+      "paraId": "65E577EB",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 50,
+      "paraId": "54975CF0",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 51,
+      "paraId": "0B4AA7EC",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 52,
+      "paraId": "31EDB5CF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 53,
+      "paraId": "3703D7D8",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 54,
+      "paraId": "2194CF60",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 55,
+      "paraId": "24CD9425",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 56,
+      "paraId": "7E1952A0",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 57,
+      "paraId": "581AC4B9",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 58,
+      "paraId": "72F2FC17",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur vanligt är det att få vaginal stenos?",
+      "images": 0
+    },
+    {
+      "paragraph": 59,
+      "paraId": "0ECF63D8",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Nästan alla får någon grad av påverkan på slemhinnorna efter strålbehandling mot bäckenområdet. Enligt tidigare forskning utvecklar mellan 50–80 % vaginal stenos i någon grad. ",
+      "images": 0
+    },
+    {
+      "paragraph": 60,
+      "paraId": "460231A3",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Förändringarna kan vara allt från lindrig minskad elasticitet till mer uttalad försnävning eller sammanläkning. Hur mycket man påverkas varierar från person till person.",
+      "images": 0
+    },
+    {
+      "paragraph": 61,
+      "paraId": "481B59E4",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 62,
+      "paraId": "6E8D4A78",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 63,
+      "paraId": "60065B07",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 64,
+      "paraId": "7AD19E43",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 65,
+      "paraId": "6E432CBE",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 66,
+      "paraId": "1E89ECED",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 67,
+      "paraId": "08E09757",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 68,
+      "paraId": "37268558",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 69,
+      "paraId": "47C5BBA0",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 70,
+      "paraId": "46B24C3E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 71,
+      "paraId": "13442536",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 72,
+      "paraId": "132A8F8A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 73,
+      "paraId": "1559C2D2",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 74,
+      "paraId": "4CF51144",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 75,
+      "paraId": "65A3504C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 76,
+      "paraId": "1E7A2177",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 77,
+      "paraId": "363730D7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 78,
+      "paraId": "2DE52009",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 79,
+      "paraId": "4748DBB6",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 80,
+      "paraId": "3E58D908",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Vad kan jag göra åt torra och sköra slemhinnor?",
+      "images": 0
+    },
+    {
+      "paragraph": 81,
+      "paraId": "001F4F47",
+      "disposition": "blocks",
+      "textNodeCount": 7,
+      "text": "Du kan i första hand använda mjukgörande intimkräm (t.ex. dr. Warming critical care) som du kan få på strålbehandlingen.  ",
+      "images": 0
+    },
+    {
+      "paragraph": 82,
+      "paraId": "5754EFDC",
+      "disposition": "blocks",
+      "textNodeCount": 10,
+      "text": "Men det är inte alltid mjukgörande och fuktbevaring räcker. Eftersom strålbehandlingen slår ut din egen östrogenproduktion behövs det ibland tillföras östrogen. Lokalt tillfört östrogen gör slemhinnorna i underlivet mindre torra och sköra.",
+      "images": 0
+    },
+    {
+      "paragraph": 83,
+      "paraId": "15362B50",
+      "disposition": "blocks",
+      "textNodeCount": 13,
+      "text": "Östrogen finns som salva och gel, både för att smörja direkt utanpå och med applikator för införande i vagina. Det finns även som vagitorium, en tablett som förs in i vagina där den löses upp. Prova dig fram vilken beredningsform som känns bäst för dig. Väljer du vagitorium behöver du ofta även använda salva eller gel för att smörja slemhinnorna på utsidan.",
+      "images": 0
+    },
+    {
+      "paragraph": 84,
+      "paraId": "68BE57BB",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Obs. Använd inte lokalt östrogen om det är sårigt i området. ",
+      "images": 0
+    },
+    {
+      "paragraph": 85,
+      "paraId": "12087F67",
+      "disposition": "blocks",
+      "textNodeCount": 5,
+      "text": "Lokalt östrogen kan hjälpa genom att:Bygga upp slemhinnorna och göra dem mer elastiska och motståndskraftiga Motverka urinvägsinfektioner Ge bättre komfort Underlätta vid sex",
+      "images": 0
+    },
+    {
+      "paragraph": 86,
+      "paraId": "66DC7D00",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Här kan du se en kort film om lokal östrogenbehandling och varför det är viktigt i samband med och efter strålbehandling.",
+      "images": 0
+    },
+    {
+      "paragraph": 87,
+      "paraId": "26C5A7EF",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Film från 1177: Jag har torra och sköra slemhinnor– vad kan jag göra?",
+      "images": 0
+    },
+    {
+      "paragraph": 88,
+      "paraId": "6345D856",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 89,
+      "paraId": "266167E5",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Läs mer här:",
+      "images": 0
+    },
+    {
+      "paragraph": 90,
+      "paraId": "F3000003",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Lokalt östrogen | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 91,
+      "paraId": "5310BDC2",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 92,
+      "paraId": "0DA23205",
+      "disposition": "blocks",
+      "textNodeCount": 7,
+      "text": "Läs mer om östrogen ",
+      "images": 0
+    },
+    {
+      "paragraph": 93,
+      "paraId": "2F984646",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Läs mer om intimvård ",
+      "images": 0
+    },
+    {
+      "paragraph": 94,
+      "paraId": "271BE6F1",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 95,
+      "paraId": "28565E3A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 96,
+      "paraId": "31EED7C5",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 97,
+      "paraId": "36557406",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 98,
+      "paraId": "42460826",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 99,
+      "paraId": "1297AC5A",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Östrogen – vad är det och vad är det bra för? ",
+      "images": 0
+    },
+    {
+      "paragraph": 100,
+      "paraId": "52D6D0C6",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Östrogen är det kvinnliga könshormonet och bildas framför allt i äggstockarna, men även till viss del i binjurebarken. Hormonet påverkar utvecklingen av kvinnans könsorgan, reglerar menstruationen och bidrar till att en graviditet kan fullföljas. Östrogen har också en positiv påverkan på stora delar av kroppen, bland annat livmoder, bröst, hjärta, blodkärl, lungor, skelett och hjärna. ",
+      "images": 0
+    },
+    {
+      "paragraph": 101,
+      "paraId": "0FF9D1C3",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 102,
+      "paraId": "049C58A3",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "I klimakteriet går östrogenproduktionen ned. Då kan exempelvis hud och slemhinnor bli mindre elastiska, torrare och skörare. En del känner av en generell värk i muskler och leder och det finns risk för benskörhet på längre sikt. Om du är i fertil ålder (under 45 år) kan du därför behöva sättas in på Menopausal HormonTerapi (MHT).",
+      "images": 0
+    },
+    {
+      "paragraph": 103,
+      "paraId": "79F98075",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Obs. Diskutera detta med din onkologläkare.",
+      "images": 0
+    },
+    {
+      "paragraph": 104,
+      "paraId": "299FA7F4",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Här kan du se en kort film om lokal östrogenbehandling och varför det är viktigt i samband med och efter strålbehandling:",
+      "images": 0
+    },
+    {
+      "paragraph": 105,
+      "paraId": "3BB1614D",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Film: Lokal östrogenbehandling – 1177",
+      "images": 0
+    },
+    {
+      "paragraph": 106,
+      "paraId": "756E6E58",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Läs mer här: ",
+      "images": 0
+    },
+    {
+      "paragraph": 107,
+      "paraId": "F3000004",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Hormonersättningsmedel | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 108,
+      "paraId": "288C1FE1",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 109,
+      "paraId": "05302C97",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 110,
+      "paraId": "42030802",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 111,
+      "paraId": "2514E742",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 112,
+      "paraId": "30EBADF4",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 113,
+      "paraId": "4DDA1FC6",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 114,
+      "paraId": "0E3D3526",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 115,
+      "paraId": "5FE80DAB",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 116,
+      "paraId": "370A32AB",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Varför får jag klimakteriebesvär vid strålbehandling?",
+      "images": 0
+    },
+    {
+      "paragraph": 117,
+      "paraId": "0295A512",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Strålbehandling leder till att den egna östrogenproduktionen minskar kraftigt eller upphör, ofta permanent. Cytostatika kan också påverka äggstockarnas funktion. Därför kommer många in i ett för tidigt eller förstärkt klimakterium redan under eller kort efter behandlingen.",
+      "images": 0
+    },
+    {
+      "paragraph": 118,
+      "paraId": "41EA45EE",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Vanliga klimakteriebesvär är torra och sköra slemhinnor, värmevallningar, svettningar, sömnsvårigheter, humörförändringar och nedstämdhet.",
+      "images": 0
+    },
+    {
+      "paragraph": 119,
+      "paraId": "5389A39D",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Är du i fertil ålder (vanligtvis före 45 års ålder) kan du behöva hormonersättningsmedel eftersom kroppens egen östrogenproduktion påverkas av behandlingen. Prata med din behandlande läkare om vilken behandling som kan passa dig.",
+      "images": 0
+    },
+    {
+      "paragraph": 120,
+      "paraId": "5964C1EF",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Läs mer här:",
+      "images": 0
+    },
+    {
+      "paragraph": 121,
+      "paraId": "F3000005",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Svettningar, vallningar och utebliven mens | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 122,
+      "paraId": "F3000006",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Hormonersättningsmedel | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 123,
+      "paraId": "49631701",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 124,
+      "paraId": "458336DA",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 125,
+      "paraId": "7319E622",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Jag har torra och sköra slemhinnor - vad kan jag göra?  ",
+      "images": 0
+    },
+    {
+      "paragraph": 126,
+      "paraId": "5633F0CF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 127,
+      "paraId": "1454C134",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 128,
+      "paraId": "06A4DBAA",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 129,
+      "paraId": "77397F04",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 130,
+      "paraId": "40057532",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 131,
+      "paraId": "0F80B223",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 132,
+      "paraId": "1BAF6ACC",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 133,
+      "paraId": "3D2EF378",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 134,
+      "paraId": "0B26C97F",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 135,
+      "paraId": "07FB050E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 136,
+      "paraId": "719E457C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 137,
+      "paraId": "0A553D21",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 138,
+      "paraId": "638F9E26",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 139,
+      "paraId": "495B73BB",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 140,
+      "paraId": "2C2C5A75",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Jag har en spiral. Kan den vara kvar?",
+      "images": 0
+    },
+    {
+      "paragraph": 141,
+      "paraId": "230F2C3A",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Har du en spiral i livmodern behöver den tas bort innan strålbehandlingen påbörjas, eller så snart som möjligt. Efter behandlingen finns annars en risk att spiralen läker fast i ärrvävnad och blir svår att avlägsna.",
+      "images": 0
+    },
+    {
+      "paragraph": 142,
+      "paraId": "02C6773A",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 143,
+      "paraId": "6934FC6C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 144,
+      "paraId": "03D68634",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 145,
+      "paraId": "5A4A8792",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 146,
+      "paraId": "2D8E5045",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 147,
+      "paraId": "47ED50FA",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 148,
+      "paraId": "2F629679",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 149,
+      "paraId": "67CA76D8",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 150,
+      "paraId": "55036ED8",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 151,
+      "paraId": "043BA0E9",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 152,
+      "paraId": "5C5C5909",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 153,
+      "paraId": "703EA0A7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 154,
+      "paraId": "4B1CE0D4",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 155,
+      "paraId": "1AC85C46",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 156,
+      "paraId": "1B0BD32E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 157,
+      "paraId": "3084BFAE",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur påverkas mina möjligheter att bli gravid?",
+      "images": 0
+    },
+    {
+      "paragraph": 158,
+      "paraId": "63773429",
+      "disposition": "blocks",
+      "textNodeCount": 20,
+      "text": "Strålbehandling mot bäckenområdet påverkar äggstockarnas funktion. Vilket leder till att ägglossning och menstruation upphör, och det går inte längre att bli gravid på naturlig väg. Även om du till exempel har frusit ner ägg så är det ingen garanti att du kan bli gravid. Kroppen kan ha påverkats av genomgången behandling så att en graviditet inte längre är möjlig. Exempelvis är livmodern ofta mindre elastisk efter strålbehandlingen, vilket kan försvåra möjligheten att genomföra en graviditet.",
+      "images": 0
+    },
+    {
+      "paragraph": 159,
+      "paraId": "6F18F277",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Även andra delar av cancerbehandlingen kan påverka fertiliteten och möjligheten att bli gravid.",
+      "images": 0
+    },
+    {
+      "paragraph": 160,
+      "paraId": "2B1ABCD0",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om du vill veta mer om hur just dina möjligheter ser ut behöver du prata med din behandlande läkare eller onkolog.",
+      "images": 0
+    },
+    {
+      "paragraph": 161,
+      "paraId": "3AEAEE18",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 162,
+      "paraId": "2BE33FC1",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 163,
+      "paraId": "642A5CBF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 164,
+      "paraId": "355DF94A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 165,
+      "paraId": "0BD6A163",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 166,
+      "paraId": "6AA4E569",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 167,
+      "paraId": "07B13269",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 168,
+      "paraId": "571FB8E1",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 169,
+      "paraId": "03583625",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 170,
+      "paraId": "1E307424",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 171,
+      "paraId": "2642B363",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 172,
+      "paraId": "72B9F04A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 173,
+      "paraId": "6C5B4106",
+      "disposition": "collection-heading",
+      "textNodeCount": 2,
+      "text": "Användning av vaginalstav",
+      "images": 0
+    },
+    {
+      "paragraph": 174,
+      "paraId": "74D2A0B9",
+      "disposition": "resource-heading",
+      "textNodeCount": 2,
+      "text": "Varför ska jag använda vaginalstav?",
+      "images": 0
+    },
+    {
+      "paragraph": 175,
+      "paraId": "69DE4908",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Vaginalstav används för att förebygga sammanläkning och ärrbildning i vagina efter strålbehandling. ",
+      "images": 0
+    },
+    {
+      "paragraph": 176,
+      "paraId": "04654E1F",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Syftet är att bibehålla så normal anatomi som möjligt, vilket kan underlätta gynekologiska undersökningar och möjligheten att ha vaginalt sex.",
+      "images": 0
+    },
+    {
+      "paragraph": 177,
+      "paraId": "3D72B1F6",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Att använda vaginalstav regelbundet kan också bidra till att minska risken för mer uttalad försnävning och sammanläkning. Hur mycket man påverkas varierar från person till person, men tidig och regelbunden användning kan hjälpa till att hålla vävnaden mjukare och mer rörlig under läkningsprocessen.",
+      "images": 0
+    },
+    {
+      "paragraph": 178,
+      "paraId": "3CE19FB9",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "läs mer här: ",
+      "images": 0
+    },
+    {
+      "paragraph": 179,
+      "paraId": "F3000007",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Användning av vaginalstav | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 180,
+      "paraId": "005D4E11",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 181,
+      "paraId": "042D9341",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 182,
+      "paraId": "619A5889",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 183,
+      "paraId": "2852E187",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 184,
+      "paraId": "1280D4A5",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 185,
+      "paraId": "57D28D6B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 186,
+      "paraId": "594553A6",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 187,
+      "paraId": "449C542A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 188,
+      "paraId": "3D89F2A7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 189,
+      "paraId": "4AB795F4",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 190,
+      "paraId": "326C22E8",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 191,
+      "paraId": "16AD6EFE",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 192,
+      "paraId": "6413420A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 193,
+      "paraId": "703F0276",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 194,
+      "paraId": "34EF626D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 195,
+      "paraId": "33169E53",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 196,
+      "paraId": "665E2C68",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 197,
+      "paraId": "724EB343",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 198,
+      "paraId": "67A3236D",
+      "disposition": "resource-heading",
+      "textNodeCount": 2,
+      "text": "Hur gör jag när jag använder vaginalstav?",
+      "images": 0
+    },
+    {
+      "paragraph": 199,
+      "paraId": "40D9D69A",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Här kan du se en animerad film om hur du använder vaginalstaven:",
+      "images": 0
+    },
+    {
+      "paragraph": 200,
+      "paraId": "24DBA5E7",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 201,
+      "paraId": "34F149BE",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Så här gör du steg för steg:",
+      "images": 0
+    },
+    {
+      "paragraph": 202,
+      "paraId": "5F9CA70B",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Hitta ett avslappnat läge och en plats där du får vara i fred ",
+      "images": 0
+    },
+    {
+      "paragraph": 203,
+      "paraId": "04077E83",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 204,
+      "paraId": "17C13E9E",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Använd glidmedel eller olja på staven  ",
+      "images": 0
+    },
+    {
+      "paragraph": 205,
+      "paraId": "60039C47",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 206,
+      "paraId": "6B8C0345",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "För sedan in staven långsamt i slidan, så långt du kan komma utan att forcera. Denna övning ska inte göra ont, gör det ont ska du avbryta",
+      "images": 0
+    },
+    {
+      "paragraph": 207,
+      "paraId": "523CB93D",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 208,
+      "paraId": "75666008",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om staven glider ut när du gör denna övning, tryck försiktigt in den igen ",
+      "images": 0
+    },
+    {
+      "paragraph": 209,
+      "paraId": "248FE6B3",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 210,
+      "paraId": "627FA6A7",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Håll staven med ett lätt till måttligt tryck inne i vagina under ca 5-10 minuter",
+      "images": 0
+    },
+    {
+      "paragraph": 211,
+      "paraId": "55711C65",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 212,
+      "paraId": "68E55AC4",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om du upplever svårigheter med att använda staven, prova med en mindre storlek ",
+      "images": 0
+    },
+    {
+      "paragraph": 213,
+      "paraId": "1A733572",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 214,
+      "paraId": "18A7D9E3",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Efter användning, tvätta vaginalstaven med medföljande produktrengöring eller tvål och vatten",
+      "images": 0
+    },
+    {
+      "paragraph": 215,
+      "paraId": "0576F692",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 216,
+      "paraId": "4B15C993",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 217,
+      "paraId": "280043A8",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 218,
+      "paraId": "336B873D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 219,
+      "paraId": "2CAE8686",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 220,
+      "paraId": "3FD97D94",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 221,
+      "paraId": "1DA396A0",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 222,
+      "paraId": "47BC84B6",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "När ska jag använda vaginalstaven?",
+      "images": 0
+    },
+    {
+      "paragraph": 223,
+      "paraId": "200B8A3A",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 224,
+      "paraId": "5E5E0972",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Före strålbehandling:",
+      "images": 0
+    },
+    {
+      "paragraph": 225,
+      "paraId": "24433842",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Prova att använda vaginalstaven regelbundet",
+      "images": 0
+    },
+    {
+      "paragraph": 226,
+      "paraId": "30F28340",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Under strålbehandling:",
+      "images": 0
+    },
+    {
+      "paragraph": 227,
+      "paraId": "79EFB0A0",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Använd staven varje dag",
+      "images": 0
+    },
+    {
+      "paragraph": 228,
+      "paraId": "7341B2D0",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Om det svider eller gör ont – ta paus från terapin, några dagar eller veckor. ",
+      "images": 0
+    },
+    {
+      "paragraph": 229,
+      "paraId": "55741380",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Obs! Det är vanligt att det ett par veckor in i behandlingen uppstår besvär. Det kan svida och slemhinnan är skör och lättblödande. När det känns bättre kan du börja använda staven igen.",
+      "images": 0
+    },
+    {
+      "paragraph": 230,
+      "paraId": "30BA2FE3",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Efter strålbehandling:",
+      "images": 0
+    },
+    {
+      "paragraph": 231,
+      "paraId": "367C7FF3",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Fortsätt dagligen i 6 veckor",
+      "images": 0
+    },
+    {
+      "paragraph": 232,
+      "paraId": "3EEDB76F",
+      "disposition": "blocks",
+      "textNodeCount": 6,
+      "text": "Efter 6 veckor, gå över till 2-3 gånger per vecka",
+      "images": 0
+    },
+    {
+      "paragraph": 233,
+      "paraId": "0D557C00",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Fortsätt regelbundet i 2-3 år",
+      "images": 0
+    },
+    {
+      "paragraph": 234,
+      "paraId": "443FA5FF",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om du har haft smärta eller blödning - vänta några veckor innan du gör ett nytt försök. Ta upp vaginalstavsanvändandet när det gått några veckor.",
+      "images": 0
+    },
+    {
+      "paragraph": 235,
+      "paraId": "603951BD",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 236,
+      "paraId": "55C389CA",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Efter avslutad strålbehandling:",
+      "images": 0
+    },
+    {
+      "paragraph": 237,
+      "paraId": "7A37DB77",
+      "disposition": "blocks",
+      "textNodeCount": 5,
+      "text": "Cirka 1 månad efter avslutad strålbehandling kommer du att ha ett samtal om vaginalstavsterapi med din kontaktsjuksköterska. Efter det samtalet kan du starta med vaginalstavsterapin enligt överenskommelse med din kontaktsjuksköterska. Vanligen 4 till 6 veckor efter avslutad strålbehandling. Följ nedanstående schema:",
+      "images": 0
+    },
+    {
+      "paragraph": 238,
+      "paraId": "2F204069",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Dagligen i 1 månad",
+      "images": 0
+    },
+    {
+      "paragraph": 239,
+      "paraId": "701161F0",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Därefter 2-3 gånger per vecka",
+      "images": 0
+    },
+    {
+      "paragraph": 240,
+      "paraId": "3FC64996",
+      "disposition": "blocks",
+      "textNodeCount": 5,
+      "text": "Fortsätt regelbundet i 2-3 år",
+      "images": 0
+    },
+    {
+      "paragraph": 241,
+      "paraId": "77A53E99",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 242,
+      "paraId": "7CB62587",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 243,
+      "paraId": "614500FA",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 244,
+      "paraId": "5EFFFCDB",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 245,
+      "paraId": "2C1DE704",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 246,
+      "paraId": "35A944CB",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Vilken storlek på stav?",
+      "images": 0
+    },
+    {
+      "paragraph": 247,
+      "paraId": "6B763F15",
+      "disposition": "blocks",
+      "textNodeCount": 5,
+      "text": "Använd den storlek som känns möjlig att föra in utan att det gör ont. Det viktiga är regelbundenheten, inte att välja största storleken. ",
+      "images": 0
+    },
+    {
+      "paragraph": 248,
+      "paraId": "779466E4",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 249,
+      "paraId": "77C8586F",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Ange storleken i ditt dagliga formulär.",
+      "images": 0
+    },
+    {
+      "paragraph": 250,
+      "paraId": "2C4F9AE8",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 251,
+      "paraId": "5F57C73B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 252,
+      "paraId": "5CE36530",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur mäter jag längden?",
+      "images": 0
+    },
+    {
+      "paragraph": 253,
+      "paraId": "6907CD25",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "När du ska göra mätningen:Håll staven med din hand/fingrar invid slidans mynning. Titta på stavens längmarkering och notera längden. Ange längden i ditt dagliga formulär",
+      "images": 0
+    },
+    {
+      "paragraph": 254,
+      "paraId": "103474BE",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 255,
+      "paraId": "63634F83",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om du är osäker eller om greppet hamnar mitt emellan två markeringar - avrunda uppåt.",
+      "images": 0
+    },
+    {
+      "paragraph": 256,
+      "paraId": "4CBC86FA",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 257,
+      "paraId": "6AD6AD88",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Ange längden i ditt dagliga formulär.",
+      "images": 0
+    },
+    {
+      "paragraph": 258,
+      "paraId": "35B9B759",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 259,
+      "paraId": "2ABC677E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 260,
+      "paraId": "05BA986D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 261,
+      "paraId": "0A79D9C2",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 262,
+      "paraId": "2B44F05D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 263,
+      "paraId": "426592A8",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur hanterar jag smärta och obehag?",
+      "images": 0
+    },
+    {
+      "paragraph": 264,
+      "paraId": "69A0F3D3",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Vid obehag under vaginalstavsterapin, ta en paus, försök hitta ett avslappnat läge. Ett visst obehag är inte farligt, men det ska inte göra ont att använda staven. ",
+      "images": 0
+    },
+    {
+      "paragraph": 265,
+      "paraId": "30481EC7",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Ibland kan musklerna i slidans mynning spänna sig eller krampa. Då kan det hjälpa att föra in staven försiktigt och låta den vila i slidöppningen en stund utan att trycka in den längre. När kroppen hunnit slappna av kan du försöka igen långsamt.",
+      "images": 0
+    },
+    {
+      "paragraph": 266,
+      "paraId": "4045EB67",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 267,
+      "paraId": "59D1750F",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Vaginalstaven har också en vibrationsfunktion som kan hjälpa musklerna att slappna av. Denna startas via knappen i toppen. Ofta kan just vibration göra att eventuell slidkramp släpper.",
+      "images": 0
+    },
+    {
+      "paragraph": 268,
+      "paraId": "60239A29",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 269,
+      "paraId": "5548AC1E",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Försök att:",
+      "images": 0
+    },
+    {
+      "paragraph": 270,
+      "paraId": "5FFFE06D",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Välj en lugn plats där du får vara ostörd ",
+      "images": 0
+    },
+    {
+      "paragraph": 271,
+      "paraId": "76519427",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 272,
+      "paraId": "32ADA537",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Hitta en bekväm kroppsposition där du kan slappna av",
+      "images": 0
+    },
+    {
+      "paragraph": 273,
+      "paraId": "4AA7EAFF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 274,
+      "paraId": "2D6BE20C",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Ta det långsamt och forcera inte behandlingen",
+      "images": 0
+    },
+    {
+      "paragraph": 275,
+      "paraId": "3F7BE346",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 276,
+      "paraId": "0ECAC701",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Använda glidmedel eller olja på staven ",
+      "images": 0
+    },
+    {
+      "paragraph": 277,
+      "paraId": "14412B49",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om det gör ont är det viktigt att inte fortsätta med terapin. Försök inte forcera stavbehandlingen, eftersom upprepad smärta kan göra att kroppen spänner sig mer och i vissa fall bidra till långvariga smärtbesvär som vestibulit. Detsamma gäller penetrerande vaginalt sex eller samlag som gör ont.",
+      "images": 0
+    },
+    {
+      "paragraph": 278,
+      "paraId": "303CB1A3",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om du får kvarstående smärta eller behöver hjälp med smärtlindring kan du kontakta din läkare eller sjuksköterska på den onkologiska kliniken.",
+      "images": 0
+    },
+    {
+      "paragraph": 279,
+      "paraId": "23779208",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Vad är vestibulit?",
+      "images": 0
+    },
+    {
+      "paragraph": 280,
+      "paraId": "542E8424",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Vestibulit är ett långvarigt smärttillstånd i slidöppningen som kan behöva behandling. Smärtan kan vara övergående men det är viktigt att ta smärta och obehag på allvar och inte fortsätta om det gör ont.",
+      "images": 0
+    },
+    {
+      "paragraph": 281,
+      "paraId": "63FF87A8",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 282,
+      "paraId": "01D7D68C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 283,
+      "paraId": "6C232AF7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 284,
+      "paraId": "1A636B0E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 285,
+      "paraId": "196A705A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 286,
+      "paraId": "718577CE",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 287,
+      "paraId": "71AF3883",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 288,
+      "paraId": "35AE48DF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 289,
+      "paraId": "5E05078D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 290,
+      "paraId": "47337288",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 291,
+      "paraId": "F1000001",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Uppstod blödning?",
+      "images": 0
+    },
+    {
+      "paragraph": 292,
+      "paraId": "F1010001",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Det är vanligt med mindre blödning eller blodtillblandad flytning i samband med införandet av staven. Det kan bero på skör slemhinna eller ytliga blodkärl. Det kan också uppstå då du tänjer isär eventuell sammanläkning av slidväggarna. En sparsam blödning efter att du har använt vaginalstaven är därför helt normalt och inget du behöver oroa dig för.",
+      "images": 0
+    },
+    {
+      "paragraph": 293,
+      "paraId": "F1010002",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Obs! Om det uppstår en större blödning behöver du direkt avbryta vaginalstavsterapin, rådgöra med ansvarig sjuksköterska eller läkare. Vad är en större blödning? Det kan vara svårt att avgöra vad som är en större blödning, men det kan vara om blödningen är så stor att du behöver använda en större binda.",
+      "images": 0
+    },
+    {
+      "paragraph": 294,
+      "paraId": "48213B0D",
+      "disposition": "collection-heading",
+      "textNodeCount": 2,
+      "text": "Om intimvård",
+      "images": 0
+    },
+    {
+      "paragraph": 295,
+      "paraId": "3CD31977",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur sköter jag bäst min intimvård?",
+      "images": 0
+    },
+    {
+      "paragraph": 296,
+      "paraId": "11D3F0DF",
+      "disposition": "blocks",
+      "textNodeCount": 6,
+      "text": "Strålbehandlingen gör huden och slemhinnorna i underlivet torra, sköra och känsliga. Därför är det viktigt att vara varsam vid intimvård och undvika sådant som kan irritera området ytterligare.",
+      "images": 0
+    },
+    {
+      "paragraph": 297,
+      "paraId": "5A8467BD",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Försök att:",
+      "images": 0
+    },
+    {
+      "paragraph": 298,
+      "paraId": "248C91F5",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Använda vatten och olja vid intimvård",
+      "images": 0
+    },
+    {
+      "paragraph": 299,
+      "paraId": "3FC824BE",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Undvika tvål eftersom det kan torka ut slemhinnorna",
+      "images": 0
+    },
+    {
+      "paragraph": 300,
+      "paraId": "7C366476",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Klappa huden torr försiktigt istället för att gnugga",
+      "images": 0
+    },
+    {
+      "paragraph": 301,
+      "paraId": "4D923D0B",
+      "disposition": "blocks",
+      "textNodeCount": 6,
+      "text": "Smörja området regelbundet med Dr. Warming Critical Care som du fått från strålbehandlingsavdelningen",
+      "images": 0
+    },
+    {
+      "paragraph": 302,
+      "paraId": "518377BE",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om huden eller slemhinnorna känns irriterade kan det också hjälpa att undvika åtsittande kläder och material som skaver mot huden.",
+      "images": 0
+    },
+    {
+      "paragraph": 303,
+      "paraId": "73D7A44C",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 304,
+      "paraId": "16CFF04B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 305,
+      "paraId": "00DC6921",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 306,
+      "paraId": "4C512C23",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 307,
+      "paraId": "4D558EF7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 308,
+      "paraId": "391022B1",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 309,
+      "paraId": "64A1518B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 310,
+      "paraId": "024EB085",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 311,
+      "paraId": "04EBF2B3",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 312,
+      "paraId": "75F417E2",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 313,
+      "paraId": "6802561E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 314,
+      "paraId": "5EB14B92",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur gör jag om jag får blåsor eller sår?",
+      "images": 0
+    },
+    {
+      "paragraph": 315,
+      "paraId": "72DB35F1",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om du får mer uttalade besvär, exempelvis blåsor, sår eller kraftig irritation i huden eller slemhinnorna, behöver du kontakta din sjuksköterska eller läkare på strålbehandlingsavdelningen för råd och hjälp.",
+      "images": 0
+    },
+    {
+      "paragraph": 316,
+      "paraId": "666E3F52",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 317,
+      "paraId": "0456B474",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 318,
+      "paraId": "21500948",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 319,
+      "paraId": "6832AA6E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 320,
+      "paraId": "60AEB79F",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 321,
+      "paraId": "5975E1B8",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 322,
+      "paraId": "1D242944",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 323,
+      "paraId": "03F9AEF9",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 324,
+      "paraId": "2D702CF7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 325,
+      "paraId": "3394139C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 326,
+      "paraId": "5571B8CC",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 327,
+      "paraId": "3F6D8DC7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 328,
+      "paraId": "2E70EF75",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 329,
+      "paraId": "1F94C53B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 330,
+      "paraId": "4187C244",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 331,
+      "paraId": "46BFBD58",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 332,
+      "paraId": "703C3329",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 333,
+      "paraId": "6423A736",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 334,
+      "paraId": "1944A09E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 335,
+      "paraId": "52A46B45",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur sköter jag könshåret under strålbehandling?",
+      "images": 0
+    },
+    {
+      "paragraph": 336,
+      "paraId": "64A253BB",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Strålbehandling mot bäckenområdet kan göra att könshåret faller av i det behandlade området. För vissa blir håravfallet tillfälligt, medan håret hos andra växer tillbaka tunnare eller inte fullt ut efter behandlingen.",
+      "images": 0
+    },
+    {
+      "paragraph": 337,
+      "paraId": "427315AF",
+      "disposition": "blocks",
+      "textNodeCount": 8,
+      "text": "Var försiktig med rakning om huden känns irriterad eller öm, eftersom det kan orsaka ytterligare irritation eller små sår i huden. Att vaxa området är inte lämpligt. ",
+      "images": 0
+    },
+    {
+      "paragraph": 338,
+      "paraId": "0D48E72B",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Om du vill ta bort hår under behandlingen är det viktigt att vara försiktig. Rådfråga gärna din sjuksköterska eller läkare om du känner dig osäker eller har besvär från huden.",
+      "images": 0
+    },
+    {
+      "paragraph": 339,
+      "paraId": "18E25543",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 340,
+      "paraId": "62B889A7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 341,
+      "paraId": "10C8FFC5",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 342,
+      "paraId": "10B20663",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 343,
+      "paraId": "10108B8F",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 344,
+      "paraId": "133E4228",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 345,
+      "paraId": "08C86FED",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 346,
+      "paraId": "55C98810",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 347,
+      "paraId": "50CFD647",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 348,
+      "paraId": "7E349E56",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 349,
+      "paraId": "1F41342A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 350,
+      "paraId": "3D02B057",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 351,
+      "paraId": "7C41053B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 352,
+      "paraId": "60D5593F",
+      "disposition": "collection-heading",
+      "textNodeCount": 2,
+      "text": "Om sexuell hälsa",
+      "images": 0
+    },
+    {
+      "paragraph": 353,
+      "paraId": "6C67BF5D",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Vad är sexuell hälsa?",
+      "images": 0
+    },
+    {
+      "paragraph": 354,
+      "paraId": "61D83512",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Sexuell hälsa är en del av den allmänna hälsan och handlar om mer än sex och samlag. Det innefattar bland annat tankar, känslor, kroppsuppfattning, självkänsla, relationer, närhet och sexualitet.",
+      "images": 0
+    },
+    {
+      "paragraph": 355,
+      "paraId": "2E05D729",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Cancer och behandling påverkar den sexuella hälsan, men det betyder inte att behovet av närhet, sexualitet eller intimitet försvinner. ",
+      "images": 0
+    },
+    {
+      "paragraph": 356,
+      "paraId": "4E3ADA80",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Film från 1177: Vad är sexualitet?",
+      "images": 0
+    },
+    {
+      "paragraph": 357,
+      "paraId": "688B2EC0",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 358,
+      "paraId": "5B7B66D1",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Sexuell hälsa kan beskrivas som \"ett tillstånd av fysiskt, känslomässigt, mentalt och socialt välbefinnande i förhållande till sexualiteten\" – vilket inte bara innebär avsaknad av sjukdom och skada. Detta enligt WHO.",
+      "images": 0
+    },
+    {
+      "paragraph": 359,
+      "paraId": "0FA0C344",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 360,
+      "paraId": "126C92FF",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": " WHO definierar också sexualitet så här:",
+      "images": 0
+    },
+    {
+      "paragraph": 361,
+      "paraId": "1A153A09",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": " ”Sexualiteten är en integrerad del av varje människas personlighet, och det gäller såväl man som kvinna som barn. Den är ett grundbehov och en aspekt av att vara mänsklig, som inte kan skiljas ifrån andra livsaspekter. Sexualiteten är inte synonymt med samlag, den handlar inte om huruvida vi kan ha orgasmer eller inte, och inte heller summan av våra erotiska liv.",
+      "images": 0
+    },
+    {
+      "paragraph": 362,
+      "paraId": "72DB87CC",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": " Dessa kan men behöver inte vara en del av vår sexualitet.",
+      "images": 0
+    },
+    {
+      "paragraph": 363,
+      "paraId": "230B8125",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Sexualitet är mycket mer: den finns i energin som driver oss att söka kärlek, kontakt, värme och närhet. Den uttrycks i vårt sätt att känna och väcka känslor samt att röra vid varandra. Sexualiteten påverkar tankar, känslor, handlingar och gensvar och därigenom vår psykiska och fysiska hälsa”.",
+      "images": 0
+    },
+    {
+      "paragraph": 364,
+      "paraId": "5D588C37",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Läs mer här: ",
+      "images": 0
+    },
+    {
+      "paragraph": 365,
+      "paraId": "F3000008",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Påverkan på sexualitet för kvinnor | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 366,
+      "paraId": "0AC08D0C",
+      "disposition": "resource-heading",
+      "textNodeCount": 3,
+      "text": "Hur påverkas sexualiteten av strålbehandling?",
+      "images": 0
+    },
+    {
+      "paragraph": 367,
+      "paraId": "6E9B4FF5",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Den sexuella hälsan påverkas på något sätt för många som får en cancerdiagnos. Hur och i vilken omfattning varierar från person till person. För vissa handlar det främst om kroppsliga förändringar, medan andra påverkas mer känslomässigt eller i sina relationer.",
+      "images": 0
+    },
+    {
+      "paragraph": 368,
+      "paraId": "2AC5F00C",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 369,
+      "paraId": "57576137",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Att få ett cancerbesked kan skapa känslor av kris, oro och stress. Dålig sömn, trötthet, smärta och oro för framtiden kan påverka lust och närhet. Det är vanligt att känna att sexualiteten eller lusten hamnar i bakgrunden under behandlingstiden.",
+      "images": 0
+    },
+    {
+      "paragraph": 370,
+      "paraId": "4E395485",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Behandlingens biverkningar kan också påverka kroppen och sexualiteten. Exempelvis kan torra och sköra slemhinnor, smärta, trötthet och förändrad kroppsuppfattning påverka lust, upphetsning och njutning. Många beskriver det som att de “tappat lusten” eller “stängt av underlivet”.",
+      "images": 0
+    },
+    {
+      "paragraph": 371,
+      "paraId": "086C4E7B",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "För vissa kan behovet av närhet, beröring och intimitet samtidigt bli extra viktigt under sjukdomstiden. Hur man reagerar är individuellt och kan förändras över tid.",
+      "images": 0
+    },
+    {
+      "paragraph": 372,
+      "paraId": "45DAD3C2",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Film från 1177: Så påverkar cancern din sexualitet",
+      "images": 0
+    },
+    {
+      "paragraph": 373,
+      "paraId": "7528238E",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 374,
+      "paraId": "580C2445",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Läs mer här:",
+      "images": 0
+    },
+    {
+      "paragraph": 375,
+      "paraId": "F3000009",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Symtom-sexualitet | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 376,
+      "paraId": "288E85A9",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 377,
+      "paraId": "7A81B1A2",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur påverkas relationer och närhet?",
+      "images": 0
+    },
+    {
+      "paragraph": 378,
+      "paraId": "1C04D49C",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Cancer och behandling kan påverka relationer och synen på den egna kroppen. Förändringar i kropp, självbild och sexuell funktion kan väcka känslor av sorg, osäkerhet eller rädsla att bli avvisad.",
+      "images": 0
+    },
+    {
+      "paragraph": 379,
+      "paraId": "005D2FFB",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Sexualitet är privat och unik för varje individ, oavsett ålder, relation eller livssituation. Det finns inga krav eller måsten kring sexuell hälsa under eller efter cancerbehandling.",
+      "images": 0
+    },
+    {
+      "paragraph": 380,
+      "paraId": "1A64FA00",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 381,
+      "paraId": "1206525B",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "För många hjälper det att försöka sätta ord på tankar och känslor tillsammans med sin partner eller någon annan man känner sig trygg med. Att prata om vad som känns bra, svårt eller viktigt kan minska missförstånd och skapa trygghet i relationen.",
+      "images": 0
+    },
+    {
+      "paragraph": 382,
+      "paraId": "179219F2",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Närhet behöver inte handla om sex eller samlag. För många blir beröring, närvaro och intimitet extra viktigt under sjukdomstiden.",
+      "images": 0
+    },
+    {
+      "paragraph": 383,
+      "paraId": "3A518692",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Film från 1177: Tips och råd för ökad lust",
+      "images": 0
+    },
+    {
+      "paragraph": 384,
+      "paraId": "3082673B",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 385,
+      "paraId": "2DB5A0BF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 386,
+      "paraId": "3B4B18F6",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 387,
+      "paraId": "6378C941",
+      "disposition": "resource-heading",
+      "textNodeCount": 2,
+      "text": "Hur pratar jag med min partner om strålbehandlingens och cancerns påverkan på sexuella hälsan?",
+      "images": 0
+    },
+    {
+      "paragraph": 388,
+      "paraId": "1A8ECAED",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Cancer och cancerbehandling kan påverka både kroppen, relationer och den sexuella hälsan. Många upplever förändringar i lust, närhet och sexuell funktion under och efter behandlingen. Det kan väcka känslor av sorg, osäkerhet eller saknad. Att prata om det kan kännas bra för vissa, för andra främmande och ovant. ",
+      "images": 0
+    },
+    {
+      "paragraph": 389,
+      "paraId": "2CD5E54A",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Det finns inga krav eller måsten kring sexuell hälsa. För vissa minskar lusten under en period, och det betyder inte att det alltid kommer att vara så. Att försöka sätta ord på tankar och känslor kan hjälpa till att minska missförstånd och skapa trygghet i relationen. ",
+      "images": 0
+    },
+    {
+      "paragraph": 390,
+      "paraId": "54B22B64",
+      "disposition": "blocks",
+      "textNodeCount": 7,
+      "text": "Här följer några råd som andra har upplevt som hjälpsamma:Planera in tid tillsammans att prata om hur det kännsBerätta om vad som förändrats och fokusera på det som fortfarande känns bra eller möjligtBerätta vad du mår bra av och behöverBekräfta varandra i vardagen med närhet och beröringUppmuntra varandra att få vara sårbar och öppen i kommunikationen och att vara tillåtande utan att döma i samtal om sexlivet Ta hjälp av kurator, psykolog, samtalsterapeut, familjeterapeut eller sexualrådgivare, själv eller tillsammans med din partner",
+      "images": 0
+    },
+    {
+      "paragraph": 391,
+      "paraId": "6D6359E1",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 392,
+      "paraId": "5A16BB60",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 393,
+      "paraId": "5F236A75",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 394,
+      "paraId": "233D0740",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 395,
+      "paraId": "241BC9C5",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 396,
+      "paraId": "518141DC",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Var kan jag få stöd och hjälp?",
+      "images": 0
+    },
+    {
+      "paragraph": 397,
+      "paraId": "308ACEB4",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Om du har frågor eller besvär kopplade till sexuell hälsa, lust, relationer eller kroppsliga förändringar finns hjälp att få. Du kan prata med din läkare eller sjuksköterska, och vid behov få stöd av exempelvis kurator, psykolog, samtalsterapeut eller sexualrådgivare.",
+      "images": 0
+    },
+    {
+      "paragraph": 398,
+      "paraId": "1FB9F2DA",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Film från 1177: Sexuella hjälpmedel vid rehabilitering",
+      "images": 0
+    },
+    {
+      "paragraph": 399,
+      "paraId": "605BCD14",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 400,
+      "paraId": "6A6F8613",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Läs mer här: ",
+      "images": 0
+    },
+    {
+      "paragraph": 401,
+      "paraId": "F300000A",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Broschyr - Sexuell hälsa och rehabilitering vid cancersjukdom",
+      "images": 0
+    },
+    {
+      "paragraph": 402,
+      "paraId": "2B9827B5",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 403,
+      "paraId": "09B9F770",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 404,
+      "paraId": "7A01D3A5",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 405,
+      "paraId": "229B79FC",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 406,
+      "paraId": "0D02EE8C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 407,
+      "paraId": "0F4995A3",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 408,
+      "paraId": "7BF8C1A7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 409,
+      "paraId": "678BFBAA",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 410,
+      "paraId": "7AC9D002",
+      "disposition": "collection-heading",
+      "textNodeCount": 2,
+      "text": "Frågor om våld",
+      "images": 0
+    },
+    {
+      "paragraph": 411,
+      "paraId": "4AEDCA63",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Varför frågar ni om övergrepp och våld?",
+      "images": 0
+    },
+    {
+      "paragraph": 412,
+      "paraId": "3C941720",
+      "disposition": "blocks",
+      "textNodeCount": 14,
+      "text": "Med frågorna i formuläret om våld vill vi försöka identifiera om kvinnor som har blivit utsatta för någon form av övergrepp, kränkning och våld behöver något stöd under och efter sin behandling. Dina svar på frågeformuläret om våld kan hjälpa oss att förbättra och anpassa vården för de som har upplevt övergrepp, kränkningar och våld. ",
+      "images": 0
+    },
+    {
+      "paragraph": 413,
+      "paraId": "18480257",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "All information som du lämnar i studien är anonym och dokumenteras inte i din journal.",
+      "images": 0
+    },
+    {
+      "paragraph": 414,
+      "paraId": "1D8E83AC",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Det är aldrig ditt fel om du har blivit utsatt för våld eller övergrepp, och hjälp finns att få.",
+      "images": 0
+    },
+    {
+      "paragraph": 415,
+      "paraId": "7F5E1C92",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Kvinnofridslinjen ger stöd till dig som utsatts för fysiskt, psykiskt eller sexuellt våld. Samtalet är gratis och du är anonym när du ringer.Ring: 020-50 50 50",
+      "images": 0
+    },
+    {
+      "paragraph": 416,
+      "paraId": "05C18D37",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Läs mer här:",
+      "images": 0
+    },
+    {
+      "paragraph": 417,
+      "paraId": "F300000B",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Förslag på hur du kan gå till väga | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 418,
+      "paraId": "28A2326C",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 419,
+      "paraId": "352754C0",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 420,
+      "paraId": "5BE0251A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 421,
+      "paraId": "33D3DBFF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 422,
+      "paraId": "7B591E3D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 423,
+      "paraId": "5E637766",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 424,
+      "paraId": "4EE27802",
+      "disposition": "resource-heading",
+      "textNodeCount": 7,
+      "text": "Vad menas med övergrepp och våld?",
+      "images": 0
+    },
+    {
+      "paragraph": 425,
+      "paraId": "43592F2E",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Våld kan ta sig uttryck på många olika sätt och handlar inte bara om fysiskt våld. Det kan exempelvis vara att någon:",
+      "images": 0
+    },
+    {
+      "paragraph": 426,
+      "paraId": "4F73CF4D",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Säger kränkande eller hotfulla saker ",
+      "images": 0
+    },
+    {
+      "paragraph": 427,
+      "paraId": "28E4A3C7",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Kontrollerar eller isolerar dig ",
+      "images": 0
+    },
+    {
+      "paragraph": 428,
+      "paraId": "666BC4DC",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Går över dina gränser ",
+      "images": 0
+    },
+    {
+      "paragraph": 429,
+      "paraId": "4F6C1545",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Utsätter dig för sexuella handlingar mot din vilja ",
+      "images": 0
+    },
+    {
+      "paragraph": 430,
+      "paraId": "0078E0BF",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Använder hot, tvång eller manipulation ",
+      "images": 0
+    },
+    {
+      "paragraph": 431,
+      "paraId": "3852A959",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Begränsar din ekonomi eller förstör dina tillhörigheter ",
+      "images": 0
+    },
+    {
+      "paragraph": 432,
+      "paraId": "56378A62",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Kontrollerar dig digitalt genom telefon, GPS eller sociala medier ",
+      "images": 0
+    },
+    {
+      "paragraph": 433,
+      "paraId": "2BC4A8BF",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Våld, övergrepp och kränkningar är tyvärr vanligt. Var tredje kvinna och var sjätte man i Sverige har någon gång varit utsatt för våld i nära relation. Våldet sker i alla samhällsklasser, förövaren kan vara kvinna, man, vårdare, barn, syskon, kompis, släktning eller förälder. Många som utsätts upplever flera olika former av våld samtidigt.",
+      "images": 0
+    },
+    {
+      "paragraph": 434,
+      "paraId": "33AD2A41",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 435,
+      "paraId": "7183BD62",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 436,
+      "paraId": "0D842B04",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Olika former av våld",
+      "images": 0
+    },
+    {
+      "paragraph": 437,
+      "paraId": "23589604",
+      "disposition": "blocks",
+      "textNodeCount": 5,
+      "text": "Fysiskt våld kan innebära att du blir fasthållen, knuffad, slagen, sparkad eller skadad på något annat sätt. ",
+      "images": 0
+    },
+    {
+      "paragraph": 438,
+      "paraId": "380F744A",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Du kan vara utsatt för psykiskt våld vilket kan handla om att du får kränkande kommentarer, hån, hot, utsätts för tvång, kontroll, manipulation och social isolering. ",
+      "images": 0
+    },
+    {
+      "paragraph": 439,
+      "paraId": "2CD5A4F7",
+      "disposition": "blocks",
+      "textNodeCount": 5,
+      "text": "Det kan vara sexuellt med tvång om att se på pornografi, sex mot ens vilja, sexuella kränkningar och trakasserier. Det kan handla om att någon går eller har gått över dina gränser sexuellt.",
+      "images": 0
+    },
+    {
+      "paragraph": 440,
+      "paraId": "5A5FFECA",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Barn eller personer med funktionshinder kan vara utsatta för försummelse vilket exempelvis kan innebära att de inte får hjälp med hygien, aktiviteter i det dagliga livet, mat och mediciner.",
+      "images": 0
+    },
+    {
+      "paragraph": 441,
+      "paraId": "4E1BD011",
+      "disposition": "blocks",
+      "textNodeCount": 7,
+      "text": "Det kan vara materiellt våld som visar sig genom att dina personliga tillhörigheter förstörs eller tas ifrån dig. Våldet kan vara av ekonomisk karaktär och visa sig genom begränsningar i den gemensamma ekonomin, hot och tvång att ta lån eller utföra ekonomiska olagligheter. ",
+      "images": 0
+    },
+    {
+      "paragraph": 442,
+      "paraId": "0D457F21",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Våldet kan vara digitalt med kränkningar och hot via sms, mail eller kontroll genom GPS och på så sätt tillgång till hur du förflyttar dig samt var du befinner dig. ",
+      "images": 0
+    },
+    {
+      "paragraph": 443,
+      "paraId": "5C4CCBE3",
+      "disposition": "blocks",
+      "textNodeCount": 7,
+      "text": "Våldsutövaren kan även utsätta husdjur för våld vilket leder till påverkan för både djuret och dig som ägare. Latent våld innebär att du är rädd och anpassar dig för att undvika våld.",
+      "images": 0
+    },
+    {
+      "paragraph": 444,
+      "paraId": "7F94D41A",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Att utsätta någon för våld är ett brott i Sverige. Det är olagligt att kränka en annan individ och är aldrig okej. Det aldrig är ditt fel om du utsätts. Ingen ska behöva bevittna våld eller utsättas för våld.",
+      "images": 0
+    },
+    {
+      "paragraph": 445,
+      "paraId": "2CC0C76C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 446,
+      "paraId": "2E9603FD",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 447,
+      "paraId": "12D7341A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 448,
+      "paraId": "61A71E6F",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 449,
+      "paraId": "49E039A1",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 450,
+      "paraId": "072D7689",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 451,
+      "paraId": "0DAB4B2B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 452,
+      "paraId": "0AF72663",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 453,
+      "paraId": "59C8BB73",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur kan våld och övergrepp påverka mig?",
+      "images": 0
+    },
+    {
+      "paragraph": 454,
+      "paraId": "57BBB2FF",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Att leva med eller tidigare ha varit utsatt för våld i nära relation kan påverka både kroppen och det psykiska måendet. Många upplever stress, oro, rädsla, sömnsvårigheter eller koncentrationssvårigheter.",
+      "images": 0
+    },
+    {
+      "paragraph": 455,
+      "paraId": "56CED393",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Det är vanligt att känna skuld, skam, nedstämdhet eller att självkänslan påverkas. En del får kroppsliga besvär som huvudvärk, magont, trötthet eller långvarig smärta.",
+      "images": 0
+    },
+    {
+      "paragraph": 456,
+      "paraId": "40114433",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Att leva med långvarigt stresspåslag till följd av våldsutsatthet kan orsaka störningar i kroppens hantering av stresshormoner. Det kan påverka immunförsvaret och öka risk för infektioner och hjärt- och kärlsjukdomar. Forskning visar också ohälsa på kort och lång sikt som depression, trauma, re-trauma, PTSD och kronisk smärta.",
+      "images": 0
+    },
+    {
+      "paragraph": 457,
+      "paraId": "5797A0AB",
+      "disposition": "blocks",
+      "textNodeCount": 8,
+      "text": "Tidigare erfarenheter av våld eller övergrepp kan påverka hur det känns att genomgå undersökningar och behandlingar inom vården. Vilket även kan väcka känslor som du inte själv kopplar till tidigare utsatthet. För dig som går igenom utredning, förberedelser och cancerbehandling där du behöver ta av dig kläder vid nödvändiga undersökningar kan tidigare utsatthet göra sig påmind utan att du kan styra det. En del upplever någon form av re-traumatisering. Det innebär att känslor och tankar som liknar de som man upplevt vid exempelvis ett övergrepp kan uppstå igen trots att du vet att situationen nu är en annan.",
+      "images": 0
+    },
+    {
+      "paragraph": 458,
+      "paraId": "6644306B",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Du har ingen skyldighet att berätta för vårdpersonalen om dina personliga erfarenheter. Men om tidigare erfarenheter påverkar hur du upplever vården kan det ibland vara hjälpsamt att berätta det, så att vårdpersonalen bättre kan ta hänsyn till dina behov och skapa trygghet i mötet med vården.",
+      "images": 0
+    },
+    {
+      "paragraph": 459,
+      "paraId": "685059EF",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 460,
+      "paraId": "59E2B47E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 461,
+      "paraId": "688D2480",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 462,
+      "paraId": "5F0133E0",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 463,
+      "paraId": "6B73BFB6",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 464,
+      "paraId": "45394997",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 465,
+      "paraId": "553D15E6",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 466,
+      "paraId": "322D79D7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 467,
+      "paraId": "65AFD6AB",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 468,
+      "paraId": "0298AE3D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 469,
+      "paraId": "43B6DF01",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 470,
+      "paraId": "517328D5",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 471,
+      "paraId": "5BDDFCAF",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 472,
+      "paraId": "67579FF3",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 473,
+      "paraId": "35484AB5",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 474,
+      "paraId": "15EAED8D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 475,
+      "paraId": "7DF08A42",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 476,
+      "paraId": "451DFCB3",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 477,
+      "paraId": "5992001A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 478,
+      "paraId": "46C48C26",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 479,
+      "paraId": "11F29464",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 480,
+      "paraId": "682014ED",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 481,
+      "paraId": "678E3C91",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Vad händer om jag svarar ja på frågor om våld i formuläret?",
+      "images": 0
+    },
+    {
+      "paragraph": 482,
+      "paraId": "502A4078",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "All information som du lämnar i studien är anonym och dokumenteras inte i din journal. Det är olagligt och inte okej att kränka, hota eller utsätta någon för våld. Det är aldrig ditt fel om du utsätts. ",
+      "images": 0
+    },
+    {
+      "paragraph": 483,
+      "paraId": "7FF815BB",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Om du är eller har varit utsatt för våld finns hjälp och stöd att få. Vill du få hjälp att ta dig ur en destruktiv relation är det vårdens skyldighet att hjälpa dig att få hjälp.",
+      "images": 0
+    },
+    {
+      "paragraph": 484,
+      "paraId": "6B66947A",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Kvinnofridslinjen är öppen dygnet runt och ger stöd till dig som utsatts för fysiskt, psykiskt eller sexuellt våld. Samtalet är gratis och anonymt.Ring: 020-50 50 50",
+      "images": 0
+    },
+    {
+      "paragraph": 485,
+      "paraId": "59E7B3DA",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Läs mer här: ",
+      "images": 0
+    },
+    {
+      "paragraph": 486,
+      "paraId": "F300000C",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Förslag på hur du kan gå till väga | Efter Cancern",
+      "images": 0
+    },
+    {
+      "paragraph": 487,
+      "paraId": "71B54C6D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 488,
+      "paraId": "46FCCB35",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 489,
+      "paraId": "0E9F99A7",
+      "disposition": "blocks",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 1
+    },
+    {
+      "paragraph": 490,
+      "paraId": "0833E9C8",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 491,
+      "paraId": "684C0942",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 492,
+      "paraId": "109B34AD",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 493,
+      "paraId": "22712FAD",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 494,
+      "paraId": "612A1509",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 495,
+      "paraId": "1487631E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 496,
+      "paraId": "6FED39BB",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 497,
+      "paraId": "18B01C6F",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 498,
+      "paraId": "1BBC57A1",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 499,
+      "paraId": "2B8F84F0",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 500,
+      "paraId": "5CBF0890",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 501,
+      "paraId": "660D24FE",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 502,
+      "paraId": "2F64C552",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Var kan jag få hjälp och stöd?",
+      "images": 0
+    },
+    {
+      "paragraph": 503,
+      "paraId": "10A952AD",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 504,
+      "paraId": "7C9C1D58",
+      "disposition": "blocks",
+      "textNodeCount": 10,
+      "text": "Behöver du skydd? Kontakta socialtjänsten i din kommunOm du har barn under 18 år som bevittnat våld har de rätt och möjlighet att få hjälp av socialtjänstenOm du är utsatt kan du göra en polisanmälan Tel: 114 14Är du i akut fara? Om du eller en närstående befinner er i akut fara ska du alltid ringa till  112",
+      "images": 0
+    },
+    {
+      "paragraph": 505,
+      "paraId": "149A6AFE",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 506,
+      "paraId": "384136E7",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Stöd och samtal",
+      "images": 0
+    },
+    {
+      "paragraph": 507,
+      "paraId": "38E415C2",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Du kan få stöd genom kurator eller psykolog via onkologiska kliniken eller ditt hemsjukhus.",
+      "images": 0
+    },
+    {
+      "paragraph": 508,
+      "paraId": "21238527",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Cancerrehabiliteringen vid Sahlgrenska Universitetssjukhuset:031-342 89 77 ",
+      "images": 0
+    },
+    {
+      "paragraph": 509,
+      "paraId": "48304BE6",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 510,
+      "paraId": "6AB7DC31",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Nationella stödlinjer och organisationer",
+      "images": 0
+    },
+    {
+      "paragraph": 511,
+      "paraId": "0FA3316E",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Kvinnofridslinjen eller ring: 020-50 50 50. Det är en nationell stödtelefon för den som har utsatts för hot eller fysiskt, psykiskt och sexuellt våld. Den som är anhörig eller vän är också välkommen att ringa. Det är öppet dygnet runt, samtalet kostar ingenting och syns inte på telefonräkningen.",
+      "images": 0
+    },
+    {
+      "paragraph": 512,
+      "paraId": "29FEB1D9",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "ROKS, Riksorganisationen för kvinnojourer och tjejjourer i Sverige. På deras hemsida listas kvinno- och tjejjourer över hela Sverige där våldsutsatta kan få stöd och hjälp.",
+      "images": 0
+    },
+    {
+      "paragraph": 513,
+      "paraId": "3739E1BD",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Nationell kvinnojour och stöd på teckenspråk erbjuder stödsamtal samt stöd i kontakt med myndigheter.",
+      "images": 0
+    },
+    {
+      "paragraph": 514,
+      "paraId": "197AE48D",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 515,
+      "paraId": "2067CC7E",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Lokala stödverksamheter",
+      "images": 0
+    },
+    {
+      "paragraph": 516,
+      "paraId": "46C3D31D",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Det finns också lokala mottagningar och verksamheter som erbjuder stöd vid våld i nära relationer, sexuella övergrepp och destruktiva relationer, exempelvis:",
+      "images": 0
+    },
+    {
+      "paragraph": 517,
+      "paraId": "4B7A924D",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Mottagning sexuella övergrepp är en specialistmottagning i Göteborg för personer över 18 år som har blivit utsatta för sexuella övergrepp och behöver specialiserad vård. ",
+      "images": 0
+    },
+    {
+      "paragraph": 518,
+      "paraId": "15DAD9F4",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 519,
+      "paraId": "7006A593",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Enheten mot våld i nära relationer erbjuder stöd för våldsutsatta i Trollhättan, Vänersborg och Lilla Edet, Åmål, Mellerud, Färgelanda, Dals-Ed och Bengtsfors. De vänder sig även till den som blivit utsatt för våldtäkt, hedersrelaterad problematik och människohandel för sexuella ändamål.",
+      "images": 0
+    },
+    {
+      "paragraph": 520,
+      "paraId": "2C4A521A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 521,
+      "paraId": "7A5B93CE",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Familjerådgivning Stenungssund (vänder sig även till Tjörn och Orust) är en samtalsmottagning som arbetar för att motverka destruktiva familjerelationer.",
+      "images": 0
+    },
+    {
+      "paragraph": 522,
+      "paraId": "599B4F8A",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 523,
+      "paraId": "2EEDD0D5",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Kriscentrum för kvinnor Göteborg erbjuder skydd och stöd för våldsutsatta.",
+      "images": 0
+    },
+    {
+      "paragraph": 524,
+      "paraId": "1A39FD73",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 525,
+      "paraId": "7E1DBAC4",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Krismottagning Våld i nära relation Ale erbjuder stöd för våldsutsatta. ",
+      "images": 0
+    },
+    {
+      "paragraph": 526,
+      "paraId": "3156CFDD",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 527,
+      "paraId": "130E86D4",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Krismottagning Våld i nära relation Kungälv erbjuder stöd för våldsutsatta.",
+      "images": 0
+    },
+    {
+      "paragraph": 528,
+      "paraId": "40BAB6D4",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 529,
+      "paraId": "2AC490C0",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Utväg Skaraborg och Utväg Södra Älvsborg är verksamheter som erbjuder stöd till personer som varit utsatta för våld i sin relation, för personer som vill få stöd med sin aggressivitet samt barn och ungdomar med upplevelse av våld i sin uppväxt.",
+      "images": 0
+    },
+    {
+      "paragraph": 530,
+      "paraId": "35459592",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 531,
+      "paraId": "55C0C808",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Uddevalla kriscentrum erbjuder samtalsstöd för personer som utsatts för våld i nära relationer.",
+      "images": 0
+    },
+    {
+      "paragraph": 532,
+      "paraId": "3B617800",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 533,
+      "paraId": "44A2CE6D",
+      "disposition": "blocks",
+      "textNodeCount": 7,
+      "text": "Utväg Skaraborg och Skövde och Utväg Södra Älvsborg och Borås  vänder sig till dig som blivit utsatt för våld i nära relation som barn eller vuxen. ",
+      "images": 0
+    },
+    {
+      "paragraph": 534,
+      "paraId": "58B5A9FD",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 535,
+      "paraId": "737D8711",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 536,
+      "paraId": "177C6006",
+      "disposition": "collection-heading",
+      "textNodeCount": 3,
+      "text": "Efter strålbehandlingen",
+      "images": 0
+    },
+    {
+      "paragraph": 537,
+      "paraId": "5099BDC0",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Att använda vaginalstav efter avslutad strålbehandling",
+      "images": 0
+    },
+    {
+      "paragraph": 538,
+      "paraId": "0334376E",
+      "disposition": "blocks",
+      "textNodeCount": 5,
+      "text": "Om det inte är några problem med användningen kan du fortsätta enligt nedan",
+      "images": 0
+    },
+    {
+      "paragraph": 539,
+      "paraId": "2962FA19",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Fortsätt dagligen i 6 veckor",
+      "images": 0
+    },
+    {
+      "paragraph": 540,
+      "paraId": "1723B9B4",
+      "disposition": "blocks",
+      "textNodeCount": 4,
+      "text": "Efter 6 veckor, gå över till 2-3 gånger per vecka",
+      "images": 0
+    },
+    {
+      "paragraph": 541,
+      "paraId": "6D725B49",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Fortsätt regelbundet i 2-3 år",
+      "images": 0
+    },
+    {
+      "paragraph": 542,
+      "paraId": "3CF65EEA",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Om du har haft smärta eller blödning (liten blödning är ok) - vänta några veckor innan du gör ett nytt försök. Ta upp vaginalstavsanvändandet när det gått några veckor. ",
+      "images": 0
+    },
+    {
+      "paragraph": 543,
+      "paraId": "6054673B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 544,
+      "paraId": "3D563F81",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Efter avslutad strålbehandling:",
+      "images": 0
+    },
+    {
+      "paragraph": 545,
+      "paraId": "114F6CD6",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Cirka 1 månad efter avslutad strålbehandling kommer du att ha ett samtal om vaginalstavsterapi med din kontaktsjuksköterska. Efter det samtalet kan du starta med vaginalstavsterapin enligt överenskommelse med din kontaktsjuksköterska. Vanligen 4 till 6 veckor efter avslutad strålbehandling. Följ nedanstående schema:",
+      "images": 0
+    },
+    {
+      "paragraph": 546,
+      "paraId": "6477793E",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Dagligen i 1 månad",
+      "images": 0
+    },
+    {
+      "paragraph": 547,
+      "paraId": "272E9DAE",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Därefter 2-3 gånger per vecka",
+      "images": 0
+    },
+    {
+      "paragraph": 548,
+      "paraId": "20196657",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Fortsätt regelbundet i 2-3 år",
+      "images": 0
+    },
+    {
+      "paragraph": 549,
+      "paraId": "602B8BC7",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 550,
+      "paraId": "738A424C",
+      "disposition": "resource-heading",
+      "textNodeCount": 2,
+      "text": "Uppföljning vaginalstav",
+      "images": 0
+    },
+    {
+      "paragraph": 551,
+      "paraId": "1FF7AD9D",
+      "disposition": "blocks",
+      "textNodeCount": 9,
+      "text": "Analcancerpat: Någon av specialistsjuksköterskorna på strålbehandlingen (Profylaxmottagningen) kommer att kontakta dig för att stämma av hur det går med vaginalstavsanvändningen. ",
+      "images": 0
+    },
+    {
+      "paragraph": 552,
+      "paraId": "193D0963",
+      "disposition": "blocks",
+      "textNodeCount": 5,
+      "text": "Gyncancerpat: Du kommer att ha uppföljning via din kontaktsjuksköterska som följer upp behandlingsbiverkningar och hantering av vaginalstav. ",
+      "images": 0
+    },
+    {
+      "paragraph": 553,
+      "paraId": "1E03511E",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Vad händer i studien efter avslutad strålbehandling?",
+      "images": 0
+    },
+    {
+      "paragraph": 554,
+      "paraId": "139960ED",
+      "disposition": "blocks",
+      "textNodeCount": 8,
+      "text": "3 månader efter avslutad strålbehandling kommer du att få ett uppföljningsformulär att besvara här i appen. Du får en påminnelse via sms. ",
+      "images": 0
+    },
+    {
+      "paragraph": 555,
+      "paraId": "216C622D",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Vart vänder jag mig om jag har frågor?",
+      "images": 0
+    },
+    {
+      "paragraph": 556,
+      "paraId": "232719F4",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Har du frågor om din vård eller uppföljning så kan du kontakta din kontaktsjuksköterska eller din onkologimottagning. ",
+      "images": 0
+    },
+    {
+      "paragraph": 557,
+      "paraId": "3FC968E7",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Har du frågor om studien kan du kontakta någon av oss som är namngivna nedan.",
+      "images": 0
+    },
+    {
+      "paragraph": 558,
+      "paraId": "F2040001",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Du kan under vardagar kl 08-16 kontakta forskningssjuksköterska Josefin Wessberg Höynä, specialistsjuksköterska i onkologi",
+      "images": 0
+    },
+    {
+      "paragraph": 559,
+      "paraId": "F2040002",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Telefon: 031-343 98 56",
+      "images": 0
+    },
+    {
+      "paragraph": 560,
+      "paraId": "F2040003",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "E-post: josefin.hoyna@vgregion.se",
+      "images": 0
+    },
+    {
+      "paragraph": 561,
+      "paraId": "F2040004",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Eller studieansvarig forskare Linda Åkeflo",
+      "images": 0
+    },
+    {
+      "paragraph": 562,
+      "paraId": "F2040005",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Med.dr och legitimerad sjuksköterska",
+      "images": 0
+    },
+    {
+      "paragraph": 563,
+      "paraId": "F2040006",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Telefon: 031-786 61 59",
+      "images": 0
+    },
+    {
+      "paragraph": 564,
+      "paraId": "F2040007",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "E-post: linda.akeflo@gu.se",
+      "images": 0
+    },
+    {
+      "paragraph": 565,
+      "paraId": "6862475C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 566,
+      "paraId": "1D09C49C",
+      "disposition": "blank-spacing",
+      "textNodeCount": 1,
+      "text": " ",
+      "images": 0
+    },
+    {
+      "paragraph": 567,
+      "paraId": "58264637",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 568,
+      "paraId": "4C9A5B5E",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 569,
+      "paraId": "2D4F9D3B",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 570,
+      "paraId": "714E7C80",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 571,
+      "paraId": "75754222",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 572,
+      "paraId": "2DA7F494",
+      "disposition": "blank-spacing",
+      "textNodeCount": 0,
+      "text": "",
+      "images": 0
+    },
+    {
+      "paragraph": 573,
+      "paraId": "F2000001",
+      "disposition": "collection-heading",
+      "textNodeCount": 1,
+      "text": "Information om studien",
+      "images": 0
+    },
+    {
+      "paragraph": 574,
+      "paraId": "F2010001",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Syftet med studien är att undersöka vid vilken tidpunkt som det är mest optimalt att påbörja vaginalstavsanvändning för att begränsa vaginala förändringar som beror på strålbehandlingens effekter.",
+      "images": 0
+    },
+    {
+      "paragraph": 575,
+      "paraId": "F2010002",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Vi vill förstå hur vården kan utveckla information och uppföljning till kvinnor om metoder för att bibehålla vävnadens elasticitet och förhindra att sammanlänkning av slidlemhinnan sker.",
+      "images": 0
+    },
+    {
+      "paragraph": 576,
+      "paraId": "F2010003",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Undersökningen är en så kallad observationsstudie.",
+      "images": 0
+    },
+    {
+      "paragraph": 577,
+      "paraId": "F2000002",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Varför ska jag svara på frågorna?",
+      "images": 0
+    },
+    {
+      "paragraph": 578,
+      "paraId": "F2020001",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Med hjälp av dina svar kan vi få bättre förståelse för hur strål-behandlingen påverkar vagina, när och hur vaginalstav kan användas. Det hjälper oss i vården att förbättra information och uppföljning av vaginala förändringar.",
+      "images": 0
+    },
+    {
+      "paragraph": 579,
+      "paraId": "F2020002",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Svara på varje fråga så gott du kan och om du inte hittar något svarsalternativ som exakt passar in på vad du känner, får du välja det som ligger närmast.",
+      "images": 0
+    },
+    {
+      "paragraph": 580,
+      "paraId": "F2020003",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Tack för att du fyller i formuläret!",
+      "images": 0
+    },
+    {
+      "paragraph": 581,
+      "paraId": "F2000003",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hur kommer jag i kontakt med ansvariga för studien?",
+      "images": 0
+    },
+    {
+      "paragraph": 582,
+      "paraId": "F2030001",
+      "disposition": "blocks",
+      "textNodeCount": 3,
+      "text": "Du kan under vardagar kl 08-16 kontakta forskningssjuksköterska Josefin Wessberg Höynä, specialistsjuksköterska i onkologi",
+      "images": 0
+    },
+    {
+      "paragraph": 583,
+      "paraId": "F2030002",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Telefon: 031-343 98 56",
+      "images": 0
+    },
+    {
+      "paragraph": 584,
+      "paraId": "F2030003",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "E-post: josefin.hoyna@vgregion.se",
+      "images": 0
+    },
+    {
+      "paragraph": 585,
+      "paraId": "F2030005",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Eller studieansvarig forskare Linda Åkeflo",
+      "images": 0
+    },
+    {
+      "paragraph": 586,
+      "paraId": "F2030007",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Med.dr och legitimerad sjuksköterska",
+      "images": 0
+    },
+    {
+      "paragraph": 587,
+      "paraId": "F2030008",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "Telefon: 031-786 61 59",
+      "images": 0
+    },
+    {
+      "paragraph": 588,
+      "paraId": "F2030009",
+      "disposition": "blocks",
+      "textNodeCount": 2,
+      "text": "E-post: linda.akeflo@gu.se",
+      "images": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": "0",
+      "text": "Cancerfonden Strålbehandling",
+      "links": [
+        {
+          "label": "Cancerfonden Strålbehandling",
+          "url": "https://www.cancerfonden.se/om-cancer/behandlingar/stralbehandling"
+        }
+      ],
+      "paraIds": [
+        "584274B9"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 6,
+        "paraId": "669A2917"
+      }
+    },
+    {
+      "id": "1",
+      "text": "Användning av vaginalstav | Efter Cancern",
+      "links": [
+        {
+          "label": "Användning av vaginalstav | Efter Cancern",
+          "url": "https://eftercancern.se/hem/losning/anvandning-av-vaginalstav/"
+        }
+      ],
+      "paraIds": [
+        "5D260F55"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 45,
+        "paraId": "6089E2AD"
+      }
+    },
+    {
+      "id": "2",
+      "text": "Lokalt östrogen | Efter Cancern",
+      "links": [
+        {
+          "label": "Lokalt östrogen | Efter Cancern",
+          "url": "https://eftercancern.se/losning/sexualitet/"
+        }
+      ],
+      "paraIds": [
+        "0F45F697"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 89,
+        "paraId": "266167E5"
+      }
+    },
+    {
+      "id": "3",
+      "text": "Hormonersättningsmedel | Efter Cancern",
+      "links": [
+        {
+          "label": "Hormonersättningsmedel | Efter Cancern",
+          "url": "https://eftercancern.se/hem/losning/hormonersattningsmedel/"
+        }
+      ],
+      "paraIds": [
+        "22AFC299"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 106,
+        "paraId": "756E6E58"
+      }
+    },
+    {
+      "id": "4",
+      "text": "Svettningar, vallningar och utebliven mens | Efter CancernHormonersättningsmedel | Efter Cancern ",
+      "links": [
+        {
+          "label": "Svettningar, vallningar och utebliven mens | Efter Cancern",
+          "url": "https://eftercancern.se/hem/symptom/svettningar-vallningar-och-utebliven-mens/"
+        },
+        {
+          "label": "Hormonersättningsmedel | Efter Cancern",
+          "url": "https://eftercancern.se/hem/losning/hormonersattningsmedel/"
+        }
+      ],
+      "paraIds": [
+        "17D9F99F",
+        "0D8EA18B"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 120,
+        "paraId": "5964C1EF"
+      }
+    },
+    {
+      "id": "5",
+      "text": "Användning av vaginalstav | Efter Cancern",
+      "links": [
+        {
+          "label": "Användning av vaginalstav | Efter Cancern",
+          "url": "https://eftercancern.se/hem/losning/anvandning-av-vaginalstav/"
+        }
+      ],
+      "paraIds": [
+        "3A34690E"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 178,
+        "paraId": "3CE19FB9"
+      }
+    },
+    {
+      "id": "6",
+      "text": "Påverkan på sexualitet för kvinnor | Efter Cancern",
+      "links": [
+        {
+          "label": "Påverkan på sexualitet för kvinnor | Efter Cancern",
+          "url": "https://eftercancern.se/hem/symptom/paverkan-pa-sexualitet-och-intimitet/"
+        }
+      ],
+      "paraIds": [
+        "7C6E5BE4"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 364,
+        "paraId": "5D588C37"
+      }
+    },
+    {
+      "id": "7",
+      "text": " Symtom-sexualitet | Efter Cancern",
+      "links": [
+        {
+          "label": "Symtom-sexualitet | Efter Cancern",
+          "url": "https://eftercancern.se/hem/symtom-sexualitet/"
+        }
+      ],
+      "paraIds": [
+        "0C040568"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 374,
+        "paraId": "580C2445"
+      }
+    },
+    {
+      "id": "8",
+      "text": "Broschyr - Sexuell hälsa och rehabilitering vid cancersjukdom",
+      "links": [
+        {
+          "label": "Broschyr - Sexuell hälsa och rehabilitering vid cancersjukdom",
+          "url": "https://eftercancern.se/hem/wp-content/uploads/2021-Broschyr-Sexuell-halsa-och-rehabilitering-vid-cancersjukdom.pdf"
+        }
+      ],
+      "paraIds": [
+        "4F1AAFEA"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 400,
+        "paraId": "6A6F8613"
+      }
+    },
+    {
+      "id": "9",
+      "text": " Förslag på hur du kan gå till väga | Efter Cancern",
+      "links": [
+        {
+          "label": "Förslag på hur du kan gå till väga | Efter Cancern",
+          "url": "https://eftercancern.se/hem/utsatthet/forslag-pa-hur-du-kan-ga-till-vaga/"
+        }
+      ],
+      "paraIds": [
+        "25E65127"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 416,
+        "paraId": "05C18D37"
+      }
+    },
+    {
+      "id": "10",
+      "text": "Förslag på hur du kan gå till väga | Efter Cancern",
+      "links": [
+        {
+          "label": "Förslag på hur du kan gå till väga | Efter Cancern",
+          "url": "https://eftercancern.se/hem/utsatthet/forslag-pa-hur-du-kan-ga-till-vaga/"
+        }
+      ],
+      "paraIds": [
+        "1642B2DF"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 485,
+        "paraId": "59E7B3DA"
+      }
+    },
+    {
+      "id": "1978030157",
+      "text": "Rätt?",
+      "links": [],
+      "paraIds": [
+        "6185B627"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 554,
+        "paraId": "139960ED"
+      }
+    },
+    {
+      "id": "151723897",
+      "text": "Här behöver vi diskutera hur vi ska formulera oss. Kan vi göra diagnosspecifikt innehåll eller pre/post så att det anpassas utefter deltagarna?",
+      "links": [],
+      "paraIds": [
+        "2180819D"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 222,
+        "paraId": "47BC84B6"
+      }
+    },
+    {
+      "id": "260864063",
+      "text": "kan påverka är kanske lite för positivt? vet inte om det är för negativt att skriva att det påverkar",
+      "links": [],
+      "paraIds": [
+        "68F4DCC9"
+      ],
+      "resolved": true,
+      "source": {
+        "paragraph": 388,
+        "paraId": "1A8ECAED"
+      }
+    },
+    {
+      "id": "194548902",
+      "text": "Nummer 7 saknas i bilden, finns två nr 6",
+      "links": [],
+      "paraIds": [
+        "48DE44AB"
+      ],
+      "resolved": true,
+      "source": {
+        "paragraph": 4,
+        "paraId": "1B41D483"
+      }
+    },
+    {
+      "id": "1873399859",
+      "text": "lagt till nummer 11",
+      "links": [],
+      "paraIds": [
+        "3D36FC36"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 4,
+        "paraId": "1B41D483"
+      }
+    },
+    {
+      "id": "344862718",
+      "text": "Stor bokstav i punktlistan ",
+      "links": [],
+      "paraIds": [
+        "1906A682"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 85,
+        "paraId": "12087F67"
+      }
+    },
+    {
+      "id": "206421416",
+      "text": "Gäller deltagare som är PRE",
+      "links": [],
+      "paraIds": [
+        "2FE6BB7B"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 223,
+        "paraId": "200B8A3A"
+      }
+    },
+    {
+      "id": "607641270",
+      "text": "Per vecka, INTE dagligen! ",
+      "links": [],
+      "paraIds": [
+        "1ACD6CD1"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 232,
+        "paraId": "3EEDB76F"
+      }
+    },
+    {
+      "id": "608751973",
+      "text": "Gäller deltagare som är POST",
+      "links": [],
+      "paraIds": [
+        "7248FC17"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 236,
+        "paraId": "55C389CA"
+      }
+    },
+    {
+      "id": "1028592312",
+      "text": "Länkar för de olika organisationerna eller att numret går att klicka på ",
+      "links": [],
+      "paraIds": [
+        "77FFB0D7"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 502,
+        "paraId": "2F64C552"
+      }
+    },
+    {
+      "id": "584976450",
+      "text": "Gäller deltagare som är POST",
+      "links": [],
+      "paraIds": [
+        "04EE5277"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 544,
+        "paraId": "3D563F81"
+      }
+    },
+    {
+      "id": "290536323",
+      "text": "Gäller deltagare som är PRE",
+      "links": [],
+      "paraIds": [
+        "4DFE0392"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 537,
+        "paraId": "5099BDC0"
+      }
+    },
+    {
+      "id": "196757189",
+      "text": "Kan eventuellt skrivas om till en text, överlämning till team 2 på gång. ",
+      "links": [],
+      "paraIds": [
+        "39169203"
+      ],
+      "resolved": false,
+      "source": {
+        "paragraph": 551,
+        "paraId": "1FF7AD9D"
+      }
+    }
+  ],
+  "threadMetadata": {
+    "commentsExtended.xml": "<?xml version='1.0' encoding='UTF-8' standalone='yes'?>\n<w15:commentsEx xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" mc:Ignorable=\"w15\">\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"584274B9\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"5D260F55\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"0F45F697\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"22AFC299\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"0D8EA18B\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"3A34690E\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"7C6E5BE4\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"0C040568\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"4F1AAFEA\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"25E65127\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"1642B2DF\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"6185B627\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"2180819D\"/>\n  <w15:commentEx w15:done=\"1\" w15:paraId=\"68F4DCC9\"/>\n  <w15:commentEx w15:done=\"1\" w15:paraId=\"48DE44AB\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"3D36FC36\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"1906A682\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"2FE6BB7B\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"1ACD6CD1\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"7248FC17\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"77FFB0D7\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"04EE5277\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"4DFE0392\"/>\n  <w15:commentEx w15:done=\"0\" w15:paraId=\"39169203\"/>\n</w15:commentsEx>",
+    "commentsIds.xml": "<w16cid:commentsIds mc:Ignorable=\"w16cid\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\">\r\n  <w16cid:commentId w16cid:paraId=\"584274B9\" w16cid:durableId=\"4D2CCE95\" />\r\n  <w16cid:commentId w16cid:paraId=\"5D260F55\" w16cid:durableId=\"01FEFF2D\" />\r\n  <w16cid:commentId w16cid:paraId=\"0F45F697\" w16cid:durableId=\"73E433B9\" />\r\n  <w16cid:commentId w16cid:paraId=\"22AFC299\" w16cid:durableId=\"75FA3946\" />\r\n  <w16cid:commentId w16cid:paraId=\"0D8EA18B\" w16cid:durableId=\"562403E5\" />\r\n  <w16cid:commentId w16cid:paraId=\"3A34690E\" w16cid:durableId=\"78C61E2E\" />\r\n  <w16cid:commentId w16cid:paraId=\"7C6E5BE4\" w16cid:durableId=\"45EF26FB\" />\r\n  <w16cid:commentId w16cid:paraId=\"0C040568\" w16cid:durableId=\"4D87D362\" />\r\n  <w16cid:commentId w16cid:paraId=\"4F1AAFEA\" w16cid:durableId=\"004A1D40\" />\r\n  <w16cid:commentId w16cid:paraId=\"25E65127\" w16cid:durableId=\"5151141D\" />\r\n  <w16cid:commentId w16cid:paraId=\"1642B2DF\" w16cid:durableId=\"368CF930\" />\r\n  <w16cid:commentId w16cid:paraId=\"6185B627\" w16cid:durableId=\"352F8A41\" />\r\n  <w16cid:commentId w16cid:paraId=\"2180819D\" w16cid:durableId=\"065F3DC7\" />\r\n  <w16cid:commentId w16cid:paraId=\"68F4DCC9\" w16cid:durableId=\"09F1FB20\" />\r\n  <w16cid:commentId w16cid:paraId=\"48DE44AB\" w16cid:durableId=\"3120675E\" />\r\n  <w16cid:commentId w16cid:paraId=\"3D36FC36\" w16cid:durableId=\"6564F098\" />\r\n  <w16cid:commentId w16cid:paraId=\"1906A682\" w16cid:durableId=\"1233B553\" />\r\n  <w16cid:commentId w16cid:paraId=\"2FE6BB7B\" w16cid:durableId=\"49AA91E6\" />\r\n  <w16cid:commentId w16cid:paraId=\"1ACD6CD1\" w16cid:durableId=\"4990537F\" />\r\n  <w16cid:commentId w16cid:paraId=\"7248FC17\" w16cid:durableId=\"520EFB3F\" />\r\n  <w16cid:commentId w16cid:paraId=\"77FFB0D7\" w16cid:durableId=\"504F8DE9\" />\r\n  <w16cid:commentId w16cid:paraId=\"04EE5277\" w16cid:durableId=\"32F2A361\" />\r\n  <w16cid:commentId w16cid:paraId=\"4DFE0392\" w16cid:durableId=\"0BB5DB71\" />\r\n  <w16cid:commentId w16cid:paraId=\"39169203\" w16cid:durableId=\"0D22B695\" />\r\n</w16cid:commentsIds>"
+  }
+}

@@ -14,7 +14,7 @@ spec:
         spec:
             containers:
                 - name: pre-rt-web-test
-                  image: 'registry.k8s.gu.se/appademin/pre-rt-web:1.0.3'
+                  image: 'registry.k8s.gu.se/appademin/pre-rt-web:1.1.0-test.resources-20260930'
                   ports:
                       - containerPort: 8080
                         name: web

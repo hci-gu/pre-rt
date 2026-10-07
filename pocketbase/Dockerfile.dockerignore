@@ -1,0 +1,19 @@
+# Repository-root context: exclude local databases, credentials and review data.
+**
+!pocketbase/
+!pocketbase/*.go
+!pocketbase/go.mod
+!pocketbase/go.sum
+!pocketbase/internal/
+!pocketbase/internal/**
+!pocketbase/cmd/
+!pocketbase/cmd/**
+!pocketbase/migrations/
+!pocketbase/migrations/**
+!content/
+!content/resources/
+!content/resources/generated/
+!content/resources/generated/bundle.json
+!content/resources/generated/assets/
+!content/resources/generated/assets/*.png
+**/*_test.go

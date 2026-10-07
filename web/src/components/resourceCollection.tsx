@@ -1,4 +1,9 @@
-import { ResourceCollection } from '@/state'
+import { ResourceCollection, userDataAtom } from '@/state'
+import { useAtomValue } from 'jotai'
+import { Suspense, useMemo } from 'react'
+import ConnectedResourceContent from './resource-content/connected'
+import { sanitizeLegacyResourceHTML } from './resource-content/legacy-html'
+import { resourceAnchor, resolveAnchor, audienceMatches } from './resource-content/model'
 import {
   Accordion,
   AccordionContent,
@@ -50,16 +55,6 @@ export function ResourceCollectionDrawer({
   )
 }
 
-const titleToSlug = (title: string) =>
-  title
-    .toLowerCase()
-    .replace(/[åäàáâãæ]/g, 'a')
-    .replace(/[öòóôõø]/g, 'o')
-    .replace(/[^a-z0-9-\s]/g, '')
-    .replace(/-+/g, '')
-    .replace(/\s+/g, '-')
-    .trim()
-
 const ResourceSection = ({ text }: { text: string }) => {
   return (
     <div className="mb-4">
@@ -75,8 +70,10 @@ export default function ResourceAccordion({
   collection: ResourceCollection
   showHeader?: boolean
 }) {
+  const user = useAtomValue(userDataAtom)
+  const visibleResources = useMemo(() => collection.resources.filter(resource => !resource.archived && audienceMatches(resource.content?.audience, user)), [collection.resources, user])
   const [openResource, setOpenResource] = useState<string>(
-    window.location.hash.replace('#', '')
+    resolveAnchor(window.location.hash.replace('#', ''), visibleResources)
   )
   const [showAbort, setShowAbort] = useState(false)
   const violenceSectionRef = useRef<HTMLDivElement | null>(null)
@@ -120,12 +117,12 @@ export default function ResourceAccordion({
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '')
 
-      setOpenResource(hash)
+      setOpenResource(resolveAnchor(hash, visibleResources))
     }
 
     window.addEventListener('hashchange', handleHashChange)
     return () => window.removeEventListener('hashchange', handleHashChange)
-  }, [])
+  }, [visibleResources])
 
   useEffect(() => {
     if (!openResource) {
@@ -176,6 +173,8 @@ export default function ResourceAccordion({
     updateUrlHash(nextValue)
   }
 
+  if (collection.archived || !audienceMatches(collection.content?.audience, user)) return null
+
   return (
     <>
       <div ref={violenceSectionRef}>
@@ -188,19 +187,19 @@ export default function ResourceAccordion({
         onValueChange={resourceClicked}
         className="space-y-4"
       >
-        {collection.description && (
+        {collection.content ? <Suspense fallback={<p>Laddar innehåll…</p>}><ConnectedResourceContent content={collection.content} bindings={collection.bindings} /></Suspense> : collection.description && (
           <div
-            className="resource-content rounded-xl bg-white px-5 py-4 text-base font-bold leading-relaxed [&_a]:text-study-link-blue [&_a]:underline [&_a]:decoration-study-link-blue/60 [&_a]:underline-offset-2 [&_a]:hover:decoration-study-link-blue [&_li]:mb-2 [&_p]:mb-3 [&_ul]:list-disc [&_ul]:pl-6"
+            className="resource-content rounded-xl bg-white px-5 py-4 text-base leading-relaxed [&_a]:text-study-link-blue [&_a]:underline [&_a]:decoration-study-link-blue/60 [&_a]:underline-offset-2 [&_a]:hover:decoration-study-link-blue [&_li]:mb-2 [&_p]:mb-3 [&_ul]:list-disc [&_ul]:pl-6"
             dangerouslySetInnerHTML={{
-              __html: collection.description ?? '',
+              __html: sanitizeLegacyResourceHTML(collection.description ?? ''),
             }}
           />
         )}
-        {(collection.resources ?? []).map((resource) => (
+        {visibleResources.map((resource) => (
           <AccordionItem
-            value={titleToSlug(resource.title)}
+            value={resourceAnchor(resource)}
             key={resource.id}
-            id={titleToSlug(resource.title)}
+            id={resourceAnchor(resource)}
             className="scroll-mt-24 border-0"
           >
             <AccordionTrigger className="group rounded-xl bg-primary px-5 py-4 text-left text-lg font-black text-foreground hover:no-underline">
@@ -215,6 +214,7 @@ export default function ResourceAccordion({
         ))}
         {showAbort && <AbortButton />}
       </Accordion>
+      {collection.content ? <Suspense fallback={<p>Laddar innehåll…</p>}><ConnectedResourceContent content={collection.content} bindings={collection.bindings} footer /></Suspense> : collection.footerContent && <div className="resource-content mt-6" dangerouslySetInnerHTML={{ __html: sanitizeLegacyResourceHTML(collection.footerContent) }} />}
     </>
   )
 }
