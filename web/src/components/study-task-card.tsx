@@ -31,7 +31,7 @@ export function StudyTaskCard({
   const content = (
     <article
       className={cn(
-        'relative aspect-[350/268] overflow-hidden rounded-xl text-left shadow-sm transition sm:aspect-[462/214] sm:text-center',
+        'relative grid aspect-[350/268] overflow-hidden rounded-xl text-left shadow-sm transition sm:aspect-[462/214] sm:text-center',
         href &&
           !disabled &&
           'hover:-translate-y-0.5 hover:shadow-md focus-within:shadow-md'
@@ -61,11 +61,11 @@ export function StudyTaskCard({
         </span>
       )}
 
-      <div className="relative z-10 flex h-full flex-col justify-between gap-4 p-4 sm:p-5">
+      <div className="relative z-10 flex min-w-0 flex-col justify-between gap-4 p-4 sm:p-5">
         <div className="space-y-2">
           <h2
             className={cn(
-              'max-w-[72%] text-lg font-black leading-none text-foreground sm:mx-auto sm:text-xl',
+              'max-w-[72%] text-lg font-black leading-none text-foreground [overflow-wrap:anywhere] sm:mx-auto sm:text-xl',
               titleClassName
             )}
           >
@@ -92,7 +92,7 @@ export function StudyTaskCard({
   }
 
   return (
-    <Link to={href} className="study-focus block rounded-xl">
+    <Link to={href} aria-label={title} className="study-focus block rounded-xl">
       {content}
     </Link>
   )

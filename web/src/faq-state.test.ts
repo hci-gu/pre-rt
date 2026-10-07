@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { createStore } from 'jotai'
 import { ResourceSessionError } from './lib/resource-errors'
+import { buildQuestions } from './pages/form/hooks/useQuestions'
 
 const api = vi.hoisted(() => ({
   getUser: vi.fn(),
@@ -32,12 +33,46 @@ vi.stubGlobal('localStorage', {
   setItem() {},
   removeItem() {},
 })
-const { authAtom, resourcesAtom, resourceCollectionAtom, studySettingsAtom, aboutCollectionAtom } = await import('./state')
+const { authAtom, resourcesAtom, resourceCollectionAtom, studySettingsAtom, aboutCollectionAtom, questionnaireAtom } = await import('./state')
 
 beforeEach(() => {
   vi.clearAllMocks()
   api.getUser.mockResolvedValue({ id: 'test-user' })
   api.getCollections.mockResolvedValue([])
+})
+
+describe('conditional questionnaire loading', () => {
+  it('loads follow-up options and help before evaluating the production-style trigger', async () => {
+    const gate = { id: 'violence-gate', type: 'singleChoice', text: 'Gate', followup: [] }
+    const pcl = {
+      id: 'pcl', name: 'PCL-5', dependency: [gate.id], dependencyValue: 'Ja',
+      expand: { questions: [
+        { id: 'symptom', type: 'singleChoice', text: 'Symptom', followup: [],
+          expand: { options: { value: ['Inte alls', 'Lite'], followup: [] } } },
+        { id: 'support', type: 'section', text: 'Support', followup: [],
+          expand: { resource: { id: 'support-resource', title: 'Help', description: '<p>Local support</p>' } } },
+      ] },
+    }
+    api.getCollection.mockImplementation(async (_id, options) => {
+      const expansion = options.expand.split(',')
+      return {
+        id: 'baseline-import', name: 'Baseline', occurrence: 'once',
+        expand: {
+          questions: [gate],
+          ...(expansion.includes('followup.questions.options') &&
+              expansion.includes('followup.questions.resource') &&
+              expansion.includes('followup.questions.resourceCollection.resources')
+            ? { followup: [pcl] } : {}),
+        },
+      }
+    })
+    const form = await createStore().get(questionnaireAtom('baseline-import'))
+    expect(buildQuestions(form, { [gate.id]: 'Nej' }).map(q => q.id)).toEqual([gate.id])
+    const triggered = buildQuestions(form, { [gate.id]: 'Ja' })
+    expect(triggered.map(q => q.id)).toEqual([gate.id, 'followup_pcl_symptom', 'followup_pcl_support'])
+    expect(triggered[1].options?.value).toEqual(['Inte alls', 'Lite'])
+    expect(triggered[2].resource?.description).toBe('<p>Local support</p>')
+  })
 })
 
 describe('study settings relationships', () => {

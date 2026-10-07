@@ -74,7 +74,7 @@ export const authAtom = atomWithStorage<AuthModel | null>(
   { getOnInit: true }
 )
 
-export const userDataAtom = atom(async (get) => {
+export const userDataAtom = atomWithRefresh(async (get) => {
   const auth = get(authAtom)
   if (!auth) return null
 
@@ -89,7 +89,8 @@ export const userDataAtom = atom(async (get) => {
   }
 })
 
-export const dailyQuestionnaireScheduleAtom = atom(async () => {
+export const dailyQuestionnaireScheduleAtom = atomWithRefresh(async (get) => {
+  if (!get(authAtom)) return { startDate: null, endDate: null }
   const response = await pb.send('/daily-schedule', {})
 
   return {
@@ -373,7 +374,7 @@ export const questionnaireAtom = atomFamily((id: string) =>
   atom(async () => {
     const response = await pb.collection('questionnaires').getOne(id, {
       expand:
-        'questions,questions.options,questions.resource,questions.resourceCollection.resources',
+        'questions,questions.options,questions.resource,questions.resourceCollection.resources,followup.questions.options,followup.questions.resource,followup.questions.resourceCollection.resources',
     })
 
     const q = mapQuestionnaire(response)

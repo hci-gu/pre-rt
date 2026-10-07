@@ -34,7 +34,7 @@
     "code": "video-placeholder",
     "message": "Video link pending; approved placeholder",
     "source": {
-      "paragraph": 357,
+      "paragraph": 358,
       "paraId": "688B2EC0"
     },
     "resource": "sexual-health.definition",
@@ -49,7 +49,7 @@
     "code": "video-placeholder",
     "message": "Video link pending; approved placeholder",
     "source": {
-      "paragraph": 373,
+      "paragraph": 374,
       "paraId": "7528238E"
     },
     "resource": "sexual-health.treatment-effects",
@@ -64,7 +64,7 @@
     "code": "video-placeholder",
     "message": "Video link pending; approved placeholder",
     "source": {
-      "paragraph": 384,
+      "paragraph": 386,
       "paraId": "3082673B"
     },
     "resource": "sexual-health.relationships",
@@ -79,7 +79,7 @@
     "code": "video-placeholder",
     "message": "Video link pending; approved placeholder",
     "source": {
-      "paragraph": 399,
+      "paragraph": 401,
       "paraId": "605BCD14"
     },
     "resource": "sexual-health.support",
@@ -94,7 +94,7 @@
     "code": "editorial-comment",
     "message": "Unresolved editorial comment: Rätt?",
     "source": {
-      "paragraph": 554,
+      "paragraph": 556,
       "paraId": "139960ED"
     },
     "resource": "after-treatment.study-follow-up",
@@ -206,7 +206,7 @@
     "code": "editorial-comment",
     "message": "Unresolved editorial comment: Länkar för de olika organisationerna eller att numret går att klicka på ",
     "source": {
-      "paragraph": 502,
+      "paragraph": 504,
       "paraId": "2F64C552"
     },
     "resource": "violence.support",
@@ -222,7 +222,7 @@
     "code": "editorial-comment",
     "message": "Unresolved editorial comment: Gäller deltagare som är POST",
     "source": {
-      "paragraph": 544,
+      "paragraph": 546,
       "paraId": "3D563F81"
     },
     "resource": "after-treatment.dilator-use",
@@ -238,7 +238,7 @@
     "code": "editorial-comment",
     "message": "Unresolved editorial comment: Gäller deltagare som är PRE",
     "source": {
-      "paragraph": 537,
+      "paragraph": 539,
       "paraId": "5099BDC0"
     },
     "resource": "after-treatment.dilator-use",
@@ -254,7 +254,7 @@
     "code": "editorial-comment",
     "message": "Unresolved editorial comment: Kan eventuellt skrivas om till en text, överlämning till team 2 på gång. ",
     "source": {
-      "paragraph": 551,
+      "paragraph": 553,
       "paraId": "1FF7AD9D"
     },
     "resource": "after-treatment.follow-up",

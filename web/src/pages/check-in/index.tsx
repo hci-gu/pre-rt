@@ -38,7 +38,7 @@ function CheckInCard({
   const content = (
     <article
       className={cn(
-        'relative aspect-[350/268] overflow-hidden rounded-xl text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:aspect-[462/214] sm:text-center',
+        'relative grid aspect-[350/268] overflow-hidden rounded-xl text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:aspect-[462/214] sm:text-center',
         !href && 'hover:translate-y-0'
       )}
     >
@@ -53,13 +53,13 @@ function CheckInCard({
       </picture>
       <div
         className={cn(
-          'relative z-10 flex h-full flex-col items-start p-3 sm:items-center sm:p-4',
+          'relative z-10 flex min-w-0 flex-col items-start p-3 sm:items-center sm:p-4',
           hasBadge && 'justify-start gap-2 sm:justify-center sm:gap-3'
         )}
       >
         <h2
           className={cn(
-            'max-w-[82%] text-sm font-black leading-tight text-foreground sm:text-xl sm:leading-none',
+            'max-w-[82%] text-sm font-black leading-tight text-foreground [overflow-wrap:anywhere] sm:text-xl sm:leading-none',
             complete && 'pr-8 sm:pr-0',
             titleClassName
           )}
@@ -69,13 +69,14 @@ function CheckInCard({
         {(badge || buttonLabel) && (
           <span
             className={cn(
-              'self-center rounded-full px-5 py-2 text-sm font-bold text-foreground sm:px-6 sm:text-base',
+              'self-center rounded-full px-5 py-2 text-sm font-bold text-foreground [overflow-wrap:anywhere] sm:px-6 sm:text-base',
               buttonLabel ? 'bg-study-header' : 'bg-card/85'
             )}
           >
-            {buttonLabel ?? badge}
+            {badge ?? buttonLabel}
           </span>
         )}
+        {badge && buttonLabel && <span className="text-sm font-bold underline">{buttonLabel}</span>}
       </div>
       {complete && (
         <img
@@ -91,7 +92,7 @@ function CheckInCard({
   if (!href) return content
 
   return (
-    <Link to={href} className="study-focus block rounded-xl">
+    <Link to={href} aria-label={[title, badge, buttonLabel].filter(Boolean).join(' ')} className="study-focus block rounded-xl">
       {content}
     </Link>
   )
@@ -110,6 +111,7 @@ export default function CheckInPage() {
     isSameDay(new Date(answer.date), new Date())
   )
   const treatmentEndComplete = treatmentEndAnswers.length > 0
+  const treatmentEndLabel = user?.treatmentEnd?.toLocaleDateString('sv-SE')
 
   return (
     <div className="space-y-6">
@@ -131,7 +133,7 @@ export default function CheckInPage() {
 
       <section
         aria-label="Daglig check-in"
-        className="grid grid-cols-2 gap-3 sm:gap-x-7 sm:gap-y-5"
+        className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,8.5rem),1fr))] gap-3 sm:gap-x-7 sm:gap-y-5"
       >
         <CheckInCard
           title="Fyll i formulär - idag"
@@ -160,8 +162,9 @@ export default function CheckInPage() {
           href={`/forms/${treatmentEndQuestionnaire}`}
           mobileArt={flagArtMobile}
           art={flagArt}
-          complete={treatmentEndComplete}
-          buttonLabel={treatmentEndComplete ? 'Svarat' : 'Svara'}
+          complete={Boolean(treatmentEndLabel) || treatmentEndComplete}
+          badge={treatmentEndLabel}
+          buttonLabel={treatmentEndLabel ? 'Ändra datum' : 'Ange datum'}
           titleClassName="max-w-[80%]"
         />
       </section>

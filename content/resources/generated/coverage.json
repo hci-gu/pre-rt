@@ -1,14 +1,14 @@
 {
   "counts": {
-    "collections": 7,
-    "resources": 35,
+    "collections": 8,
+    "resources": 38,
     "images": 37,
     "textBoxes": 17,
     "comments": 24,
     "alternateContent": 16,
-    "rawTextNodes": 757,
-    "selectedTextNodes": 692,
-    "bodyParagraphs": 589
+    "rawTextNodes": 768,
+    "selectedTextNodes": 703,
+    "bodyParagraphs": 598
   },
   "paragraphs": [
     {
@@ -2013,6 +2013,14 @@
     },
     {
       "paragraph": 250,
+      "paraId": "F4000001",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Läs hela instruktionen för hur du använder vaginalstaven.",
+      "images": 0
+    },
+    {
+      "paragraph": 251,
       "paraId": "2C4F9AE8",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2020,7 +2028,7 @@
       "images": 0
     },
     {
-      "paragraph": 251,
+      "paragraph": 252,
       "paraId": "5F57C73B",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2028,7 +2036,7 @@
       "images": 0
     },
     {
-      "paragraph": 252,
+      "paragraph": 253,
       "paraId": "5CE36530",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -2036,7 +2044,7 @@
       "images": 0
     },
     {
-      "paragraph": 253,
+      "paragraph": 254,
       "paraId": "6907CD25",
       "disposition": "blocks",
       "textNodeCount": 4,
@@ -2044,7 +2052,7 @@
       "images": 0
     },
     {
-      "paragraph": 254,
+      "paragraph": 255,
       "paraId": "103474BE",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2052,7 +2060,7 @@
       "images": 0
     },
     {
-      "paragraph": 255,
+      "paragraph": 256,
       "paraId": "63634F83",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2060,7 +2068,7 @@
       "images": 0
     },
     {
-      "paragraph": 256,
+      "paragraph": 257,
       "paraId": "4CBC86FA",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -2068,7 +2076,7 @@
       "images": 1
     },
     {
-      "paragraph": 257,
+      "paragraph": 258,
       "paraId": "6AD6AD88",
       "disposition": "blocks",
       "textNodeCount": 4,
@@ -2076,7 +2084,7 @@
       "images": 0
     },
     {
-      "paragraph": 258,
+      "paragraph": 259,
       "paraId": "35B9B759",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2084,7 +2092,7 @@
       "images": 0
     },
     {
-      "paragraph": 259,
+      "paragraph": 260,
       "paraId": "2ABC677E",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2092,7 +2100,7 @@
       "images": 0
     },
     {
-      "paragraph": 260,
+      "paragraph": 261,
       "paraId": "05BA986D",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2100,7 +2108,7 @@
       "images": 0
     },
     {
-      "paragraph": 261,
+      "paragraph": 262,
       "paraId": "0A79D9C2",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2108,7 +2116,7 @@
       "images": 0
     },
     {
-      "paragraph": 262,
+      "paragraph": 263,
       "paraId": "2B44F05D",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2116,7 +2124,7 @@
       "images": 0
     },
     {
-      "paragraph": 263,
+      "paragraph": 264,
       "paraId": "426592A8",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -2124,7 +2132,7 @@
       "images": 0
     },
     {
-      "paragraph": 264,
+      "paragraph": 265,
       "paraId": "69A0F3D3",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -2132,7 +2140,7 @@
       "images": 0
     },
     {
-      "paragraph": 265,
+      "paragraph": 266,
       "paraId": "30481EC7",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2140,7 +2148,7 @@
       "images": 0
     },
     {
-      "paragraph": 266,
+      "paragraph": 267,
       "paraId": "4045EB67",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -2148,7 +2156,7 @@
       "images": 1
     },
     {
-      "paragraph": 267,
+      "paragraph": 268,
       "paraId": "59D1750F",
       "disposition": "blocks",
       "textNodeCount": 4,
@@ -2156,7 +2164,7 @@
       "images": 0
     },
     {
-      "paragraph": 268,
+      "paragraph": 269,
       "paraId": "60239A29",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -2164,7 +2172,7 @@
       "images": 1
     },
     {
-      "paragraph": 269,
+      "paragraph": 270,
       "paraId": "5548AC1E",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2172,7 +2180,7 @@
       "images": 0
     },
     {
-      "paragraph": 270,
+      "paragraph": 271,
       "paraId": "5FFFE06D",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2180,7 +2188,7 @@
       "images": 0
     },
     {
-      "paragraph": 271,
+      "paragraph": 272,
       "paraId": "76519427",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2188,7 +2196,7 @@
       "images": 0
     },
     {
-      "paragraph": 272,
+      "paragraph": 273,
       "paraId": "32ADA537",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2196,7 +2204,7 @@
       "images": 0
     },
     {
-      "paragraph": 273,
+      "paragraph": 274,
       "paraId": "4AA7EAFF",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2204,7 +2212,7 @@
       "images": 0
     },
     {
-      "paragraph": 274,
+      "paragraph": 275,
       "paraId": "2D6BE20C",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -2212,7 +2220,7 @@
       "images": 0
     },
     {
-      "paragraph": 275,
+      "paragraph": 276,
       "paraId": "3F7BE346",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2220,7 +2228,7 @@
       "images": 0
     },
     {
-      "paragraph": 276,
+      "paragraph": 277,
       "paraId": "0ECAC701",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2228,7 +2236,7 @@
       "images": 0
     },
     {
-      "paragraph": 277,
+      "paragraph": 278,
       "paraId": "14412B49",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2236,7 +2244,7 @@
       "images": 0
     },
     {
-      "paragraph": 278,
+      "paragraph": 279,
       "paraId": "303CB1A3",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2244,7 +2252,7 @@
       "images": 0
     },
     {
-      "paragraph": 279,
+      "paragraph": 280,
       "paraId": "23779208",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2252,7 +2260,7 @@
       "images": 0
     },
     {
-      "paragraph": 280,
+      "paragraph": 281,
       "paraId": "542E8424",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2260,7 +2268,7 @@
       "images": 0
     },
     {
-      "paragraph": 281,
+      "paragraph": 282,
       "paraId": "63FF87A8",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2268,7 +2276,7 @@
       "images": 0
     },
     {
-      "paragraph": 282,
+      "paragraph": 283,
       "paraId": "01D7D68C",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2276,7 +2284,7 @@
       "images": 0
     },
     {
-      "paragraph": 283,
+      "paragraph": 284,
       "paraId": "6C232AF7",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2284,7 +2292,7 @@
       "images": 0
     },
     {
-      "paragraph": 284,
+      "paragraph": 285,
       "paraId": "1A636B0E",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2292,7 +2300,7 @@
       "images": 0
     },
     {
-      "paragraph": 285,
+      "paragraph": 286,
       "paraId": "196A705A",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2300,7 +2308,7 @@
       "images": 0
     },
     {
-      "paragraph": 286,
+      "paragraph": 287,
       "paraId": "718577CE",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2308,7 +2316,7 @@
       "images": 0
     },
     {
-      "paragraph": 287,
+      "paragraph": 288,
       "paraId": "71AF3883",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2316,7 +2324,7 @@
       "images": 0
     },
     {
-      "paragraph": 288,
+      "paragraph": 289,
       "paraId": "35AE48DF",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2324,7 +2332,7 @@
       "images": 0
     },
     {
-      "paragraph": 289,
+      "paragraph": 290,
       "paraId": "5E05078D",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2332,7 +2340,7 @@
       "images": 0
     },
     {
-      "paragraph": 290,
+      "paragraph": 291,
       "paraId": "47337288",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2340,7 +2348,7 @@
       "images": 0
     },
     {
-      "paragraph": 291,
+      "paragraph": 292,
       "paraId": "F1000001",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -2348,7 +2356,7 @@
       "images": 0
     },
     {
-      "paragraph": 292,
+      "paragraph": 293,
       "paraId": "F1010001",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2356,7 +2364,7 @@
       "images": 0
     },
     {
-      "paragraph": 293,
+      "paragraph": 294,
       "paraId": "F1010002",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2364,7 +2372,7 @@
       "images": 0
     },
     {
-      "paragraph": 294,
+      "paragraph": 295,
       "paraId": "48213B0D",
       "disposition": "collection-heading",
       "textNodeCount": 2,
@@ -2372,7 +2380,7 @@
       "images": 0
     },
     {
-      "paragraph": 295,
+      "paragraph": 296,
       "paraId": "3CD31977",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -2380,7 +2388,7 @@
       "images": 0
     },
     {
-      "paragraph": 296,
+      "paragraph": 297,
       "paraId": "11D3F0DF",
       "disposition": "blocks",
       "textNodeCount": 6,
@@ -2388,7 +2396,7 @@
       "images": 0
     },
     {
-      "paragraph": 297,
+      "paragraph": 298,
       "paraId": "5A8467BD",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2396,7 +2404,7 @@
       "images": 0
     },
     {
-      "paragraph": 298,
+      "paragraph": 299,
       "paraId": "248C91F5",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2404,7 +2412,7 @@
       "images": 0
     },
     {
-      "paragraph": 299,
+      "paragraph": 300,
       "paraId": "3FC824BE",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2412,7 +2420,7 @@
       "images": 0
     },
     {
-      "paragraph": 300,
+      "paragraph": 301,
       "paraId": "7C366476",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2420,7 +2428,7 @@
       "images": 0
     },
     {
-      "paragraph": 301,
+      "paragraph": 302,
       "paraId": "4D923D0B",
       "disposition": "blocks",
       "textNodeCount": 6,
@@ -2428,7 +2436,7 @@
       "images": 0
     },
     {
-      "paragraph": 302,
+      "paragraph": 303,
       "paraId": "518377BE",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2436,7 +2444,7 @@
       "images": 0
     },
     {
-      "paragraph": 303,
+      "paragraph": 304,
       "paraId": "73D7A44C",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -2444,7 +2452,7 @@
       "images": 1
     },
     {
-      "paragraph": 304,
+      "paragraph": 305,
       "paraId": "16CFF04B",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2452,7 +2460,7 @@
       "images": 0
     },
     {
-      "paragraph": 305,
+      "paragraph": 306,
       "paraId": "00DC6921",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2460,7 +2468,7 @@
       "images": 0
     },
     {
-      "paragraph": 306,
+      "paragraph": 307,
       "paraId": "4C512C23",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2468,7 +2476,7 @@
       "images": 0
     },
     {
-      "paragraph": 307,
+      "paragraph": 308,
       "paraId": "4D558EF7",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2476,7 +2484,7 @@
       "images": 0
     },
     {
-      "paragraph": 308,
+      "paragraph": 309,
       "paraId": "391022B1",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2484,7 +2492,7 @@
       "images": 0
     },
     {
-      "paragraph": 309,
+      "paragraph": 310,
       "paraId": "64A1518B",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2492,7 +2500,7 @@
       "images": 0
     },
     {
-      "paragraph": 310,
+      "paragraph": 311,
       "paraId": "024EB085",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2500,7 +2508,7 @@
       "images": 0
     },
     {
-      "paragraph": 311,
+      "paragraph": 312,
       "paraId": "04EBF2B3",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2508,7 +2516,7 @@
       "images": 0
     },
     {
-      "paragraph": 312,
+      "paragraph": 313,
       "paraId": "75F417E2",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2516,7 +2524,7 @@
       "images": 0
     },
     {
-      "paragraph": 313,
+      "paragraph": 314,
       "paraId": "6802561E",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2524,7 +2532,7 @@
       "images": 0
     },
     {
-      "paragraph": 314,
+      "paragraph": 315,
       "paraId": "5EB14B92",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -2532,7 +2540,7 @@
       "images": 0
     },
     {
-      "paragraph": 315,
+      "paragraph": 316,
       "paraId": "72DB35F1",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2540,7 +2548,7 @@
       "images": 0
     },
     {
-      "paragraph": 316,
+      "paragraph": 317,
       "paraId": "666E3F52",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -2548,7 +2556,7 @@
       "images": 1
     },
     {
-      "paragraph": 317,
+      "paragraph": 318,
       "paraId": "0456B474",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2556,7 +2564,7 @@
       "images": 0
     },
     {
-      "paragraph": 318,
+      "paragraph": 319,
       "paraId": "21500948",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2564,7 +2572,7 @@
       "images": 0
     },
     {
-      "paragraph": 319,
+      "paragraph": 320,
       "paraId": "6832AA6E",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2572,7 +2580,7 @@
       "images": 0
     },
     {
-      "paragraph": 320,
+      "paragraph": 321,
       "paraId": "60AEB79F",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2580,7 +2588,7 @@
       "images": 0
     },
     {
-      "paragraph": 321,
+      "paragraph": 322,
       "paraId": "5975E1B8",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2588,7 +2596,7 @@
       "images": 0
     },
     {
-      "paragraph": 322,
+      "paragraph": 323,
       "paraId": "1D242944",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2596,7 +2604,7 @@
       "images": 0
     },
     {
-      "paragraph": 323,
+      "paragraph": 324,
       "paraId": "03F9AEF9",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2604,7 +2612,7 @@
       "images": 0
     },
     {
-      "paragraph": 324,
+      "paragraph": 325,
       "paraId": "2D702CF7",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2612,7 +2620,7 @@
       "images": 0
     },
     {
-      "paragraph": 325,
+      "paragraph": 326,
       "paraId": "3394139C",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2620,7 +2628,7 @@
       "images": 0
     },
     {
-      "paragraph": 326,
+      "paragraph": 327,
       "paraId": "5571B8CC",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2628,7 +2636,7 @@
       "images": 0
     },
     {
-      "paragraph": 327,
+      "paragraph": 328,
       "paraId": "3F6D8DC7",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2636,7 +2644,7 @@
       "images": 0
     },
     {
-      "paragraph": 328,
+      "paragraph": 329,
       "paraId": "2E70EF75",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2644,7 +2652,7 @@
       "images": 0
     },
     {
-      "paragraph": 329,
+      "paragraph": 330,
       "paraId": "1F94C53B",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2652,7 +2660,7 @@
       "images": 0
     },
     {
-      "paragraph": 330,
+      "paragraph": 331,
       "paraId": "4187C244",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2660,7 +2668,7 @@
       "images": 0
     },
     {
-      "paragraph": 331,
+      "paragraph": 332,
       "paraId": "46BFBD58",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2668,7 +2676,7 @@
       "images": 0
     },
     {
-      "paragraph": 332,
+      "paragraph": 333,
       "paraId": "703C3329",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2676,7 +2684,7 @@
       "images": 0
     },
     {
-      "paragraph": 333,
+      "paragraph": 334,
       "paraId": "6423A736",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2684,7 +2692,7 @@
       "images": 0
     },
     {
-      "paragraph": 334,
+      "paragraph": 335,
       "paraId": "1944A09E",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2692,7 +2700,7 @@
       "images": 0
     },
     {
-      "paragraph": 335,
+      "paragraph": 336,
       "paraId": "52A46B45",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -2700,7 +2708,7 @@
       "images": 0
     },
     {
-      "paragraph": 336,
+      "paragraph": 337,
       "paraId": "64A253BB",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2708,7 +2716,7 @@
       "images": 0
     },
     {
-      "paragraph": 337,
+      "paragraph": 338,
       "paraId": "427315AF",
       "disposition": "blocks",
       "textNodeCount": 8,
@@ -2716,7 +2724,7 @@
       "images": 0
     },
     {
-      "paragraph": 338,
+      "paragraph": 339,
       "paraId": "0D48E72B",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -2724,7 +2732,7 @@
       "images": 0
     },
     {
-      "paragraph": 339,
+      "paragraph": 340,
       "paraId": "18E25543",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -2732,7 +2740,7 @@
       "images": 1
     },
     {
-      "paragraph": 340,
+      "paragraph": 341,
       "paraId": "62B889A7",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2740,7 +2748,7 @@
       "images": 0
     },
     {
-      "paragraph": 341,
+      "paragraph": 342,
       "paraId": "10C8FFC5",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2748,7 +2756,7 @@
       "images": 0
     },
     {
-      "paragraph": 342,
+      "paragraph": 343,
       "paraId": "10B20663",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2756,7 +2764,7 @@
       "images": 0
     },
     {
-      "paragraph": 343,
+      "paragraph": 344,
       "paraId": "10108B8F",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2764,7 +2772,7 @@
       "images": 0
     },
     {
-      "paragraph": 344,
+      "paragraph": 345,
       "paraId": "133E4228",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2772,7 +2780,7 @@
       "images": 0
     },
     {
-      "paragraph": 345,
+      "paragraph": 346,
       "paraId": "08C86FED",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2780,7 +2788,7 @@
       "images": 0
     },
     {
-      "paragraph": 346,
+      "paragraph": 347,
       "paraId": "55C98810",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2788,7 +2796,7 @@
       "images": 0
     },
     {
-      "paragraph": 347,
+      "paragraph": 348,
       "paraId": "50CFD647",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2796,7 +2804,7 @@
       "images": 0
     },
     {
-      "paragraph": 348,
+      "paragraph": 349,
       "paraId": "7E349E56",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2804,7 +2812,7 @@
       "images": 0
     },
     {
-      "paragraph": 349,
+      "paragraph": 350,
       "paraId": "1F41342A",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2812,7 +2820,7 @@
       "images": 0
     },
     {
-      "paragraph": 350,
+      "paragraph": 351,
       "paraId": "3D02B057",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2820,7 +2828,7 @@
       "images": 0
     },
     {
-      "paragraph": 351,
+      "paragraph": 352,
       "paraId": "7C41053B",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -2828,7 +2836,7 @@
       "images": 0
     },
     {
-      "paragraph": 352,
+      "paragraph": 353,
       "paraId": "60D5593F",
       "disposition": "collection-heading",
       "textNodeCount": 2,
@@ -2836,7 +2844,7 @@
       "images": 0
     },
     {
-      "paragraph": 353,
+      "paragraph": 354,
       "paraId": "6C67BF5D",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -2844,7 +2852,7 @@
       "images": 0
     },
     {
-      "paragraph": 354,
+      "paragraph": 355,
       "paraId": "61D83512",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2852,7 +2860,7 @@
       "images": 0
     },
     {
-      "paragraph": 355,
+      "paragraph": 356,
       "paraId": "2E05D729",
       "disposition": "blocks",
       "textNodeCount": 4,
@@ -2860,7 +2868,7 @@
       "images": 0
     },
     {
-      "paragraph": 356,
+      "paragraph": 357,
       "paraId": "4E3ADA80",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2868,7 +2876,7 @@
       "images": 0
     },
     {
-      "paragraph": 357,
+      "paragraph": 358,
       "paraId": "688B2EC0",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -2876,7 +2884,7 @@
       "images": 1
     },
     {
-      "paragraph": 358,
+      "paragraph": 359,
       "paraId": "5B7B66D1",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -2884,7 +2892,7 @@
       "images": 0
     },
     {
-      "paragraph": 359,
+      "paragraph": 360,
       "paraId": "0FA0C344",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -2892,7 +2900,7 @@
       "images": 1
     },
     {
-      "paragraph": 360,
+      "paragraph": 361,
       "paraId": "126C92FF",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2900,7 +2908,7 @@
       "images": 0
     },
     {
-      "paragraph": 361,
+      "paragraph": 362,
       "paraId": "1A153A09",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2908,7 +2916,7 @@
       "images": 0
     },
     {
-      "paragraph": 362,
+      "paragraph": 363,
       "paraId": "72DB87CC",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2916,7 +2924,7 @@
       "images": 0
     },
     {
-      "paragraph": 363,
+      "paragraph": 364,
       "paraId": "230B8125",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2924,7 +2932,7 @@
       "images": 0
     },
     {
-      "paragraph": 364,
+      "paragraph": 365,
       "paraId": "5D588C37",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2932,7 +2940,7 @@
       "images": 0
     },
     {
-      "paragraph": 365,
+      "paragraph": 366,
       "paraId": "F3000008",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -2940,7 +2948,7 @@
       "images": 0
     },
     {
-      "paragraph": 366,
+      "paragraph": 367,
       "paraId": "0AC08D0C",
       "disposition": "resource-heading",
       "textNodeCount": 3,
@@ -2948,7 +2956,7 @@
       "images": 0
     },
     {
-      "paragraph": 367,
+      "paragraph": 368,
       "paraId": "6E9B4FF5",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2956,7 +2964,7 @@
       "images": 0
     },
     {
-      "paragraph": 368,
+      "paragraph": 369,
       "paraId": "2AC5F00C",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -2964,7 +2972,7 @@
       "images": 1
     },
     {
-      "paragraph": 369,
+      "paragraph": 370,
       "paraId": "57576137",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2972,7 +2980,7 @@
       "images": 0
     },
     {
-      "paragraph": 370,
+      "paragraph": 371,
       "paraId": "4E395485",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2980,7 +2988,7 @@
       "images": 0
     },
     {
-      "paragraph": 371,
+      "paragraph": 372,
       "paraId": "086C4E7B",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -2988,7 +2996,7 @@
       "images": 0
     },
     {
-      "paragraph": 372,
+      "paragraph": 373,
       "paraId": "45DAD3C2",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -2996,7 +3004,7 @@
       "images": 0
     },
     {
-      "paragraph": 373,
+      "paragraph": 374,
       "paraId": "7528238E",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3004,7 +3012,7 @@
       "images": 1
     },
     {
-      "paragraph": 374,
+      "paragraph": 375,
       "paraId": "580C2445",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3012,7 +3020,7 @@
       "images": 0
     },
     {
-      "paragraph": 375,
+      "paragraph": 376,
       "paraId": "F3000009",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3020,7 +3028,15 @@
       "images": 0
     },
     {
-      "paragraph": 376,
+      "paragraph": 377,
+      "paraId": "F4000002",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Läs mer om relationer och sexualitet.",
+      "images": 0
+    },
+    {
+      "paragraph": 378,
       "paraId": "288E85A9",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3028,7 +3044,7 @@
       "images": 0
     },
     {
-      "paragraph": 377,
+      "paragraph": 379,
       "paraId": "7A81B1A2",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -3036,7 +3052,7 @@
       "images": 0
     },
     {
-      "paragraph": 378,
+      "paragraph": 380,
       "paraId": "1C04D49C",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3044,7 +3060,7 @@
       "images": 0
     },
     {
-      "paragraph": 379,
+      "paragraph": 381,
       "paraId": "005D2FFB",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3052,7 +3068,7 @@
       "images": 0
     },
     {
-      "paragraph": 380,
+      "paragraph": 382,
       "paraId": "1A64FA00",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3060,7 +3076,7 @@
       "images": 1
     },
     {
-      "paragraph": 381,
+      "paragraph": 383,
       "paraId": "1206525B",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3068,7 +3084,7 @@
       "images": 0
     },
     {
-      "paragraph": 382,
+      "paragraph": 384,
       "paraId": "179219F2",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3076,7 +3092,7 @@
       "images": 0
     },
     {
-      "paragraph": 383,
+      "paragraph": 385,
       "paraId": "3A518692",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3084,7 +3100,7 @@
       "images": 0
     },
     {
-      "paragraph": 384,
+      "paragraph": 386,
       "paraId": "3082673B",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3092,7 +3108,7 @@
       "images": 1
     },
     {
-      "paragraph": 385,
+      "paragraph": 387,
       "paraId": "2DB5A0BF",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3100,7 +3116,7 @@
       "images": 0
     },
     {
-      "paragraph": 386,
+      "paragraph": 388,
       "paraId": "3B4B18F6",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3108,7 +3124,7 @@
       "images": 0
     },
     {
-      "paragraph": 387,
+      "paragraph": 389,
       "paraId": "6378C941",
       "disposition": "resource-heading",
       "textNodeCount": 2,
@@ -3116,7 +3132,7 @@
       "images": 0
     },
     {
-      "paragraph": 388,
+      "paragraph": 390,
       "paraId": "1A8ECAED",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3124,7 +3140,7 @@
       "images": 0
     },
     {
-      "paragraph": 389,
+      "paragraph": 391,
       "paraId": "2CD5E54A",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3132,7 +3148,7 @@
       "images": 0
     },
     {
-      "paragraph": 390,
+      "paragraph": 392,
       "paraId": "54B22B64",
       "disposition": "blocks",
       "textNodeCount": 7,
@@ -3140,7 +3156,7 @@
       "images": 0
     },
     {
-      "paragraph": 391,
+      "paragraph": 393,
       "paraId": "6D6359E1",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3148,7 +3164,7 @@
       "images": 1
     },
     {
-      "paragraph": 392,
+      "paragraph": 394,
       "paraId": "5A16BB60",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3156,7 +3172,7 @@
       "images": 0
     },
     {
-      "paragraph": 393,
+      "paragraph": 395,
       "paraId": "5F236A75",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3164,7 +3180,7 @@
       "images": 0
     },
     {
-      "paragraph": 394,
+      "paragraph": 396,
       "paraId": "233D0740",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3172,7 +3188,7 @@
       "images": 0
     },
     {
-      "paragraph": 395,
+      "paragraph": 397,
       "paraId": "241BC9C5",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3180,7 +3196,7 @@
       "images": 0
     },
     {
-      "paragraph": 396,
+      "paragraph": 398,
       "paraId": "518141DC",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -3188,7 +3204,7 @@
       "images": 0
     },
     {
-      "paragraph": 397,
+      "paragraph": 399,
       "paraId": "308ACEB4",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3196,7 +3212,7 @@
       "images": 0
     },
     {
-      "paragraph": 398,
+      "paragraph": 400,
       "paraId": "1FB9F2DA",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3204,7 +3220,7 @@
       "images": 0
     },
     {
-      "paragraph": 399,
+      "paragraph": 401,
       "paraId": "605BCD14",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3212,7 +3228,7 @@
       "images": 1
     },
     {
-      "paragraph": 400,
+      "paragraph": 402,
       "paraId": "6A6F8613",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3220,7 +3236,7 @@
       "images": 0
     },
     {
-      "paragraph": 401,
+      "paragraph": 403,
       "paraId": "F300000A",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3228,7 +3244,7 @@
       "images": 0
     },
     {
-      "paragraph": 402,
+      "paragraph": 404,
       "paraId": "2B9827B5",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3236,7 +3252,7 @@
       "images": 0
     },
     {
-      "paragraph": 403,
+      "paragraph": 405,
       "paraId": "09B9F770",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3244,7 +3260,7 @@
       "images": 0
     },
     {
-      "paragraph": 404,
+      "paragraph": 406,
       "paraId": "7A01D3A5",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3252,7 +3268,7 @@
       "images": 1
     },
     {
-      "paragraph": 405,
+      "paragraph": 407,
       "paraId": "229B79FC",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3260,7 +3276,7 @@
       "images": 0
     },
     {
-      "paragraph": 406,
+      "paragraph": 408,
       "paraId": "0D02EE8C",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3268,7 +3284,7 @@
       "images": 0
     },
     {
-      "paragraph": 407,
+      "paragraph": 409,
       "paraId": "0F4995A3",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3276,7 +3292,7 @@
       "images": 0
     },
     {
-      "paragraph": 408,
+      "paragraph": 410,
       "paraId": "7BF8C1A7",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3284,7 +3300,7 @@
       "images": 0
     },
     {
-      "paragraph": 409,
+      "paragraph": 411,
       "paraId": "678BFBAA",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3292,7 +3308,7 @@
       "images": 0
     },
     {
-      "paragraph": 410,
+      "paragraph": 412,
       "paraId": "7AC9D002",
       "disposition": "collection-heading",
       "textNodeCount": 2,
@@ -3300,7 +3316,7 @@
       "images": 0
     },
     {
-      "paragraph": 411,
+      "paragraph": 413,
       "paraId": "4AEDCA63",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -3308,7 +3324,7 @@
       "images": 0
     },
     {
-      "paragraph": 412,
+      "paragraph": 414,
       "paraId": "3C941720",
       "disposition": "blocks",
       "textNodeCount": 14,
@@ -3316,7 +3332,7 @@
       "images": 0
     },
     {
-      "paragraph": 413,
+      "paragraph": 415,
       "paraId": "18480257",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3324,7 +3340,7 @@
       "images": 0
     },
     {
-      "paragraph": 414,
+      "paragraph": 416,
       "paraId": "1D8E83AC",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3332,15 +3348,15 @@
       "images": 0
     },
     {
-      "paragraph": 415,
+      "paragraph": 417,
       "paraId": "7F5E1C92",
       "disposition": "blocks",
-      "textNodeCount": 2,
+      "textNodeCount": 3,
       "text": "Kvinnofridslinjen ger stöd till dig som utsatts för fysiskt, psykiskt eller sexuellt våld. Samtalet är gratis och du är anonym när du ringer.Ring: 020-50 50 50",
       "images": 0
     },
     {
-      "paragraph": 416,
+      "paragraph": 418,
       "paraId": "05C18D37",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3348,7 +3364,7 @@
       "images": 0
     },
     {
-      "paragraph": 417,
+      "paragraph": 419,
       "paraId": "F300000B",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3356,7 +3372,7 @@
       "images": 0
     },
     {
-      "paragraph": 418,
+      "paragraph": 420,
       "paraId": "28A2326C",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3364,7 +3380,7 @@
       "images": 1
     },
     {
-      "paragraph": 419,
+      "paragraph": 421,
       "paraId": "352754C0",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3372,7 +3388,7 @@
       "images": 0
     },
     {
-      "paragraph": 420,
+      "paragraph": 422,
       "paraId": "5BE0251A",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3380,7 +3396,7 @@
       "images": 0
     },
     {
-      "paragraph": 421,
+      "paragraph": 423,
       "paraId": "33D3DBFF",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3388,7 +3404,7 @@
       "images": 0
     },
     {
-      "paragraph": 422,
+      "paragraph": 424,
       "paraId": "7B591E3D",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3396,7 +3412,7 @@
       "images": 0
     },
     {
-      "paragraph": 423,
+      "paragraph": 425,
       "paraId": "5E637766",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3404,7 +3420,7 @@
       "images": 0
     },
     {
-      "paragraph": 424,
+      "paragraph": 426,
       "paraId": "4EE27802",
       "disposition": "resource-heading",
       "textNodeCount": 7,
@@ -3412,7 +3428,7 @@
       "images": 0
     },
     {
-      "paragraph": 425,
+      "paragraph": 427,
       "paraId": "43592F2E",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3420,7 +3436,7 @@
       "images": 0
     },
     {
-      "paragraph": 426,
+      "paragraph": 428,
       "paraId": "4F73CF4D",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3428,7 +3444,7 @@
       "images": 0
     },
     {
-      "paragraph": 427,
+      "paragraph": 429,
       "paraId": "28E4A3C7",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3436,7 +3452,7 @@
       "images": 0
     },
     {
-      "paragraph": 428,
+      "paragraph": 430,
       "paraId": "666BC4DC",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3444,7 +3460,7 @@
       "images": 0
     },
     {
-      "paragraph": 429,
+      "paragraph": 431,
       "paraId": "4F6C1545",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3452,7 +3468,7 @@
       "images": 0
     },
     {
-      "paragraph": 430,
+      "paragraph": 432,
       "paraId": "0078E0BF",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3460,7 +3476,7 @@
       "images": 0
     },
     {
-      "paragraph": 431,
+      "paragraph": 433,
       "paraId": "3852A959",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3468,7 +3484,7 @@
       "images": 0
     },
     {
-      "paragraph": 432,
+      "paragraph": 434,
       "paraId": "56378A62",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3476,7 +3492,7 @@
       "images": 0
     },
     {
-      "paragraph": 433,
+      "paragraph": 435,
       "paraId": "2BC4A8BF",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3484,7 +3500,7 @@
       "images": 0
     },
     {
-      "paragraph": 434,
+      "paragraph": 436,
       "paraId": "33AD2A41",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3492,7 +3508,7 @@
       "images": 1
     },
     {
-      "paragraph": 435,
+      "paragraph": 437,
       "paraId": "7183BD62",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3500,7 +3516,7 @@
       "images": 0
     },
     {
-      "paragraph": 436,
+      "paragraph": 438,
       "paraId": "0D842B04",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3508,7 +3524,7 @@
       "images": 0
     },
     {
-      "paragraph": 437,
+      "paragraph": 439,
       "paraId": "23589604",
       "disposition": "blocks",
       "textNodeCount": 5,
@@ -3516,7 +3532,7 @@
       "images": 0
     },
     {
-      "paragraph": 438,
+      "paragraph": 440,
       "paraId": "380F744A",
       "disposition": "blocks",
       "textNodeCount": 4,
@@ -3524,7 +3540,7 @@
       "images": 0
     },
     {
-      "paragraph": 439,
+      "paragraph": 441,
       "paraId": "2CD5A4F7",
       "disposition": "blocks",
       "textNodeCount": 5,
@@ -3532,7 +3548,7 @@
       "images": 0
     },
     {
-      "paragraph": 440,
+      "paragraph": 442,
       "paraId": "5A5FFECA",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3540,7 +3556,7 @@
       "images": 0
     },
     {
-      "paragraph": 441,
+      "paragraph": 443,
       "paraId": "4E1BD011",
       "disposition": "blocks",
       "textNodeCount": 7,
@@ -3548,7 +3564,7 @@
       "images": 0
     },
     {
-      "paragraph": 442,
+      "paragraph": 444,
       "paraId": "0D457F21",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3556,7 +3572,7 @@
       "images": 0
     },
     {
-      "paragraph": 443,
+      "paragraph": 445,
       "paraId": "5C4CCBE3",
       "disposition": "blocks",
       "textNodeCount": 7,
@@ -3564,7 +3580,7 @@
       "images": 0
     },
     {
-      "paragraph": 444,
+      "paragraph": 446,
       "paraId": "7F94D41A",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3572,7 +3588,7 @@
       "images": 0
     },
     {
-      "paragraph": 445,
+      "paragraph": 447,
       "paraId": "2CC0C76C",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3580,7 +3596,7 @@
       "images": 0
     },
     {
-      "paragraph": 446,
+      "paragraph": 448,
       "paraId": "2E9603FD",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3588,7 +3604,7 @@
       "images": 0
     },
     {
-      "paragraph": 447,
+      "paragraph": 449,
       "paraId": "12D7341A",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3596,7 +3612,7 @@
       "images": 0
     },
     {
-      "paragraph": 448,
+      "paragraph": 450,
       "paraId": "61A71E6F",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3604,7 +3620,7 @@
       "images": 0
     },
     {
-      "paragraph": 449,
+      "paragraph": 451,
       "paraId": "49E039A1",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3612,7 +3628,7 @@
       "images": 0
     },
     {
-      "paragraph": 450,
+      "paragraph": 452,
       "paraId": "072D7689",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3620,7 +3636,7 @@
       "images": 0
     },
     {
-      "paragraph": 451,
+      "paragraph": 453,
       "paraId": "0DAB4B2B",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3628,7 +3644,7 @@
       "images": 0
     },
     {
-      "paragraph": 452,
+      "paragraph": 454,
       "paraId": "0AF72663",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3636,7 +3652,7 @@
       "images": 0
     },
     {
-      "paragraph": 453,
+      "paragraph": 455,
       "paraId": "59C8BB73",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -3644,7 +3660,7 @@
       "images": 0
     },
     {
-      "paragraph": 454,
+      "paragraph": 456,
       "paraId": "57BBB2FF",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3652,7 +3668,7 @@
       "images": 0
     },
     {
-      "paragraph": 455,
+      "paragraph": 457,
       "paraId": "56CED393",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3660,7 +3676,7 @@
       "images": 0
     },
     {
-      "paragraph": 456,
+      "paragraph": 458,
       "paraId": "40114433",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3668,7 +3684,7 @@
       "images": 0
     },
     {
-      "paragraph": 457,
+      "paragraph": 459,
       "paraId": "5797A0AB",
       "disposition": "blocks",
       "textNodeCount": 8,
@@ -3676,7 +3692,7 @@
       "images": 0
     },
     {
-      "paragraph": 458,
+      "paragraph": 460,
       "paraId": "6644306B",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -3684,7 +3700,7 @@
       "images": 0
     },
     {
-      "paragraph": 459,
+      "paragraph": 461,
       "paraId": "685059EF",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3692,7 +3708,7 @@
       "images": 1
     },
     {
-      "paragraph": 460,
+      "paragraph": 462,
       "paraId": "59E2B47E",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3700,7 +3716,7 @@
       "images": 0
     },
     {
-      "paragraph": 461,
+      "paragraph": 463,
       "paraId": "688D2480",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3708,7 +3724,7 @@
       "images": 0
     },
     {
-      "paragraph": 462,
+      "paragraph": 464,
       "paraId": "5F0133E0",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3716,7 +3732,7 @@
       "images": 0
     },
     {
-      "paragraph": 463,
+      "paragraph": 465,
       "paraId": "6B73BFB6",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3724,7 +3740,7 @@
       "images": 0
     },
     {
-      "paragraph": 464,
+      "paragraph": 466,
       "paraId": "45394997",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3732,7 +3748,7 @@
       "images": 0
     },
     {
-      "paragraph": 465,
+      "paragraph": 467,
       "paraId": "553D15E6",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3740,7 +3756,7 @@
       "images": 0
     },
     {
-      "paragraph": 466,
+      "paragraph": 468,
       "paraId": "322D79D7",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3748,7 +3764,7 @@
       "images": 0
     },
     {
-      "paragraph": 467,
+      "paragraph": 469,
       "paraId": "65AFD6AB",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3756,7 +3772,7 @@
       "images": 0
     },
     {
-      "paragraph": 468,
+      "paragraph": 470,
       "paraId": "0298AE3D",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3764,7 +3780,7 @@
       "images": 0
     },
     {
-      "paragraph": 469,
+      "paragraph": 471,
       "paraId": "43B6DF01",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3772,7 +3788,7 @@
       "images": 0
     },
     {
-      "paragraph": 470,
+      "paragraph": 472,
       "paraId": "517328D5",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3780,7 +3796,7 @@
       "images": 0
     },
     {
-      "paragraph": 471,
+      "paragraph": 473,
       "paraId": "5BDDFCAF",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3788,7 +3804,7 @@
       "images": 0
     },
     {
-      "paragraph": 472,
+      "paragraph": 474,
       "paraId": "67579FF3",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3796,7 +3812,7 @@
       "images": 0
     },
     {
-      "paragraph": 473,
+      "paragraph": 475,
       "paraId": "35484AB5",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3804,7 +3820,7 @@
       "images": 0
     },
     {
-      "paragraph": 474,
+      "paragraph": 476,
       "paraId": "15EAED8D",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3812,7 +3828,7 @@
       "images": 0
     },
     {
-      "paragraph": 475,
+      "paragraph": 477,
       "paraId": "7DF08A42",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3820,7 +3836,7 @@
       "images": 0
     },
     {
-      "paragraph": 476,
+      "paragraph": 478,
       "paraId": "451DFCB3",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3828,7 +3844,7 @@
       "images": 0
     },
     {
-      "paragraph": 477,
+      "paragraph": 479,
       "paraId": "5992001A",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3836,7 +3852,7 @@
       "images": 0
     },
     {
-      "paragraph": 478,
+      "paragraph": 480,
       "paraId": "46C48C26",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3844,7 +3860,7 @@
       "images": 0
     },
     {
-      "paragraph": 479,
+      "paragraph": 481,
       "paraId": "11F29464",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3852,7 +3868,7 @@
       "images": 0
     },
     {
-      "paragraph": 480,
+      "paragraph": 482,
       "paraId": "682014ED",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3860,7 +3876,7 @@
       "images": 0
     },
     {
-      "paragraph": 481,
+      "paragraph": 483,
       "paraId": "678E3C91",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -3868,7 +3884,7 @@
       "images": 0
     },
     {
-      "paragraph": 482,
+      "paragraph": 484,
       "paraId": "502A4078",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3876,7 +3892,7 @@
       "images": 0
     },
     {
-      "paragraph": 483,
+      "paragraph": 485,
       "paraId": "7FF815BB",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -3884,15 +3900,15 @@
       "images": 0
     },
     {
-      "paragraph": 484,
+      "paragraph": 486,
       "paraId": "6B66947A",
       "disposition": "blocks",
-      "textNodeCount": 2,
+      "textNodeCount": 3,
       "text": "Kvinnofridslinjen är öppen dygnet runt och ger stöd till dig som utsatts för fysiskt, psykiskt eller sexuellt våld. Samtalet är gratis och anonymt.Ring: 020-50 50 50",
       "images": 0
     },
     {
-      "paragraph": 485,
+      "paragraph": 487,
       "paraId": "59E7B3DA",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3900,7 +3916,7 @@
       "images": 0
     },
     {
-      "paragraph": 486,
+      "paragraph": 488,
       "paraId": "F300000C",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -3908,7 +3924,7 @@
       "images": 0
     },
     {
-      "paragraph": 487,
+      "paragraph": 489,
       "paraId": "71B54C6D",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3916,7 +3932,7 @@
       "images": 0
     },
     {
-      "paragraph": 488,
+      "paragraph": 490,
       "paraId": "46FCCB35",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3924,7 +3940,7 @@
       "images": 0
     },
     {
-      "paragraph": 489,
+      "paragraph": 491,
       "paraId": "0E9F99A7",
       "disposition": "blocks",
       "textNodeCount": 0,
@@ -3932,7 +3948,7 @@
       "images": 1
     },
     {
-      "paragraph": 490,
+      "paragraph": 492,
       "paraId": "0833E9C8",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3940,7 +3956,7 @@
       "images": 0
     },
     {
-      "paragraph": 491,
+      "paragraph": 493,
       "paraId": "684C0942",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3948,7 +3964,7 @@
       "images": 0
     },
     {
-      "paragraph": 492,
+      "paragraph": 494,
       "paraId": "109B34AD",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3956,7 +3972,7 @@
       "images": 0
     },
     {
-      "paragraph": 493,
+      "paragraph": 495,
       "paraId": "22712FAD",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3964,7 +3980,7 @@
       "images": 0
     },
     {
-      "paragraph": 494,
+      "paragraph": 496,
       "paraId": "612A1509",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3972,7 +3988,7 @@
       "images": 0
     },
     {
-      "paragraph": 495,
+      "paragraph": 497,
       "paraId": "1487631E",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3980,7 +3996,7 @@
       "images": 0
     },
     {
-      "paragraph": 496,
+      "paragraph": 498,
       "paraId": "6FED39BB",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3988,7 +4004,7 @@
       "images": 0
     },
     {
-      "paragraph": 497,
+      "paragraph": 499,
       "paraId": "18B01C6F",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -3996,7 +4012,7 @@
       "images": 0
     },
     {
-      "paragraph": 498,
+      "paragraph": 500,
       "paraId": "1BBC57A1",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4004,7 +4020,7 @@
       "images": 0
     },
     {
-      "paragraph": 499,
+      "paragraph": 501,
       "paraId": "2B8F84F0",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4012,7 +4028,7 @@
       "images": 0
     },
     {
-      "paragraph": 500,
+      "paragraph": 502,
       "paraId": "5CBF0890",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4020,7 +4036,7 @@
       "images": 0
     },
     {
-      "paragraph": 501,
+      "paragraph": 503,
       "paraId": "660D24FE",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4028,7 +4044,7 @@
       "images": 0
     },
     {
-      "paragraph": 502,
+      "paragraph": 504,
       "paraId": "2F64C552",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4036,7 +4052,7 @@
       "images": 0
     },
     {
-      "paragraph": 503,
+      "paragraph": 505,
       "paraId": "10A952AD",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4044,7 +4060,7 @@
       "images": 0
     },
     {
-      "paragraph": 504,
+      "paragraph": 506,
       "paraId": "7C9C1D58",
       "disposition": "blocks",
       "textNodeCount": 10,
@@ -4052,7 +4068,7 @@
       "images": 0
     },
     {
-      "paragraph": 505,
+      "paragraph": 507,
       "paraId": "149A6AFE",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4060,7 +4076,7 @@
       "images": 0
     },
     {
-      "paragraph": 506,
+      "paragraph": 508,
       "paraId": "384136E7",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4068,7 +4084,7 @@
       "images": 0
     },
     {
-      "paragraph": 507,
+      "paragraph": 509,
       "paraId": "38E415C2",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4076,7 +4092,7 @@
       "images": 0
     },
     {
-      "paragraph": 508,
+      "paragraph": 510,
       "paraId": "21238527",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -4084,7 +4100,7 @@
       "images": 0
     },
     {
-      "paragraph": 509,
+      "paragraph": 511,
       "paraId": "48304BE6",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4092,7 +4108,7 @@
       "images": 0
     },
     {
-      "paragraph": 510,
+      "paragraph": 512,
       "paraId": "6AB7DC31",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4100,7 +4116,7 @@
       "images": 0
     },
     {
-      "paragraph": 511,
+      "paragraph": 513,
       "paraId": "0FA3316E",
       "disposition": "blocks",
       "textNodeCount": 4,
@@ -4108,7 +4124,7 @@
       "images": 0
     },
     {
-      "paragraph": 512,
+      "paragraph": 514,
       "paraId": "29FEB1D9",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4116,7 +4132,7 @@
       "images": 0
     },
     {
-      "paragraph": 513,
+      "paragraph": 515,
       "paraId": "3739E1BD",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4124,7 +4140,7 @@
       "images": 0
     },
     {
-      "paragraph": 514,
+      "paragraph": 516,
       "paraId": "197AE48D",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4132,7 +4148,7 @@
       "images": 0
     },
     {
-      "paragraph": 515,
+      "paragraph": 517,
       "paraId": "2067CC7E",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4140,7 +4156,7 @@
       "images": 0
     },
     {
-      "paragraph": 516,
+      "paragraph": 518,
       "paraId": "46C3D31D",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4148,7 +4164,7 @@
       "images": 0
     },
     {
-      "paragraph": 517,
+      "paragraph": 519,
       "paraId": "4B7A924D",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -4156,7 +4172,7 @@
       "images": 0
     },
     {
-      "paragraph": 518,
+      "paragraph": 520,
       "paraId": "15DAD9F4",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4164,7 +4180,7 @@
       "images": 0
     },
     {
-      "paragraph": 519,
+      "paragraph": 521,
       "paraId": "7006A593",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -4172,7 +4188,7 @@
       "images": 0
     },
     {
-      "paragraph": 520,
+      "paragraph": 522,
       "paraId": "2C4A521A",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4180,7 +4196,7 @@
       "images": 0
     },
     {
-      "paragraph": 521,
+      "paragraph": 523,
       "paraId": "7A5B93CE",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4188,7 +4204,7 @@
       "images": 0
     },
     {
-      "paragraph": 522,
+      "paragraph": 524,
       "paraId": "599B4F8A",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4196,7 +4212,7 @@
       "images": 0
     },
     {
-      "paragraph": 523,
+      "paragraph": 525,
       "paraId": "2EEDD0D5",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4204,7 +4220,7 @@
       "images": 0
     },
     {
-      "paragraph": 524,
+      "paragraph": 526,
       "paraId": "1A39FD73",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4212,7 +4228,7 @@
       "images": 0
     },
     {
-      "paragraph": 525,
+      "paragraph": 527,
       "paraId": "7E1DBAC4",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -4220,7 +4236,7 @@
       "images": 0
     },
     {
-      "paragraph": 526,
+      "paragraph": 528,
       "paraId": "3156CFDD",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4228,7 +4244,7 @@
       "images": 0
     },
     {
-      "paragraph": 527,
+      "paragraph": 529,
       "paraId": "130E86D4",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4236,7 +4252,7 @@
       "images": 0
     },
     {
-      "paragraph": 528,
+      "paragraph": 530,
       "paraId": "40BAB6D4",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4244,7 +4260,7 @@
       "images": 0
     },
     {
-      "paragraph": 529,
+      "paragraph": 531,
       "paraId": "2AC490C0",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4252,7 +4268,7 @@
       "images": 0
     },
     {
-      "paragraph": 530,
+      "paragraph": 532,
       "paraId": "35459592",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4260,7 +4276,7 @@
       "images": 0
     },
     {
-      "paragraph": 531,
+      "paragraph": 533,
       "paraId": "55C0C808",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -4268,7 +4284,7 @@
       "images": 0
     },
     {
-      "paragraph": 532,
+      "paragraph": 534,
       "paraId": "3B617800",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4276,7 +4292,7 @@
       "images": 0
     },
     {
-      "paragraph": 533,
+      "paragraph": 535,
       "paraId": "44A2CE6D",
       "disposition": "blocks",
       "textNodeCount": 7,
@@ -4284,7 +4300,7 @@
       "images": 0
     },
     {
-      "paragraph": 534,
+      "paragraph": 536,
       "paraId": "58B5A9FD",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4292,7 +4308,7 @@
       "images": 0
     },
     {
-      "paragraph": 535,
+      "paragraph": 537,
       "paraId": "737D8711",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4300,7 +4316,7 @@
       "images": 0
     },
     {
-      "paragraph": 536,
+      "paragraph": 538,
       "paraId": "177C6006",
       "disposition": "collection-heading",
       "textNodeCount": 3,
@@ -4308,7 +4324,7 @@
       "images": 0
     },
     {
-      "paragraph": 537,
+      "paragraph": 539,
       "paraId": "5099BDC0",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4316,7 +4332,7 @@
       "images": 0
     },
     {
-      "paragraph": 538,
+      "paragraph": 540,
       "paraId": "0334376E",
       "disposition": "blocks",
       "textNodeCount": 5,
@@ -4324,7 +4340,7 @@
       "images": 0
     },
     {
-      "paragraph": 539,
+      "paragraph": 541,
       "paraId": "2962FA19",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4332,7 +4348,7 @@
       "images": 0
     },
     {
-      "paragraph": 540,
+      "paragraph": 542,
       "paraId": "1723B9B4",
       "disposition": "blocks",
       "textNodeCount": 4,
@@ -4340,7 +4356,7 @@
       "images": 0
     },
     {
-      "paragraph": 541,
+      "paragraph": 543,
       "paraId": "6D725B49",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4348,7 +4364,7 @@
       "images": 0
     },
     {
-      "paragraph": 542,
+      "paragraph": 544,
       "paraId": "3CF65EEA",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4356,7 +4372,7 @@
       "images": 0
     },
     {
-      "paragraph": 543,
+      "paragraph": 545,
       "paraId": "6054673B",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4364,7 +4380,7 @@
       "images": 0
     },
     {
-      "paragraph": 544,
+      "paragraph": 546,
       "paraId": "3D563F81",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4372,7 +4388,7 @@
       "images": 0
     },
     {
-      "paragraph": 545,
+      "paragraph": 547,
       "paraId": "114F6CD6",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4380,7 +4396,7 @@
       "images": 0
     },
     {
-      "paragraph": 546,
+      "paragraph": 548,
       "paraId": "6477793E",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4388,7 +4404,7 @@
       "images": 0
     },
     {
-      "paragraph": 547,
+      "paragraph": 549,
       "paraId": "272E9DAE",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4396,7 +4412,7 @@
       "images": 0
     },
     {
-      "paragraph": 548,
+      "paragraph": 550,
       "paraId": "20196657",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4404,7 +4420,7 @@
       "images": 0
     },
     {
-      "paragraph": 549,
+      "paragraph": 551,
       "paraId": "602B8BC7",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4412,7 +4428,7 @@
       "images": 0
     },
     {
-      "paragraph": 550,
+      "paragraph": 552,
       "paraId": "738A424C",
       "disposition": "resource-heading",
       "textNodeCount": 2,
@@ -4420,7 +4436,7 @@
       "images": 0
     },
     {
-      "paragraph": 551,
+      "paragraph": 553,
       "paraId": "1FF7AD9D",
       "disposition": "blocks",
       "textNodeCount": 9,
@@ -4428,7 +4444,7 @@
       "images": 0
     },
     {
-      "paragraph": 552,
+      "paragraph": 554,
       "paraId": "193D0963",
       "disposition": "blocks",
       "textNodeCount": 5,
@@ -4436,7 +4452,7 @@
       "images": 0
     },
     {
-      "paragraph": 553,
+      "paragraph": 555,
       "paraId": "1E03511E",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4444,7 +4460,7 @@
       "images": 0
     },
     {
-      "paragraph": 554,
+      "paragraph": 556,
       "paraId": "139960ED",
       "disposition": "blocks",
       "textNodeCount": 8,
@@ -4452,7 +4468,7 @@
       "images": 0
     },
     {
-      "paragraph": 555,
+      "paragraph": 557,
       "paraId": "216C622D",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4460,7 +4476,7 @@
       "images": 0
     },
     {
-      "paragraph": 556,
+      "paragraph": 558,
       "paraId": "232719F4",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4468,7 +4484,7 @@
       "images": 0
     },
     {
-      "paragraph": 557,
+      "paragraph": 559,
       "paraId": "3FC968E7",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4476,7 +4492,7 @@
       "images": 0
     },
     {
-      "paragraph": 558,
+      "paragraph": 560,
       "paraId": "F2040001",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -4484,7 +4500,7 @@
       "images": 0
     },
     {
-      "paragraph": 559,
+      "paragraph": 561,
       "paraId": "F2040002",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4492,7 +4508,7 @@
       "images": 0
     },
     {
-      "paragraph": 560,
+      "paragraph": 562,
       "paraId": "F2040003",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4500,7 +4516,7 @@
       "images": 0
     },
     {
-      "paragraph": 561,
+      "paragraph": 563,
       "paraId": "F2040004",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4508,7 +4524,7 @@
       "images": 0
     },
     {
-      "paragraph": 562,
+      "paragraph": 564,
       "paraId": "F2040005",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4516,7 +4532,7 @@
       "images": 0
     },
     {
-      "paragraph": 563,
+      "paragraph": 565,
       "paraId": "F2040006",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4524,7 +4540,7 @@
       "images": 0
     },
     {
-      "paragraph": 564,
+      "paragraph": 566,
       "paraId": "F2040007",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4532,7 +4548,7 @@
       "images": 0
     },
     {
-      "paragraph": 565,
+      "paragraph": 567,
       "paraId": "6862475C",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4540,7 +4556,7 @@
       "images": 0
     },
     {
-      "paragraph": 566,
+      "paragraph": 568,
       "paraId": "1D09C49C",
       "disposition": "blank-spacing",
       "textNodeCount": 1,
@@ -4548,7 +4564,7 @@
       "images": 0
     },
     {
-      "paragraph": 567,
+      "paragraph": 569,
       "paraId": "58264637",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4556,7 +4572,7 @@
       "images": 0
     },
     {
-      "paragraph": 568,
+      "paragraph": 570,
       "paraId": "4C9A5B5E",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4564,7 +4580,7 @@
       "images": 0
     },
     {
-      "paragraph": 569,
+      "paragraph": 571,
       "paraId": "2D4F9D3B",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4572,7 +4588,7 @@
       "images": 0
     },
     {
-      "paragraph": 570,
+      "paragraph": 572,
       "paraId": "714E7C80",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4580,7 +4596,7 @@
       "images": 0
     },
     {
-      "paragraph": 571,
+      "paragraph": 573,
       "paraId": "75754222",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4588,7 +4604,7 @@
       "images": 0
     },
     {
-      "paragraph": 572,
+      "paragraph": 574,
       "paraId": "2DA7F494",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4596,7 +4612,7 @@
       "images": 0
     },
     {
-      "paragraph": 573,
+      "paragraph": 575,
       "paraId": "F2000001",
       "disposition": "collection-heading",
       "textNodeCount": 1,
@@ -4604,7 +4620,7 @@
       "images": 0
     },
     {
-      "paragraph": 574,
+      "paragraph": 576,
       "paraId": "F2010001",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4612,7 +4628,7 @@
       "images": 0
     },
     {
-      "paragraph": 575,
+      "paragraph": 577,
       "paraId": "F2010002",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4620,7 +4636,7 @@
       "images": 0
     },
     {
-      "paragraph": 576,
+      "paragraph": 578,
       "paraId": "F2010003",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4628,7 +4644,7 @@
       "images": 0
     },
     {
-      "paragraph": 577,
+      "paragraph": 579,
       "paraId": "F2000002",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4636,7 +4652,7 @@
       "images": 0
     },
     {
-      "paragraph": 578,
+      "paragraph": 580,
       "paraId": "F2020001",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4644,7 +4660,7 @@
       "images": 0
     },
     {
-      "paragraph": 579,
+      "paragraph": 581,
       "paraId": "F2020002",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4652,7 +4668,7 @@
       "images": 0
     },
     {
-      "paragraph": 580,
+      "paragraph": 582,
       "paraId": "F2020003",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4660,7 +4676,7 @@
       "images": 0
     },
     {
-      "paragraph": 581,
+      "paragraph": 583,
       "paraId": "F2000003",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4668,7 +4684,7 @@
       "images": 0
     },
     {
-      "paragraph": 582,
+      "paragraph": 584,
       "paraId": "F2030001",
       "disposition": "blocks",
       "textNodeCount": 3,
@@ -4676,7 +4692,7 @@
       "images": 0
     },
     {
-      "paragraph": 583,
+      "paragraph": 585,
       "paraId": "F2030002",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4684,7 +4700,7 @@
       "images": 0
     },
     {
-      "paragraph": 584,
+      "paragraph": 586,
       "paraId": "F2030003",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4692,7 +4708,7 @@
       "images": 0
     },
     {
-      "paragraph": 585,
+      "paragraph": 587,
       "paraId": "F2030005",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4700,7 +4716,7 @@
       "images": 0
     },
     {
-      "paragraph": 586,
+      "paragraph": 588,
       "paraId": "F2030007",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4708,7 +4724,7 @@
       "images": 0
     },
     {
-      "paragraph": 587,
+      "paragraph": 589,
       "paraId": "F2030008",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4716,11 +4732,67 @@
       "images": 0
     },
     {
-      "paragraph": 588,
+      "paragraph": 590,
       "paraId": "F2030009",
       "disposition": "blocks",
       "textNodeCount": 2,
       "text": "E-post: linda.akeflo@gu.se",
+      "images": 0
+    },
+    {
+      "paragraph": 591,
+      "paraId": "F4000010",
+      "disposition": "collection-heading",
+      "textNodeCount": 1,
+      "text": "Förklaringar till frågeformulären",
+      "images": 0
+    },
+    {
+      "paragraph": 592,
+      "paraId": "F4000020",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Närstående",
+      "images": 0
+    },
+    {
+      "paragraph": 593,
+      "paraId": "F4000021",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Med närstående menar vi partner, familjemedlem, släkting eller annan viktig person.",
+      "images": 0
+    },
+    {
+      "paragraph": 594,
+      "paraId": "F4000022",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Vaginalt sex",
+      "images": 0
+    },
+    {
+      "paragraph": 595,
+      "paraId": "F4000023",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Med vaginalt sex menar vi här sexuell aktivitet själv eller med partner där något förs in i slidan (exempelvis penis, fingrar, föremål eller dildo).",
+      "images": 0
+    },
+    {
+      "paragraph": 596,
+      "paraId": "F4000024",
+      "disposition": "resource-heading",
+      "textNodeCount": 1,
+      "text": "Hormonplåster",
+      "images": 0
+    },
+    {
+      "paragraph": 597,
+      "paraId": "F4000025",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Svara Ja om du använder hormonbehandling via hud, t.ex. plåster, gel eller spray.",
       "images": 0
     }
   ],
@@ -4852,7 +4924,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 364,
+        "paragraph": 365,
         "paraId": "5D588C37"
       }
     },
@@ -4870,7 +4942,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 374,
+        "paragraph": 375,
         "paraId": "580C2445"
       }
     },
@@ -4888,7 +4960,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 400,
+        "paragraph": 402,
         "paraId": "6A6F8613"
       }
     },
@@ -4906,7 +4978,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 416,
+        "paragraph": 418,
         "paraId": "05C18D37"
       }
     },
@@ -4924,7 +4996,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 485,
+        "paragraph": 487,
         "paraId": "59E7B3DA"
       }
     },
@@ -4937,7 +5009,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 554,
+        "paragraph": 556,
         "paraId": "139960ED"
       }
     },
@@ -4963,7 +5035,7 @@
       ],
       "resolved": true,
       "source": {
-        "paragraph": 388,
+        "paragraph": 390,
         "paraId": "1A8ECAED"
       }
     },
@@ -5054,7 +5126,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 502,
+        "paragraph": 504,
         "paraId": "2F64C552"
       }
     },
@@ -5067,7 +5139,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 544,
+        "paragraph": 546,
         "paraId": "3D563F81"
       }
     },
@@ -5080,7 +5152,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 537,
+        "paragraph": 539,
         "paraId": "5099BDC0"
       }
     },
@@ -5093,7 +5165,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 551,
+        "paragraph": 553,
         "paraId": "1FF7AD9D"
       }
     }

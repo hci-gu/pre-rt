@@ -21,6 +21,7 @@ async (page) => {
   let submitted
   await page.route('**/api/**', route => {
     const path = route.request().url()
+    if (path.includes('/studySettings/records')) return route.fulfill({ json: { page: 1, totalItems: 1, totalPages: 1, items: [{ id: 'settings', key: 'default', baselineQuestionnaire: 'baseline', dailyQuestionnaire: 'daily', treatmentEndQuestionnaire: 'end', treatmentEndQuestion: 'end-date', aboutCollection: 'about', afterTreatmentCollection: 'after' }] } })
     if (path.includes('/questionnaires/records/')) return route.fulfill({ json: source })
     if (path.includes('/users/records/')) return route.fulfill({ json: { id: 'layout-user', type: 'PRE' } })
     if (path.includes('/answers/records') && route.request().method() === 'POST') {

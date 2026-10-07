@@ -25,6 +25,7 @@ export type MockQuestion = {
   followup: string[]
   expand?: {
     options?: MockQuestionOptions
+    resource?: { id: string; title: string; description: string }
   }
 }
 
@@ -158,6 +159,21 @@ export const mockAnswer = ({
 })
 
 export const seedAuthenticatedUser = async (page: Page) => {
+  // Keep browser fixtures independent of any real PocketBase data or network.
+  await page.route('**/api/**', route => route.fulfill({ status: 404, json: { message: 'Unmocked test API request' } }))
+  await page.route('**/api/collections/users/records/test-user', route => route.fulfill({ json: {
+    id: 'test-user', type: 'PRE', diagnosis: 'corpus', treatmentStart: '2026-07-01', treatmentEnd: '',
+  } }))
+  await page.route('**/api/collections/studySettings/records**', route => route.fulfill({ json: {
+    page: 1, perPage: 1, totalItems: 1, totalPages: 1, items: [{ id: 'settings', key: 'default',
+      baselineQuestionnaire: 'baseline-form', dailyQuestionnaire: 'daily-form',
+      treatmentEndQuestionnaire: 'treatment-end-form', treatmentEndQuestion: 'treatment-end-date',
+      aboutCollection: 'about', afterTreatmentCollection: 'after-treatment',
+    }],
+  } }))
+  await page.route('**/api/collections/resourceAsset/records**', route => route.fulfill({ json: { page: 1, totalItems: 0, totalPages: 0, items: [] } }))
+  await page.route('**/api/collections/resourceCollection/records**', route => route.fulfill({ json: { page: 1, totalItems: 0, totalPages: 0, items: [] } }))
+  await page.route('**/daily-schedule', route => route.fulfill({ json: { startDate: null, endDate: null } }))
   await page.addInitScript(() => {
     window.localStorage.setItem(
       'auth',

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": "1.1.0",
-  "sourceDocumentHash": "e8f9e63196e569e7b319990f93e3875854a9364344b251518e0297eb0245ce6d",
-  "manifestHash": "974f375fbc04d04841854bbcb426f69c36d9e59ac82142e7027cab23995ce9fd",
+  "sourceDocumentHash": "a30c0b50bc834cabce85948803db26e5d02a38e17070067c3c7a4b9f0981a2d3",
+  "manifestHash": "103e276087667e71fec1deae68cfc85cdbb014f5464c0d6f795ed349de5ed6d4",
   "collections": [
     {
       "sourceKey": "radiation",
@@ -81,7 +81,7 @@
         "footer": []
       },
       "source": {
-        "paragraph": 294,
+        "paragraph": 295,
         "paraId": "48213B0D"
       },
       "contentHash": "78b340eea3ff67a7e28951e938cdc98b4789af878eb4e4a11521829782b99078"
@@ -107,7 +107,7 @@
         "footer": []
       },
       "source": {
-        "paragraph": 352,
+        "paragraph": 353,
         "paraId": "60D5593F"
       },
       "contentHash": "925f339e190c5c5796d18f99b390212646567912283ed29b9f0f5d509cfc2d6b"
@@ -133,7 +133,7 @@
         "footer": []
       },
       "source": {
-        "paragraph": 410,
+        "paragraph": 412,
         "paraId": "7AC9D002"
       },
       "contentHash": "68041c75a8d0ab568b628089b2ca5fb3c5fd242f868193d827985b9e3aed1754"
@@ -153,19 +153,15 @@
       ],
       "content": {
         "schemaVersion": 1,
-        "audience": {
-          "phases": [
-            "after"
-          ]
-        },
+        "audience": {},
         "blocks": [],
         "footer": []
       },
       "source": {
-        "paragraph": 536,
+        "paragraph": 538,
         "paraId": "177C6006"
       },
-      "contentHash": "53c9274d62d5f0d745097d897a276e05888d8758d96b218091295ffabf938e80"
+      "contentHash": "344a338c58330563f125968bcf0b9d3878a9483dd0d7653322c588491eacec80"
     },
     {
       "sourceKey": "study",
@@ -190,7 +186,7 @@
               }
             ],
             "source": {
-              "paragraph": 574,
+              "paragraph": 576,
               "paraId": "F2010001"
             }
           },
@@ -202,7 +198,7 @@
               }
             ],
             "source": {
-              "paragraph": 575,
+              "paragraph": 577,
               "paraId": "F2010002"
             }
           },
@@ -214,7 +210,7 @@
               }
             ],
             "source": {
-              "paragraph": 576,
+              "paragraph": 578,
               "paraId": "F2010003"
             }
           }
@@ -222,10 +218,34 @@
         "footer": []
       },
       "source": {
-        "paragraph": 573,
+        "paragraph": 575,
         "paraId": "F2000001"
       },
       "contentHash": "c51723ea5dd4c5e12e75bbd5a6e693995217144cb44ec7c62802f0d78204a909"
+    },
+    {
+      "sourceKey": "questionnaire-help",
+      "existingId": "",
+      "name": "Förklaringar till frågeformulären",
+      "visible": false,
+      "showQuickExit": false,
+      "sort": 80,
+      "resources": [
+        "questionnaire-help.close-person",
+        "questionnaire-help.vaginal-sex",
+        "questionnaire-help.hormone-skin"
+      ],
+      "content": {
+        "schemaVersion": 1,
+        "audience": {},
+        "blocks": [],
+        "footer": []
+      },
+      "source": {
+        "paragraph": 591,
+        "paraId": "F4000010"
+      },
+      "contentHash": "5272da41c33ce42d22fd379060b8fc828623d4ce81178fc515abe66ac74b68f9"
     }
   ],
   "resources": [
@@ -2011,6 +2031,20 @@
               "paragraph": 249,
               "paraId": "77C8586F"
             }
+          },
+          {
+            "type": "paragraph",
+            "inline": [
+              {
+                "text": "Läs hela instruktionen för hur du använder vaginalstaven.",
+                "underline": true,
+                "target": "dilator.how-to"
+              }
+            ],
+            "source": {
+              "paragraph": 250,
+              "paraId": "F4000001"
+            }
           }
         ]
       },
@@ -2018,7 +2052,7 @@
         "paragraph": 246,
         "paraId": "35A944CB"
       },
-      "contentHash": "1805522893c56575dc781356168f8fa81a19b1b3222f35099f863f30704258f0"
+      "contentHash": "4208d0a99b87bc3a4ec48b6927479dfba6495f88c8f11f4e23982f9d1d5c0f33"
     },
     {
       "sourceKey": "dilator.measure-length",
@@ -2045,7 +2079,7 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 253,
+                  "paragraph": 254,
                   "paraId": "6907CD25"
                 }
               },
@@ -2064,7 +2098,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 253,
+                          "paragraph": 254,
                           "paraId": "6907CD25"
                         }
                       }
@@ -2080,7 +2114,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 253,
+                          "paragraph": 254,
                           "paraId": "6907CD25"
                         }
                       }
@@ -2096,7 +2130,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 253,
+                          "paragraph": 254,
                           "paraId": "6907CD25"
                         }
                       }
@@ -2104,13 +2138,13 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 253,
+                  "paragraph": 254,
                   "paraId": "6907CD25"
                 }
               }
             ],
             "source": {
-              "paragraph": 253,
+              "paragraph": 254,
               "paraId": "6907CD25"
             }
           },
@@ -2122,7 +2156,7 @@
               }
             ],
             "source": {
-              "paragraph": 255,
+              "paragraph": 256,
               "paraId": "63634F83"
             }
           },
@@ -2132,7 +2166,7 @@
             "alt": "Vaginalstav med markeringarna 2 cm eller kortare, 4 cm, 6 cm, 8 cm och 10 cm eller längre.",
             "decorative": false,
             "source": {
-              "paragraph": 256,
+              "paragraph": 257,
               "paraId": "4CBC86FA"
             },
             "width": 419.4,
@@ -2146,14 +2180,14 @@
               }
             ],
             "source": {
-              "paragraph": 257,
+              "paragraph": 258,
               "paraId": "6AD6AD88"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 252,
+        "paragraph": 253,
         "paraId": "5CE36530"
       },
       "contentHash": "f6feaddb99c5ba4db63668c52a70aa9afb4eb89c8f8e0c73888b7ed245853413"
@@ -2178,7 +2212,7 @@
               }
             ],
             "source": {
-              "paragraph": 264,
+              "paragraph": 265,
               "paraId": "69A0F3D3"
             }
           },
@@ -2190,7 +2224,7 @@
               }
             ],
             "source": {
-              "paragraph": 265,
+              "paragraph": 266,
               "paraId": "30481EC7"
             }
           },
@@ -2200,7 +2234,7 @@
             "alt": "Genomskärning som visar vaginalstavens spets vid slidöppningen.",
             "decorative": false,
             "source": {
-              "paragraph": 266,
+              "paragraph": 267,
               "paraId": "4045EB67"
             },
             "width": 430.66,
@@ -2214,7 +2248,7 @@
               }
             ],
             "source": {
-              "paragraph": 267,
+              "paragraph": 268,
               "paraId": "59D1750F"
             }
           },
@@ -2224,7 +2258,7 @@
             "alt": "En pil pekar på knappen som startar vaginalstavens vibration.",
             "decorative": false,
             "source": {
-              "paragraph": 268,
+              "paragraph": 269,
               "paraId": "60239A29"
             },
             "width": 429.71,
@@ -2239,7 +2273,7 @@
               }
             ],
             "source": {
-              "paragraph": 269,
+              "paragraph": 270,
               "paraId": "5548AC1E"
             }
           },
@@ -2258,7 +2292,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 270,
+                      "paragraph": 271,
                       "paraId": "5FFFE06D"
                     }
                   }
@@ -2274,7 +2308,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 272,
+                      "paragraph": 273,
                       "paraId": "32ADA537"
                     }
                   }
@@ -2290,7 +2324,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 274,
+                      "paragraph": 275,
                       "paraId": "2D6BE20C"
                     }
                   }
@@ -2306,7 +2340,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 276,
+                      "paragraph": 277,
                       "paraId": "0ECAC701"
                     }
                   }
@@ -2314,7 +2348,7 @@
               }
             ],
             "source": {
-              "paragraph": 270,
+              "paragraph": 271,
               "paraId": "5FFFE06D"
             }
           },
@@ -2326,7 +2360,7 @@
               }
             ],
             "source": {
-              "paragraph": 277,
+              "paragraph": 278,
               "paraId": "14412B49"
             }
           },
@@ -2338,7 +2372,7 @@
               }
             ],
             "source": {
-              "paragraph": 278,
+              "paragraph": 279,
               "paraId": "303CB1A3"
             }
           },
@@ -2351,7 +2385,7 @@
               }
             ],
             "source": {
-              "paragraph": 279,
+              "paragraph": 280,
               "paraId": "23779208"
             }
           },
@@ -2363,14 +2397,14 @@
               }
             ],
             "source": {
-              "paragraph": 280,
+              "paragraph": 281,
               "paraId": "542E8424"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 263,
+        "paragraph": 264,
         "paraId": "426592A8"
       },
       "contentHash": "1c9babc458b415f4b2657c5f95c19a0fe8d981bb4c51c76111a88654739b67d9"
@@ -2395,7 +2429,7 @@
               }
             ],
             "source": {
-              "paragraph": 292,
+              "paragraph": 293,
               "paraId": "F1010001"
             }
           },
@@ -2407,14 +2441,14 @@
               }
             ],
             "source": {
-              "paragraph": 293,
+              "paragraph": 294,
               "paraId": "F1010002"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 291,
+        "paragraph": 292,
         "paraId": "F1000001"
       },
       "contentHash": "9fe7afbfd1826925d9308f7ce4da98879e4ec9784e6d59a14a2029c2b364734c"
@@ -2439,7 +2473,7 @@
               }
             ],
             "source": {
-              "paragraph": 296,
+              "paragraph": 297,
               "paraId": "11D3F0DF"
             }
           },
@@ -2451,7 +2485,7 @@
               }
             ],
             "source": {
-              "paragraph": 297,
+              "paragraph": 298,
               "paraId": "5A8467BD"
             }
           },
@@ -2470,7 +2504,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 298,
+                      "paragraph": 299,
                       "paraId": "248C91F5"
                     }
                   }
@@ -2486,7 +2520,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 299,
+                      "paragraph": 300,
                       "paraId": "3FC824BE"
                     }
                   }
@@ -2502,7 +2536,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 300,
+                      "paragraph": 301,
                       "paraId": "7C366476"
                     }
                   }
@@ -2518,7 +2552,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 301,
+                      "paragraph": 302,
                       "paraId": "4D923D0B"
                     }
                   }
@@ -2526,7 +2560,7 @@
               }
             ],
             "source": {
-              "paragraph": 298,
+              "paragraph": 299,
               "paraId": "248C91F5"
             }
           },
@@ -2538,7 +2572,7 @@
               }
             ],
             "source": {
-              "paragraph": 302,
+              "paragraph": 303,
               "paraId": "518377BE"
             }
           },
@@ -2548,7 +2582,7 @@
             "alt": "En pumpflaska, tvål och ett frågetecken som illustrerar frågor om intimvård.",
             "decorative": false,
             "source": {
-              "paragraph": 303,
+              "paragraph": 304,
               "paraId": "73D7A44C"
             },
             "width": 417.33,
@@ -2557,7 +2591,7 @@
         ]
       },
       "source": {
-        "paragraph": 295,
+        "paragraph": 296,
         "paraId": "3CD31977"
       },
       "contentHash": "ba7c6bde7af02b9b422dd5489ff61ca8420346c8662347f1435253073b217bfa"
@@ -2582,7 +2616,7 @@
               }
             ],
             "source": {
-              "paragraph": 315,
+              "paragraph": 316,
               "paraId": "72DB35F1"
             }
           },
@@ -2592,7 +2626,7 @@
             "alt": "Ett varningstecken över underlivet på en person i underkläder.",
             "decorative": false,
             "source": {
-              "paragraph": 316,
+              "paragraph": 317,
               "paraId": "666E3F52"
             },
             "width": 452.24,
@@ -2601,7 +2635,7 @@
         ]
       },
       "source": {
-        "paragraph": 314,
+        "paragraph": 315,
         "paraId": "5EB14B92"
       },
       "contentHash": "6a6a89cd31c85693da7a6b96e55adee40e085c5676fc795d354551d9137a0758"
@@ -2626,7 +2660,7 @@
               }
             ],
             "source": {
-              "paragraph": 336,
+              "paragraph": 337,
               "paraId": "64A253BB"
             }
           },
@@ -2638,7 +2672,7 @@
               }
             ],
             "source": {
-              "paragraph": 337,
+              "paragraph": 338,
               "paraId": "427315AF"
             }
           },
@@ -2650,7 +2684,7 @@
               }
             ],
             "source": {
-              "paragraph": 338,
+              "paragraph": 339,
               "paraId": "0D48E72B"
             }
           },
@@ -2660,7 +2694,7 @@
             "alt": "En rakhyvel intill ett frågetecken.",
             "decorative": false,
             "source": {
-              "paragraph": 339,
+              "paragraph": 340,
               "paraId": "18E25543"
             },
             "width": 463.81,
@@ -2669,7 +2703,7 @@
         ]
       },
       "source": {
-        "paragraph": 335,
+        "paragraph": 336,
         "paraId": "52A46B45"
       },
       "contentHash": "a6f0e5c2ad96a91ec797da356ac167a76e3a33b8ea84ca5b6fde71a38f2f3cd4"
@@ -2694,7 +2728,7 @@
               }
             ],
             "source": {
-              "paragraph": 354,
+              "paragraph": 355,
               "paraId": "61D83512"
             }
           },
@@ -2706,7 +2740,7 @@
               }
             ],
             "source": {
-              "paragraph": 355,
+              "paragraph": 356,
               "paraId": "2E05D729"
             }
           },
@@ -2724,7 +2758,7 @@
               }
             ],
             "source": {
-              "paragraph": 356,
+              "paragraph": 357,
               "paraId": "4E3ADA80"
             }
           },
@@ -2734,7 +2768,7 @@
             "alt": "Förhandsbild till filmen ”Vad är sexualitet?”.",
             "decorative": false,
             "source": {
-              "paragraph": 357,
+              "paragraph": 358,
               "paraId": "688B2EC0"
             },
             "width": 309.59,
@@ -2757,7 +2791,7 @@
               }
             ],
             "source": {
-              "paragraph": 358,
+              "paragraph": 359,
               "paraId": "5B7B66D1"
             }
           },
@@ -2767,7 +2801,7 @@
             "alt": "Fyra sammanfogade pusselbitar märkta mental, fysisk, social och emotionell.",
             "decorative": false,
             "source": {
-              "paragraph": 359,
+              "paragraph": 360,
               "paraId": "0FA0C344"
             },
             "width": 288.0,
@@ -2785,7 +2819,7 @@
               }
             ],
             "source": {
-              "paragraph": 360,
+              "paragraph": 361,
               "paraId": "126C92FF"
             }
           },
@@ -2801,7 +2835,7 @@
               }
             ],
             "source": {
-              "paragraph": 361,
+              "paragraph": 362,
               "paraId": "1A153A09"
             }
           },
@@ -2817,7 +2851,7 @@
               }
             ],
             "source": {
-              "paragraph": 362,
+              "paragraph": 363,
               "paraId": "72DB87CC"
             }
           },
@@ -2833,7 +2867,7 @@
               }
             ],
             "source": {
-              "paragraph": 363,
+              "paragraph": 364,
               "paraId": "230B8125"
             }
           },
@@ -2845,7 +2879,7 @@
               }
             ],
             "source": {
-              "paragraph": 364,
+              "paragraph": 365,
               "paraId": "5D588C37"
             }
           },
@@ -2857,7 +2891,7 @@
               }
             ],
             "source": {
-              "paragraph": 365,
+              "paragraph": 366,
               "paraId": "F3000008"
             },
             "href": "https://eftercancern.se/hem/symptom/paverkan-pa-sexualitet-och-intimitet/"
@@ -2865,7 +2899,7 @@
         ]
       },
       "source": {
-        "paragraph": 353,
+        "paragraph": 354,
         "paraId": "6C67BF5D"
       },
       "contentHash": "bd920384523c1431cd02f82d8c72c2280e737f5a452d028b73088e7a0cdcbd79"
@@ -2890,7 +2924,7 @@
               }
             ],
             "source": {
-              "paragraph": 367,
+              "paragraph": 368,
               "paraId": "6E9B4FF5"
             }
           },
@@ -2900,7 +2934,7 @@
             "alt": "Två hjärtformade blommor med plåster.",
             "decorative": false,
             "source": {
-              "paragraph": 368,
+              "paragraph": 369,
               "paraId": "2AC5F00C"
             },
             "width": 394.41,
@@ -2914,7 +2948,7 @@
               }
             ],
             "source": {
-              "paragraph": 369,
+              "paragraph": 370,
               "paraId": "57576137"
             }
           },
@@ -2926,7 +2960,7 @@
               }
             ],
             "source": {
-              "paragraph": 370,
+              "paragraph": 371,
               "paraId": "4E395485"
             }
           },
@@ -2938,7 +2972,7 @@
               }
             ],
             "source": {
-              "paragraph": 371,
+              "paragraph": 372,
               "paraId": "086C4E7B"
             }
           },
@@ -2956,7 +2990,7 @@
               }
             ],
             "source": {
-              "paragraph": 372,
+              "paragraph": 373,
               "paraId": "45DAD3C2"
             }
           },
@@ -2966,7 +3000,7 @@
             "alt": "Förhandsbild till filmen ”Så påverkar cancern din sexualitet”.",
             "decorative": false,
             "source": {
-              "paragraph": 373,
+              "paragraph": 374,
               "paraId": "7528238E"
             },
             "width": 412.92,
@@ -2982,7 +3016,7 @@
               }
             ],
             "source": {
-              "paragraph": 374,
+              "paragraph": 375,
               "paraId": "580C2445"
             }
           },
@@ -2994,18 +3028,32 @@
               }
             ],
             "source": {
-              "paragraph": 375,
+              "paragraph": 376,
               "paraId": "F3000009"
             },
             "href": "https://eftercancern.se/hem/symtom-sexualitet/"
+          },
+          {
+            "type": "paragraph",
+            "inline": [
+              {
+                "text": "Läs mer om relationer och sexualitet.",
+                "underline": true,
+                "target": "sexual-health.relationships"
+              }
+            ],
+            "source": {
+              "paragraph": 377,
+              "paraId": "F4000002"
+            }
           }
         ]
       },
       "source": {
-        "paragraph": 366,
+        "paragraph": 367,
         "paraId": "0AC08D0C"
       },
-      "contentHash": "ed5c073da01b07f79202918c86826ab08717da788bdf6e86e355179f2511fb24"
+      "contentHash": "39c4488ec186371ed4bac199f4cff2496494f566c10e2c44ea73842782d676f6"
     },
     {
       "sourceKey": "sexual-health.relationships",
@@ -3027,7 +3075,7 @@
               }
             ],
             "source": {
-              "paragraph": 378,
+              "paragraph": 380,
               "paraId": "1C04D49C"
             }
           },
@@ -3039,7 +3087,7 @@
               }
             ],
             "source": {
-              "paragraph": 379,
+              "paragraph": 381,
               "paraId": "005D2FFB"
             }
           },
@@ -3049,7 +3097,7 @@
             "alt": "Två händer som håller varandra framför ett hjärta och en hjärtformad blomma med plåster.",
             "decorative": false,
             "source": {
-              "paragraph": 380,
+              "paragraph": 382,
               "paraId": "1A64FA00"
             },
             "width": 467.28,
@@ -3063,7 +3111,7 @@
               }
             ],
             "source": {
-              "paragraph": 381,
+              "paragraph": 383,
               "paraId": "1206525B"
             }
           },
@@ -3075,7 +3123,7 @@
               }
             ],
             "source": {
-              "paragraph": 382,
+              "paragraph": 384,
               "paraId": "179219F2"
             }
           },
@@ -3093,7 +3141,7 @@
               }
             ],
             "source": {
-              "paragraph": 383,
+              "paragraph": 385,
               "paraId": "3A518692"
             }
           },
@@ -3103,7 +3151,7 @@
             "alt": "Förhandsbild till filmen ”Tips och råd för ökad lust”.",
             "decorative": false,
             "source": {
-              "paragraph": 384,
+              "paragraph": 386,
               "paraId": "3082673B"
             },
             "width": 473.06,
@@ -3114,7 +3162,7 @@
         ]
       },
       "source": {
-        "paragraph": 377,
+        "paragraph": 379,
         "paraId": "7A81B1A2"
       },
       "contentHash": "88591af62db969618c2f709732d070260493f0014cc4e0b19a34aee055b44b5b"
@@ -3139,7 +3187,7 @@
               }
             ],
             "source": {
-              "paragraph": 388,
+              "paragraph": 390,
               "paraId": "1A8ECAED"
             }
           },
@@ -3151,7 +3199,7 @@
               }
             ],
             "source": {
-              "paragraph": 389,
+              "paragraph": 391,
               "paraId": "2CD5E54A"
             }
           },
@@ -3168,7 +3216,7 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 390,
+                  "paragraph": 392,
                   "paraId": "54B22B64"
                 }
               },
@@ -3187,7 +3235,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 390,
+                          "paragraph": 392,
                           "paraId": "54B22B64"
                         }
                       }
@@ -3203,7 +3251,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 390,
+                          "paragraph": 392,
                           "paraId": "54B22B64"
                         }
                       }
@@ -3219,7 +3267,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 390,
+                          "paragraph": 392,
                           "paraId": "54B22B64"
                         }
                       }
@@ -3235,7 +3283,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 390,
+                          "paragraph": 392,
                           "paraId": "54B22B64"
                         }
                       }
@@ -3251,7 +3299,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 390,
+                          "paragraph": 392,
                           "paraId": "54B22B64"
                         }
                       }
@@ -3267,7 +3315,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 390,
+                          "paragraph": 392,
                           "paraId": "54B22B64"
                         }
                       }
@@ -3275,13 +3323,13 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 390,
+                  "paragraph": 392,
                   "paraId": "54B22B64"
                 }
               }
             ],
             "source": {
-              "paragraph": 390,
+              "paragraph": 392,
               "paraId": "54B22B64"
             }
           },
@@ -3291,7 +3339,7 @@
             "alt": "Två händer som håller varandra, omgivna av hjärtan och en blomma med plåster.",
             "decorative": false,
             "source": {
-              "paragraph": 391,
+              "paragraph": 393,
               "paraId": "6D6359E1"
             },
             "width": 504.57,
@@ -3300,7 +3348,7 @@
         ]
       },
       "source": {
-        "paragraph": 387,
+        "paragraph": 389,
         "paraId": "6378C941"
       },
       "contentHash": "0002b3a0e825aaa88df6f4a1b2ef891eed553cac31ed108adeafbadacf166821"
@@ -3325,7 +3373,7 @@
               }
             ],
             "source": {
-              "paragraph": 397,
+              "paragraph": 399,
               "paraId": "308ACEB4"
             }
           },
@@ -3343,7 +3391,7 @@
               }
             ],
             "source": {
-              "paragraph": 398,
+              "paragraph": 400,
               "paraId": "1FB9F2DA"
             }
           },
@@ -3353,7 +3401,7 @@
             "alt": "Förhandsbild till filmen ”Sexuella hjälpmedel vid rehabilitering”.",
             "decorative": false,
             "source": {
-              "paragraph": 399,
+              "paragraph": 401,
               "paraId": "605BCD14"
             },
             "width": 488.67,
@@ -3369,7 +3417,7 @@
               }
             ],
             "source": {
-              "paragraph": 400,
+              "paragraph": 402,
               "paraId": "6A6F8613"
             }
           },
@@ -3381,7 +3429,7 @@
               }
             ],
             "source": {
-              "paragraph": 401,
+              "paragraph": 403,
               "paraId": "F300000A"
             },
             "href": "https://eftercancern.se/hem/wp-content/uploads/2021-Broschyr-Sexuell-halsa-och-rehabilitering-vid-cancersjukdom.pdf"
@@ -3392,7 +3440,7 @@
             "alt": "Ett frågetecken intill en hjärtformad blomma med plåster.",
             "decorative": false,
             "source": {
-              "paragraph": 404,
+              "paragraph": 406,
               "paraId": "7A01D3A5"
             },
             "width": 481.14,
@@ -3401,7 +3449,7 @@
         ]
       },
       "source": {
-        "paragraph": 396,
+        "paragraph": 398,
         "paraId": "518141DC"
       },
       "contentHash": "2021f752af4fa221e3071c954f2e3147dcb5488bc6bb9f8d357f5121eac4ab6b"
@@ -3426,7 +3474,7 @@
               }
             ],
             "source": {
-              "paragraph": 412,
+              "paragraph": 414,
               "paraId": "3C941720"
             }
           },
@@ -3438,7 +3486,7 @@
               }
             ],
             "source": {
-              "paragraph": 413,
+              "paragraph": 415,
               "paraId": "18480257"
             }
           },
@@ -3450,7 +3498,7 @@
               }
             ],
             "source": {
-              "paragraph": 414,
+              "paragraph": 416,
               "paraId": "1D8E83AC"
             }
           },
@@ -3458,11 +3506,16 @@
             "type": "paragraph",
             "inline": [
               {
-                "text": "Kvinnofridslinjen ger stöd till dig som utsatts för fysiskt, psykiskt eller sexuellt våld. Samtalet är gratis och du är anonym när du ringer.\nRing: 020-50 50 50"
+                "text": "Kvinnofridslinjen ger stöd till dig som utsatts för fysiskt, psykiskt eller sexuellt våld. Samtalet är gratis och du är anonym när du ringer.\nRing: "
+              },
+              {
+                "text": "020-50 50 50",
+                "underline": true,
+                "href": "tel:020505050"
               }
             ],
             "source": {
-              "paragraph": 415,
+              "paragraph": 417,
               "paraId": "7F5E1C92"
             }
           },
@@ -3474,7 +3527,7 @@
               }
             ],
             "source": {
-              "paragraph": 416,
+              "paragraph": 418,
               "paraId": "05C18D37"
             }
           },
@@ -3486,7 +3539,7 @@
               }
             ],
             "source": {
-              "paragraph": 417,
+              "paragraph": 419,
               "paraId": "F300000B"
             },
             "href": "https://eftercancern.se/hem/utsatthet/forslag-pa-hur-du-kan-ga-till-vaga/"
@@ -3497,7 +3550,7 @@
             "alt": "Ett sprucket hjärta bredvid ett mindre hjärta och en blomma med plåster.",
             "decorative": false,
             "source": {
-              "paragraph": 418,
+              "paragraph": 420,
               "paraId": "28A2326C"
             },
             "width": 466.07,
@@ -3506,10 +3559,10 @@
         ]
       },
       "source": {
-        "paragraph": 411,
+        "paragraph": 413,
         "paraId": "4AEDCA63"
       },
-      "contentHash": "afdfde99509221dfcc0b9468c7eb31595a2e2efd5c5b768e697977711207b0fa"
+      "contentHash": "82d66c7810204ddafa427ec5ea911d76fc8370147caac388571395c8ce52260e"
     },
     {
       "sourceKey": "violence.definition",
@@ -3532,7 +3585,7 @@
               }
             ],
             "source": {
-              "paragraph": 425,
+              "paragraph": 427,
               "paraId": "43592F2E"
             }
           },
@@ -3551,7 +3604,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 426,
+                      "paragraph": 428,
                       "paraId": "4F73CF4D"
                     }
                   }
@@ -3567,7 +3620,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 427,
+                      "paragraph": 429,
                       "paraId": "28E4A3C7"
                     }
                   }
@@ -3583,7 +3636,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 428,
+                      "paragraph": 430,
                       "paraId": "666BC4DC"
                     }
                   }
@@ -3599,7 +3652,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 429,
+                      "paragraph": 431,
                       "paraId": "4F6C1545"
                     }
                   }
@@ -3615,7 +3668,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 430,
+                      "paragraph": 432,
                       "paraId": "0078E0BF"
                     }
                   }
@@ -3631,7 +3684,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 431,
+                      "paragraph": 433,
                       "paraId": "3852A959"
                     }
                   }
@@ -3647,7 +3700,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 432,
+                      "paragraph": 434,
                       "paraId": "56378A62"
                     }
                   }
@@ -3655,7 +3708,7 @@
               }
             ],
             "source": {
-              "paragraph": 426,
+              "paragraph": 428,
               "paraId": "4F73CF4D"
             }
           },
@@ -3667,7 +3720,7 @@
               }
             ],
             "source": {
-              "paragraph": 433,
+              "paragraph": 435,
               "paraId": "2BC4A8BF"
             }
           },
@@ -3677,7 +3730,7 @@
             "alt": "En öppen hand hålls upp framför en knuten näve.",
             "decorative": false,
             "source": {
-              "paragraph": 434,
+              "paragraph": 436,
               "paraId": "33AD2A41"
             },
             "width": 434.89,
@@ -3692,7 +3745,7 @@
               }
             ],
             "source": {
-              "paragraph": 436,
+              "paragraph": 438,
               "paraId": "0D842B04"
             }
           },
@@ -3708,7 +3761,7 @@
               }
             ],
             "source": {
-              "paragraph": 437,
+              "paragraph": 439,
               "paraId": "23589604"
             }
           },
@@ -3727,7 +3780,7 @@
               }
             ],
             "source": {
-              "paragraph": 438,
+              "paragraph": 440,
               "paraId": "380F744A"
             }
           },
@@ -3753,7 +3806,7 @@
               }
             ],
             "source": {
-              "paragraph": 439,
+              "paragraph": 441,
               "paraId": "2CD5A4F7"
             }
           },
@@ -3772,7 +3825,7 @@
               }
             ],
             "source": {
-              "paragraph": 440,
+              "paragraph": 442,
               "paraId": "5A5FFECA"
             }
           },
@@ -3805,7 +3858,7 @@
               }
             ],
             "source": {
-              "paragraph": 441,
+              "paragraph": 443,
               "paraId": "4E1BD011"
             }
           },
@@ -3817,7 +3870,7 @@
               }
             ],
             "source": {
-              "paragraph": 442,
+              "paragraph": 444,
               "paraId": "0D457F21"
             }
           },
@@ -3850,7 +3903,7 @@
               }
             ],
             "source": {
-              "paragraph": 443,
+              "paragraph": 445,
               "paraId": "5C4CCBE3"
             }
           },
@@ -3863,14 +3916,14 @@
               }
             ],
             "source": {
-              "paragraph": 444,
+              "paragraph": 446,
               "paraId": "7F94D41A"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 424,
+        "paragraph": 426,
         "paraId": "4EE27802"
       },
       "contentHash": "e8811fe82a91d0b33d507657473d474d4b716fbfbbfc2c85baba80ce0bf8cfe0"
@@ -3895,7 +3948,7 @@
               }
             ],
             "source": {
-              "paragraph": 454,
+              "paragraph": 456,
               "paraId": "57BBB2FF"
             }
           },
@@ -3907,7 +3960,7 @@
               }
             ],
             "source": {
-              "paragraph": 455,
+              "paragraph": 457,
               "paraId": "56CED393"
             }
           },
@@ -3919,7 +3972,7 @@
               }
             ],
             "source": {
-              "paragraph": 456,
+              "paragraph": 458,
               "paraId": "40114433"
             }
           },
@@ -3931,7 +3984,7 @@
               }
             ],
             "source": {
-              "paragraph": 457,
+              "paragraph": 459,
               "paraId": "5797A0AB"
             }
           },
@@ -3943,7 +3996,7 @@
               }
             ],
             "source": {
-              "paragraph": 458,
+              "paragraph": 460,
               "paraId": "6644306B"
             }
           },
@@ -3953,7 +4006,7 @@
             "alt": "Två människosiluetter framför sprickor och konturen av ett brustet hjärta.",
             "decorative": false,
             "source": {
-              "paragraph": 459,
+              "paragraph": 461,
               "paraId": "685059EF"
             },
             "width": 462.06,
@@ -3962,7 +4015,7 @@
         ]
       },
       "source": {
-        "paragraph": 453,
+        "paragraph": 455,
         "paraId": "59C8BB73"
       },
       "contentHash": "bfebb027b3effc54eb89d2443bb400ac1bce1b9c46dd9a9326404f1536003de3"
@@ -3987,7 +4040,7 @@
               }
             ],
             "source": {
-              "paragraph": 482,
+              "paragraph": 484,
               "paraId": "502A4078"
             }
           },
@@ -3999,7 +4052,7 @@
               }
             ],
             "source": {
-              "paragraph": 483,
+              "paragraph": 485,
               "paraId": "7FF815BB"
             }
           },
@@ -4007,11 +4060,16 @@
             "type": "paragraph",
             "inline": [
               {
-                "text": "Kvinnofridslinjen är öppen dygnet runt och ger stöd till dig som utsatts för fysiskt, psykiskt eller sexuellt våld. Samtalet är gratis och anonymt.\nRing: 020-50 50 50"
+                "text": "Kvinnofridslinjen är öppen dygnet runt och ger stöd till dig som utsatts för fysiskt, psykiskt eller sexuellt våld. Samtalet är gratis och anonymt.\nRing: "
+              },
+              {
+                "text": "020-50 50 50",
+                "underline": true,
+                "href": "tel:020505050"
               }
             ],
             "source": {
-              "paragraph": 484,
+              "paragraph": 486,
               "paraId": "6B66947A"
             }
           },
@@ -4023,7 +4081,7 @@
               }
             ],
             "source": {
-              "paragraph": 485,
+              "paragraph": 487,
               "paraId": "59E7B3DA"
             }
           },
@@ -4035,7 +4093,7 @@
               }
             ],
             "source": {
-              "paragraph": 486,
+              "paragraph": 488,
               "paraId": "F300000C"
             },
             "href": "https://eftercancern.se/hem/utsatthet/forslag-pa-hur-du-kan-ga-till-vaga/"
@@ -4046,7 +4104,7 @@
             "alt": "Ett frågeformulär och en penna intill ett hjärta med sprickor och ett frågetecken.",
             "decorative": false,
             "source": {
-              "paragraph": 489,
+              "paragraph": 491,
               "paraId": "0E9F99A7"
             },
             "width": 449.93,
@@ -4055,10 +4113,10 @@
         ]
       },
       "source": {
-        "paragraph": 481,
+        "paragraph": 483,
         "paraId": "678E3C91"
       },
-      "contentHash": "a20cbc2b64156cfd24b83149f8df51645e67d72ab85436484eaeb2bedc9244da"
+      "contentHash": "9adf33155e9c3fab3d3aa6326ebb73720dd9887fc72a712c35bcf1a0133f3c5e"
     },
     {
       "sourceKey": "violence.support",
@@ -4088,7 +4146,7 @@
                         }
                       ],
                       "source": {
-                        "paragraph": 504,
+                        "paragraph": 506,
                         "paraId": "7C9C1D58"
                       }
                     },
@@ -4107,7 +4165,7 @@
                                 }
                               ],
                               "source": {
-                                "paragraph": 504,
+                                "paragraph": 506,
                                 "paraId": "7C9C1D58"
                               }
                             }
@@ -4123,7 +4181,7 @@
                                 }
                               ],
                               "source": {
-                                "paragraph": 504,
+                                "paragraph": 506,
                                 "paraId": "7C9C1D58"
                               }
                             }
@@ -4145,7 +4203,7 @@
                                 }
                               ],
                               "source": {
-                                "paragraph": 504,
+                                "paragraph": 506,
                                 "paraId": "7C9C1D58"
                               }
                             }
@@ -4153,13 +4211,13 @@
                         }
                       ],
                       "source": {
-                        "paragraph": 504,
+                        "paragraph": 506,
                         "paraId": "7C9C1D58"
                       }
                     }
                   ],
                   "source": {
-                    "paragraph": 504,
+                    "paragraph": 506,
                     "paraId": "7C9C1D58"
                   }
                 }
@@ -4177,7 +4235,7 @@
                         }
                       ],
                       "source": {
-                        "paragraph": 504,
+                        "paragraph": 506,
                         "paraId": "7C9C1D58"
                       }
                     },
@@ -4201,7 +4259,7 @@
                                 }
                               ],
                               "source": {
-                                "paragraph": 504,
+                                "paragraph": 506,
                                 "paraId": "7C9C1D58"
                               }
                             }
@@ -4209,20 +4267,20 @@
                         }
                       ],
                       "source": {
-                        "paragraph": 504,
+                        "paragraph": 506,
                         "paraId": "7C9C1D58"
                       }
                     }
                   ],
                   "source": {
-                    "paragraph": 504,
+                    "paragraph": 506,
                     "paraId": "7C9C1D58"
                   }
                 }
               ]
             ],
             "source": {
-              "paragraph": 504,
+              "paragraph": 506,
               "paraId": "7C9C1D58"
             }
           },
@@ -4235,7 +4293,7 @@
               }
             ],
             "source": {
-              "paragraph": 506,
+              "paragraph": 508,
               "paraId": "384136E7"
             }
           },
@@ -4247,7 +4305,7 @@
               }
             ],
             "source": {
-              "paragraph": 507,
+              "paragraph": 509,
               "paraId": "38E415C2"
             }
           },
@@ -4255,11 +4313,19 @@
             "type": "paragraph",
             "inline": [
               {
-                "text": "Cancerrehabiliteringen vid Sahlgrenska Universitetssjukhuset:\n031-342 89 77 "
+                "text": "Cancerrehabiliteringen vid Sahlgrenska Universitetssjukhuset:\n"
+              },
+              {
+                "text": "031-342 89 77",
+                "underline": true,
+                "href": "tel:0313428977"
+              },
+              {
+                "text": " "
               }
             ],
             "source": {
-              "paragraph": 508,
+              "paragraph": 510,
               "paraId": "21238527"
             }
           },
@@ -4272,7 +4338,7 @@
               }
             ],
             "source": {
-              "paragraph": 510,
+              "paragraph": 512,
               "paraId": "6AB7DC31"
             }
           },
@@ -4306,7 +4372,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 511,
+                      "paragraph": 513,
                       "paraId": "0FA3316E"
                     }
                   }
@@ -4328,7 +4394,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 512,
+                      "paragraph": 514,
                       "paraId": "29FEB1D9"
                     }
                   }
@@ -4350,7 +4416,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 513,
+                      "paragraph": 515,
                       "paraId": "3739E1BD"
                     }
                   }
@@ -4358,7 +4424,7 @@
               }
             ],
             "source": {
-              "paragraph": 511,
+              "paragraph": 513,
               "paraId": "0FA3316E"
             }
           },
@@ -4371,7 +4437,7 @@
               }
             ],
             "source": {
-              "paragraph": 515,
+              "paragraph": 517,
               "paraId": "2067CC7E"
             }
           },
@@ -4383,7 +4449,7 @@
               }
             ],
             "source": {
-              "paragraph": 516,
+              "paragraph": 518,
               "paraId": "46C3D31D"
             }
           },
@@ -4412,7 +4478,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 517,
+                      "paragraph": 519,
                       "paraId": "4B7A924D"
                     }
                   }
@@ -4438,7 +4504,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 519,
+                      "paragraph": 521,
                       "paraId": "7006A593"
                     }
                   }
@@ -4460,7 +4526,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 521,
+                      "paragraph": 523,
                       "paraId": "7A5B93CE"
                     }
                   }
@@ -4482,7 +4548,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 523,
+                      "paragraph": 525,
                       "paraId": "2EEDD0D5"
                     }
                   }
@@ -4504,7 +4570,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 525,
+                      "paragraph": 527,
                       "paraId": "7E1DBAC4"
                     }
                   }
@@ -4526,7 +4592,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 527,
+                      "paragraph": 529,
                       "paraId": "130E86D4"
                     }
                   }
@@ -4548,7 +4614,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 529,
+                      "paragraph": 531,
                       "paraId": "2AC490C0"
                     }
                   }
@@ -4574,7 +4640,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 531,
+                      "paragraph": 533,
                       "paraId": "55C0C808"
                     }
                   }
@@ -4617,7 +4683,7 @@
                       }
                     ],
                     "source": {
-                      "paragraph": 533,
+                      "paragraph": 535,
                       "paraId": "44A2CE6D"
                     }
                   }
@@ -4625,17 +4691,17 @@
               }
             ],
             "source": {
-              "paragraph": 517,
+              "paragraph": 519,
               "paraId": "4B7A924D"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 502,
+        "paragraph": 504,
         "paraId": "2F64C552"
       },
-      "contentHash": "d6a7e71236377f4380e855a8d65b0472bbb8f803f727544208b1372fa6a8cfaf"
+      "contentHash": "808f152b83a5b2f59dcfd6cbbaa89e29a4f7ce6dc600b5e5df05a880df6b45b6"
     },
     {
       "sourceKey": "after-treatment.dilator-use",
@@ -4647,11 +4713,7 @@
       "collection": "after-treatment",
       "content": {
         "schemaVersion": 1,
-        "audience": {
-          "phases": [
-            "after"
-          ]
-        },
+        "audience": {},
         "blocks": [
           {
             "type": "audienceGroup",
@@ -4669,7 +4731,7 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 538,
+                  "paragraph": 540,
                   "paraId": "0334376E"
                 }
               },
@@ -4688,7 +4750,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 539,
+                          "paragraph": 541,
                           "paraId": "2962FA19"
                         }
                       }
@@ -4704,7 +4766,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 540,
+                          "paragraph": 542,
                           "paraId": "1723B9B4"
                         }
                       }
@@ -4720,7 +4782,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 541,
+                          "paragraph": 543,
                           "paraId": "6D725B49"
                         }
                       }
@@ -4728,7 +4790,7 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 539,
+                  "paragraph": 541,
                   "paraId": "2962FA19"
                 }
               },
@@ -4740,13 +4802,13 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 542,
+                  "paragraph": 544,
                   "paraId": "3CF65EEA"
                 }
               }
             ],
             "source": {
-              "paragraph": 538,
+              "paragraph": 540,
               "paraId": "0334376E"
             }
           },
@@ -4767,7 +4829,7 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 544,
+                  "paragraph": 546,
                   "paraId": "3D563F81"
                 }
               },
@@ -4779,7 +4841,7 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 545,
+                  "paragraph": 547,
                   "paraId": "114F6CD6"
                 }
               },
@@ -4798,7 +4860,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 546,
+                          "paragraph": 548,
                           "paraId": "6477793E"
                         }
                       }
@@ -4814,7 +4876,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 547,
+                          "paragraph": 549,
                           "paraId": "272E9DAE"
                         }
                       }
@@ -4830,7 +4892,7 @@
                           }
                         ],
                         "source": {
-                          "paragraph": 548,
+                          "paragraph": 550,
                           "paraId": "20196657"
                         }
                       }
@@ -4838,23 +4900,23 @@
                   }
                 ],
                 "source": {
-                  "paragraph": 546,
+                  "paragraph": 548,
                   "paraId": "6477793E"
                 }
               }
             ],
             "source": {
-              "paragraph": 544,
+              "paragraph": 546,
               "paraId": "3D563F81"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 537,
+        "paragraph": 539,
         "paraId": "5099BDC0"
       },
-      "contentHash": "6c5e1e13ae7823b9f30807100732e574ee87f771ddedb16d7093bedf4b85926f"
+      "contentHash": "2a3f2e3fd80808f3b02fbdf60b13c5bf83bd6a000877f09389fa7878f449733f"
     },
     {
       "sourceKey": "after-treatment.follow-up",
@@ -4866,11 +4928,7 @@
       "collection": "after-treatment",
       "content": {
         "schemaVersion": 1,
-        "audience": {
-          "phases": [
-            "after"
-          ]
-        },
+        "audience": {},
         "blocks": [
           {
             "type": "paragraph",
@@ -4880,7 +4938,7 @@
               }
             ],
             "source": {
-              "paragraph": 551,
+              "paragraph": 553,
               "paraId": "1FF7AD9D"
             }
           },
@@ -4892,17 +4950,17 @@
               }
             ],
             "source": {
-              "paragraph": 552,
+              "paragraph": 554,
               "paraId": "193D0963"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 550,
+        "paragraph": 552,
         "paraId": "738A424C"
       },
-      "contentHash": "ca9b805f6f3318d598fb0f30e33a3d8d3cec6fa44e75bf16ca74c3dd18943d38"
+      "contentHash": "fafc4d5f83ea32d3350b61432257aa66bb1037092cbe2e6b9202be83b54aa8ab"
     },
     {
       "sourceKey": "after-treatment.study-follow-up",
@@ -4914,11 +4972,7 @@
       "collection": "after-treatment",
       "content": {
         "schemaVersion": 1,
-        "audience": {
-          "phases": [
-            "after"
-          ]
-        },
+        "audience": {},
         "blocks": [
           {
             "type": "paragraph",
@@ -4928,17 +4982,17 @@
               }
             ],
             "source": {
-              "paragraph": 554,
+              "paragraph": 556,
               "paraId": "139960ED"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 553,
+        "paragraph": 555,
         "paraId": "1E03511E"
       },
-      "contentHash": "c72b48f070e80c1fcf34017c521d50e1f8370da32c180ec417dfc28c1de704fb"
+      "contentHash": "8de271050ab6e16acdec47417d6685425830f7876a21224365b28e02246230a6"
     },
     {
       "sourceKey": "after-treatment.contact",
@@ -4950,11 +5004,7 @@
       "collection": "after-treatment",
       "content": {
         "schemaVersion": 1,
-        "audience": {
-          "phases": [
-            "after"
-          ]
-        },
+        "audience": {},
         "blocks": [
           {
             "type": "paragraph",
@@ -4964,7 +5014,7 @@
               }
             ],
             "source": {
-              "paragraph": 556,
+              "paragraph": 558,
               "paraId": "232719F4"
             }
           },
@@ -4976,7 +5026,7 @@
               }
             ],
             "source": {
-              "paragraph": 557,
+              "paragraph": 559,
               "paraId": "3FC968E7"
             }
           },
@@ -4988,7 +5038,7 @@
               }
             ],
             "source": {
-              "paragraph": 558,
+              "paragraph": 560,
               "paraId": "F2040001"
             }
           },
@@ -5004,7 +5054,7 @@
               }
             ],
             "source": {
-              "paragraph": 559,
+              "paragraph": 561,
               "paraId": "F2040002"
             }
           },
@@ -5020,7 +5070,7 @@
               }
             ],
             "source": {
-              "paragraph": 560,
+              "paragraph": 562,
               "paraId": "F2040003"
             }
           },
@@ -5032,7 +5082,7 @@
               }
             ],
             "source": {
-              "paragraph": 561,
+              "paragraph": 563,
               "paraId": "F2040004"
             }
           },
@@ -5044,7 +5094,7 @@
               }
             ],
             "source": {
-              "paragraph": 562,
+              "paragraph": 564,
               "paraId": "F2040005"
             }
           },
@@ -5060,7 +5110,7 @@
               }
             ],
             "source": {
-              "paragraph": 563,
+              "paragraph": 565,
               "paraId": "F2040006"
             }
           },
@@ -5076,17 +5126,17 @@
               }
             ],
             "source": {
-              "paragraph": 564,
+              "paragraph": 566,
               "paraId": "F2040007"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 555,
+        "paragraph": 557,
         "paraId": "216C622D"
       },
-      "contentHash": "fc70f0fde84395533c9d8873b4150880ebeedb643b11affdb3b1f4be78fbf8f6"
+      "contentHash": "1f091b911ae150341c6bfc2af471a29ed63c6d0b6f550a2b6ca45ecfb083f43a"
     },
     {
       "sourceKey": "study.questionnaire",
@@ -5108,7 +5158,7 @@
               }
             ],
             "source": {
-              "paragraph": 578,
+              "paragraph": 580,
               "paraId": "F2020001"
             }
           },
@@ -5120,7 +5170,7 @@
               }
             ],
             "source": {
-              "paragraph": 579,
+              "paragraph": 581,
               "paraId": "F2020002"
             }
           },
@@ -5132,14 +5182,14 @@
               }
             ],
             "source": {
-              "paragraph": 580,
+              "paragraph": 582,
               "paraId": "F2020003"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 577,
+        "paragraph": 579,
         "paraId": "F2000002"
       },
       "contentHash": "e0871a0e2c8aa027c8c54324ef52932f7bd7224a004e6836e4b09bf9424efe67"
@@ -5164,7 +5214,7 @@
               }
             ],
             "source": {
-              "paragraph": 582,
+              "paragraph": 584,
               "paraId": "F2030001"
             }
           },
@@ -5180,7 +5230,7 @@
               }
             ],
             "source": {
-              "paragraph": 583,
+              "paragraph": 585,
               "paraId": "F2030002"
             }
           },
@@ -5196,7 +5246,7 @@
               }
             ],
             "source": {
-              "paragraph": 584,
+              "paragraph": 586,
               "paraId": "F2030003"
             }
           },
@@ -5208,7 +5258,7 @@
               }
             ],
             "source": {
-              "paragraph": 585,
+              "paragraph": 587,
               "paraId": "F2030005"
             }
           },
@@ -5220,7 +5270,7 @@
               }
             ],
             "source": {
-              "paragraph": 586,
+              "paragraph": 588,
               "paraId": "F2030007"
             }
           },
@@ -5236,7 +5286,7 @@
               }
             ],
             "source": {
-              "paragraph": 587,
+              "paragraph": 589,
               "paraId": "F2030008"
             }
           },
@@ -5252,17 +5302,113 @@
               }
             ],
             "source": {
-              "paragraph": 588,
+              "paragraph": 590,
               "paraId": "F2030009"
             }
           }
         ]
       },
       "source": {
-        "paragraph": 581,
+        "paragraph": 583,
         "paraId": "F2000003"
       },
       "contentHash": "8f82f59691d13d4d2ddc391f57e49abee88f0ab6344c940fe23badd30508893d"
+    },
+    {
+      "sourceKey": "questionnaire-help.close-person",
+      "existingId": "h3t6383vxtilg44",
+      "title": "Närstående",
+      "titleHistory": [
+        "Närstående"
+      ],
+      "collection": "questionnaire-help",
+      "content": {
+        "schemaVersion": 1,
+        "audience": {},
+        "blocks": [
+          {
+            "type": "paragraph",
+            "inline": [
+              {
+                "text": "Med närstående menar vi partner, familjemedlem, släkting eller annan viktig person."
+              }
+            ],
+            "source": {
+              "paragraph": 593,
+              "paraId": "F4000021"
+            }
+          }
+        ]
+      },
+      "source": {
+        "paragraph": 592,
+        "paraId": "F4000020"
+      },
+      "contentHash": "50d82400fa2603c59958b2ac6d68c3325947bbbe09529b33a0f2b474913d3f43"
+    },
+    {
+      "sourceKey": "questionnaire-help.vaginal-sex",
+      "existingId": "8d2vi8ipto076du",
+      "title": "Vaginalt sex",
+      "titleHistory": [
+        "Vaginalt sex"
+      ],
+      "collection": "questionnaire-help",
+      "content": {
+        "schemaVersion": 1,
+        "audience": {},
+        "blocks": [
+          {
+            "type": "paragraph",
+            "inline": [
+              {
+                "text": "Med vaginalt sex menar vi här sexuell aktivitet själv eller med partner där något förs in i slidan (exempelvis penis, fingrar, föremål eller dildo)."
+              }
+            ],
+            "source": {
+              "paragraph": 595,
+              "paraId": "F4000023"
+            }
+          }
+        ]
+      },
+      "source": {
+        "paragraph": 594,
+        "paraId": "F4000022"
+      },
+      "contentHash": "d8e329ace3469284e4e8600bbf48af2896500e77e2ac17c05593e7da9196b3ff"
+    },
+    {
+      "sourceKey": "questionnaire-help.hormone-skin",
+      "existingId": "iiqw74s03f6273r",
+      "title": "Hormonplåster",
+      "titleHistory": [
+        "Hormonplåster"
+      ],
+      "collection": "questionnaire-help",
+      "content": {
+        "schemaVersion": 1,
+        "audience": {},
+        "blocks": [
+          {
+            "type": "paragraph",
+            "inline": [
+              {
+                "text": "Svara Ja om du använder hormonbehandling via hud, t.ex. plåster, gel eller spray."
+              }
+            ],
+            "source": {
+              "paragraph": 597,
+              "paraId": "F4000025"
+            }
+          }
+        ]
+      },
+      "source": {
+        "paragraph": 596,
+        "paraId": "F4000024"
+      },
+      "contentHash": "4df066fff9a3e8fa2cac965eaf8ca9d2f230666fec51aebab7b57b2cd5b2648d"
     }
   ],
   "assets": [
@@ -5599,7 +5745,7 @@
       "code": "video-placeholder",
       "message": "Video link pending; approved placeholder",
       "source": {
-        "paragraph": 357,
+        "paragraph": 358,
         "paraId": "688B2EC0"
       },
       "resource": "sexual-health.definition",
@@ -5614,7 +5760,7 @@
       "code": "video-placeholder",
       "message": "Video link pending; approved placeholder",
       "source": {
-        "paragraph": 373,
+        "paragraph": 374,
         "paraId": "7528238E"
       },
       "resource": "sexual-health.treatment-effects",
@@ -5629,7 +5775,7 @@
       "code": "video-placeholder",
       "message": "Video link pending; approved placeholder",
       "source": {
-        "paragraph": 384,
+        "paragraph": 386,
         "paraId": "3082673B"
       },
       "resource": "sexual-health.relationships",
@@ -5644,7 +5790,7 @@
       "code": "video-placeholder",
       "message": "Video link pending; approved placeholder",
       "source": {
-        "paragraph": 399,
+        "paragraph": 401,
         "paraId": "605BCD14"
       },
       "resource": "sexual-health.support",
@@ -5659,7 +5805,7 @@
       "code": "editorial-comment",
       "message": "Unresolved editorial comment: Rätt?",
       "source": {
-        "paragraph": 554,
+        "paragraph": 556,
         "paraId": "139960ED"
       },
       "resource": "after-treatment.study-follow-up",
@@ -5771,7 +5917,7 @@
       "code": "editorial-comment",
       "message": "Unresolved editorial comment: Länkar för de olika organisationerna eller att numret går att klicka på ",
       "source": {
-        "paragraph": 502,
+        "paragraph": 504,
         "paraId": "2F64C552"
       },
       "resource": "violence.support",
@@ -5787,7 +5933,7 @@
       "code": "editorial-comment",
       "message": "Unresolved editorial comment: Gäller deltagare som är POST",
       "source": {
-        "paragraph": 544,
+        "paragraph": 546,
         "paraId": "3D563F81"
       },
       "resource": "after-treatment.dilator-use",
@@ -5803,7 +5949,7 @@
       "code": "editorial-comment",
       "message": "Unresolved editorial comment: Gäller deltagare som är PRE",
       "source": {
-        "paragraph": 537,
+        "paragraph": 539,
         "paraId": "5099BDC0"
       },
       "resource": "after-treatment.dilator-use",
@@ -5819,7 +5965,7 @@
       "code": "editorial-comment",
       "message": "Unresolved editorial comment: Kan eventuellt skrivas om till en text, överlämning till team 2 på gång. ",
       "source": {
-        "paragraph": 551,
+        "paragraph": 553,
         "paraId": "1FF7AD9D"
       },
       "resource": "after-treatment.follow-up",
@@ -5888,10 +6034,34 @@
     },
     {
       "collection": "questions",
-      "id": "v3pcgtlpz9w3oh1",
+      "id": "35loke6slz37910",
       "field": "resource",
-      "target": "sexual-health.treatment-effects"
+      "target": "dilator.bleeding"
+    },
+    {
+      "collection": "questions",
+      "id": "9ecl9c22y6hw843",
+      "field": "resource",
+      "target": "violence.support"
+    },
+    {
+      "collection": "questions",
+      "id": "fjkqkrffjmulav7",
+      "field": "resourceCollection",
+      "target": "violence"
+    },
+    {
+      "collection": "questions",
+      "id": "phsclj2eksh3qse",
+      "field": "resourceCollection",
+      "target": "violence"
+    },
+    {
+      "collection": "questions",
+      "id": "yz733oqw1e7xw15",
+      "field": "resourceCollection",
+      "target": "dilator"
     }
   ],
-  "bundleHash": "dadf3cf4731f9a6ffdc144f0d316759c491d889d0b2194b394526479fff5f09c"
+  "bundleHash": "2cc8e33ebd29d84dd90185c3bae0de1068d68439fe89ca8ea6a31fb0eefcb831"
 }

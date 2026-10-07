@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"myapp/internal/answerexport"
 	"myapp/internal/studysettings"
 	_ "myapp/migrations"
 	"net/http"
@@ -417,6 +418,7 @@ func main() {
 		scheduler := cron.New()
 
 		se.Router.Bind(apis.Gzip())
+		se.Router.PUT("/treatment-end", studysettings.HandleTreatmentEnd).Bind(apis.RequireAuth("users"))
 
 		se.Router.GET("/data-export/{id}", func(e *core.RequestEvent) error {
 			// if !e.HasSuperuserAuth() {
@@ -517,22 +519,14 @@ func main() {
 						}
 					}
 				}
-				// Fallback: union of keys in answers.
-				if len(questionIDs) == 0 {
-					keysSet := make(map[string]struct{})
-					for _, rec := range recs {
-						ansStr := rec.GetString("answers")
-						var ansMap map[string]interface{}
-						if err := json.Unmarshal([]byte(ansStr), &ansMap); err == nil {
-							for key := range ansMap {
-								keysSet[key] = struct{}{}
-							}
-						}
+				questionIDs = answerexport.QuestionKeys(questionIDs, recs)
+				for _, key := range questionIDs {
+					if _, exists := questionInfoMap[key]; exists {
+						continue
 					}
-					for key := range keysSet {
-						questionIDs = append(questionIDs, key)
+					if source, exists := questionInfoMap[answerexport.SourceQuestion(key)]; exists {
+						questionInfoMap[key] = source
 					}
-					sort.Strings(questionIDs)
 				}
 
 				// Expand columns: for multipleChoice questions, create a column per option.

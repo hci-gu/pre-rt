@@ -2,6 +2,11 @@
 
 `resources.docx` owns patient-facing resource text, meaningful block layout and original illustrations. `content/resources/manifest.json` owns stable identities, app destinations, reviewed audience rules and bindings that Word cannot currently supply. Generated JSON and PocketBase content are outputs; do not hand-edit them to correct prose.
 
+The subsequent [2026-10-07 feedback update](feedback-implementation-20261007.md)
+adds the three approved questionnaire helpers, telephone/internal links and
+advance access to after-treatment information. That report records the latest
+local/test import receipts and the remaining document/device dependencies.
+
 The 2026-09-30 revision is applied to the actual local PocketBase database and available in the normal app at <http://127.0.0.1:5173/faq>. It has complete coverage of existing referenced resources, both corrected illustrations and all 37 approved alternative texts. Publication validation has zero blockers; six accepted video placeholders remain until URLs are supplied. See [the implementation report](resource-content-implementation.md) for the backup and verified import receipt, [the original design](resource-content-import-plan.md) and [the document inventory](resources-document-inventory.md).
 
 ## Prerequisites

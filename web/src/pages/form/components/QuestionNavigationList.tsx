@@ -16,6 +16,7 @@ import { useAtom } from 'jotai'
 import { formPageAtom } from '../state'
 import QuestionnaireDialogContent from './QuestionnaireDialogContent'
 import { useNavigate } from 'react-router-dom'
+import { QuestionnaireQuickExit } from '../questionnaire-safety'
 
 const stripHtml = (html: string) => {
   const text =
@@ -54,12 +55,15 @@ const QuestionNavigationList = ({
         </Button>
       </DialogTrigger>
       <QuestionnaireDialogContent leadingAction={
+        <div className="flex flex-wrap items-center gap-2">
         <DialogClose asChild>
           <Button type="button" variant="ghost" onClick={() => navigate(-1)}>
             <ArrowLeftIcon aria-hidden="true" className="mr-2 h-4 w-4 shrink-0" />
             <span className="min-w-0">Lämna formuläret</span>
           </Button>
         </DialogClose>
+        <QuestionnaireQuickExit navigation />
+        </div>
       }>
         <DialogHeader className="mb-4 flex flex-col items-center gap-2 px-8 text-center">
           <DialogTitle className="text-3xl font-black leading-tight text-foreground">

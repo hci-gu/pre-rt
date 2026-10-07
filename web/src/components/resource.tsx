@@ -18,6 +18,7 @@ import ConnectedResourceContent from './resource-content/connected'
 import { audienceMatches } from './resource-content/model'
 import { sanitizeLegacyResourceHTML } from './resource-content/legacy-html'
 import QuestionnaireDialogContent from '@/pages/form/components/QuestionnaireDialogContent'
+import { QuestionnaireQuickExit } from '@/pages/form/questionnaire-safety'
 
 export function ResourceDrawer({
   resource,
@@ -42,7 +43,7 @@ export function ResourceDrawer({
           <InfoCircledIcon />
         </Button>
       </DialogTrigger>
-      <QuestionnaireDialogContent closeLabel="Stäng hjälp" aria-describedby={undefined} className="bg-white">
+      <QuestionnaireDialogContent leadingAction={<QuestionnaireQuickExit />} closeLabel="Stäng hjälp" aria-describedby={undefined} className="bg-white">
         <DialogHeader>
           <DialogTitle className="min-w-0 text-center text-xl font-black leading-tight">
             {title}
@@ -56,6 +57,7 @@ export function ResourceDrawer({
               <ResourceAccordion
                 collection={resourceCollection}
                 showHeader={false}
+                syncLocation={false}
               />
             </div>
           )}

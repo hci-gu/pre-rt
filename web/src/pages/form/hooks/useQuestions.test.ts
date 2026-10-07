@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import type { Question, Questionnaire } from '@/state'
 import { buildQuestions, compareAnswer } from './useQuestions'
+import { isSensitivePage } from '../questionnaire-safety'
+import { QUESTIONNAIRE_PCL5_ID, QUESTIONNAIRE_FOV_ID } from '@/constants'
 
 const question = (
   overrides: Partial<Question> & Pick<Question, 'id' | 'type'>
@@ -39,6 +41,31 @@ describe('compareAnswer', () => {
     expect(compareAnswer('No', 'Yes')).toBe(false)
     expect(compareAnswer(['A', 'B'], 'B')).toBe(true)
     expect(compareAnswer(['A', 'B'], 'C')).toBe(false)
+  })
+})
+
+describe('sensitive questionnaire pages', () => {
+  it('keeps PCL-5 closing and submit screens protected after the section ID changes', () => {
+    const pcl = questionnaire({ id: 'pcl-form', dependency: ['gate'], dependencyValue: 'Ja', questions: [
+      question({ id: QUESTIONNAIRE_PCL5_ID, type: 'section' }),
+      question({ id: 'symptom', type: 'singleChoice' }),
+      question({ id: 'closing-support', type: 'section' }),
+    ] })
+    const baseline = questionnaire({ questions: [question({ id: 'gate', type: 'singleChoice' })], followup: [pcl] })
+    const questions = buildQuestions(baseline, { gate: 'Ja' })
+    expect(isSensitivePage(baseline, questions, 0)).toBe(false)
+    for (const page of [1, 2, 3, 4]) expect(isSensitivePage(baseline, questions, page)).toBe(true)
+    expect(isSensitivePage(pcl, buildQuestions(pcl), 2)).toBe(true)
+    const noFollowup = buildQuestions(baseline, { gate: 'Nej' })
+    expect(isSensitivePage(baseline, noFollowup, noFollowup.length)).toBe(false)
+  })
+
+  it('retains violence-section protection without exposing quick exit on unrelated forms', () => {
+    const form = questionnaire({ questions: [question({ id: QUESTIONNAIRE_FOV_ID, type: 'section' }), question({ id: 'violence-question', type: 'singleChoice' })] })
+    const questions = buildQuestions(form)
+    expect(isSensitivePage(form, questions, -1)).toBe(false)
+    expect(isSensitivePage(form, questions, 1)).toBe(true)
+    expect(isSensitivePage(form, questions, 2)).toBe(true)
   })
 })
 

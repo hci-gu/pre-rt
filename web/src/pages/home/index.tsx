@@ -89,7 +89,7 @@ function HomePage() {
 
       <section
         aria-label="Studieöversikt"
-        className="grid grid-cols-2 gap-3 sm:gap-x-7 sm:gap-y-5"
+        className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,8.5rem),1fr))] gap-3 sm:gap-x-7 sm:gap-y-5"
       >
         <StudyTaskCard
           title="Registrera dig"

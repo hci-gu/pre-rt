@@ -50,11 +50,6 @@
         "För Pre-RT-armen, EFTER strålbehandlingen",
         "Efter strålbehandlingen"
       ],
-      "audience": {
-        "phases": [
-          "after"
-        ]
-      },
       "visible": false
     },
     {
@@ -64,6 +59,14 @@
         "Information om studien"
       ],
       "existingId": "2c44uc062ek2y04",
+      "visible": false
+    },
+    {
+      "sourceKey": "questionnaire-help",
+      "paraId": "F4000010",
+      "titleHistory": [
+        "Förklaringar till frågeformulären"
+      ],
       "visible": false
     }
   ],
@@ -380,6 +383,30 @@
         "Hur kommer jag i kontakt med ansvariga för studien?"
       ],
       "existingId": "yy98yjvj54e732h"
+    },
+    {
+      "sourceKey": "questionnaire-help.close-person",
+      "paraId": "F4000020",
+      "titleHistory": [
+        "Närstående"
+      ],
+      "existingId": "h3t6383vxtilg44"
+    },
+    {
+      "sourceKey": "questionnaire-help.vaginal-sex",
+      "paraId": "F4000022",
+      "titleHistory": [
+        "Vaginalt sex"
+      ],
+      "existingId": "8d2vi8ipto076du"
+    },
+    {
+      "sourceKey": "questionnaire-help.hormone-skin",
+      "paraId": "F4000024",
+      "titleHistory": [
+        "Hormonplåster"
+      ],
+      "existingId": "iiqw74s03f6273r"
     }
   ],
   "footerParaIds": [],
@@ -387,7 +414,9 @@
     "0DA23205": "radiation.estrogen",
     "2F984646": "intimate-care",
     "7319E622": "radiation.dry-mucosa",
-    "3BB1614D": "radiation.dry-mucosa"
+    "3BB1614D": "radiation.dry-mucosa",
+    "F4000001": "dilator.how-to",
+    "F4000002": "sexual-health.relationships"
   },
   "assets": {
     "fd6cf1b539a90b240983b0fe3b0e713aa564cd57bace1e3c57ba63d6f1d76676": {
@@ -590,9 +619,33 @@
     },
     {
       "collection": "questions",
-      "id": "v3pcgtlpz9w3oh1",
+      "id": "35loke6slz37910",
       "field": "resource",
-      "target": "sexual-health.treatment-effects"
+      "target": "dilator.bleeding"
+    },
+    {
+      "collection": "questions",
+      "id": "9ecl9c22y6hw843",
+      "field": "resource",
+      "target": "violence.support"
+    },
+    {
+      "collection": "questions",
+      "id": "fjkqkrffjmulav7",
+      "field": "resourceCollection",
+      "target": "violence"
+    },
+    {
+      "collection": "questions",
+      "id": "phsclj2eksh3qse",
+      "field": "resourceCollection",
+      "target": "violence"
+    },
+    {
+      "collection": "questions",
+      "id": "yz733oqw1e7xw15",
+      "field": "resourceCollection",
+      "target": "dilator"
     }
   ]
 }

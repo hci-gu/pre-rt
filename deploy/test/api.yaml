@@ -26,6 +26,7 @@ spec:
                   args:
                     - |
                       /pb/resources --dir /pb/pb_data migrate
+                      APP_ENV=test /pb/testquestionnaires --dir /pb/pb_data --snapshot /pb/content/questionnaires.json --prepare-resources
                       /pb/resources --dir /pb/pb_data --bundle /pb/content/bundle.json --out /tmp/resources.json plan
                       result=$(/pb/resources --dir /pb/pb_data --plan /tmp/resources.json apply)
                       echo "$result"
@@ -33,6 +34,7 @@ spec:
                       if [ "$run_id" != unchanged ]; then
                         /pb/resources --dir /pb/pb_data --run "$run_id" verify
                       fi
+                      APP_ENV=test /pb/testquestionnaires --dir /pb/pb_data --snapshot /pb/content/questionnaires.json
                   volumeMounts:
                       - mountPath: /pb/pb_data
                         name: pre-rt-api-persistent-storage-test

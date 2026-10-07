@@ -9,6 +9,7 @@ import {
   Questionnaire,
   questionnaireAtom,
   submitQuestionnaire,
+  studySettingsAtom,
 } from '@/state'
 import QuestionSelector from './components/QuestionSelector'
 import { Form } from '@/components/ui/form'
@@ -21,7 +22,7 @@ import {
   UpdateIcon,
 } from '@radix-ui/react-icons'
 import { useToast } from '@/hooks/use-toast'
-import useQuestions, { useCurrentSection } from './hooks/useQuestions'
+import useQuestions from './hooks/useQuestions'
 import { answeredUpTo, canProceedAtom, formPageAtom } from './state'
 import { questionnaireAnswered } from '@/utils'
 import useFormStateWithCache, {
@@ -30,11 +31,11 @@ import useFormStateWithCache, {
   SyncFormStateToLocalStorage,
   useScrollToLastAnsweredQuestion,
 } from './hooks/useFormState'
-import AbortButton from '../../components/ui/AbortButton'
 import QuestionNavigationList from './components/QuestionNavigationList'
-import { QUESTIONNAIRE_FOV_ID, QUESTIONNAIRE_PCL5_ID } from '@/constants'
 import AdaptiveQuestionPanel from './components/AdaptiveQuestionPanel'
 import useVisualViewport from './hooks/useVisualViewport'
+import TreatmentEndForm from './components/TreatmentEndForm'
+import { QuestionnaireQuickExit, QuestionnaireSafetyProvider, useQuestionnaireSafety } from './questionnaire-safety'
 import './questionnaire.css'
 
 const ProgressBar = ({ questionnaire }: { questionnaire: Questionnaire }) => {
@@ -201,18 +202,9 @@ const QuestionnaireIntro = ({
   )
 }
 
-const SectionHandler = ({
-  questionnaire,
-}: {
-  questionnaire: Questionnaire
-}) => {
-  const section = useCurrentSection(questionnaire)
-
-  if (
-    section &&
-    (section.id === QUESTIONNAIRE_FOV_ID ||
-      section.id.includes(QUESTIONNAIRE_PCL5_ID))
-  ) {
+const SectionHandler = () => {
+  const safety = useQuestionnaireSafety()
+  if (safety?.active) {
     return (
       <>
         <div className="questionnaire-attribution">
@@ -225,7 +217,7 @@ const SectionHandler = ({
             className="h-6 md:h-8"
           />
         </div>
-        <AbortButton questionnaire={questionnaire} inline />
+        <QuestionnaireQuickExit />
       </>
     )
   }
@@ -287,6 +279,7 @@ const LoadedForm = ({
 
   return (
     <Form {...form}>
+      <QuestionnaireSafetyProvider questionnaire={questionnaire}>
       <form
         className="questionnaire-shell bg-background text-foreground"
         onSubmit={(e) => e.preventDefault()}
@@ -307,10 +300,11 @@ const LoadedForm = ({
           />
         )}
         <footer className="questionnaire-footer">
-          <SectionHandler questionnaire={questionnaire} />
+          <SectionHandler />
           {page >= 0 && <NavigationButtons questionnaire={questionnaire} />}
         </footer>
       </form>
+      </QuestionnaireSafetyProvider>
     </Form>
   )
 }
@@ -319,6 +313,7 @@ const FormPage = () => {
   const { id } = useParams()
   const schema = useAtomValue(formStateAtom(id ?? ''))
   const questionnaire = useAtomValue(questionnaireAtom(id ?? ''))
+  const settings = useAtomValue(studySettingsAtom)
 
   const [answers, refreshAnswers] = useAtom(
     answersForQuestionnaireAtom(questionnaire.id)
@@ -333,6 +328,10 @@ const FormPage = () => {
   }, [questionnaire.id, refreshAnswers])
 
   const answered = questionnaireAnswered(questionnaire, answers, date)
+
+  if (questionnaire.id === settings.treatmentEndQuestionnaire) {
+    return <TreatmentEndForm key={questionnaire.id} questionnaire={questionnaire} />
+  }
 
   if (answered) {
     return (

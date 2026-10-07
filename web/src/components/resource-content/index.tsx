@@ -1,4 +1,5 @@
 import { Fragment, type ReactNode } from 'react'
+import { Link, useInRouterContext } from 'react-router-dom'
 import { audienceMatches, safeContentURL, type Block, type ContentUser, type Inline } from './model'
 import './resource-content.css'
 
@@ -11,6 +12,7 @@ type Props = {
 }
 
 function InlineText({ nodes, links, review = false }: { nodes: Inline[]; links: Record<string, string>; review?: boolean }) {
+  const inRouter = useInRouterContext()
   return nodes.map((node, index) => {
     let child: ReactNode = node.text
     if (node.bold) child = <strong>{child}</strong>
@@ -18,7 +20,8 @@ function InlineText({ nodes, links, review = false }: { nodes: Inline[]; links: 
     if (node.underline) child = <u>{child}</u>
     const target = node.target ? links[node.target] : node.href
     const url = review && target && /^#[a-z0-9.-]+$/.test(target) ? target : safeContentURL(target, !!node.target)
-    if (url) child = <a href={url}>{child}</a>
+    if (url) child = inRouter && url.startsWith('/')
+      ? <Link to={url}>{child}</Link> : <a href={url}>{child}</a>
     return <Fragment key={index}>{child}</Fragment>
   })
 }

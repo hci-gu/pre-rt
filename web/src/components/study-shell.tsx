@@ -57,13 +57,13 @@ export function StudyFooter() {
   return (
     <footer className="w-full bg-study-header text-foreground">
       <div className="mx-auto flex min-h-[5.375rem] w-full max-w-[57rem] items-center gap-4 px-4 py-3 sm:px-8">
-        <div className="flex items-center gap-3">
+        <div className="flex min-w-0 items-center gap-3">
           <img
             src={guSeal}
             alt="Goteborgs universitet"
             className="h-12 w-12 shrink-0"
           />
-          <p className="max-w-3xl text-sm font-bold leading-snug">
+          <p className="min-w-0 max-w-3xl text-sm font-bold leading-snug [overflow-wrap:anywhere]">
             Pre-RT studien är ett samarbete mellan Göteborgs Universitet och
             Sahlgrenska universitetssjukhuset
             <br />
@@ -85,14 +85,14 @@ function StudyBreadcrumbs({ items }: { items: BreadcrumbItemType[] }) {
   if (items.length === 0) return null
 
   return (
-    <Breadcrumb className="sm:translate-y-3.5">
+    <Breadcrumb className="min-w-0 [overflow-wrap:anywhere] sm:translate-y-3.5">
       <BreadcrumbList className="gap-2 text-base font-semibold leading-tight text-foreground sm:gap-2">
         {items.map((item, index) => {
           const isLast = index === items.length - 1
 
           return (
             <Fragment key={`${item.label}-${index}`}>
-              <BreadcrumbItem>
+              <BreadcrumbItem className="min-w-0">
                 {item.href && !isLast ? (
                   <BreadcrumbLink asChild>
                     <NavLink
@@ -103,7 +103,7 @@ function StudyBreadcrumbs({ items }: { items: BreadcrumbItemType[] }) {
                     </NavLink>
                   </BreadcrumbLink>
                 ) : (
-                  <BreadcrumbPage className="font-black text-foreground">
+                  <BreadcrumbPage className="min-w-0 font-black text-foreground">
                     {item.label}
                   </BreadcrumbPage>
                 )}
@@ -154,8 +154,8 @@ export function StudyAppShell({
           className={cn(
             'mx-auto flex w-full max-w-[57rem] items-center px-4 sm:h-[5.625rem] sm:flex-row sm:justify-start sm:gap-8 sm:px-8',
             isHome
-              ? 'h-[6.5rem] flex-col justify-center gap-2 text-center sm:relative sm:gap-0'
-              : 'h-[5.625rem] gap-8 sm:gap-[3.75rem]'
+              ? 'min-h-[6.5rem] py-3 flex-col justify-center gap-2 text-center sm:relative sm:gap-0'
+              : 'min-h-[5.625rem] gap-4 py-3 sm:gap-[3.75rem]'
           )}
         >
           <NavLink
@@ -168,7 +168,7 @@ export function StudyAppShell({
             <img src={preRtLogo} alt="Pre-RT" className="h-12 w-auto" />
           </NavLink>
           {isHome ? (
-            <h1 className="mx-auto text-3xl font-black leading-none text-foreground md:text-4xl">
+            <h1 className="mx-auto min-w-0 text-3xl font-black leading-none [overflow-wrap:anywhere] text-foreground md:text-4xl">
               {headerItems[0]?.label}
             </h1>
           ) : faqCollectionId ? (
@@ -183,7 +183,7 @@ export function StudyAppShell({
 
       <main
         className={cn(
-          'mx-auto w-full max-w-[57rem] flex-1 px-4 sm:px-8',
+          'mx-auto min-w-0 w-full max-w-[57rem] flex-1 [overflow-wrap:anywhere] px-4 sm:px-8',
           variant === 'form' ? 'py-0' : 'py-6 md:py-7'
         )}
       >

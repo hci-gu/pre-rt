@@ -11,6 +11,8 @@
 !pocketbase/migrations/
 !pocketbase/migrations/**
 !content/
+!content/questionnaires/
+!content/questionnaires/production-20261007.json
 !content/resources/
 !content/resources/generated/
 !content/resources/generated/bundle.json

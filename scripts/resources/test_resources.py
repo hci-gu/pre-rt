@@ -27,8 +27,8 @@ class ExtractionTests(unittest.TestCase):
             for v in obj:yield from self.walk(v)
     def resource(self,key):return next(x for x in self.bundle['resources'] if x['sourceKey']==key)
     def test_baseline_coverage_and_shape_conversion(self):
-        self.assertEqual({k:self.counts[k] for k in ('resources','images','textBoxes','comments','alternateContent')},{'resources':35,'images':37,'textBoxes':17,'comments':24,'alternateContent':16})
-        self.assertEqual([len(x['resources']) for x in self.bundle['collections']],[9,7,3,5,5,4,2])
+        self.assertEqual({k:self.counts[k] for k in ('resources','images','textBoxes','comments','alternateContent')},{'resources':38,'images':37,'textBoxes':17,'comments':24,'alternateContent':16})
+        self.assertEqual([len(x['resources']) for x in self.bundle['collections']],[9,7,3,5,5,4,2,3])
         nodes=list(self.walk(self.bundle['resources']))
         self.assertEqual(sum(n.get('type')=='video' for n in nodes),6)
         self.assertEqual(sum(n.get('type')=='callout' for n in nodes),5)
@@ -39,7 +39,7 @@ class ExtractionTests(unittest.TestCase):
         footer=self.resource('violence.support')['content']['blocks']
         self.assertEqual(footer[0]['type'],'columns')
         self.assertEqual(len(footer[0]['columns']),2)
-        self.assertEqual(self.bundle['collections'][5]['content']['audience'],{'phases':['after']})
+        self.assertEqual(self.bundle['collections'][5]['content']['audience'],{})
     def test_illustrations_stay_with_steps_and_text_boxes_are_not_duplicated(self):
         blocks=self.resource('dilator.how-to')['content']['blocks']
         items=[item for b in blocks if b['type']=='list' for item in b['items']]
@@ -52,8 +52,22 @@ class ExtractionTests(unittest.TestCase):
         self.assertEqual(r.validate(self.bundle,Path(self.temp.name)),[])
         self.assertEqual(r.validate(self.bundle,Path(self.temp.name),True),[])
         targets=[n['target'] for n in self.walk(self.bundle['resources']) if 'target' in n]
-        self.assertEqual(set(targets),{'radiation.estrogen','intimate-care','radiation.dry-mucosa'})
+        self.assertEqual(set(targets),{'radiation.estrogen','intimate-care','radiation.dry-mucosa','dilator.how-to','sexual-health.relationships'})
         self.assertNotIn('https://pre-rt.prod.appadem.in/about',r.canonical(self.bundle['resources']))
+    def test_feedback_helpers_audience_and_contact_links(self):
+        helpers=next(c for c in self.bundle['collections'] if c['sourceKey']=='questionnaire-help')
+        self.assertFalse(helpers['visible'])
+        for key,id in [('close-person','h3t6383vxtilg44'),('vaginal-sex','8d2vi8ipto076du'),('hormone-skin','iiqw74s03f6273r')]:
+            item=self.resource('questionnaire-help.'+key)
+            self.assertEqual(item['existingId'],id)
+            self.assertTrue(item['content']['blocks'])
+        for item in self.bundle['resources']:
+            if item['sourceKey'].startswith('after-treatment.'):
+                self.assertNotIn('phases',item['content']['audience'])
+        for key,number in [('violence.why-asked','tel:020505050'),('violence.answering-yes','tel:020505050'),('violence.support','tel:0313428977')]:
+            self.assertTrue(any(n.get('href')==number for n in self.walk(self.resource(key))))
+        for key in ['study.contacts','after-treatment.contact']:
+            self.assertTrue(any(n.get('href')=='tel:0317866159' for n in self.walk(self.resource(key))))
     def mutated(self,mutate):
         temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup)
         path=Path(temp.name)/'source.docx'

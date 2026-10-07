@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { createStore, Provider } from 'jotai'
 import { MemoryRouter } from 'react-router-dom'
-import { aboutCollectionAtom } from '@/state'
+import { aboutCollectionAtom, userDataAtom } from '@/state'
 import AboutPage from './about'
 import AfterTreatmentPage from './after-treatment'
 import HomePage from './home'
@@ -43,7 +43,7 @@ describe('study pages', () => {
         { id: 'new-contact', title: 'Edited contact heading', description: '<p>Stored contact</p>' },
       ],
     } as never)
-    const html = renderToStaticMarkup(<Provider store={store}><AboutPage /></Provider>)
+    const html = renderToStaticMarkup(<Provider store={store}><MemoryRouter><AboutPage /></MemoryRouter></Provider>)
     expect(html).toContain('Edited study title')
     expect(html).toContain('Edited study introduction')
     expect(html).toContain('Edited contact heading')
@@ -76,5 +76,15 @@ describe('study pages', () => {
     )
     expect(html.match(/Efter strålbehandlingen/g)).toHaveLength(2)
     expect(html).toContain('href="/"')
+  })
+
+  it('shows the saved treatment end date and an explicit edit action on check-in', () => {
+    const store = createStore()
+    store.set(userDataAtom as never, { type: 'PRE', treatmentStart: new Date('2026-09-01T12:00:00'), treatmentEnd: new Date('2026-10-07T12:00:00') } as never)
+    const html = renderToStaticMarkup(<Provider store={store}><MemoryRouter><CheckInPage /></MemoryRouter></Provider>)
+    expect(html).toContain('2026-09-01')
+    expect(html).toContain('2026-10-07')
+    expect(html).toContain('Ändra datum')
+    expect(html).not.toContain('Svarat')
   })
 })

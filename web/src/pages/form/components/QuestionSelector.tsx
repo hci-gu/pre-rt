@@ -36,12 +36,14 @@ const renderQuestionType = (
     case 'text':
     case 'number':
       return (
+        <div className="flex min-w-0 items-center gap-3">
         <Input
           placeholder={
             question.placeholder && question.placeholder.length > 0
               ? question.placeholder
-              : 'Valfri kommentar'
+              : question.type === 'number' ? 'Ange ett tal' : 'Valfri kommentar'
           }
+          aria-describedby={question.type === 'number' && ['år', 'cm', 'kg'].includes(question.placeholder ?? '') ? `${question.id}-unit` : undefined}
           type={question.type}
           enterKeyHint="done"
           onKeyDown={(e) => {
@@ -53,7 +55,12 @@ const renderQuestionType = (
             }
           }}
           {...field}
+          value={field.value ?? ''}
         />
+        {question.type === 'number' && ['år', 'cm', 'kg'].includes(question.placeholder ?? '') && (
+          <span id={`${question.id}-unit`} className="shrink-0 font-bold">{question.placeholder}</span>
+        )}
+        </div>
       )
     case 'painScale':
       return (

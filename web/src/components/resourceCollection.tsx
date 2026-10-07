@@ -18,7 +18,8 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useLocation, useNavigationType } from 'react-router-dom'
 import Resource from './resource'
 import { Button } from './ui/button'
 import { Cross1Icon } from '@radix-ui/react-icons'
@@ -48,7 +49,7 @@ export function ResourceCollectionDrawer({
           </div>
         </DrawerHeader>
         <div className="p-8 overflow-y-scroll">
-          <ResourceAccordion collection={collection} showHeader={false} />
+          <ResourceAccordion collection={collection} showHeader={false} syncLocation={false} />
         </div>
       </DrawerContent>
     </Drawer>
@@ -63,121 +64,105 @@ const ResourceSection = ({ text }: { text: string }) => {
   )
 }
 
+// Store reading positions per history entry, so Back returns to the paragraph
+// the reader left. Accordion toggles keep the current entry and scroll position.
+const readingPositions = new Map<string, number>()
+
 export default function ResourceAccordion({
   collection,
   showHeader = true,
+  syncLocation = true,
 }: {
   collection: ResourceCollection
   showHeader?: boolean
+  syncLocation?: boolean
 }) {
   const user = useAtomValue(userDataAtom)
   const visibleResources = useMemo(() => collection.resources.filter(resource => !resource.archived && audienceMatches(resource.content?.audience, user)), [collection.resources, user])
-  const [openResource, setOpenResource] = useState<string>(
-    resolveAnchor(window.location.hash.replace('#', ''), visibleResources)
-  )
-  const [showAbort, setShowAbort] = useState(false)
-  const violenceSectionRef = useRef<HTMLDivElement | null>(null)
+  const location = useLocation()
+  const navigationType = useNavigationType()
+  const root = useRef<HTMLDivElement>(null)
+  const [openResource, setOpenResource] = useState(() =>
+    syncLocation ? resolveAnchor(location.hash.slice(1), visibleResources) : '')
+  const pendingScroll = useRef(false)
 
-  useEffect(() => {
-    setShowAbort(false)
-    if (!collection.showQuickExit) return
-    const element = violenceSectionRef.current
-    if (!element) return
+  useLayoutEffect(() => {
+    if (!syncLocation) return
+    setOpenResource(resolveAnchor(location.hash.slice(1), visibleResources))
+    pendingScroll.current = true
+  }, [location.key, location.hash, visibleResources, syncLocation])
 
-    const observer = new window.IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setShowAbort(true)
-          }
-        })
-      },
-      {
-        threshold: 0.1,
-      }
-    )
-    observer.observe(element)
+  useLayoutEffect(() => {
+    if (!syncLocation) return
+    let lastPosition = window.scrollY
+    const remember = () => { lastPosition = window.scrollY }
+    window.addEventListener('scroll', remember, { passive: true })
     return () => {
-      observer.disconnect()
+      window.removeEventListener('scroll', remember)
+      // A first load is also reported as POP. Only cache a history entry when
+      // it is actually left, not while its initial hash/content is settling.
+      if ((history.state?.key || 'default') !== location.key) readingPositions.set(location.key, lastPosition)
     }
-  }, [collection])
-
-  const scrollTimeout = useRef<number | null>(null)
-  const isFirstRender = useRef(true)
-
-  const updateUrlHash = (slug: string) => {
-    const url = `${window.location.pathname}${window.location.search}${
-      slug ? `#${slug}` : ''
-    }`
-
-    history.replaceState(null, '', url)
-  }
+  }, [location.key, syncLocation])
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '')
-
-      setOpenResource(resolveAnchor(hash, visibleResources))
-    }
-
-    window.addEventListener('hashchange', handleHashChange)
-    return () => window.removeEventListener('hashchange', handleHashChange)
-  }, [visibleResources])
-
-  useEffect(() => {
-    if (!openResource) {
-      return
-    }
-
-    const behavior = isFirstRender.current ? 'auto' : 'smooth'
-    const delay = isFirstRender.current ? 0 : 220
-
-    if (scrollTimeout.current) {
-      window.clearTimeout(scrollTimeout.current)
-    }
-
-    scrollTimeout.current = window.setTimeout(() => {
-      const element = document.getElementById(openResource)
-
-      if (element) {
-        element.scrollIntoView({
-          behavior,
-          block: 'start',
-          inline: 'nearest',
-        })
+    if (!syncLocation || !pendingScroll.current ||
+        openResource !== resolveAnchor(location.hash.slice(1), visibleResources)) return
+    const saved = navigationType === 'POP' ? readingPositions.get(location.key) : undefined
+    let cancelled = false
+    let revision = 0
+    const restore = async () => {
+      const currentRevision = ++revision
+      // Wait for the expanding panel, and retry when async resource content,
+      // illustrations or fonts change its height. Stop as soon as the reader
+      // interacts; background layout must not fight deliberate scrolling.
+      await Promise.allSettled((root.current?.getAnimations({ subtree: true }) || []).map(animation => animation.finished))
+      if (cancelled || currentRevision !== revision) return
+      pendingScroll.current = false
+      if (saved !== undefined) {
+        window.scrollTo({ top: saved, behavior: 'instant' })
+      } else if (openResource) {
+        const element = root.current?.querySelector<HTMLElement>(`[id="${CSS.escape(openResource)}"]`)
+        if (element) {
+          const headerHeight = document.querySelector('header')?.getBoundingClientRect().height || 0
+          window.scrollTo({ top: window.scrollY + element.getBoundingClientRect().top - headerHeight - 16, behavior: 'instant' })
+        }
+      } else if (!location.hash && navigationType !== 'POP') {
+        window.scrollTo({ top: 0, behavior: 'instant' })
       }
-    }, delay)
-
-    isFirstRender.current = false
-
+    }
+    const frame = requestAnimationFrame(restore)
+    const observer = new ResizeObserver(restore)
+    if (root.current) observer.observe(root.current)
+    const stop = () => { cancelled = true; observer.disconnect(); cancelAnimationFrame(frame) }
+    const events = ['wheel', 'touchstart', 'pointerdown', 'keydown'] as const
+    events.forEach(event => window.addEventListener(event, stop, { passive: true }))
+    void document.fonts.ready.then(restore)
     return () => {
-      if (scrollTimeout.current) {
-        window.clearTimeout(scrollTimeout.current)
-      }
+      stop()
+      events.forEach(event => window.removeEventListener(event, stop))
     }
-  }, [openResource])
 
-  useEffect(() => {
-    return () => {
-      if (scrollTimeout.current) {
-        window.clearTimeout(scrollTimeout.current)
-      }
-    }
-  }, [])
+  }, [openResource, location.key, location.hash, navigationType, visibleResources, syncLocation])
 
   const resourceClicked = (value: string | undefined) => {
     const nextValue = value ?? ''
-
     setOpenResource(nextValue)
-
-    updateUrlHash(nextValue)
+    if (syncLocation) {
+      const url = `${window.location.pathname}${window.location.search}${nextValue ? `#${nextValue}` : ''}`
+      // Retain React Router's history key/index. Do not scroll on an ordinary
+      // toggle or add an extra Back step for every opened answer.
+      history.replaceState(history.state, '', url)
+      readingPositions.set(location.key, window.scrollY)
+      if (readingPositions.size > 100) readingPositions.delete(readingPositions.keys().next().value!)
+    }
   }
 
   if (collection.archived || !audienceMatches(collection.content?.audience, user)) return null
 
   return (
-    <>
-      <div ref={violenceSectionRef}>
+    <div ref={root} className={collection.showQuickExit && syncLocation ? 'pb-24' : undefined}>
+      <div>
         {showHeader && <ResourceSection text={collection.name} />}
       </div>
       <Accordion
@@ -212,9 +197,9 @@ export default function ResourceAccordion({
             </AccordionContent>
           </AccordionItem>
         ))}
-        {showAbort && <AbortButton />}
       </Accordion>
+      {collection.showQuickExit && syncLocation && <AbortButton />}
       {collection.content ? <Suspense fallback={<p>Laddar innehåll…</p>}><ConnectedResourceContent content={collection.content} bindings={collection.bindings} footer /></Suspense> : collection.footerContent && <div className="resource-content mt-6" dangerouslySetInnerHTML={{ __html: sanitizeLegacyResourceHTML(collection.footerContent) }} />}
-    </>
+    </div>
   )
 }

@@ -1,0 +1,1566 @@
+{
+  "version": 1,
+  "source": "Production backup 2026-10-07; approved local help mappings and F11/F12 corrections. No participant data.",
+  "records": {
+    "questionOptions": [
+      {
+        "id": "0maf4u9z2519csi",
+        "name": "Smoking",
+        "value": [
+          "Nej, jag har aldrig rökt",
+          "Ja, jag röker",
+          "Jag har rökt tidigare, med slutat vid {AMOUNT} års ålder"
+        ],
+        "followup": null
+      },
+      {
+        "id": "30slb01eltdc5kw",
+        "name": "CivilStatus",
+        "value": [
+          "Gift/sammanboende",
+          "Änka/änkeman",
+          "Ensamboende med partner, \"särbo\"",
+          "Ensamboende utan fast partner"
+        ],
+        "followup": null
+      },
+      {
+        "id": "3p75e6pzu97x883",
+        "name": "Animation",
+        "value": null,
+        "followup": null
+      },
+      {
+        "id": "6jgm849vh2l7084",
+        "name": "HowExperienced",
+        "value": [
+          "Det hände mig",
+          "Jag bevittnade det",
+          "Jag fick veta att det hände en nära släkting eller nära vän",
+          "Jag har upprepade gånger exponerats för saker som rörde detta som en del av mitt arbete\n (exempelvis ambulanspersonal, polis, militär personal eller annan insatspersonal)",
+          "Annat"
+        ],
+        "followup": ""
+      },
+      {
+        "id": "6w7qqbtusy0j1j9",
+        "name": "Size",
+        "value": [
+          "Mindre",
+          "Mellan",
+          "Stor"
+        ],
+        "followup": null
+      },
+      {
+        "id": "alswljcjki85nf6",
+        "name": "GynecologicalDisease",
+        "value": [
+          "Nej",
+          "Ja, lichen sclerosus (hudsjukdom i underlivet)",
+          "Ja, vaginism (slidkramp)",
+          "Ja, vulvodyni (smärta i underlivet)",
+          "Ja, prolaps (framfall)",
+          "Annat"
+        ],
+        "followup": null
+      },
+      {
+        "id": "cqrgdkg3sqf10ki",
+        "name": "Occupation",
+        "value": [
+          "Studerande",
+          "Arbetssökande",
+          "Förvärvsarbetande",
+          "Icke förvärvsarbetande, hemarbetande",
+          "Sjukskriven",
+          "Sjukpensionär",
+          "Ålderspensionär/avtalspensionär"
+        ],
+        "followup": null
+      },
+      {
+        "id": "k596yiqdtsp76c7",
+        "name": "YesNoNotTested",
+        "value": [
+          "Ja",
+          "Nej",
+          "Ej provat"
+        ],
+        "followup": null
+      },
+      {
+        "id": "ko7gg7al0x19gki",
+        "name": "LengthOption",
+        "value": [
+          "2cm",
+          "4cm",
+          "6cm",
+          "8cm",
+          "10cm"
+        ],
+        "followup": null
+      },
+      {
+        "id": "ktmxewvswsgpkh6",
+        "name": "Importance",
+        "value": [
+          "Inte alls viktigt",
+          "Lite viktigt",
+          "Måttligt viktigt",
+          "Mycket viktigt"
+        ],
+        "followup": null
+      },
+      {
+        "id": "kwx9npxagwy67ru",
+        "name": "VaginalSexOccurence",
+        "value": [
+          "Inte aktuellt, jag har inte haft sex med partner de senaste 10 åren",
+          "Nej, aldrig",
+          "Ja, vid färre än hälften av tillfällena som jag har haft sex",
+          "Ja, ungefär hälften av tillfällena som jag har haft sex",
+          "Ja, vid fler än hälften av tillfällena som jag har haft sex",
+          "Ja, vid varje tillfälle som jag har haft sex"
+        ],
+        "followup": null
+      },
+      {
+        "id": "l21p53266rwhvh0",
+        "name": "ViolenceOrNaturalCause",
+        "value": [
+          "Olyckshändelse eller våld",
+          "Naturliga orsaker",
+          "Inte aktuellt (händelsen innebar inte att en nära släkting eller nära vän dog)"
+        ],
+        "followup": null
+      },
+      {
+        "id": "mmsgnaah98vpicg",
+        "name": "LastYearOccurence",
+        "value": [
+          "Aldrig",
+          "Några gånger",
+          "1-2 gånger per månad",
+          "3-4 gånger per månad",
+          "1-2 gånger per vecka",
+          "Fler är 2 gånger per vecka"
+        ],
+        "followup": null
+      },
+      {
+        "id": "ojqramgdgp7jf0w",
+        "name": "WhatRelative",
+        "value": [
+          "Nuvarande Partner",
+          "Tidigare Partner",
+          "Förälder/styvförälder",
+          "Syskon",
+          "Släkting (förutom syskon/förälder)",
+          "Annan närstående person"
+        ],
+        "followup": null
+      },
+      {
+        "id": "okqwcnxk93xv39o",
+        "name": "Snuff",
+        "value": [
+          "Nej, jag har aldrig snusat",
+          "Ja, jag snusar",
+          "Jag har snusat tidigare, men slutat"
+        ],
+        "followup": null
+      },
+      {
+        "id": "p124eiu3ah1nfil",
+        "name": "PainOccurence",
+        "value": [
+          "Nej, aldrig",
+          "Någon enstaka gång",
+          "Några gånger",
+          "Nästan varje gång",
+          "Varje gång"
+        ],
+        "followup": null
+      },
+      {
+        "id": "sued2qb1xyhkfkv",
+        "name": "AccomodationLocation",
+        "value": [
+          "På landet (enstaka grannhus)",
+          "I mindre ort, mindre stad eller mellanstor stad",
+          "I en stor stad"
+        ],
+        "followup": null
+      },
+      {
+        "id": "ui5z16j7b4rl6c5",
+        "name": "Satisfaction",
+        "value": [
+          "Inte alls nöjd",
+          "Lite nöjd",
+          "Måttligt nöjd",
+          "Mycket nöjd"
+        ],
+        "followup": null
+      },
+      {
+        "id": "wlk7cgeqxv5lr8l",
+        "name": "Childbirth",
+        "value": [
+          "Nej",
+          "Ja, jag har fött {AMOUNT} barn vaginalt",
+          "Ja, jag har fött {AMOUNT} med kejsarsnitt"
+        ],
+        "followup": null
+      },
+      {
+        "id": "wt4iu415y6bgqwa",
+        "name": "YesNo",
+        "value": [
+          "Ja",
+          "Nej"
+        ],
+        "followup": null
+      },
+      {
+        "id": "yjetcsmu00xc2pi",
+        "name": "BotheredAmount",
+        "value": [
+          "0 - Inte alls",
+          "1 - Lite grann",
+          "2 - Måttligt",
+          "3 - Ganska mycket",
+          "4 - Extremt"
+        ],
+        "followup": null
+      },
+      {
+        "id": "zbwduuzw9ag8sdp",
+        "name": "ChildbirthComplications",
+        "value": [
+          "Nej",
+          "Ja, vid en förlossning",
+          "Ja, vid flera förlossningar"
+        ],
+        "followup": null
+      },
+      {
+        "id": "zxltoyr8ji87m50",
+        "name": "WhatAge",
+        "value": [
+          "Under senaste året",
+          "Tidigare i vuxenlivet",
+          "Som barn (yngre än 18 år)"
+        ],
+        "followup": [
+          "Vid ett tillfälle",
+          "Vid upprepade tillfällen"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "0q1t26jlxp5bzc3",
+        "placeholder": "",
+        "text": "<p>Har du k&auml;nt dig pressad eller tvingad till sexuella handlingar av en n&auml;rst&aring;ende?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": "Ja",
+        "followup": [
+          "phsclj2eksh3qse",
+          "fjkqkrffjmulav7"
+        ],
+        "help": {
+          "resource": "questionnaire-help.close-person"
+        }
+      },
+      {
+        "id": "0w5mv0m4k00ozqi",
+        "placeholder": "",
+        "text": "<p align=\"center\"><span style=\"text-decoration: underline;\"><strong>FR&Aring;GOR OM KVINNOH&Auml;LSA </strong></span></p>",
+        "type": "section",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "0wp7ipmeu60y824",
+        "placeholder": "",
+        "text": "<p>Att undvika minnen, tankar eller k&auml;nslor f&ouml;rknippade med den stressande&nbsp;upplevelsen?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "1ztexj9r49nliqc",
+        "placeholder": "",
+        "text": "<p>Vilken l&auml;ngd p&aring; stav?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "ko7gg7al0x19gki",
+        "dependency": "lf5ya5abfuyb5uo",
+        "dependencyValue": "Ja",
+        "followup": [],
+        "help": {
+          "resource": "dilator.measure-length"
+        }
+      },
+      {
+        "id": "242u8ha0yn8m06d",
+        "placeholder": "",
+        "text": "<p>N&auml;r slutar din behandling?</p>",
+        "type": "date",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "2ptfrdm7ozxzpqr",
+        "placeholder": "",
+        "text": "<p>Vilken &auml;r din nuvarande syssels&auml;ttning?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "cqrgdkg3sqf10ki",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "2vidwrkxpgbnwx1",
+        "placeholder": "",
+        "text": "<p>Snusar du regelbundet?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "okqwcnxk93xv39o",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "35loke6slz37910",
+        "placeholder": "",
+        "text": "<p>Uppstod bl&ouml;dning?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "lf5ya5abfuyb5uo",
+        "dependencyValue": "Ja",
+        "followup": [],
+        "help": {
+          "resource": "dilator.bleeding"
+        }
+      },
+      {
+        "id": "36c01493az497z4",
+        "placeholder": "",
+        "text": "<p>Starka fysiska reaktioner n&auml;r n&aring;got p&aring;minde dig om den stressande&nbsp;upplevelsen (<em>t.ex. hj&auml;rtklappning, sv&aring;rt att andas, svettas</em>)?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "3f6jp460p9r1jwn",
+        "placeholder": "",
+        "text": "<p>Att ta f&ouml;r mycket risker eller att g&ouml;ra s&aring;dant som kunnat skada dig?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "3q6ucwu86voi6q9",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Har du eller har du haft n&aring;gon gynekologisk sjukdom eller diagnos det senaste &aring;ret (som inte &auml;r relaterad till din nuvarande cancerdiagnos)?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "alswljcjki85nf6",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "4531b9z9zqj3165",
+        "placeholder": "",
+        "text": "<p>Att pl&ouml;tsligt k&auml;nna eller agera som om den stressande upplevelsen&nbsp;faktiskt h&auml;nder igen <em>(som om du faktiskt var tillbaka d&auml;r och &aring;terupplevde </em><em>den</em>)?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "4q7l47uu649pb99",
+        "placeholder": "",
+        "text": "<p>Annat, beskriv g&auml;rna</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "bshdzo1r9zckqxj",
+        "dependencyValue": "Annat",
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "4zm0554c878e4ch",
+        "placeholder": "",
+        "text": "<p>Vilken storlek p&aring; staven anv&auml;nde du?&nbsp;</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "6w7qqbtusy0j1j9",
+        "dependency": "yz733oqw1e7xw15",
+        "dependencyValue": "Ja",
+        "followup": [],
+        "help": {
+          "resource": "dilator.size"
+        }
+      },
+      {
+        "id": "56s8hf60fcz97w6",
+        "placeholder": "cm",
+        "text": "<p>L&auml;ngd</p>",
+        "type": "number",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "6gvveeo8k3a522b",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Blev Du blivit klippt i omr&aring;det mellan slidan, mellang&aring;rden och &auml;ndtarms&ouml;ppningen i samband med f&ouml;rlossningen?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "zbwduuzw9ag8sdp",
+        "dependency": "iusye568rmxlfoj",
+        "dependencyValue": [
+          "NOT",
+          "Nej"
+        ],
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "6kx2ng33xjjrm8f",
+        "placeholder": "",
+        "text": "<p>Egna kommentarer om sexuella besv&auml;r:&nbsp;</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "73f9k2gk7ywnq76",
+        "placeholder": "",
+        "text": "<p>Om h&auml;ndelsen innebar att en n&auml;ra familjemedlem eller n&auml;ra v&auml;n dog, berodde detta p&aring; n&aring;gon slags</p>\r\n<p>olycksh&auml;ndelse eller v&aring;ld, eller berodde det p&aring; naturliga orsaker?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "l21p53266rwhvh0",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "7634x05i795x675",
+        "placeholder": "",
+        "text": "<p>Att beskylla dig sj&auml;lv eller n&aring;gon annan f&ouml;r den stressande upplevelsen&nbsp;eller det som h&auml;nde efter&aring;t?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "7rd688umot92uqc",
+        "placeholder": "",
+        "text": "<p>Sv&aring;righeter att uppleva positiva k&auml;nslor (<em>t.ex. of&ouml;rm&aring;ga att k&auml;nna gl&auml;dje </em><em>eller varma k&auml;nslor f&ouml;r m&auml;nniskor som st&aring;r n&auml;ra dig</em>)?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "7yuf0dp61p770p6",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Har du haft besv&auml;r med&nbsp;<u>djupt liggande</u> sm&auml;rta vid vaginalt sex, dvs sm&auml;rtor fr&aring;n djupet av slidan och inne i sj&auml;lva b&auml;ckenet, det senaste &aring;ret f&ouml;re din cancerdiagnos?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "p124eiu3ah1nfil",
+        "dependency": "o4va2co2m0f30zz",
+        "dependencyValue": [
+          "NOT",
+          "Inte aktuellt, jag har inte haft sex med partner de senaste 10 åren"
+        ],
+        "followup": [],
+        "help": {
+          "resource": "questionnaire-help.vaginal-sex"
+        }
+      },
+      {
+        "id": "85ack5vmi4faxsa",
+        "placeholder": "",
+        "text": "<p>Var bor du?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "sued2qb1xyhkfkv",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "89q0y1yxa03c1u2",
+        "placeholder": "",
+        "text": "<p>Att k&auml;nna distans till eller k&auml;nna dig avskuren fr&aring;n&nbsp;andra m&auml;nniskor</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "8ahme1mkgunly1y",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Har du anv&auml;nt hormontabletter sedan minst 6 m&aring;nader tillbaka?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "90jqh7bssqsm973",
+        "placeholder": "",
+        "text": "<p>Sv&aring;righeter att minnas viktiga delar av den stressande upplevelsen?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "96758dpiuvpf35o",
+        "placeholder": "",
+        "text": "<p>Starka negativa k&auml;nslor som r&auml;dsla, skr&auml;ck, ilska, skuld eller skam?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "9a47m7l4iik41p2",
+        "placeholder": "",
+        "text": "<p>Sv&aring;righeter med att koncentrera dig?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "9ecl9c22y6hw843",
+        "placeholder": "",
+        "text": "<p>Tack f&ouml;r att du har svarat p&aring; fr&aring;gorna. Har du behov av st&ouml;d finns det information h&auml;r:</p>",
+        "type": "section",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {
+          "resource": "violence.support"
+        }
+      },
+      {
+        "id": "9j3d96m4o2xf4p7",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Har du kommit in i menopaus (klimakteriet, slutat menstruera) sedan minst 6 m&aring;nader f&ouml;re din cancerdiagnos?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "9jhkenowkkqlkgm",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Fick Du bristningar i slutmuskeln f&ouml;r &auml;ndtarmen (sfinkterskada) i samband med f&ouml;rlossningen?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "zbwduuzw9ag8sdp",
+        "dependency": "iusye568rmxlfoj",
+        "dependencyValue": [
+          "NOT",
+          "Nej"
+        ],
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "9uph11w7qzq3unr",
+        "placeholder": "",
+        "text": "<p>Hur har din sm&auml;rta varit?</p>",
+        "type": "painScale",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "a547a815bheg8l6",
+        "placeholder": "",
+        "text": "<p>Hur l&auml;nge sedan h&auml;nde detta?</p>\r\n<p>(g&ouml;r en uppskattning om du inte &auml;r s&auml;ker)</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "b1y01dne3lqtvdm",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Ungef&auml;r hur ofta hade du vaginalt sex det senaste &aring;ret innan din cancerdiagnos?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "mmsgnaah98vpicg",
+        "dependency": "o4va2co2m0f30zz",
+        "dependencyValue": [
+          "NOT",
+          "Inte aktuellt, jag har inte haft sex med partner de senaste 10 åren"
+        ],
+        "followup": [],
+        "help": {
+          "resource": "questionnaire-help.vaginal-sex"
+        }
+      },
+      {
+        "id": "bceir2r9ev20kwq",
+        "placeholder": "",
+        "text": "<p>R&ouml;ker du cigaretter regelbundet?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "0maf4u9z2519csi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "bhob0el056a5m2t",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Har du haft ytlig sm&auml;rta, i vulva eller i underlivet (dvs. sm&auml;rtor fr&aring;n slemhinnorna och slid&ouml;ppningen) vid vaginalt sex, det senaste &aring;ret innan din cancerdiagnos?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "p124eiu3ah1nfil",
+        "dependency": "o4va2co2m0f30zz",
+        "dependencyValue": [
+          "NOT",
+          "Inte aktuellt, jag har inte haft sex med partner de senaste 10 åren"
+        ],
+        "followup": [],
+        "help": {
+          "resource": "questionnaire-help.vaginal-sex"
+        }
+      },
+      {
+        "id": "bqtwmtkhke46pyz",
+        "placeholder": "",
+        "text": "<p><!-- [if !supportLists]-->F<!--[endif]--><span lang=\"SV\">ick Du bristningar i mellang&aring;rden i samband med f&ouml;rlossningen?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "zbwduuzw9ag8sdp",
+        "dependency": "iusye568rmxlfoj",
+        "dependencyValue": [
+          "NOT",
+          "Nej"
+        ],
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "bshdzo1r9zckqxj",
+        "placeholder": "",
+        "text": "<p>P&aring; vilket s&auml;tt upplevde du det?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "6jgm849vh2l7084",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "c0y2ie8d9vo4aro",
+        "placeholder": "",
+        "text": "<p align=\"center\"><span style=\"text-decoration: underline;\"><strong>FR&Aring;GOR OM SEXUALITET</strong></span></p>\r\n<p align=\"center\">&nbsp;</p>\r\n<h2 style=\"text-align: center;\"><strong>Sexualitet kan handla b&aring;de om attraktion, lust, tankar och sex men ocks&aring; om drivkraften att s&ouml;ka kontakt, n&auml;rhet, bekr&auml;ftelse. H&auml;r st&auml;ller vi fr&aring;gor om sexualitet med fokus p&aring; funktion och din egen k&auml;nsla f&ouml;r hur n&ouml;jd du &auml;r med ditt sexliv. N&auml;r vi skriver vaginalt sex menar vi h&auml;r sexuell aktivitet sj&auml;lv eller med partner d&auml;r n&aring;got f&ouml;rs in i slidan (exempelvis penis, fingrar, f&ouml;rem&aring;l eller dildo). Fr&aring;gorna g&auml;ller innan du fick din cancerdiagnos. </strong></h2>",
+        "type": "section",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "c2xmobhywcotlrq",
+        "placeholder": "år",
+        "text": "<p>&Aring;lder</p>",
+        "type": "number",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "ct90px8re365dz4",
+        "placeholder": "",
+        "text": "<p>&Aring;terkommande st&ouml;rande dr&ouml;mmar om den stressande upplevelsen?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "dfz5iu5fwp1q3k9",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Har du anv&auml;nt hormonpl&aring;ster sedan minst 6 m&aring;nader tillbaka?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {
+          "resource": "questionnaire-help.hormone-skin"
+        }
+      },
+      {
+        "id": "fjkqkrffjmulav7",
+        "placeholder": "",
+        "text": "<p>Om ja, har du varit med om det (flera svarsalternativ &auml;r m&ouml;jliga)</p>",
+        "type": "multipleChoice",
+        "required": false,
+        "options": "zxltoyr8ji87m50",
+        "dependency": "",
+        "dependencyValue": "Ja",
+        "followup": [],
+        "help": {
+          "resourceCollection": "violence"
+        }
+      },
+      {
+        "id": "h69f54z1tcn5772",
+        "placeholder": "",
+        "text": "<p>Ange kort den v&auml;rsta h&auml;ndelsen</p>\r\n<p>(om det k&auml;nns bekv&auml;mt f&ouml;r dig att g&ouml;ra det):</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "i235kaza3489msm",
+        "placeholder": "",
+        "text": "<p>&Aring;terkommande, st&ouml;rande och ofrivilliga minnen av den stressande&nbsp;upplevelsen?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "i29z7v6994xr4ci",
+        "placeholder": "",
+        "text": "<p>Att k&auml;nna dig nerv&ouml;s eller l&auml;ttskr&auml;md?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "iusye568rmxlfoj",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Har du f&ouml;tt barn?</span></p>",
+        "type": "multipleChoice",
+        "required": false,
+        "options": "wlk7cgeqxv5lr8l",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "j68fxy6j684m58t",
+        "placeholder": "",
+        "text": "<p>Att vara &rdquo;hyperalert&rdquo;, vaksam eller p&aring; din vakt</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "jo1fsumwfm21rmf",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Har du anv&auml;nt lokalt &ouml;strogen exempelvis vagitorium, kr&auml;m eller gel i underlivet regelbundet sedan minst 6 m&aring;nader tillbaka?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "jzzot4gxpb1pppa",
+        "placeholder": "",
+        "text": "<p>&Auml;r orsaken r&auml;dsla f&ouml;r obehag?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "lf5ya5abfuyb5uo",
+        "dependencyValue": "Nej",
+        "followup": [],
+        "help": {
+          "resource": "dilator.pain-discomfort"
+        }
+      },
+      {
+        "id": "k2ixx8997t8bxf2",
+        "placeholder": "",
+        "text": "<p>Har du under din uppv&auml;xt sett eller h&ouml;rt en n&auml;rst&aring;ende bli utsatt f&ouml;r v&aring;ld?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": "Ja",
+        "followup": [
+          "phsclj2eksh3qse"
+        ],
+        "help": {
+          "resource": "questionnaire-help.close-person"
+        }
+      },
+      {
+        "id": "kujwudwaahabsiz",
+        "placeholder": "",
+        "text": "<p style=\"text-align: center;\"><span style=\"text-decoration: underline;\"><strong>FR&Aring;GOR OM V&Aring;LD</strong></span></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p>V&aring;ld i n&auml;ra relationer p&aring;verkar hur du m&aring;r b&aring;de fysiskt och psykiskt, d&auml;rf&ouml;r fr&aring;gar vi.</p>\r\n<p>&nbsp;</p>\r\n<p>Det p&aring;verkar&nbsp;&auml;ven dina barns fysiska och psykiska h&auml;lsa. Barn har r&auml;tt att v&auml;xa upp utan v&aring;ld.</p>\r\n<p>&nbsp;</p>\r\n<p>V&aring;ld kan vara att&nbsp;du blir utsatt sj&auml;lv eller ser n&aring;gon annan bli utsatt. Du kan f&aring; st&ouml;d/hj&auml;lp om du varit utsatt f&ouml;r v&aring;ld&nbsp;eller om du sett eller h&ouml;rt v&aring;ld mot en n&auml;rst&aring;ende* under din uppv&auml;xt. Du kan &auml;ven f&aring; st&ouml;d/hj&auml;lp&nbsp;om du sj&auml;lv utsatt n&aring;gon annan f&ouml;r v&aring;ld.</p>\r\n<p>&nbsp;</p>\r\n<p><em>*Med n&auml;rst&aring;ende menar vi partner, familjemedlem, sl&auml;kting eller annan viktig person.</em></p>\r\n<p><em>* \"<strong>L&auml;mna genast</strong>&rdquo;-knappen tar dig direkt till en neutral sida. Du beh&ouml;ver fylla i hela formul&auml;ret fr&aring;n b&ouml;rjan n&auml;r du &aring;terv&auml;nder.</em></p>",
+        "type": "section",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "lf5ya5abfuyb5uo",
+        "placeholder": "",
+        "text": "<p>Har du anv&auml;nt vaginalstav idag?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "lpw80087l5wfeed",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Hur n&ouml;jd totalt sett har du varit med ditt sexliv, det senaste &aring;ret f&ouml;re din cancerdiagnos?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "ui5z16j7b4rl6c5",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "m8nvwfn3jnm0gc1",
+        "placeholder": "",
+        "text": "<p>Annat, n&auml;mligen:</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "3q6ucwu86voi6q9",
+        "dependencyValue": "Annat",
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "mnp346hxbzcvy48",
+        "placeholder": "",
+        "text": "<p>Vilken storlek p&aring; stav?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "6w7qqbtusy0j1j9",
+        "dependency": "lf5ya5abfuyb5uo",
+        "dependencyValue": "Ja",
+        "followup": [],
+        "help": {
+          "resource": "dilator.size"
+        }
+      },
+      {
+        "id": "nf6qa6a9wr8ktgi",
+        "placeholder": "",
+        "text": "<p>&Auml;r orsaken att du &auml;r avr&aring;dd att anv&auml;nda vaginalstav i nul&auml;get p&aring; grund av att biverkningar av behandlingen?<span lang=\"SV\" style=\"font-size: 11.0pt; line-height: 107%; font-family: 'Calibri',sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-bidi-theme-font: minor-bidi; mso-ansi-language: SV; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\"> </span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "lf5ya5abfuyb5uo",
+        "dependencyValue": "Nej",
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "nirt0w1z038n1et",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Ungef&auml;r hur ofta har Du haft orgasm i genomsnitt, det senaste &aring;ret innan din cancerdiagnos?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "mmsgnaah98vpicg",
+        "dependency": "o4va2co2m0f30zz",
+        "dependencyValue": [
+          "NOT",
+          "Inte aktuellt, jag har inte haft sex med partner de senaste 10 åren"
+        ],
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "nqsm7xx1fx1ka94",
+        "placeholder": "skriv vad du vill",
+        "text": "<p>Har du svarat p&aring; den h&auml;r fr&aring;gan?</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "o4va2co2m0f30zz",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">N&auml;r du har haft sex med partner de senaste 10 &aring;ren, har det varit med n&aring;gon form av vaginalt sex (exempelvis samlag)?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "kwx9npxagwy67ru",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {
+          "resource": "questionnaire-help.vaginal-sex"
+        }
+      },
+      {
+        "id": "o8tp9g7glebm2v5",
+        "placeholder": "ja?",
+        "text": "<p>Har du svarat p&aring; den <strong>h&auml;r</strong> d&aring;?</p>",
+        "type": "text",
+        "required": true,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {
+          "resource": "dilator.purpose"
+        }
+      },
+      {
+        "id": "opj999bkg9x37cm",
+        "placeholder": "",
+        "text": "<p>Att vara l&auml;ttirriterad, f&aring; vredesutbrott, eller agera aggressivt?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "osu8yeqjvw00nzs",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Segoe UI'; color: black; mso-color-alt: windowtext; mso-fareast-language: SV;\">Hur viktigt tror du att det har varit f&ouml;r din/dina&nbsp;<u>partners </u>med vaginalt sex vid sexuell aktivitet det senaste &aring;ret f&ouml;re cancerdiagnos?&nbsp;</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "ktmxewvswsgpkh6",
+        "dependency": "o4va2co2m0f30zz",
+        "dependencyValue": [
+          "NOT",
+          "Inte aktuellt, jag har inte haft sex med partner de senaste 10 åren"
+        ],
+        "followup": [],
+        "help": {
+          "resource": "questionnaire-help.vaginal-sex"
+        }
+      },
+      {
+        "id": "p8s9voy70rj7orm",
+        "placeholder": "",
+        "text": "<p>Har du blivit fasth&aring;llen, knuffad, slagen, sparkad eller skadad p&aring; n&aring;got annat s&auml;tt av en n&auml;rst&aring;ende?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": "Ja",
+        "followup": [
+          "phsclj2eksh3qse",
+          "fjkqkrffjmulav7"
+        ],
+        "help": {
+          "resource": "questionnaire-help.close-person"
+        }
+      },
+      {
+        "id": "phsclj2eksh3qse",
+        "placeholder": "",
+        "text": "<p>Om ja, av vem/vilka? (Flera svarsalternativ &auml;r m&ouml;jliga)</p>",
+        "type": "multipleChoice",
+        "required": false,
+        "options": "ojqramgdgp7jf0w",
+        "dependency": "",
+        "dependencyValue": "",
+        "followup": [],
+        "help": {
+          "resourceCollection": "violence"
+        }
+      },
+      {
+        "id": "q1dj4c71z068awf",
+        "placeholder": "",
+        "text": "<p>Vilken uppskattad l&auml;ng p&aring; staven?&nbsp;</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "ko7gg7al0x19gki",
+        "dependency": "yz733oqw1e7xw15",
+        "dependencyValue": "Ja",
+        "followup": [],
+        "help": {
+          "resource": "dilator.measure-length"
+        }
+      },
+      {
+        "id": "q7nq4uo61zyj441",
+        "placeholder": "",
+        "text": "<p>Problem att somna eller sova utan avbrott?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "qc49b461i708p6c",
+        "placeholder": "",
+        "text": "<p>Har du blivit utsatt f&ouml;r v&aring;ld av n&aring;gon som inte &auml;r en n&auml;rst&aring;ende?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": "Ja",
+        "followup": [
+          "fjkqkrffjmulav7"
+        ],
+        "help": {
+          "resource": "questionnaire-help.close-person"
+        }
+      },
+      {
+        "id": "rinz2do0dbnkipp",
+        "placeholder": "",
+        "text": "<p>V&auml;lj n&aring;got</p>",
+        "type": "singleChoice",
+        "required": true,
+        "options": "k596yiqdtsp76c7",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "sqw12763lr6l293",
+        "placeholder": "",
+        "text": "<p>Innebar h&auml;ndelsen faktisk d&ouml;d eller livshot, allvarlig skada eller sexuellt v&aring;ld?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "t5rd35xsh65cy3g",
+        "placeholder": "",
+        "text": "<p>Att du har f&ouml;rlorat intresset f&ouml;r aktiviteter som du brukade tycka om?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "v3pcgtlpz9w3oh1",
+        "placeholder": "",
+        "text": "<p>Har du f&aring;tt str&aring;lbehandling idag?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "vlj8wg2offs828e",
+        "placeholder": "",
+        "text": "<p>Fri kommentar</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "vxhvj3xhwuj9gmx",
+        "placeholder": "",
+        "text": "<p>&Auml;r orsaken r&auml;dsla f&ouml;r sm&auml;rta?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "lf5ya5abfuyb5uo",
+        "dependencyValue": "Nej",
+        "followup": [],
+        "help": {
+          "resource": "dilator.pain-discomfort"
+        }
+      },
+      {
+        "id": "w60agvus8oz07k8",
+        "placeholder": "",
+        "text": "<p>Har du blivit hotad, kontrollerad, f&ouml;rnedrad, trakasserad eller liknande av en n&auml;rst&aring;ende?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": "Ja",
+        "followup": [
+          "phsclj2eksh3qse",
+          "fjkqkrffjmulav7"
+        ],
+        "help": {
+          "resource": "questionnaire-help.close-person"
+        }
+      },
+      {
+        "id": "wduofcem3n7ux9w",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\">Har du haft sveda, br&auml;nnande eller sk&auml;rande k&auml;nsla fr&aring;n slemhinnorna och i slid&ouml;ppningen i samband med vaginalt sex, det senaste &aring;ret f&ouml;re din cancerdiagnos?</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "p124eiu3ah1nfil",
+        "dependency": "o4va2co2m0f30zz",
+        "dependencyValue": [
+          "NOT",
+          "Inte aktuellt, jag har inte haft sex med partner de senaste 10 åren"
+        ],
+        "followup": [],
+        "help": {
+          "resource": "questionnaire-help.vaginal-sex"
+        }
+      },
+      {
+        "id": "wn0wqv9hl0erwra",
+        "placeholder": "",
+        "text": "<p><span lang=\"SV\" style=\"mso-ascii-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-bidi-font-family: 'Segoe UI'; color: #212121; mso-fareast-language: SV;\">Hur viktigt har det varit f&ouml;r&nbsp;<u>dig</u> med vaginalt sex vid sexuell aktivitet det senaste &aring;ret f&ouml;re din cancerdiagnos?&nbsp;</span></p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "ktmxewvswsgpkh6",
+        "dependency": "o4va2co2m0f30zz",
+        "dependencyValue": [
+          "NOT",
+          "Inte aktuellt, jag har inte haft sex med partner de senaste 10 åren"
+        ],
+        "followup": [],
+        "help": {
+          "resource": "questionnaire-help.vaginal-sex"
+        }
+      },
+      {
+        "id": "wrd72il6h48yhwd",
+        "placeholder": "",
+        "text": "<p>Att bli mycket uppr&ouml;rd n&auml;r n&aring;got p&aring;minde dig om den stressande&nbsp;upplevelsen?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "wv7jj2rmonqy566",
+        "placeholder": "",
+        "text": "<p>&Auml;r du idag (civilst&aring;nd)</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "30slb01eltdc5kw",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "x8ley173dg265w5",
+        "placeholder": "",
+        "text": "<p>Att undvika s&aring;dant i din omgivning som p&aring;mint dig om den stressande&nbsp;upplevelsen (<em>t.ex. personer, platser, samtal, aktiviteter, f&ouml;rem&aring;l eller </em><em>situationer</em>)?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "xxye1so1puvkwqd",
+        "placeholder": "",
+        "text": "<p>Fri kommentar</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "yeea9whxqv2c1kq",
+        "placeholder": "",
+        "text": "<p>Upplevde du obehag?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "lf5ya5abfuyb5uo",
+        "dependencyValue": "Ja",
+        "followup": [],
+        "help": {
+          "resource": "dilator.pain-discomfort"
+        }
+      },
+      {
+        "id": "yk0osj2389ut13y",
+        "placeholder": "",
+        "text": "<h4 style=\"text-align: center;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"text-decoration: underline;\">Eftersom du har svarat <em><strong>JA</strong></em> p&aring; fr&aring;gor om v&aring;ld </span>f&ouml;ljer h&auml;r ett </span>fr&aring;geformul&auml;r som ber&ouml;r problem som du kan ha f&aring;tt efter en mycket stressande&nbsp;upplevelse som innebar d&ouml;d eller livshot, allvarlig skada eller sexuellt v&aring;ld. Det kan vara n&aring;got som&nbsp;h&auml;nde just dig, n&aring;got som du bevittnade eller n&aring;got som du fick veta hade h&auml;nt en n&auml;ra anh&ouml;rig eller&nbsp;n&auml;ra v&auml;n. N&aring;gra exempel &auml;r en allvarlig olycksh&auml;ndelse; brand; en naturkatastrof som till exempel en&nbsp;orkan, en tromb eller en jordb&auml;vning; fysiskt eller sexuellt &ouml;verfall eller &ouml;vergrepp; krig; mord; eller&nbsp;sj&auml;lvmord.</h4>\r\n<h4 style=\"text-align: center;\">&nbsp;</h4>\r\n<h4 style=\"text-align: center;\">F&ouml;rst ber vi dig vara v&auml;nlig och besvara n&aring;gra <span style=\"color: rgb(0, 0, 0);\">fr&aring;gor om <span style=\"text-decoration: underline;\"><strong>din v&auml;rsta h&auml;ndelse</strong></span></span>, vilket h&auml;r inneb&auml;r den&nbsp;h&auml;ndelse som just nu besv&auml;rar dig mest. Detta kan vara en s&aring;dan h&auml;ndelse som beskrivs i exemplen&nbsp;ovan eller n&aring;gon annan mycket stressande upplevelse. Det kan vara en enda h&auml;ndelse (som till&nbsp;exempel en bilolycka) eller flera liknande h&auml;ndelser (exempelvis flera stressande h&auml;ndelser i en&nbsp;krigszon eller upprepade sexuella &ouml;vergrepp).</h4>",
+        "type": "section",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "yz733oqw1e7xw15",
+        "placeholder": "",
+        "text": "<p>Har du testat att anv&auml;nda vaginalstaven? Se informationsknappen f&ouml;r instruktion om hur den ska anv&auml;ndas.&nbsp;</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {
+          "resourceCollection": "dilator"
+        }
+      },
+      {
+        "id": "z39l2ubdri1evdx",
+        "placeholder": "",
+        "text": "<p>Upplevde du sm&auml;rta?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "lf5ya5abfuyb5uo",
+        "dependencyValue": "Ja",
+        "followup": [],
+        "help": {
+          "resource": "dilator.pain-discomfort"
+        }
+      },
+      {
+        "id": "zlay0n666s5d1r3",
+        "placeholder": "kg",
+        "text": "<p>Vikt</p>",
+        "type": "number",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "zxe6mf0xt5032p7",
+        "placeholder": "",
+        "text": "<p>Att ha starka negativa uppfattningar om dig sj&auml;lv, om andra eller om&nbsp;v&auml;rlden <em>(t.ex. haft s&aring;dana tankar som att: jag &auml;r d&aring;lig, det &auml;r n&aring;got </em><em>allvarligt fel p&aring; mig, det g&aring;r inte att lita p&aring; n&aring;gon, allt i hela v&auml;rlden &auml;r </em><em>farligt</em>)?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "yjetcsmu00xc2pi",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      }
+    ],
+    "questionnaires": [
+      {
+        "description": "",
+        "questions": [
+          "yk0osj2389ut13y",
+          "h69f54z1tcn5772",
+          "a547a815bheg8l6",
+          "sqw12763lr6l293",
+          "bshdzo1r9zckqxj",
+          "4q7l47uu649pb99",
+          "73f9k2gk7ywnq76",
+          "i235kaza3489msm",
+          "ct90px8re365dz4",
+          "4531b9z9zqj3165",
+          "wrd72il6h48yhwd",
+          "36c01493az497z4",
+          "0wp7ipmeu60y824",
+          "x8ley173dg265w5",
+          "90jqh7bssqsm973",
+          "zxe6mf0xt5032p7",
+          "7634x05i795x675",
+          "96758dpiuvpf35o",
+          "t5rd35xsh65cy3g",
+          "89q0y1yxa03c1u2",
+          "7rd688umot92uqc",
+          "opj999bkg9x37cm",
+          "3f6jp460p9r1jwn",
+          "j68fxy6j684m58t",
+          "i29z7v6994xr4ci",
+          "9a47m7l4iik41p2",
+          "q7nq4uo61zyj441",
+          "9ecl9c22y6hw843"
+        ],
+        "id": "5u3cydwh92re50o",
+        "name": "PCL-5",
+        "occurrence": "once",
+        "enabled": false,
+        "introText": "",
+        "dependencyValue": "Ja",
+        "dependency": [
+          "0q1t26jlxp5bzc3",
+          "qc49b461i708p6c",
+          "p8s9voy70rj7orm",
+          "w60agvus8oz07k8",
+          "k2ixx8997t8bxf2"
+        ],
+        "followup": []
+      },
+      {
+        "description": "<p>Det h&auml;r &auml;r en <strong>beskrivning.</strong></p>",
+        "questions": [
+          "iusye568rmxlfoj"
+        ],
+        "id": "6vc0a2dmcl2xmkc",
+        "name": "Testformulär",
+        "occurrence": "once",
+        "enabled": false,
+        "introText": "",
+        "dependencyValue": null,
+        "dependency": [],
+        "followup": []
+      },
+      {
+        "description": "<p>Svara p&aring; det h&auml;r formul&auml;ret innan du b&ouml;rjar</p>",
+        "questions": [
+          "242u8ha0yn8m06d"
+        ],
+        "id": "muyb28eqa5xq39k",
+        "name": "Initiellt formulär",
+        "occurrence": "once",
+        "enabled": false,
+        "introText": "",
+        "dependencyValue": null,
+        "dependency": [],
+        "followup": []
+      },
+      {
+        "description": "<p>H&auml;r fyller du i de datum du har din sista str&aring;lbehandling.</p>",
+        "questions": [
+          "242u8ha0yn8m06d"
+        ],
+        "id": "p8ow7xj8h4uuv43",
+        "name": "Datum för din sista strålbehandling",
+        "occurrence": "once",
+        "enabled": true,
+        "introText": "",
+        "dependencyValue": null,
+        "dependency": [],
+        "followup": []
+      },
+      {
+        "description": "<p>Det h&auml;r formul&auml;ret ska du svara p&aring; varje dag under din behandling.</p>",
+        "questions": [
+          "v3pcgtlpz9w3oh1",
+          "lf5ya5abfuyb5uo",
+          "nf6qa6a9wr8ktgi",
+          "mnp346hxbzcvy48",
+          "1ztexj9r49nliqc",
+          "yeea9whxqv2c1kq",
+          "35loke6slz37910",
+          "z39l2ubdri1evdx",
+          "jzzot4gxpb1pppa",
+          "vxhvj3xhwuj9gmx",
+          "xxye1so1puvkwqd"
+        ],
+        "id": "sdzkpd49ndccf5b",
+        "name": "Dagligt formulär",
+        "occurrence": "daily",
+        "enabled": true,
+        "introText": "<p>Detta är ett snabbt formulär kring din dagliga användning av vaginalstaven.</p><p>Antalet frågor beror på dina svar. Formuläret tar cirka 1–2 minuter.</p>",
+        "dependencyValue": null,
+        "dependency": [],
+        "followup": []
+      },
+      {
+        "description": "<p>N&auml;r du fyllt i din startpunkt kommer du kunna se den h&auml;r.</p>",
+        "questions": [
+          "c2xmobhywcotlrq",
+          "56s8hf60fcz97w6",
+          "zlay0n666s5d1r3",
+          "wv7jj2rmonqy566",
+          "2ptfrdm7ozxzpqr",
+          "85ack5vmi4faxsa",
+          "bceir2r9ev20kwq",
+          "2vidwrkxpgbnwx1",
+          "0w5mv0m4k00ozqi",
+          "3q6ucwu86voi6q9",
+          "m8nvwfn3jnm0gc1",
+          "iusye568rmxlfoj",
+          "6gvveeo8k3a522b",
+          "bqtwmtkhke46pyz",
+          "9jhkenowkkqlkgm",
+          "9j3d96m4o2xf4p7",
+          "8ahme1mkgunly1y",
+          "dfz5iu5fwp1q3k9",
+          "jo1fsumwfm21rmf",
+          "yz733oqw1e7xw15",
+          "4zm0554c878e4ch",
+          "q1dj4c71z068awf",
+          "vlj8wg2offs828e",
+          "c0y2ie8d9vo4aro",
+          "o4va2co2m0f30zz",
+          "b1y01dne3lqtvdm",
+          "nirt0w1z038n1et",
+          "bhob0el056a5m2t",
+          "wduofcem3n7ux9w",
+          "7yuf0dp61p770p6",
+          "lpw80087l5wfeed",
+          "wn0wqv9hl0erwra",
+          "osu8yeqjvw00nzs",
+          "6kx2ng33xjjrm8f",
+          "kujwudwaahabsiz",
+          "w60agvus8oz07k8",
+          "p8s9voy70rj7orm",
+          "0q1t26jlxp5bzc3",
+          "qc49b461i708p6c",
+          "k2ixx8997t8bxf2",
+          "phsclj2eksh3qse",
+          "fjkqkrffjmulav7"
+        ],
+        "id": "u6917wm639q1d01",
+        "name": "Din startpunkt",
+        "occurrence": "once",
+        "enabled": true,
+        "introText": "<p>Detta är ett längre formulär där vi samlar in grundläggande information om dig som behövs för studien.</p><p>Antalet frågor beror på dina svar. Formuläret tar cirka 20 minuter.</p>",
+        "dependencyValue": null,
+        "dependency": [],
+        "followup": [
+          "5u3cydwh92re50o"
+        ]
+      }
+    ]
+  }
+}
