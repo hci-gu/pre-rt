@@ -1,14 +1,13 @@
-import { Button } from '@/components/ui/button'
+import { PageBackLink } from '@/components/page-back-link'
 import ResourceAccordion from '@/components/resourceCollection'
 import FaqCollections from '@/components/faq-collections'
-import { Link } from 'react-router-dom'
 
 export default function FaqMorePage() {
   return (
     <FaqCollections>{(collections) => (
     <div className="space-y-7">
       <div className="space-y-2">
-        <h1 className="text-4xl font-black md:text-5xl">Om du vill veta mer</h1>
+        <h1 className="text-3xl font-black md:text-4xl">Om du vill veta mer</h1>
         <p className="max-w-xl text-lg font-bold leading-snug">
           Här finns alla frågor och svar samlade från de olika kategorierna.
         </p>
@@ -18,9 +17,7 @@ export default function FaqMorePage() {
           <ResourceAccordion key={collection.id} collection={collection} />
         ))}
       </div>
-      <Button asChild variant="secondary" className="h-auto min-h-11 max-w-full whitespace-normal py-3 text-center">
-        <Link to="/faq">Tillbaka till frågor och svar</Link>
-      </Button>
+      <PageBackLink to="/faq">Tillbaka till frågor och svar</PageBackLink>
     </div>
     )}</FaqCollections>
   )

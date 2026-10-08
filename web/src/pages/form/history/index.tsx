@@ -1,11 +1,4 @@
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb'
+import { PageBackLink } from '@/components/page-back-link'
 import HistoryCalendar from './history-calendar'
 import {
   Answer,
@@ -37,17 +30,7 @@ const FormHistoryLoaded = ({
 
   return (
     <div className="px-2">
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/forms">Formulär</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>{questionnaire.name}</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+      <h1 className="text-2xl font-black">Tidigare dagar</h1>
 
       <p className="mt-4">
         <span className="text-sm">
@@ -69,6 +52,7 @@ const FormHistoryLoaded = ({
       </p>
 
       <HistoryCalendar questionnaireId={questionnaire.id} answers={answers} startDate={startDate} endDate={endDate} treatmentStart={treatmentStart} treatmentEnd={treatmentEnd} />
+      <div className="mt-6"><PageBackLink to="/check-in">Tillbaka till dagligt formulär</PageBackLink></div>
     </div>
   )
 }

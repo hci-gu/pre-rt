@@ -38,6 +38,14 @@ their close button; even the dialog title is inside the bounded scrolling body.
 The question menu also has a left-aligned “Lämna formuläret” action in that row.
 It navigates back one history entry without clearing the saved draft.
 
+Panels align near the top below the questionnaire header, with a small responsive
+gap rather than vertical centering. Section introductions share a parser with the
+question menu: the menu uses a concise title, while the page retains the full
+body with normal-weight paragraphs and consistent title spacing. The final
+submission panel explains how to review answers. Success navigation retains the
+form context: the configured daily form returns to check-in; other forms return
+home, including after refreshing the success page.
+
 `AdaptiveQuestionPanel` measures the rendered content against the available
 space, trying comfortable, compact, then tight typography and spacing. When
 there is enough readable column width, ordinary choice lists are also measured
@@ -66,6 +74,13 @@ while the underlying questionnaire is inert, not nested scrolling areas.
 Intro, information sections, input questions, submission, and success use the
 same panel. The quick-exit eligibility rules are unchanged, but its control and
 attribution now occupy footer space rather than overlapping the question.
+The question menu and help dialogs use the same current-page quick-exit rule as
+the footer; having a violence section elsewhere in the form does not show it.
+Opening the question menu centers and focuses the current question (or its
+section heading). On the submission screen it starts at the final item. Each
+question has a subtle answered check or empty circle, with an accessible status
+description; skipped optional questions remain unanswered and zero is a valid
+answer. Status uses the current form values and existing answer validation.
 
 ## Browser regression checks
 

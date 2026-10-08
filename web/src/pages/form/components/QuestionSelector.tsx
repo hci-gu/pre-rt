@@ -16,12 +16,13 @@ import {
 import { useSetAtom } from 'jotai'
 import { formPageAtom, needsContinueButton } from '../state'
 import { DatePicker } from '@/components/ui/date-picker'
-import { type MutableRefObject, useEffect, useRef } from 'react'
+import { type MutableRefObject, useEffect, useMemo, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import Select from './Select'
 import { ResourceDrawer } from '@/components/resource'
 import AdaptiveQuestionPanel from './AdaptiveQuestionPanel'
 import { answerError, emptyAnswer } from '../answers'
+import { sectionContent } from '../section-content'
 
 const answerChipClassName =
   'question-chip cursor-pointer rounded-xl bg-primary font-bold text-foreground transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-card peer-data-[state=checked]:bg-study-teal-dark peer-data-[state=checked]:text-white'
@@ -137,6 +138,7 @@ const renderQuestionType = (
 }
 
 const QuestionSelector = ({ question, canProceed }: { question: Question; canProceed: boolean }) => {
+  const section = useMemo(() => question.type === 'section' ? sectionContent(question.text) : null, [question.type, question.text])
   const { control } = useFormContext()
   const setPage = useSetAtom(formPageAtom)
   const optionCount = question.options?.value?.length ?? 0
@@ -178,15 +180,21 @@ const QuestionSelector = ({ question, canProceed }: { question: Question; canPro
               )}
             </div>
             <div className="h-px w-full bg-foreground" />
-            <FormLabel className="question-text resource-content"
-              dangerouslySetInnerHTML={{ __html: question.text }} />
+            {section ? (
+              <div className="question-section">
+                <h2 className="question-section-title">{section.title}</h2>
+                <div className="question-section-body" dangerouslySetInnerHTML={{ __html: section.body }} />
+              </div>
+            ) : (
+              <FormLabel className="question-text resource-content"
+                dangerouslySetInnerHTML={{ __html: question.text }} />
+            )}
           </div>
           <FormControl>
             <div className="question-answer">
               {renderQuestionType(question, field, onAnswer, onContinue, optionInputRefs)}
             </div>
           </FormControl>
-          {!question.required && question.type !== 'section' && <p className="text-sm">Frivillig fråga – du kan gå vidare utan att svara.</p>}
           {!emptyAnswer(field.value) && answerError(question, field.value)
             ? <p role="alert" className="text-sm font-medium text-destructive">{answerError(question, field.value)}</p>
             : answerError(question, field.value) ? <FormMessage /> : null }

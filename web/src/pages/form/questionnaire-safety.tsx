@@ -18,19 +18,18 @@ export function isSensitivePage(form: Questionnaire, questions: Question[], page
     current?.id.startsWith(`followup_${f.id}_`)) ?? false
 }
 
-const SafetyContext = createContext<{ questionnaire: Questionnaire; active: boolean; sensitiveNavigation: boolean } | null>(null)
+const SafetyContext = createContext<{ questionnaire: Questionnaire; active: boolean } | null>(null)
 
 export function QuestionnaireSafetyProvider({ questionnaire, children }: { questionnaire: Questionnaire; children: ReactNode }) {
   const questions = useQuestions(questionnaire)
   const page = useAtomValue(formPageAtom)
-  const sensitiveNavigation = questions.some(q => q.id === QUESTIONNAIRE_FOV_ID || q.id.includes(QUESTIONNAIRE_PCL5_ID))
-  return <SafetyContext.Provider value={{ questionnaire, active: isSensitivePage(questionnaire, questions, page), sensitiveNavigation }}>{children}</SafetyContext.Provider>
+  return <SafetyContext.Provider value={{ questionnaire, active: isSensitivePage(questionnaire, questions, page) }}>{children}</SafetyContext.Provider>
 }
 
 export const useQuestionnaireSafety = () => useContext(SafetyContext)
 
-export function QuestionnaireQuickExit({ navigation = false }: { navigation?: boolean }) {
+export function QuestionnaireQuickExit() {
   const safety = useQuestionnaireSafety()
-  return safety && (safety.active || (navigation && safety.sensitiveNavigation))
+  return safety?.active
     ? <AbortButton questionnaire={safety.questionnaire} inline /> : null
 }

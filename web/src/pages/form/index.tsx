@@ -156,7 +156,10 @@ const Questions = ({
         <QuestionSelector key={question.id} question={question} canProceed={canProceed} />
       ) : (
         <AdaptiveQuestionPanel>
-          <div className="question-card">
+          <div className="question-card space-y-5">
+            <h1 className="question-heading">Klart att skicka in</h1>
+            <p>Du har gått igenom formuläret och det är klart att skicka in.</p>
+            <p>Vill du kolla igenom dina svar eller gå tillbaka till en specifik fråga kan du gå till Se alla frågor eller klicka dig tillbaka via pilarna.</p>
             <Button type="submit" disabled={loading} data-testid="questionnaire-submit"
               onClick={() => onSubmit(answers)}>
               {loading && <UpdateIcon className="animate-spin mr-2" />}
@@ -254,6 +257,7 @@ const LoadedForm = ({
     questionnaire,
   })
 
+  const { dailyQuestionnaire } = useAtomValue(studySettingsAtom)
   const draftKey = useQuestionnaireDraftKey(questionnaire)
   const [, setPage] = useAtom(formPageAtom)
   const onSubmit = async (data: FieldValues) => {
@@ -284,7 +288,7 @@ const LoadedForm = ({
       return
     }
     localStorage.removeItem(draftKey)
-    navigate('/form/success')
+    navigate('/form/success', { state: { daily: questionnaire.id === dailyQuestionnaire } })
   }
 
   return (

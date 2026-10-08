@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom'
 import { Fragment, ReactNode, Suspense } from 'react'
+import { UserRound } from 'lucide-react'
 import { useAtomValue } from 'jotai'
 import { resourceCollectionAtom } from '@/state'
 import preRtLogo from '@/assets/redesign/logos/pre-rt-logo--p56.svg'
@@ -27,6 +28,9 @@ type StudyAppShellProps = {
 
 const headerItemsForPath = (pathname: string): BreadcrumbItemType[] => {
   if (pathname === '/') return [{ label: 'Välkommen till studien!' }]
+  if (/^\/forms\/[^/]+\/history$/.test(pathname)) {
+    return [{ label: 'Start', href: '/' }, { label: 'Dagligt formulär', href: '/check-in' }, { label: 'Tidigare dagar' }]
+  }
   if (pathname.startsWith('/check-in')) {
     return [{ label: 'Start', href: '/' }, { label: 'Dagligt formulär' }]
   }
@@ -85,7 +89,7 @@ function StudyBreadcrumbs({ items }: { items: BreadcrumbItemType[] }) {
   if (items.length === 0) return null
 
   return (
-    <Breadcrumb className="min-w-0 [overflow-wrap:anywhere] sm:translate-y-3.5">
+    <Breadcrumb className="min-w-0 [overflow-wrap:anywhere]">
       <BreadcrumbList className="gap-2 text-base font-semibold leading-tight text-foreground sm:gap-2">
         {items.map((item, index) => {
           const isLast = index === items.length - 1
@@ -150,38 +154,38 @@ export function StudyAppShell({
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="sm:sticky top-0 z-30 w-full border-b border-foreground/15 bg-study-header">
-        <div
-          className={cn(
-            'mx-auto flex w-full max-w-[57rem] items-center px-4 sm:h-[5.625rem] sm:flex-row sm:justify-start sm:gap-8 sm:px-8',
-            isHome
-              ? 'min-h-[6.5rem] py-3 flex-col justify-center gap-2 text-center sm:relative sm:gap-0'
-              : 'min-h-[5.625rem] gap-4 py-3 sm:gap-[3.75rem]'
-          )}
-        >
+        <div className="mx-auto grid w-full max-w-[57rem] grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 px-4 py-3 sm:min-h-[5.625rem] sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:gap-x-6 sm:px-8">
           <NavLink
             to="/"
-            className={cn(
-              'study-focus flex w-fit shrink-0 items-center gap-3 rounded-full',
-              isHome && 'sm:absolute sm:left-8'
-            )}
+            className="study-focus col-start-1 row-start-1 flex w-fit items-center rounded-full"
           >
             <img src={preRtLogo} alt="Pre-RT" className="h-12 w-auto" />
           </NavLink>
-          {isHome ? (
-            <h1 className="mx-auto min-w-0 text-3xl font-black leading-none [overflow-wrap:anywhere] text-foreground md:text-4xl">
-              {headerItems[0]?.label}
-            </h1>
-          ) : faqCollectionId ? (
-            <Suspense fallback={<StudyBreadcrumbs items={headerItems} />}>
-              <FaqBreadcrumbs collectionId={faqCollectionId} />
-            </Suspense>
-          ) : (
-            <StudyBreadcrumbs items={headerItems} />
-          )}
+          <div className="col-span-2 col-start-1 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
+            {isHome ? (
+              <h1 className="text-2xl font-black leading-tight [overflow-wrap:anywhere] text-foreground sm:text-center md:text-3xl">
+                {headerItems[0]?.label}
+              </h1>
+            ) : faqCollectionId ? (
+              <Suspense fallback={<StudyBreadcrumbs items={headerItems} />}>
+                <FaqBreadcrumbs collectionId={faqCollectionId} />
+              </Suspense>
+            ) : (
+              <StudyBreadcrumbs items={headerItems} />
+            )}
+          </div>
+          <nav aria-label="Kontonavigation" className="col-start-2 row-start-1 justify-self-end sm:col-start-3">
+            <NavLink
+              to="/profile"
+              aria-label="Profil och logga ut"
+              className="study-focus inline-flex min-h-11 items-center gap-2 whitespace-nowrap rounded-lg px-2 text-sm font-bold underline underline-offset-4"
+            >
+              <UserRound aria-hidden="true" className="h-5 w-5 sm:hidden" />
+              <span className="sm:hidden">Profil</span>
+              <span className="hidden sm:inline">Profil och logga ut</span>
+            </NavLink>
+          </nav>
         </div>
-        <nav aria-label="Kontonavigation" className="mx-auto flex w-full max-w-[57rem] justify-end px-4 pb-2 sm:px-8">
-          <NavLink to="/profile" className="study-focus max-w-full rounded-lg px-2 py-2 text-sm font-bold underline [overflow-wrap:anywhere]">Profil och logga ut</NavLink>
-        </nav>
       </header>
 
       <main

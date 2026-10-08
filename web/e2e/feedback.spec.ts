@@ -116,6 +116,8 @@ test('treatment end can be saved, edited, reloaded and retried after failure', a
   await page.getByRole('button', { name: 'Välj datum' }).click()
   await page.getByRole('gridcell', { name: '7', exact: true }).click()
   await page.getByRole('button', { name: 'Spara datum' }).click()
+  await expect(page).toHaveURL(/\/$/)
+  await page.getByRole('link', { name: 'Dagligt formulär', exact: true }).click()
   await expect(page.getByRole('link', { name: /Slutdatum strålbehandling/ })).toContainText('2026-10-07')
   await page.getByRole('link', { name: /Ändra datum/ }).click()
   await page.getByRole('button', { name: '7 oktober 2026' }).click()
@@ -126,12 +128,93 @@ test('treatment end can be saved, edited, reloaded and retried after failure', a
   expect(date).toBe('2026-10-07')
   fail = false
   await page.getByRole('button', { name: 'Spara datum' }).click()
+  await expect(page).toHaveURL(/\/$/)
+  await page.getByRole('link', { name: 'Dagligt formulär', exact: true }).click()
   await expect(page.getByRole('link', { name: /Slutdatum strålbehandling/ })).toContainText('2026-10-09')
   await page.reload()
   await expect(page.getByRole('link', { name: /Slutdatum strålbehandling/ })).toContainText('2026-10-09')
   expect(writes).toBe(3)
 })
 
+
+test('question menu opens at the current question and keeps answer indicators up to date', async ({ page }) => {
+  await seedAuthenticatedUser(page)
+  const form = mockQuestionnaire({ id: 'long-form', name: 'Långt formulär', questions:
+    Array.from({ length: 57 }, (_, i) => mockQuestion({ id: `q${i}`, text: `Testfråga ${i + 1}`, type: 'number', required: false })),
+  })
+  await routeMockQuestionnaireApi(page, form)
+  await seedQuestionnaireDraft(page, form.id, { q0: 0, q1: '  ', q2: '-1', q33: '7' }, 33)
+  await page.goto('/forms/long-form')
+  await expect(page.getByText('Testfråga 34', { exact: true })).toBeVisible()
+  const trigger = page.getByRole('button', { name: 'Se alla frågor', exact: true })
+  const menu = page.getByRole('dialog')
+  const current = menu.getByRole('button', { name: '34. Testfråga 34', exact: true })
+  const expectPosition = async () => {
+    await expect(current).toBeFocused()
+    await expect(current).toHaveAttribute('aria-current', 'step')
+    await expect.poll(() => current.evaluate(el => {
+      const viewport = el.closest('.questionnaire-dialog-scroll')!.getBoundingClientRect()
+      const row = el.getBoundingClientRect()
+      return Math.abs((row.top + row.bottom) / 2 - (viewport.top + viewport.bottom) / 2)
+    })).toBeLessThan(8)
+    await expect(page.getByRole('button', { name: 'Stäng frågor', exact: true })).toBeInViewport()
+    expect(await page.evaluate(() => window.scrollY)).toBe(0)
+  }
+  await trigger.click()
+  await expectPosition()
+  await expect(current).toHaveAccessibleDescription('Besvarad')
+  await test.info().attach('question-menu', { body: await menu.screenshot(), contentType: 'image/png' })
+  await expect(menu.getByRole('button', { name: '1. Testfråga 1', exact: true })).toHaveAccessibleDescription('Besvarad')
+  for (const number of [2, 3, 35]) {
+    await expect(menu.getByRole('button', { name: `${number}. Testfråga ${number}`, exact: true })).toHaveAccessibleDescription('Obesvarad')
+  }
+  // Reopening must restore the current question even after browsing the list.
+  await menu.locator('.questionnaire-dialog-scroll').evaluate(el => { el.scrollTop = 0 })
+  await page.getByRole('button', { name: 'Stäng frågor', exact: true }).click()
+  await trigger.click()
+  await expectPosition()
+  await page.getByRole('button', { name: 'Stäng frågor', exact: true }).click()
+  await page.getByRole('spinbutton').fill('')
+  await trigger.click()
+  await expect(current).toHaveAccessibleDescription('Obesvarad')
+  await current.click()
+  await expect(menu).not.toBeVisible()
+  await page.getByRole('spinbutton').fill('0')
+  await trigger.click()
+  await expectPosition()
+  await expect(current).toHaveAccessibleDescription('Besvarad')
+})
+
+test('question menu quick exit follows the current violence section', async ({ page }) => {
+  await seedAuthenticatedUser(page)
+  const form = mockQuestionnaire({ id: 'baseline', name: 'Inledande formulär', questions: [
+    mockQuestion({ id: 'age', text: 'Ålder', type: 'number' }),
+    mockQuestion({ id: 'kujwudwaahabsiz', text: 'Frågor om våld', type: 'section' }),
+    mockQuestion({ id: 'violence', text: 'Våldsfråga', type: 'singleChoice', options: ['Ja', 'Nej'] }),
+    mockQuestion({ id: 'other-section', text: 'Övriga frågor', type: 'section' }),
+    mockQuestion({ id: 'other', text: 'Övrig kommentar', type: 'text' }),
+  ] })
+  await routeMockQuestionnaireApi(page, form)
+  await seedQuestionnaireDraft(page, form.id, {}, 0)
+  await page.goto('/forms/baseline')
+  await expect(page.getByText('Ålder', { exact: true })).toBeVisible()
+  const quickExit = page.getByRole('button', { name: 'Lämna genast', exact: true })
+  await expect(quickExit).toHaveCount(0)
+  await page.getByRole('button', { name: 'Se alla frågor' }).click()
+  const menu = page.getByRole('dialog')
+  const menuExit = menu.getByRole('button', { name: 'Lämna genast', exact: true })
+  await expect(menuExit).toHaveCount(0)
+  await menu.getByRole('button', { name: /Våldsfråga/ }).click()
+  await expect(quickExit).toBeVisible()
+  await page.getByRole('button', { name: 'Se alla frågor' }).click()
+  await expect(menuExit).toBeVisible()
+  await menu.getByRole('button', { name: /Övrig kommentar/ }).click()
+  await expect(menu).not.toBeVisible()
+  await expect(page.getByText('Övrig kommentar', { exact: true })).toBeVisible()
+  await expect(quickExit).toHaveCount(0)
+  await page.getByRole('button', { name: 'Se alla frågor' }).click()
+  await expect(menuExit).toHaveCount(0)
+})
 
 test('PCL closing help, question menu and submission retain quick exit and clear the parent draft', async ({ page }) => {
   await seedAuthenticatedUser(page)

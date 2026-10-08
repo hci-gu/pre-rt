@@ -9,7 +9,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
-import { InfoCircledIcon } from '@radix-ui/react-icons'
 import { Button } from '@/components/ui/button'
 import { useAtomValue } from 'jotai'
 import { Suspense } from 'react'
@@ -36,11 +35,14 @@ export function ResourceDrawer({
       <DialogTrigger asChild>
         <Button
           type="button"
+          variant="ghost"
           size="icon"
-          className="h-9 w-9 rounded-full bg-study-coral text-white hover:bg-study-coral/90"
+          className="group h-11 w-11 shrink-0 rounded-full p-0 hover:bg-transparent"
           aria-label={`Visa hjälp: ${title}`}
         >
-          <InfoCircledIcon />
+          <span aria-hidden="true" className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#ff9699] font-serif text-xl font-bold leading-none text-white group-hover:bg-[#f58286]">
+            i
+          </span>
         </Button>
       </DialogTrigger>
       <QuestionnaireDialogContent leadingAction={<QuestionnaireQuickExit />} closeLabel="Stäng hjälp" aria-describedby={undefined} className="bg-white">

@@ -81,12 +81,12 @@ html.questionnaire-active, html.questionnaire-active body { overflow: hidden; ov
   --choice-padding: .75rem;
   --choice-gap: .75rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   min-width: 0;
   min-height: 0;
   height: 100%;
-  padding: clamp(.25rem, 1.5vh, 1rem) max(.5rem, env(safe-area-inset-left)) clamp(.25rem, 1.5vh, 1rem) max(.5rem, env(safe-area-inset-right));
+  padding: clamp(.5rem, 3vh, 2rem) max(.5rem, env(safe-area-inset-left)) clamp(.25rem, 1.5vh, 1rem) max(.5rem, env(safe-area-inset-right));
 }
 
 .question-viewport[data-density="compact"] {
@@ -133,7 +133,9 @@ html.questionnaire-active, html.questionnaire-active body { overflow: hidden; ov
 }
 
 .question-heading-group { display: flex; flex-direction: column; align-items: center; gap: var(--question-gap); }
-.question-heading-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem; width: 100%; }
+.question-heading-row { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: .5rem; width: 100%; }
+.question-heading-row > .question-heading { grid-column: 2; grid-row: 1; }
+.question-heading-row > button { grid-column: 3; grid-row: 1; }
 .question-heading { min-width: 0; font-size: calc(var(--question-heading) * var(--question-font-scale)); font-weight: 900; line-height: 1.2; }
 .question-text { min-width: 0; width: 100%; font-size: calc(var(--question-text) * var(--question-font-scale)); font-weight: 800; line-height: 1.4; }
 /* Even positioned rich HTML cannot paint outside its text area onto controls. */
@@ -214,3 +216,12 @@ html.questionnaire-active, html.questionnaire-active body { overflow: hidden; ov
 @media (prefers-reduced-motion: reduce) {
   .questionnaire-shell *, .questionnaire-dialog * { transition-duration: 0s !important; animation-duration: 0s !important; }
 }
+
+/* Section introductions keep their text but use consistent reading typography. */
+.question-section { width: 100%; text-align: left; font-size: calc(1rem * var(--question-font-scale)); font-weight: 400; line-height: 1.65; }
+.question-section-title { margin-bottom: 1.5rem; text-align: center; font-size: calc(var(--question-text) * var(--question-font-scale)); font-weight: 800; text-transform: uppercase; }
+.question-section-body > * + * { margin-top: 1rem; }
+.question-section-body ul { list-style: disc; padding-left: 1.5rem; }
+.question-section-body ol { list-style: decimal; padding-left: 1.5rem; }
+.question-section-body a { text-decoration: underline; }
+.question-section-body { display: flow-root; contain: paint; isolation: isolate; }

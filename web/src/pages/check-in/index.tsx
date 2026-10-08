@@ -1,3 +1,4 @@
+import { PageBackLink } from '@/components/page-back-link'
 import { Link } from 'react-router-dom'
 import { useAtomValue } from 'jotai'
 import { studySettingsAtom, useAnswers, userDataAtom } from '@/state'
@@ -60,8 +61,9 @@ function CheckInCard({
       >
         <h2
           className={cn(
-            'max-w-[82%] text-sm font-black leading-tight text-foreground [overflow-wrap:anywhere] sm:text-xl sm:leading-none',
-            titleClassName
+            'max-w-[82%] text-sm font-black leading-tight text-foreground [overflow-wrap:anywhere] sm:text-base sm:leading-tight',
+            titleClassName,
+            complete && 'pr-10 sm:px-8'
           )}
         >
           {title}
@@ -116,7 +118,7 @@ export default function CheckInPage() {
   return (
     <div className="space-y-6">
       <div className="space-y-4">
-        <h1 className="text-4xl font-black leading-tight md:text-5xl">
+        <h1 className="text-3xl font-black leading-tight md:text-4xl">
           Här checkar du in!
         </h1>
         <div className="max-w-2xl space-y-4 text-lg font-semibold leading-snug">
@@ -141,14 +143,14 @@ export default function CheckInPage() {
           mobileArt={registrationArtMobile}
           art={registrationArt}
           complete={dailyComplete}
-          titleClassName="max-w-[78%]"
+          titleClassName="max-w-full"
         />
         <CheckInCard
           title="Fyll i formulär - annan dag"
           href={`/forms/${dailyQuestionnaire}/history`}
           mobileArt={calendarArtMobile}
           art={calendarArt}
-          titleClassName="max-w-[84%]"
+          titleClassName="max-w-full"
         />
         <CheckInCard
           title="Startdatum strålbehandling:"
@@ -168,6 +170,7 @@ export default function CheckInPage() {
           titleClassName="max-w-[80%]"
         />
       </section>
+      <PageBackLink />
     </div>
   )
 }

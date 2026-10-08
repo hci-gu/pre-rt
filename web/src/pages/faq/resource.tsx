@@ -1,3 +1,4 @@
+import { PageBackLink } from '@/components/page-back-link'
 import ResourceAccordion from '@/components/resourceCollection'
 import { resourceCollectionAtom, userDataAtom } from '@/state'
 import { useAtomValue } from 'jotai'
@@ -16,11 +17,12 @@ export default function FaqResourcePage() {
   return (
     <div className="space-y-7">
       <div className="space-y-2">
-        <h1 className="text-3xl font-black md:text-4xl">
+        <h1 className="text-2xl font-black">
           {collection.pageTitle || collection.name}
         </h1>
       </div>
       <ResourceAccordion collection={collection} showHeader={false} />
+      <PageBackLink to="/faq">Tillbaka till frågor och svar</PageBackLink>
 
     </div>
   )

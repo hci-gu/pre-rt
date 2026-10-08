@@ -33,7 +33,7 @@ export default function TreatmentEndForm({ questionnaire }: { questionnaire: Que
     refreshUser()
     refreshSchedule()
     await refreshAnswers()
-    navigate('/check-in')
+    navigate('/')
   }
 
   return (

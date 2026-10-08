@@ -104,7 +104,6 @@ function HomePage() {
           desktopIllustration={initialQuestionnaireArtWide}
           complete={baselineAnswered}
           href={baselineAnswered ? undefined : `/forms/${baselineQuestionnaire}`}
-          titleClassName="max-w-[70%]"
         />
 
         <StudyTaskCard
@@ -119,7 +118,6 @@ function HomePage() {
           illustration={faqArtSquare}
           desktopIllustration={faqArtWide}
           href="/faq"
-          titleClassName="max-w-[78%]"
         />
 
         <StudyTaskCard
@@ -134,7 +132,6 @@ function HomePage() {
           illustration={afterTreatmentArtSquare}
           desktopIllustration={afterTreatmentArtWide}
           href="/after-treatment"
-          titleClassName="max-w-[76%] text-foreground"
         />
       </section>
 

@@ -1,3 +1,4 @@
+import { PageBackLink } from '@/components/page-back-link'
 import { aboutCollectionAtom, readAboutPageAtom } from '@/state'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useEffect } from 'react'
@@ -16,10 +17,11 @@ function AboutPage() {
 
   return (
     <div className="space-y-7">
-      <h1 className="text-2xl font-black leading-tight md:text-4xl">
+      <h1 className="text-2xl font-black leading-tight">
         {collection.pageTitle || collection.name}
       </h1>
       <ResourceAccordion collection={collection} showHeader={false} />
+      <PageBackLink />
     </div>
   )
 }

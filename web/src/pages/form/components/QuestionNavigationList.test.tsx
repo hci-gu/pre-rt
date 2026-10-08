@@ -1,4 +1,5 @@
-import { afterEach, describe, expect, it, vi } from 'vitest'
+// @vitest-environment jsdom
+import { describe, expect, it, vi } from 'vitest'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { FormProvider, useForm } from 'react-hook-form'
 import type { ReactNode } from 'react'
@@ -16,16 +17,10 @@ vi.mock('@/components/ui/dialog', () => {
   ].map((name) => [name, Children]))
 })
 
-afterEach(() => vi.unstubAllGlobals())
 
 describe('question menu follows the resolved questionnaire', () => {
   it.each(['sdzkpd49ndccf5b', 'replacement-form'])(
     'includes either dependency branch and stored sections for %s', (id) => {
-      vi.stubGlobal('DOMParser', class {
-        parseFromString(text: string) {
-          return { documentElement: { textContent: text } }
-        }
-      })
       const questionnaire: Questionnaire = {
         id, name: 'Test', description: '', occurrence: 'daily', dependency: [],
         questions: [

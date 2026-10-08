@@ -1,3 +1,4 @@
+import { PageBackLink } from '@/components/page-back-link'
 import { useAtom, useAtomValue } from 'jotai'
 import { authAtom, pb, studySettingsAtom, userDataAtom } from '../../state'
 import { Card } from '@/components/ui/card'
@@ -22,7 +23,7 @@ function ProfilePage() {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h1 className="text-4xl font-black md:text-5xl">Profil</h1>
+        <h1 className="text-3xl font-black md:text-4xl">Profil</h1>
       </div>
       <Card className="border-0 bg-white p-6 shadow-none">
         <div className="grid gap-6 sm:grid-cols-2">
@@ -54,6 +55,7 @@ function ProfilePage() {
         <LogOut className="mr-2 h-4 w-4" />
         Logga ut
       </Button>
+      <div><PageBackLink /></div>
     </div>
   )
 }

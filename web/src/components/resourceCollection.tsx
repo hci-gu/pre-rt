@@ -186,12 +186,12 @@ export default function ResourceAccordion({
             value={resourceAnchor(resource)}
             key={resource.id}
             id={resourceAnchor(resource)}
-            className="scroll-mt-24 border-0"
+            className="scroll-mt-24 rounded-xl border-0 data-[state=open]:bg-white"
           >
-            <AccordionTrigger className="group rounded-xl bg-primary px-5 py-4 text-left text-lg font-black text-foreground hover:no-underline">
+            <AccordionTrigger className="group rounded-xl bg-primary px-5 py-4 text-left text-lg font-black text-foreground hover:no-underline [&>svg]:h-6 [&>svg]:w-6 [&>svg]:text-foreground">
               <span>{resource.title}</span>
             </AccordionTrigger>
-            <AccordionContent className="mt-2 rounded-xl bg-white px-5 py-6">
+            <AccordionContent className="rounded-b-xl px-5 py-6">
               <div className="max-w-none">
                 <Resource resource={resource} />
               </div>
