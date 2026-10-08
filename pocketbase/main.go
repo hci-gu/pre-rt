@@ -44,7 +44,13 @@ var testLoginIDPattern = regexp.MustCompile(`^[a-z0-9]{15}$`)
 const WEB_URL = "https://pre-rt.test.appadem.in"
 const API_URL = "https://pre-rt-api.test.appadem.in"
 
-// const WEB_URL = "http://localhost:5173"
+// Deployment defaults stay unchanged; local development sets these explicitly.
+func configuredURL(name, fallback string) string {
+	if value := strings.TrimSpace(os.Getenv(name)); value != "" {
+		return strings.TrimRight(value, "/")
+	}
+	return fallback
+}
 
 func testLoginUserID() (string, bool) {
 	if !strings.EqualFold(strings.TrimSpace(os.Getenv("APP_ENV")), "test") {
@@ -284,7 +290,7 @@ func sendTreatmentEndReminder(app *pocketbase.PocketBase, user *core.Record) {
 		app.Logger().Error("Skipping treatment-end reminder: invalid study settings", "error", err)
 		return
 	}
-	link := WEB_URL + "/forms/" + settings.TreatmentEndQuestionnaire
+	link := configuredURL("WEB_URL", WEB_URL) + "/forms/" + settings.TreatmentEndQuestionnaire
 
 	sendText(user.GetString("phoneNumber"), "Hej! Det är nu 5 veckor efter behandlingsstart, du kan fylla i slutdatum här: "+link)
 }
@@ -432,7 +438,7 @@ func checkAndSendNotification(app *pocketbase.PocketBase, user *core.Record, que
 	}
 
 	date := time.Now().Format("2006-01-02")
-	link := WEB_URL + "/forms/" + questionnaire.Id + "?date=" + date
+	link := configuredURL("WEB_URL", WEB_URL) + "/forms/" + questionnaire.Id + "?date=" + date
 
 	sendText(user.GetString("phoneNumber"), "Hej! Glöm inte att svara på din enkät idag!"+link)
 }
@@ -529,20 +535,15 @@ func main() {
 				return err
 			}
 			// Build mapping for question details.
-			type QuestionInfo struct {
-				Name    string   // rich text stripped (assume you have a helper stripHTML already defined)
-				Type    string   // e.g. "multipleChoice"
-				Options []string // for multipleChoice, a list of possible options
-			}
-			questionInfoMap := make(map[string]QuestionInfo)
+			questionInfoMap := make(map[string]answerexport.QuestionInfo)
 			// (Assume questionOptions have been fetched and processed similarly elsewhere.)
 			questionOptionsCache := make(map[string][]string)
 			for _, qRec := range questionRecs {
-				qi := QuestionInfo{
+				qi := answerexport.QuestionInfo{
 					Name: stripHTML(qRec.GetString("text")),
 					Type: qRec.GetString("type"),
 				}
-				if qi.Type == "multipleChoice" {
+				if qi.Type == "multipleChoice" || qi.Type == "singleChoice" {
 					optionsID := qRec.GetString("options")
 					if optionsID != "" {
 						if opts, ok := questionOptionsCache[optionsID]; ok {
@@ -570,8 +571,20 @@ func main() {
 				questionInfoMap[qRec.Id] = qi
 			}
 
+			questionnaireNames := make(map[string]string)
+			for id, record := range questionnairesMap {
+				questionnaireNames[id] = record.GetString("name")
+			}
+
 			var buf bytes.Buffer
 			zipWriter := zip.NewWriter(&buf)
+			participants, err := app.FindRecordsByFilter("users", "", "id", 0, 0, nil)
+			if err != nil {
+				return err
+			}
+			if err := answerexport.WriteParticipants(zipWriter, participants); err != nil {
+				return err
+			}
 
 			// Process each questionnaire group.
 			for qid, recs := range groupedAnswers {
@@ -590,9 +603,7 @@ func main() {
 					if _, exists := questionInfoMap[key]; exists {
 						continue
 					}
-					if source, exists := questionInfoMap[answerexport.SourceQuestion(key)]; exists {
-						questionInfoMap[key] = source
-					}
+					questionInfoMap[key] = answerexport.ResolveInfo(key, questionInfoMap, questionnaireNames)
 				}
 
 				// Expand columns: for multipleChoice questions, create a column per option.
@@ -614,7 +625,7 @@ func main() {
 					}
 				}
 				idHeaders := append(baseHeaders, expandedIDHeaders...)
-				humanHeaders := append(baseHeaders, expandedHumanHeaders...)
+				humanHeaders := answerexport.UniqueHeaders(append(baseHeaders, expandedHumanHeaders...), idHeaders)
 
 				questionnaireName := qid
 				if qRec, ok := questionnairesMap[qid]; ok {
@@ -644,6 +655,11 @@ func main() {
 					// For each question in order, expand the answer.
 					for _, qKey := range questionIDs {
 						if qi, ok := questionInfoMap[qKey]; ok && qi.Type == "multipleChoice" && len(qi.Options) > 0 {
+							// Missing and empty answers are not negative responses.
+							if answerexport.MissingAnswer(ansMap[qKey]) {
+								expandedValues = append(expandedValues, make([]string, len(qi.Options))...)
+								continue
+							}
 							// Parse the stored answer into a slice of strings.
 							var selectedAnswers []string
 							if rawVal, exists := ansMap[qKey]; exists {
@@ -988,7 +1004,7 @@ func main() {
 			return badRequestErr
 		}
 
-		link := WEB_URL + "/login/" + otp.Id + "?code=" + otp.GetString("password")
+		link := configuredURL("WEB_URL", WEB_URL) + "/login/" + otp.Id + "?code=" + otp.GetString("password")
 
 		sendText(phoneNumber, "Välkommen till Sahlgrenska forskningsprojekt PreRT. registrera dig här: "+link)
 
@@ -1012,7 +1028,7 @@ func main() {
 	})
 
 	app.OnRecordAfterCreateSuccess("exports").BindFunc(func(e *core.RecordEvent) error {
-		e.Record.Set("link", fmt.Sprintf("%s/data-export/%s", API_URL, e.Record.Id))
+		e.Record.Set("link", fmt.Sprintf("%s/data-export/%s", configuredURL("API_URL", API_URL), e.Record.Id))
 
 		// save
 		if err := e.App.Save(e.Record); err != nil {

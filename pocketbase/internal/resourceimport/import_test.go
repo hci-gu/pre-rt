@@ -93,6 +93,20 @@ func mutate(t *testing.T, path string, fn func(*Bundle)) {
 		t.Fatal(e)
 	}
 }
+func TestImportSkipsAbsentLegacyRetirements(t *testing.T) {
+	app, path := fixture(t)
+	mutate(t, path, func(b *Bundle) {
+		b.Retirements = []Retirement{
+			{Collection: "resource", ID: "absentresource1"},
+			{Collection: "resourceCollection", ID: "absentcategory1"},
+		}
+	})
+	apply(t, app, plan(t, app, path))
+	if got := apply(t, app, plan(t, app, path)); got != "unchanged" {
+		t.Fatal(got)
+	}
+}
+
 func TestImportIdempotenceRenameConflictAndRollback(t *testing.T) {
 	app, path := fixture(t)
 	p := plan(t, app, path)

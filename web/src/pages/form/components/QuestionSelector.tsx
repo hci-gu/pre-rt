@@ -36,6 +36,16 @@ const renderQuestionType = (
 ) => {
   switch (question.type) {
     case 'text':
+      return (
+        <textarea
+          {...field}
+          aria-label={question.text.replace(/<[^>]*>/g, '')}
+          value={field.value ?? ''}
+          placeholder={question.placeholder || 'Valfri kommentar'}
+          rows={4}
+          className="min-h-28 w-full resize-y rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+        />
+      )
     case 'number':
       return (
         <div className="flex min-w-0 items-center gap-3">

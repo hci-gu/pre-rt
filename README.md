@@ -24,12 +24,15 @@ Run `cd pocketbase` then `./dev.sh`. This starts PocketBase in local test mode a
 2. Frontend (Vite):
 Run `cd web`, `pnpm install`, then `VITE_API_URL=http://127.0.0.1:8090 pnpm dev`. The app will be at `http://localhost:5173`.
 
-Note: SMS links and export links are built from `WEB_URL` and `API_URL` constants in `pocketbase/main.go`. For local testing, update those constants (there is a commented local `WEB_URL` example).
+Note: `./dev.sh` sets local `WEB_URL` and `API_URL` values so invitation, reminder, and export links stay on localhost. When starting the backend directly with `go run . serve`, set these environment variables yourself; unset values retain the hosted test defaults.
 
 **Configuration**
 - `VITE_API_URL` (web): Base URL for the PocketBase API.
+- `WEB_URL` and `API_URL` (backend): Public app and API origins used in invitation, reminder, and export links.
 - `ELKS_API_USERNAME` and `ELKS_API_PASSWORD` (backend): 46elks SMS credentials. When running via `go run`, SMS messages are logged to the console instead of being sent.
 - `APP_ENV=test` together with `TEST_LOGIN_USER_ID` (backend): Enables the public test-account login. The id must be exactly 15 lowercase letters or digits. Both values are required; without them the test-login routes and UI are absent. Never set these on the production deployment.
+
+For the admin export's files, participant joins, missing-answer values and start timestamps, see [Export format](docs/export-format.md).
 
 **Backend Behavior**
 - OTP auth:

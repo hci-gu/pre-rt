@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { Link, useNavigate } from 'react-router-dom'
 import { answersForQuestionnaireAtom, dailyQuestionnaireScheduleAtom, pb, userDataAtom, type Questionnaire } from '@/state'
 import { Button } from '@/components/ui/button'
 import { DatePicker } from '@/components/ui/date-picker'
 import { format } from 'date-fns'
+import { useQuestionnaireDraftKey } from '../hooks/useFormState'
+import { readQuestionnaireDraft, saveQuestionnaireDraft } from '@/lib/questionnaire-drafts'
 
 // Only the configured treatment-end form is editable. Other once-only forms
 // continue through the normal completion guard.
@@ -14,16 +16,26 @@ export default function TreatmentEndForm({ questionnaire }: { questionnaire: Que
   const refreshSchedule = useSetAtom(dailyQuestionnaireScheduleAtom)
   const refreshAnswers = useSetAtom(answersForQuestionnaireAtom(questionnaire.id))
   const navigate = useNavigate()
-  const [date, setDate] = useState<Date | undefined>(user?.treatmentEnd)
+  const draftKey = useQuestionnaireDraftKey(questionnaire)
+  const [draft] = useState(() => readQuestionnaireDraft(draftKey))
+  const [started] = useState(() => draft ? draft.started ?? null : new Date().toISOString())
+  const [date, setDate] = useState<Date | undefined>(() => {
+    const value = draft?.answers.date
+    const saved = typeof value === 'string' ? new Date(value) : undefined
+    return saved && Number.isFinite(saved.getTime()) ? saved : user?.treatmentEnd
+  })
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
+  useEffect(() => {
+    saveQuestionnaireDraft(draftKey, { answers: { date: date?.toISOString() }, page: 0, started })
+  }, [draftKey, date, started])
 
   const save = async () => {
     if (!date || saving) return
     setSaving(true)
     setError('')
     try {
-      await pb.send('/treatment-end', { method: 'PUT', body: { date: format(date, 'yyyy-MM-dd') } })
+      await pb.send('/treatment-end', { method: 'PUT', body: { date: format(date, 'yyyy-MM-dd'), ...(started ? { started } : {}) } })
     } catch (cause) {
       const response = (cause as { response?: { message?: string } }).response
       setError(response?.message || 'Datumet kunde inte sparas. Ditt tidigare datum finns kvar. Försök igen.')
@@ -33,6 +45,7 @@ export default function TreatmentEndForm({ questionnaire }: { questionnaire: Que
     refreshUser()
     refreshSchedule()
     await refreshAnswers()
+    localStorage.removeItem(draftKey)
     navigate('/')
   }
 

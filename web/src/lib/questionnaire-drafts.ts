@@ -24,13 +24,13 @@ export function clearOtherParticipantDrafts(userId?: string) {
   } catch { /* Storage can be disabled; user-scoped keys still prevent reads across accounts. */ }
 }
 
-export type QuestionnaireDraft = { answers: Record<string, unknown>; page: number }
+export type QuestionnaireDraft = { answers: Record<string, unknown>; page: number; started?: string | null }
 
 export function readQuestionnaireDraft(key: string): QuestionnaireDraft | null {
   try {
     const value = JSON.parse(localStorage.getItem(key) ?? 'null')
-    return value && typeof value.answers === 'object' && value.answers !== null && !Array.isArray(value.answers) && Number.isInteger(value.page)
-      ? value : null
+    if (!value || typeof value.answers !== 'object' || value.answers === null || Array.isArray(value.answers) || !Number.isInteger(value.page)) return null
+    return { ...value, started: typeof value.started === 'string' && Number.isFinite(Date.parse(value.started)) ? value.started : null }
   } catch { return null }
 }
 

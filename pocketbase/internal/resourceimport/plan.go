@@ -270,12 +270,13 @@ func BuildPlan(app core.App, bundlePath string, review bool, prefer []string) (*
 		if r.Collection != "resource" && r.Collection != "resourceCollection" {
 			return nil, fmt.Errorf("invalid retirement collection")
 		}
-		before := snapshot[r.Collection][r.ID]
-		if before == nil {
-			return nil, fmt.Errorf("retirement record missing")
-		}
 		if claimed[r.Collection+"/"+r.ID] != "" {
 			return nil, fmt.Errorf("cannot retire a source section still in the bundle")
+		}
+		before := snapshot[r.Collection][r.ID]
+		if before == nil {
+			// Fresh installations never contained these legacy records.
+			continue
 		}
 		after := withoutMeta(before)
 		after["archived"] = true

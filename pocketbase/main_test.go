@@ -57,3 +57,18 @@ func TestTestLoginUserID(t *testing.T) {
 		})
 	}
 }
+
+func TestConfiguredURL(t *testing.T) {
+	for _, name := range []string{"WEB_URL", "API_URL"} {
+		t.Run(name, func(t *testing.T) {
+			t.Setenv(name, "")
+			if got := configuredURL(name, "https://example.test"); got != "https://example.test" {
+				t.Fatal(got)
+			}
+			t.Setenv(name, " http://127.0.0.1:8090/ ")
+			if got := configuredURL(name, "https://example.test"); got != "http://127.0.0.1:8090" {
+				t.Fatal(got)
+			}
+		})
+	}
+}

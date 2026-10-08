@@ -29,3 +29,20 @@ it('treats malformed drafts as absent rather than crashing the form', () => {
     expect(readQuestionnaireDraft('draft')).toBeNull()
   }
 })
+
+it('preserves start times and multiline comments across draft updates and reloads', () => {
+  const started = '2026-10-08T09:00:00.000Z'
+  saveQuestionnaireDraft('draft', { answers: { comment: 'Första raden, "åäö".\nAndra raden.' }, page: 2, started })
+  const restored = readQuestionnaireDraft('draft')!
+  saveQuestionnaireDraft('draft', { ...restored, page: 3 })
+  expect(readQuestionnaireDraft('draft')).toEqual({ ...restored, page: 3 })
+  expect(restored.started).toBe(started)
+  expect(restored.answers.comment).toBe('Första raden, "åäö".\nAndra raden.')
+})
+
+it('leaves start times unknown for legacy drafts and malformed timestamps', () => {
+  for (const started of [undefined, 'not-a-date', 123]) {
+    localStorage.setItem('draft', JSON.stringify({ answers: { age: '52' }, page: 1, started }))
+    expect(readQuestionnaireDraft('draft')?.started).toBeNull()
+  }
+})

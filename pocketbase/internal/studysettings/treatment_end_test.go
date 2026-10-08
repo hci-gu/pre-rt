@@ -102,17 +102,20 @@ func TestTreatmentEndHTTP(t *testing.T) {
 	}
 	request(`{"date":"2026-10-07"}`, "", 401)
 	request(`{"date":"2026-02-30"}`, token, 400)
-	first := request(`{"date":"2026-10-07","user":"`+other.Id+`"}`, token, 200)
+	request(`{"date":"2026-10-07","started":"bad timestamp"}`, token, 400)
+	first := request(`{"date":"2026-10-07","started":"2026-10-01T10:00:00Z","user":"`+other.Id+`"}`, token, 200)
 	answer, _ := app.FindRecordById("answers", first["answerId"])
+	if answer.GetString("started") != "2026-10-01 10:00:00.000Z" {
+		t.Fatal("start time not saved", answer.GetString("started"))
+	}
 	answer.Set("answers", map[string]string{question.Id: "2026-10-07", "keep": "existing answer value"})
-	answer.Set("started", "2026-10-01")
 	save(answer)
-	second := request(`{"date":"2026-10-12"}`, token, 200)
+	second := request(`{"date":"2026-10-12","started":"2026-10-08T10:00:00Z"}`, token, 200)
 	if first["answerId"] != second["answerId"] {
 		t.Fatal("edit created another answer")
 	}
 	answer, _ = app.FindRecordById("answers", first["answerId"])
-	if !strings.Contains(answer.GetString("answers"), "existing answer value") || !strings.Contains(answer.GetString("answers"), "2026-10-12") || answer.GetString("started")[:10] != "2026-10-01" {
+	if !strings.Contains(answer.GetString("answers"), "existing answer value") || !strings.Contains(answer.GetString("answers"), "2026-10-12") || answer.GetString("started") != "2026-10-01 10:00:00.000Z" {
 		t.Fatal("edit lost existing values or did not save the new date")
 	}
 	user, _ = app.FindRecordById("users", user.Id)

@@ -47,12 +47,12 @@ export const useScrollToLastAnsweredQuestion = (questionnaire: Questionnaire) =>
   }, [key, questions.length, setPage])
 }
 
-export const SyncFormStateToLocalStorage = ({ questionnaire }: { questionnaire: Questionnaire }) => {
+export const SyncFormStateToLocalStorage = ({ questionnaire, started }: { questionnaire: Questionnaire; started: string | null }) => {
   const { control } = useFormContext()
   const values = useWatch({ control })
   const page = useAtomValue(formPageAtom)
   const key = useQuestionnaireDraftKey(questionnaire)
-  useEffect(() => { saveQuestionnaireDraft(key, { answers: values, page }) }, [key, values, page])
+  useEffect(() => { saveQuestionnaireDraft(key, { answers: values, page, started }) }, [key, values, page, started])
   return null
 }
 

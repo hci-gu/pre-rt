@@ -15,7 +15,7 @@ var ErrMultipleTreatmentEndAnswers = errors.New("multiple treatment-end answers"
 
 // SaveTreatmentEnd keeps the answer used by exports and the date used by
 // schedules in one transaction. Editing never creates a second answer.
-func SaveTreatmentEnd(app core.App, userID string, date time.Time) (*core.Record, error) {
+func SaveTreatmentEnd(app core.App, userID string, date, started time.Time) (*core.Record, error) {
 	var answer *core.Record
 	err := app.RunInTransaction(func(tx core.App) error {
 		settings, err := Load(tx)
@@ -50,6 +50,9 @@ func SaveTreatmentEnd(app core.App, userID string, date time.Time) (*core.Record
 			answer.Set("user", userID)
 			answer.Set("questionnaire", settings.TreatmentEndQuestionnaire)
 			answer.Set("date", time.Now().UTC().Format(time.DateOnly))
+			if !started.IsZero() {
+				answer.Set("started", started)
+			}
 		}
 		if values == nil {
 			values = map[string]any{}
@@ -70,7 +73,8 @@ func HandleTreatmentEnd(e *core.RequestEvent) error {
 		return apis.NewUnauthorizedError("Logga in för att spara datumet.", nil)
 	}
 	var data struct {
-		Date string `json:"date"`
+		Date    string `json:"date"`
+		Started string `json:"started"`
 	}
 	if err := e.BindBody(&data); err != nil {
 		return apis.NewBadRequestError("Ange ett giltigt datum.", nil)
@@ -79,7 +83,14 @@ func HandleTreatmentEnd(e *core.RequestEvent) error {
 	if err != nil || date.IsZero() || len(data.Date) != 10 {
 		return apis.NewBadRequestError("Ange ett giltigt datum.", nil)
 	}
-	answer, err := SaveTreatmentEnd(e.App, e.Auth.Id, date)
+	var started time.Time
+	if data.Started != "" {
+		started, err = time.Parse(time.RFC3339Nano, data.Started)
+		if err != nil {
+			return apis.NewBadRequestError("Ogiltig starttid.", nil)
+		}
+	}
+	answer, err := SaveTreatmentEnd(e.App, e.Auth.Id, date, started)
 	if errors.Is(err, ErrMultipleTreatmentEndAnswers) {
 		return apis.NewApiError(http.StatusConflict, "Det finns flera registrerade slutdatum. Kontakta studiepersonalen för hjälp.", nil)
 	}

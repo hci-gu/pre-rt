@@ -41,6 +41,7 @@ import TreatmentEndForm from './components/TreatmentEndForm'
 import { QuestionnaireQuickExit, QuestionnaireSafetyProvider, useQuestionnaireSafety } from './questionnaire-safety'
 import { eligibleHistoryDate } from './history/history-calendar'
 import './questionnaire.css'
+import { readQuestionnaireDraft } from '@/lib/questionnaire-drafts'
 
 const ProgressBar = ({ questionnaire }: { questionnaire: Questionnaire }) => {
   const questions = useQuestions(questionnaire)
@@ -259,6 +260,11 @@ const LoadedForm = ({
 
   const { dailyQuestionnaire } = useAtomValue(studySettingsAtom)
   const draftKey = useQuestionnaireDraftKey(questionnaire)
+  const [started] = useState(() => {
+    const draft = readQuestionnaireDraft(draftKey)
+    // Older drafts have no known start time; never invent one on resume.
+    return draft ? draft.started ?? null : new Date().toISOString()
+  })
   const [, setPage] = useAtom(formPageAtom)
   const onSubmit = async (data: FieldValues) => {
     const submission = prepareSubmission(questionnaire, data)
@@ -274,7 +280,7 @@ const LoadedForm = ({
       const date = new URLSearchParams(window.location.search).get('date')
 
       await Promise.allSettled([
-        await submitQuestionnaire(questionnaire.id, submission.answers, date),
+        await submitQuestionnaire(questionnaire.id, submission.answers, date, started),
         new Promise((resolve) => setTimeout(resolve, 1000)),
       ])
     } catch (e) {
@@ -299,7 +305,7 @@ const LoadedForm = ({
         onSubmit={(e) => e.preventDefault()}
       >
         <InitiallyScrollToLastAnsweredQuestion questionnaire={questionnaire} />
-        <SyncFormStateToLocalStorage questionnaire={questionnaire} />
+        <SyncFormStateToLocalStorage questionnaire={questionnaire} started={started} />
         <header className="questionnaire-header">
           <QuestionNavigationList questionnaire={questionnaire} />
           <ProgressBar questionnaire={questionnaire} />

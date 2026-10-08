@@ -436,12 +436,14 @@ export const useAnswers = (questionnaireId: string) => {
 export const submitQuestionnaire = async (
   questionnaireId: string,
   answers: any,
-  date: string | null = null
+  date: string | null = null,
+  started: string | null = null
 ) => {
   const response = await pb.collection('answers').create({
     user: pb.authStore.model?.id,
     questionnaire: questionnaireId,
     answers,
+    ...(started ? { started } : {}),
     date: date ? new Date(date) : dayStringFromDate(new Date()),
   })
   return response

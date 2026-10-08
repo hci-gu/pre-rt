@@ -87,12 +87,21 @@ function HomePage() {
         </p>
       </section>
 
+      <section aria-label="Registrering" className="rounded-xl bg-white p-4 text-sm sm:text-base">
+        <h2 className="font-black">Du är registrerad av studieteamet</h2>
+        <p className="mt-1">
+          {treatmentStart
+            ? `Din strålbehandling börjar ${treatmentStart.toLocaleDateString('sv-SE')}. Du behöver inte registrera dig själv.`
+            : 'Vi väntar på ditt startdatum för strålbehandlingen. Studieteamet lägger in datumet åt dig. Du behöver inte registrera dig själv.'}
+        </p>
+      </section>
+
       <section
         aria-label="Studieöversikt"
         className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,8.5rem),1fr))] gap-3 sm:grid-cols-[repeat(auto-fit,minmax(min(100%,17rem),1fr))] sm:gap-x-7 sm:gap-y-5"
       >
         <StudyTaskCard
-          title="Registrera dig"
+          title={treatmentStart ? 'Registrerad' : 'Inväntar behandlingsstart'}
           illustration={registrationArtSquare}
           desktopIllustration={registrationArtWide}
           complete={Boolean(treatmentStart)}
