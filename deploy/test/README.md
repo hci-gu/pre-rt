@@ -18,6 +18,12 @@ succeed or the API cannot start. The packaged questionnaire
 snapshot contains no users or answers. Its importer requires `APP_ENV=test`,
 validates all relations in one transaction, and leaves participant data intact. No manual import, backup or approval steps.
 
+The initializer also populates empty FAQ card image fields with the original
+wide/mobile illustrations packaged in the API image. It matches the five standard
+categories by `sourceKey` and preserves existing uploaded artwork. Missing required
+artwork or category records fail initialization rather than silently shipping blank
+cards. See `scripts/resources/resources seed-card-images` for the local equivalent.
+
 `content/questionnaires/production-20261007.json` is the reviewed definition
 snapshot, including the approved local introduction and help corrections. Update
 that source when changing test questionnaire definitions: the next deployment

@@ -29,11 +29,12 @@ func run() error {
 	review := flags.Bool("review", false, "Draft import, isolated review DB only")
 	prefer := flags.String("prefer-source", "", "Comma-separated collection/id conflicts explicitly resolved in favor of Word")
 	input := flags.String("snapshot", "", "Content-only snapshot to load into an isolated review DB")
+	cardAssets := flags.String("card-assets", "", "Directory containing original FAQ card artwork")
 	if err := flags.Parse(os.Args[1:]); err != nil {
 		return err
 	}
 	if *dir == "" || flags.NArg() != 1 {
-		return fmt.Errorf("usage: resources --dir <path> [flags] init-review|migrate|snapshot|load-review|plan|apply|verify|rollback")
+		return fmt.Errorf("usage: resources --dir <path> [flags] init-review|migrate|snapshot|load-review|plan|apply|verify|rollback|seed-card-images")
 	}
 	command := flags.Arg(0)
 	if command == "init-review" {
@@ -59,6 +60,12 @@ func run() error {
 	}
 	defer app.ResetBootstrapState()
 	switch command {
+	case "seed-card-images":
+		changed, err := resourceimport.SeedCardImages(app, *cardAssets)
+		if err != nil {
+			return err
+		}
+		fmt.Printf("FAQ card artwork restored: %d; existing artwork and content preserved\n", changed)
 	case "init-review", "migrate":
 		if err = app.RunAllMigrations(); err != nil {
 			return err

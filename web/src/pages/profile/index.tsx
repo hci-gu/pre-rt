@@ -1,13 +1,14 @@
 import { useAtom, useAtomValue } from 'jotai'
-import { authAtom, pb, userDataAtom } from '../../state'
+import { authAtom, pb, studySettingsAtom, userDataAtom } from '../../state'
 import { Card } from '@/components/ui/card'
-import { DatePicker } from '@/components/ui/date-picker'
+import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { LogOut } from 'lucide-react'
 
 function ProfilePage() {
   const [, setAuth] = useAtom(authAtom)
   const userData = useAtomValue(userDataAtom)
+  const { treatmentEndQuestionnaire } = useAtomValue(studySettingsAtom)
 
   const handleLogout = () => {
     pb.authStore.clear()
@@ -32,16 +33,14 @@ function ProfilePage() {
           <div>
             <h2 className="text-xl font-black">Behandlingsstart</h2>
             <div className="mt-2">
-              <DatePicker
-                date={userData.treatmentStart}
-                onChange={() => {}}
-              />
+              <p>{userData.treatmentStart?.toLocaleDateString('sv-SE') ?? 'Ej angivet'}</p>
             </div>
           </div>
           <div>
             <h2 className="text-xl font-black">Behandlingsslut</h2>
             <div className="mt-2">
-              <DatePicker date={userData.treatmentEnd} onChange={() => {}} />
+              <p>{userData.treatmentEnd?.toLocaleDateString('sv-SE') ?? 'Ej angivet'}</p>
+              <Link to={`/forms/${treatmentEndQuestionnaire}`} className="mt-2 inline-block font-bold underline">{userData.treatmentEnd ? 'Ändra slutdatum' : 'Ange slutdatum'}</Link>
             </div>
           </div>
         </div>

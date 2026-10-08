@@ -21,6 +21,7 @@ import FormSuccessPage from './pages/form/success.tsx'
 import FaqPage from './pages/faq/index.tsx'
 import FaqMorePage from './pages/faq/more.tsx'
 import FaqResourcePage from './pages/faq/resource.tsx'
+import RouteError from './components/route-error'
 import StudySettingsGate from './components/study-settings-gate.tsx'
 
 const WithAuthLayout = ({ children }: { children: ReactNode }) => {
@@ -36,7 +37,9 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <RootPage />,
+    errorElement: <RouteError />,
     children: [
+      { path: "*", element: <RouteError notFound /> },
       {
         path: '',
         element: (

@@ -18,4 +18,10 @@
 !content/resources/generated/bundle.json
 !content/resources/generated/assets/
 !content/resources/generated/assets/*.png
+!web/
+!web/src/
+!web/src/assets/
+!web/src/assets/redesign/
+!web/src/assets/redesign/faq-categories/
+!web/src/assets/redesign/faq-categories/*-card-*.svg
 **/*_test.go

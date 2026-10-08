@@ -18,6 +18,7 @@ COPY --from=build /out/app /out/resources /out/testquestionnaires /pb/
 COPY content/resources/generated/bundle.json /pb/content/bundle.json
 COPY content/resources/generated/assets/ /pb/content/assets/
 COPY content/questionnaires/production-20261007.json /pb/content/questionnaires.json
+COPY web/src/assets/redesign/faq-categories/*-card-*.svg /pb/content/faq-cards/
 EXPOSE 8080
 USER 1001
 CMD ["/pb/app", "serve", "--dir=/pb/pb_data", "--http=0.0.0.0:8080"]

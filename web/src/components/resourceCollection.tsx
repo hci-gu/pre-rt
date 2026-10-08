@@ -124,7 +124,8 @@ export default function ResourceAccordion({
       } else if (openResource) {
         const element = root.current?.querySelector<HTMLElement>(`[id="${CSS.escape(openResource)}"]`)
         if (element) {
-          const headerHeight = document.querySelector('header')?.getBoundingClientRect().height || 0
+          const header = document.querySelector('header')
+          const headerHeight = header && getComputedStyle(header).position === 'sticky' ? header.getBoundingClientRect().height : 0
           window.scrollTo({ top: window.scrollY + element.getBoundingClientRect().top - headerHeight - 16, behavior: 'instant' })
         }
       } else if (!location.hash && navigationType !== 'POP') {

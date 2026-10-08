@@ -264,7 +264,7 @@ test.describe('questionnaire form', () => {
       draft_second: '6',
     })
     await expect
-      .poll(() => page.evaluate((key) => localStorage.getItem(key), questionnaire.id))
+      .poll(() => page.evaluate((key) => localStorage.getItem(`questionnaire-draft:v2:test-user:${key}`), questionnaire.id))
       .toBeNull()
   })
 

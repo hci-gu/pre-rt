@@ -1,15 +1,16 @@
-import { Suspense, useEffect, useState } from 'react'
+import { type ReactNode, Suspense, useEffect, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { motion, interpolate } from 'framer-motion'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useAtom, useAtomValue } from 'jotai'
 import {
   answersForQuestionnaireAtom,
-  formStateAtom,
+  authAtom,
   Questionnaire,
   questionnaireAtom,
   submitQuestionnaire,
   studySettingsAtom,
+  dailyQuestionnaireScheduleAtom,
 } from '@/state'
 import QuestionSelector from './components/QuestionSelector'
 import { Form } from '@/components/ui/form'
@@ -23,11 +24,13 @@ import {
 } from '@radix-ui/react-icons'
 import { useToast } from '@/hooks/use-toast'
 import useQuestions from './hooks/useQuestions'
+import { prepareSubmission } from './answers'
 import { answeredUpTo, canProceedAtom, formPageAtom } from './state'
 import { questionnaireAnswered } from '@/utils'
 import useFormStateWithCache, {
   keyForQuestionnaire,
-  type QuestionnaireFormSchema,
+  useQuestionnaireDraftKey,
+  questionnaireDate,
   SyncFormStateToLocalStorage,
   useScrollToLastAnsweredQuestion,
 } from './hooks/useFormState'
@@ -36,6 +39,7 @@ import AdaptiveQuestionPanel from './components/AdaptiveQuestionPanel'
 import useVisualViewport from './hooks/useVisualViewport'
 import TreatmentEndForm from './components/TreatmentEndForm'
 import { QuestionnaireQuickExit, QuestionnaireSafetyProvider, useQuestionnaireSafety } from './questionnaire-safety'
+import { eligibleHistoryDate } from './history/history-calendar'
 import './questionnaire.css'
 
 const ProgressBar = ({ questionnaire }: { questionnaire: Questionnaire }) => {
@@ -237,10 +241,8 @@ const InitiallyScrollToLastAnsweredQuestion = ({
 
 const LoadedForm = ({
   questionnaire,
-  formSchema,
 }: {
   questionnaire: Questionnaire
-  formSchema: QuestionnaireFormSchema
 }) => {
   useVisualViewport()
   const navigate = useNavigate()
@@ -250,17 +252,25 @@ const LoadedForm = ({
   const page = useAtomValue(formPageAtom)
   const form = useFormStateWithCache({
     questionnaire,
-    formSchema,
   })
 
+  const draftKey = useQuestionnaireDraftKey(questionnaire)
+  const [, setPage] = useAtom(formPageAtom)
   const onSubmit = async (data: FieldValues) => {
+    const submission = prepareSubmission(questionnaire, data)
+    form.clearErrors()
+    if (submission.errors.length) {
+      for (const error of submission.errors) form.setError(error.id, { type: 'validate', message: error.message })
+      setPage(submission.errors[0].index)
+      return
+    }
     setLoading(true)
     try {
       // get date from query params
       const date = new URLSearchParams(window.location.search).get('date')
 
       await Promise.allSettled([
-        await submitQuestionnaire(questionnaire.id, data, date),
+        await submitQuestionnaire(questionnaire.id, submission.answers, date),
         new Promise((resolve) => setTimeout(resolve, 1000)),
       ])
     } catch (e) {
@@ -273,7 +283,7 @@ const LoadedForm = ({
       setLoading(false)
       return
     }
-    localStorage.removeItem(keyForQuestionnaire(questionnaire))
+    localStorage.removeItem(draftKey)
     navigate('/form/success')
   }
 
@@ -309,9 +319,21 @@ const LoadedForm = ({
   )
 }
 
+const DailyEligibility = ({ date, children }: { date: Date; children: ReactNode }) => {
+  const schedule = useAtomValue(dailyQuestionnaireScheduleAtom)
+  if (!eligibleHistoryDate(date, schedule.startDate, schedule.endDate, new Date())) {
+    return <div className="mx-auto flex min-h-svh max-w-xl flex-col justify-center gap-5 p-6">
+      <h1 className="text-2xl font-black">Datumet ligger utanför formulärperioden</h1>
+      <p>Välj en tillgänglig dag i din formulärhistorik.</p>
+      <Button className="h-auto min-h-11 whitespace-normal py-3" onClick={() => window.location.assign(window.location.pathname + '/history')}>Till formulärhistoriken</Button>
+    </div>
+  }
+  return children
+}
+
 const FormPage = () => {
   const { id } = useParams()
-  const schema = useAtomValue(formStateAtom(id ?? ''))
+  const auth = useAtomValue(authAtom)
   const questionnaire = useAtomValue(questionnaireAtom(id ?? ''))
   const settings = useAtomValue(studySettingsAtom)
 
@@ -319,13 +341,13 @@ const FormPage = () => {
     answersForQuestionnaireAtom(questionnaire.id)
   )
   const queryDate = new URLSearchParams(window.location.search).get('date')
-  const date = queryDate ? new Date(queryDate) : new Date()
+  const date = questionnaireDate()
 
   useEffect(() => {
     if (questionnaire.id) {
       refreshAnswers()
     }
-  }, [questionnaire.id, refreshAnswers])
+  }, [questionnaire.id, auth?.id, refreshAnswers])
 
   const answered = questionnaireAnswered(questionnaire, answers, date)
 
@@ -350,7 +372,7 @@ const FormPage = () => {
     )
   }
 
-  return (
+  const content = (
     <ErrorBoundary
       fallback={
         <div className="flex justify-center items-center h-screen">
@@ -370,12 +392,15 @@ const FormPage = () => {
       }
     >
       <Suspense fallback={<div>Loading...</div>}>
-        {questionnaire && schema && (
-          <LoadedForm questionnaire={questionnaire} formSchema={schema} />
+        {questionnaire && (
+          <LoadedForm key={`${auth?.id}:${questionnaire.id}:${queryDate ?? "today"}`} questionnaire={questionnaire} />
         )}
       </Suspense>
     </ErrorBoundary>
   )
+  return questionnaire.id === settings.dailyQuestionnaire
+    ? <DailyEligibility date={date}>{content}</DailyEligibility>
+    : content
 }
 
 export default FormPage

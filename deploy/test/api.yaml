@@ -35,6 +35,7 @@ spec:
                         /pb/resources --dir /pb/pb_data --run "$run_id" verify
                       fi
                       APP_ENV=test /pb/testquestionnaires --dir /pb/pb_data --snapshot /pb/content/questionnaires.json
+                      /pb/resources --dir /pb/pb_data --card-assets /pb/content/faq-cards seed-card-images
                   volumeMounts:
                       - mountPath: /pb/pb_data
                         name: pre-rt-api-persistent-storage-test

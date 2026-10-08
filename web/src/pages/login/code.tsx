@@ -22,10 +22,11 @@ import { useParams } from 'react-router-dom'
 import { useSetAtom } from 'jotai'
 import { authAtom, pb } from '../../state'
 import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const loginSchema = z.object({
-  password: z.string().min(6).max(6),
+  password: z.string().regex(/^\d{6}$/, 'Ange den sexsiffriga koden.'),
 })
 
 function OTPPage() {
@@ -38,12 +39,15 @@ function OTPPage() {
   })
   const setAuth = useSetAtom(authAtom)
   const navigate = useNavigate()
+  const [pending, setPending] = useState(false)
+  const autoAttempted = useRef(false)
 
   useEffect(() => {
     // get query params
     const urlParams = new URLSearchParams(window.location.search)
 
-    if (urlParams.has('code')) {
+    if (urlParams.has('code') && !autoAttempted.current) {
+      autoAttempted.current = true
       const code = urlParams.get('code')
       form.setValue('password', code ?? '')
       onSubmit({ password: code ?? '' })
@@ -51,6 +55,9 @@ function OTPPage() {
   }, [])
 
   async function onSubmit(values: z.infer<typeof loginSchema>) {
+    if (pending) return
+    setPending(true)
+    form.clearErrors()
     try {
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/otp-verify`,
@@ -67,19 +74,23 @@ function OTPPage() {
       )
 
       if (!response.ok) {
-        throw new Error('OTP verification failed')
+        form.setError('password', { type: 'server', message: response.status === 401 || response.status === 403
+          ? 'Koden är felaktig eller har gått ut. Försök igen eller begär en ny kod.'
+          : 'Det gick inte att logga in. Försök igen om en stund.' })
+        return
       }
 
       const data = await response.json()
       pb.authStore.save(data.token, data.record)
 
-      document.cookie = pb.authStore.exportToCookie()
 
       setAuth(pb.authStore.model)
 
       navigate('/')
-    } catch (error) {
-      console.error('Login error:', error)
+    } catch {
+      form.setError('password', { type: 'server', message: 'Det gick inte att ansluta. Kontrollera din internetanslutning och försök igen.' })
+    } finally {
+      setPending(false)
     }
   }
 
@@ -89,12 +100,15 @@ function OTPPage() {
         <FormField
           control={form.control}
           name="password"
-          render={() => (
+          render={({ field }) => (
             <FormItem>
               <FormLabel>Engångskod</FormLabel>
               <FormControl>
                 <InputOTP
                   maxLength={6}
+                  value={field.value}
+                  disabled={pending}
+                  containerClassName="flex-wrap"
                   onChange={(value) => {
                     form.setValue('password', value)
                   }}
@@ -115,11 +129,12 @@ function OTPPage() {
               <FormDescription>
                 Kod skickad till ditt telefonnummer
               </FormDescription>
-              <FormMessage />
+              <FormMessage role="alert" />
             </FormItem>
           )}
         />
-        <Button type="submit">Skicka in</Button>
+        <Button type="submit" disabled={pending} className="h-auto min-h-11 max-w-full whitespace-normal py-2">{pending ? "Loggar in..." : "Skicka in"}</Button>
+        <Link to="/login" className="block font-bold underline">Begär en ny kod</Link>
       </form>
     </Form>
   )

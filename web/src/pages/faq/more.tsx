@@ -18,7 +18,7 @@ export default function FaqMorePage() {
           <ResourceAccordion key={collection.id} collection={collection} />
         ))}
       </div>
-      <Button asChild variant="secondary">
+      <Button asChild variant="secondary" className="h-auto min-h-11 max-w-full whitespace-normal py-3 text-center">
         <Link to="/faq">Tillbaka till frågor och svar</Link>
       </Button>
     </div>

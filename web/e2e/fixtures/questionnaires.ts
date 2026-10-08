@@ -192,14 +192,16 @@ export const seedAuthenticatedUser = async (page: Page) => {
 export const seedQuestionnaireDraft = async (
   page: Page,
   key: string,
-  answers: Record<string, unknown>
+  answers: Record<string, unknown>,
+  pageIndex = Object.keys(answers).length
 ) => {
   await page.addInitScript(
-    ({ storageKey, storageAnswers }) => {
-      window.localStorage.setItem(storageKey, JSON.stringify(storageAnswers))
+    ({ storageKey, storageAnswers, pageIndex }) => {
+      window.localStorage.setItem(storageKey, JSON.stringify({ answers: storageAnswers, page: pageIndex }))
     },
     {
-      storageKey: key,
+      storageKey: `questionnaire-draft:v2:test-user:${key}`,
+      pageIndex,
       storageAnswers: answers,
     }
   )

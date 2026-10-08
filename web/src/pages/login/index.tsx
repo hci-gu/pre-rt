@@ -18,7 +18,7 @@ import { authAtom, pb } from '../../state'
 import { z } from 'zod'
 
 const resetSchema = z.object({
-  phoneNumber: z.string().min(2).max(20),
+  phoneNumber: z.string().min(2, 'Ange ditt telefonnummer.').max(20, 'Kontrollera telefonnumret.'),
 })
 
 const LoginPage = () => {
@@ -47,24 +47,22 @@ const LoginPage = () => {
   }, [])
 
   async function onSubmit(values: z.infer<typeof resetSchema>) {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/otp-create`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        phoneNumber: values.phoneNumber,
-      }),
-    })
-    const data = await response.json()
-
-    if (response.ok) {
-      navigate(`${data.id}`)
-    } else {
-      form.setError('phoneNumber', {
-        type: 'manual',
-        message: data.message,
+    form.clearErrors()
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/otp-create`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phoneNumber: values.phoneNumber }),
       })
+      if (!response.ok) {
+        form.setError('phoneNumber', { type: 'server', message: response.status === 404
+          ? 'Kontrollera telefonnumret. Kontakta studieteamet om du inte kan logga in.'
+          : 'Koden kunde inte skickas. Försök igen om en stund.' })
+        return
+      }
+      const data = await response.json()
+      navigate(`/login/${data.id}`)
+    } catch {
+      form.setError('phoneNumber', { type: 'server', message: 'Det gick inte att ansluta. Kontrollera din internetanslutning och försök igen.' })
     }
   }
 
@@ -83,7 +81,6 @@ const LoginPage = () => {
 
       const data = await response.json()
       pb.authStore.save(data.token, data.record)
-      document.cookie = pb.authStore.exportToCookie()
       setAuth(pb.authStore.model)
       navigate('/')
     } catch {
@@ -108,11 +105,11 @@ const LoginPage = () => {
                     {...field}
                   />
                 </FormControl>
-                <FormMessage />
+                <FormMessage role="alert" />
               </FormItem>
             )}
           />
-          <Button type="submit">Skicka engångskod</Button>
+          <Button type="submit" disabled={form.formState.isSubmitting} className="h-auto min-h-11 max-w-full whitespace-normal py-2">{form.formState.isSubmitting ? "Skickar kod..." : "Skicka engångskod"}</Button>
         </form>
       </Form>
 
@@ -127,7 +124,7 @@ const LoginPage = () => {
           <Button
             type="button"
             variant="outline"
-            className="mt-4 w-full"
+            className="mt-4 h-auto min-h-11 w-full whitespace-normal py-2"
             disabled={testLoginPending}
             onClick={loginWithTestAccount}
           >

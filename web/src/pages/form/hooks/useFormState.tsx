@@ -1,110 +1,58 @@
-import type { Questionnaire } from '@/state'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { authAtom, pb, type Questionnaire } from '@/state'
 import { useForm, useFormContext, useWatch } from 'react-hook-form'
-import { useLayoutEffect, useRef } from 'react'
-import { useSetAtom } from 'jotai'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useAtomValue, useSetAtom } from 'jotai'
+import { useLocation } from 'react-router-dom'
 import { formPageAtom } from '../state'
 import useQuestions from './useQuestions'
+import { questionnaireDraftKey, readQuestionnaireDraft, saveQuestionnaireDraft } from '@/lib/questionnaire-drafts'
 
-export type QuestionnaireFormSchema = Parameters<typeof zodResolver>[0]
-
-export const keyForQuestionnaire = (
-  questionnaire: Questionnaire,
-  date = new Date()
-) => {
-  switch (questionnaire.occurrence) {
-    case 'daily': {
-      const day = date.toISOString().split('T')[0]
-      return `${questionnaire.id}-${day}`
-    }
-    case 'weekly': {
-      // get the first day of the week
-      const week = new Date(date)
-      week.setDate(date.getDate() - date.getDay())
-      return `${questionnaire.id}-${week.toISOString().split('T')[0]}`
-    }
-    case 'monthly':
-      return `${questionnaire.id}-${date
-        .toISOString()
-        .split('-')
-        .slice(0, 2)
-        .join('-')}`
-    case 'once':
-    default:
-      return questionnaire.id
+export function questionnaireDate(search = window.location.search) {
+  const raw = new URLSearchParams(search).get('date')
+  if (!raw) return new Date()
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(raw) ? new Date(raw + 'T12:00:00') : new Date(NaN)
+  if (Number.isNaN(date.getTime()) || [date.getFullYear(), String(date.getMonth() + 1).padStart(2, '0'), String(date.getDate()).padStart(2, '0')].join('-') !== raw) {
+    throw new Error('Ogiltigt formulärdatum')
   }
+  return date
 }
 
-const getAnswersFromLocalStorage = (key: string) => {
-  const answers = localStorage.getItem(key)
-  return answers ? JSON.parse(answers) : {}
+// Shared with quick exit/debug controls; hooks use the reactive authenticated ID.
+export const keyForQuestionnaire = (questionnaire: Questionnaire, date = questionnaireDate(), userId = pb.authStore.model?.id ?? '') =>
+  questionnaireDraftKey(questionnaire, userId, date)
+
+export function useQuestionnaireDraftKey(questionnaire: Questionnaire) {
+  const auth = useAtomValue(authAtom)
+  const { search } = useLocation()
+  return questionnaireDraftKey(questionnaire, auth?.id ?? '', questionnaireDate(search))
 }
 
-const useFormStateWithCache = ({
-  questionnaire,
-  formSchema,
-}: {
-  questionnaire: Questionnaire
-  formSchema: QuestionnaireFormSchema
-}) => {
-  const key = keyForQuestionnaire(questionnaire)
-  const answers = getAnswersFromLocalStorage(key)
-
-  const form = useForm({
-    resolver: zodResolver(formSchema),
-    defaultValues: answers,
-  })
-
-  return form
+const useFormStateWithCache = ({ questionnaire }: { questionnaire: Questionnaire }) => {
+  const key = useQuestionnaireDraftKey(questionnaire)
+  // The form is remounted when the participant or selected date changes.
+  const [draft] = useState(() => readQuestionnaireDraft(key))
+  return useForm({ defaultValues: draft?.answers ?? {} })
 }
 
-export const useScrollToLastAnsweredQuestion = (
-  questionnaire: Questionnaire
-) => {
+export const useScrollToLastAnsweredQuestion = (questionnaire: Questionnaire) => {
   const setPage = useSetAtom(formPageAtom)
   const questions = useQuestions(questionnaire)
-  const key = keyForQuestionnaire(questionnaire)
-  const answers = getAnswersFromLocalStorage(key)
+  const key = useQuestionnaireDraftKey(questionnaire)
   const initialized = useRef(false)
-
   useLayoutEffect(() => {
     if (initialized.current) return
     initialized.current = true
-
-    if (Object.keys(answers).length === 0) {
-      setPage(-1)
-      return
-    }
-
-    let index = 0
-    for (const question of questions) {
-      if (
-        !answers[question.id] &&
-        question.type !== 'section' &&
-        question.type !== 'text'
-      ) {
-        break
-      }
-      index++
-    }
-    setPage(index)
-  }, [answers, questions, setPage])
+    const draft = readQuestionnaireDraft(key)
+    setPage(draft ? Math.max(-1, Math.min(draft.page, questions.length)) : -1)
+  }, [key, questions.length, setPage])
 }
 
-export const SyncFormStateToLocalStorage = ({
-  questionnaire,
-}: {
-  questionnaire: Questionnaire
-}) => {
+export const SyncFormStateToLocalStorage = ({ questionnaire }: { questionnaire: Questionnaire }) => {
   const { control } = useFormContext()
   const values = useWatch({ control })
-
-  const key = keyForQuestionnaire(questionnaire)
-
-  if (questionnaire.occurrence === 'once') {
-    localStorage.setItem(key, JSON.stringify(values))
-  }
-
+  const page = useAtomValue(formPageAtom)
+  const key = useQuestionnaireDraftKey(questionnaire)
+  useEffect(() => { saveQuestionnaireDraft(key, { answers: values, page }) }, [key, values, page])
   return null
 }
 

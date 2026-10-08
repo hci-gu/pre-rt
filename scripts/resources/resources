@@ -5,12 +5,12 @@ resource_command=${1:-help}
 if [ "$#" -gt 0 ]; then shift; fi
 case "$resource_command" in
  extract|validate|preview|report) exec python3 "$resource_root/scripts/resources/resources.py" "$resource_command" "$@" ;;
- plan|apply|verify|rollback|migrate|snapshot|load-review|init-review)
+ plan|apply|verify|rollback|migrate|snapshot|load-review|init-review|seed-card-images)
   # Build with the backend's pinned Go toolchain; keep the caller's working directory.
   resource_binary=$(mktemp "${TMPDIR:-/tmp}/pre-rt-resources.XXXXXX")
   trap 'rm -f "$resource_binary"' EXIT HUP INT TERM
   go -C "$resource_root/pocketbase" build -o "$resource_binary" ./cmd/resources
-  "$resource_binary" --bundle "$resource_root/content/resources/generated/bundle.json" "$@" "$resource_command"
+  "$resource_binary" --bundle "$resource_root/content/resources/generated/bundle.json" --card-assets "$resource_root/web/src/assets/redesign/faq-categories" "$@" "$resource_command"
   ;;
- *) echo 'Usage: scripts/resources/resources extract|validate|preview|report|init-review|migrate|snapshot|load-review|plan|apply|verify|rollback [options]'; exit 1 ;;
+ *) echo 'Usage: scripts/resources/resources extract|validate|preview|report|init-review|migrate|snapshot|load-review|plan|apply|verify|rollback|seed-card-images [options]'; exit 1 ;;
 esac

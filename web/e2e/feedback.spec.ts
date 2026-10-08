@@ -28,9 +28,10 @@ async function resources(page: Page) {
 
 async function expectAnchorBelowHeader(page: Page, anchor: string) {
   await expect.poll(() => page.locator(`[id="${anchor}"]`).evaluate(el => {
-    const header = document.querySelector('header')!.getBoundingClientRect()
+    const header = document.querySelector('header')!
+    const coveredTop = getComputedStyle(header).position === 'sticky' ? header.getBoundingClientRect().bottom : 0
     const rect = el.getBoundingClientRect()
-    return rect.top >= header.bottom - 1 && rect.top < header.bottom + 90
+    return rect.top >= coveredTop - 1 && rect.top < coveredTop + 90
   })).toBe(true)
 }
 
@@ -143,7 +144,7 @@ test('PCL closing help, question menu and submission retain quick exit and clear
     ],
   })] })
   await routeMockQuestionnaireApi(page, form)
-  await seedQuestionnaireDraft(page, form.id, { gate: 'Ja' })
+  await seedQuestionnaireDraft(page, form.id, { gate: 'Ja' }, 2)
   await page.goto('/forms/baseline')
   await expect(page.getByText('Symtomfråga', { exact: true })).toBeVisible()
   await expect(page.getByRole('button', { name: 'Lämna genast', exact: true })).toBeVisible()
@@ -159,12 +160,12 @@ test('PCL closing help, question menu and submission retain quick exit and clear
   await page.getByRole('button', { name: 'Se alla frågor' }).click()
   await expect(page.getByRole('dialog').getByRole('button', { name: 'Lämna genast' })).toBeVisible()
   await page.getByRole('button', { name: 'Stäng frågor' }).click()
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('baseline')!))).toMatchObject({ gate: 'Ja', followup_pcl_symptom: 'Måttligt' })
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('questionnaire-draft:v2:test-user:baseline')!).answers)).toMatchObject({ gate: 'Ja', followup_pcl_symptom: 'Måttligt' })
   // Intercept the external exit and inspect the original origin through the
   // browser context. No request reaches an external service.
   await page.route('https://www.google.se/**', route => route.abort())
   await page.getByRole('button', { name: 'Lämna genast', exact: true }).click()
-  await expect.poll(async () => (await page.context().storageState()).origins.flatMap(origin => origin.localStorage).find(item => item.name === 'baseline')).toBeUndefined()
+  await expect.poll(async () => (await page.context().storageState()).origins.flatMap(origin => origin.localStorage).find(item => item.name === 'questionnaire-draft:v2:test-user:baseline')).toBeUndefined()
 })
 
 test('PCL answers and daily 10cm keep their stored values when submitted', async ({ page }) => {
@@ -176,7 +177,7 @@ test('PCL answers and daily 10cm keep their stored values when submitted', async
     ],
   })] })
   const capture = await routeMockQuestionnaireApi(page, form)
-  await seedQuestionnaireDraft(page, 'baseline', { gate: 'Ja', followup_pcl_symptom: 'Måttligt' })
+  await seedQuestionnaireDraft(page, 'baseline', { gate: 'Ja', followup_pcl_symptom: 'Måttligt' }, 3)
   await page.goto('/forms/baseline')
   await page.getByTestId('questionnaire-submit').click()
   await expect.poll(() => capture.submittedAnswer?.answers).toEqual({ gate: 'Ja', followup_pcl_symptom: 'Måttligt' })

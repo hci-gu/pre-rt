@@ -1,0 +1,13 @@
+.history-calendar { container-type: inline-size; }
+.history-weekdays, .history-date-short { display: none; }
+.history-days { display: grid; grid-template-columns: minmax(0, 1fr); gap: .5rem; margin-top: 1rem; }
+.history-day { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; min-width: 0; padding: .75rem; border-radius: .75rem; background: white; overflow-wrap: anywhere; }
+.history-day[aria-current="date"] { outline: 2px solid var(--color-study-coral, #dc657b); }
+@container (min-width: 32rem) {
+  .history-weekdays { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .5rem; margin-top: 1rem; text-align: center; }
+  .history-days { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .history-day { flex-direction: column; justify-content: flex-start; text-align: center; padding: .5rem .25rem; }
+  .history-day:first-child { grid-column-start: var(--first-weekday); }
+  .history-date-long, .history-unavailable { display: none; }
+  .history-date-short { display: inline; }
+}

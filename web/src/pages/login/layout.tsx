@@ -48,7 +48,7 @@ const LoginLayout = ({ children }: { children: any }) => {
     : 'Skriv in ditt telefonnummer för att få en kod att logga in med'
 
   return (
-    <div>
+    <div className="w-full min-w-0 max-w-md [overflow-wrap:anywhere]">
       <Breadcrumb>
         <BreadcrumbList>
           {breadCrumbs.map((item, index) => (

@@ -183,7 +183,7 @@ func compareOptionValues(str1, str2 string) bool {
 	return normalize(str1) == normalize(str2)
 }
 
-func createOtp(app *pocketbase.PocketBase, user *core.Record) (*core.Record, error) {
+func createOtp(app core.App, user *core.Record) (*core.Record, error) {
 	return createOtpWithExpiration(app, user, false)
 }
 
@@ -203,7 +203,7 @@ func getLastCreatedUserWithDiagnosis(app *pocketbase.PocketBase, diagnosis strin
 	return users[0], nil
 }
 
-func createOtpWithExpiration(app *pocketbase.PocketBase, user *core.Record, useLongExpiration bool) (*core.Record, error) {
+func createOtpWithExpiration(app core.App, user *core.Record, useLongExpiration bool) (*core.Record, error) {
 	collection, err := app.FindCollectionByNameOrId("otp")
 	if err != nil {
 		return nil, err
@@ -375,6 +375,38 @@ func endDateForDailyQuestionnaires(user *core.Record) *time.Time {
 	return &temp
 }
 
+func validateDailyAnswerDate(app core.App, answer *core.Record, now time.Time) error {
+	settings, err := app.FindFirstRecordByData("studySettings", "key", "default")
+	if err != nil {
+		return err
+	}
+	if answer.GetString("questionnaire") != settings.GetString("dailyQuestionnaire") {
+		return nil
+	}
+	user, err := app.FindRecordById("users", answer.GetString("user"))
+	if err != nil {
+		return err
+	}
+	start, end := startDateForDailyQuestionnaires(user), endDateForDailyQuestionnaires(user)
+	date := answer.GetDateTime("date")
+	if start == nil || date.IsZero() {
+		return apis.NewBadRequestError("Datumet ligger utanför perioden för dagliga formulär.", nil)
+	}
+	// These are study calendar dates, not elapsed 24-hour periods.
+	location, err := time.LoadLocation("Europe/Stockholm")
+	if err != nil {
+		return err
+	}
+	day, last := date.Time().Format(time.DateOnly), now.In(location).Format(time.DateOnly)
+	if end != nil && end.Format(time.DateOnly) < last {
+		last = end.Format(time.DateOnly)
+	}
+	if day < start.Format(time.DateOnly) || day > last {
+		return apis.NewBadRequestError("Datumet ligger utanför perioden för dagliga formulär.", nil)
+	}
+	return nil
+}
+
 func userShouldBeNotified(user *core.Record) bool {
 	startDate := startDateForDailyQuestionnaires(user)
 	endDate := endDateForDailyQuestionnaires(user)
@@ -403,6 +435,40 @@ func checkAndSendNotification(app *pocketbase.PocketBase, user *core.Record, que
 	link := WEB_URL + "/forms/" + questionnaire.Id + "?date=" + date
 
 	sendText(user.GetString("phoneNumber"), "Hej! Glöm inte att svara på din enkät idag!"+link)
+}
+
+func otpCreateHandler(deliver func(string, string) error) func(*core.RequestEvent) error {
+	return func(e *core.RequestEvent) error {
+		data := struct {
+			PhoneNumber string `json:"phoneNumber"`
+		}{}
+
+		if err := e.BindBody(&data); err != nil {
+			log.Println("bind error", err)
+			return badRequestErr
+		}
+
+		user, err := e.App.FindFirstRecordByData("users", "phoneNumber", data.PhoneNumber)
+		if err != nil {
+			return notFoundErr
+		}
+		if isTestLoginUser(user) {
+			return notFoundErr
+		}
+
+		record, err := createOtp(e.App, user)
+
+		if err != nil {
+			return badRequestErr
+		}
+
+		if err := deliver(data.PhoneNumber, "Din engångskod är: "+record.GetString("password")); err != nil {
+			_ = e.App.Delete(record)
+			return apis.NewInternalServerError("Code delivery failed", nil)
+		}
+
+		return e.JSON(200, map[string]string{"id": record.Id})
+	}
 }
 
 func main() {
@@ -704,34 +770,7 @@ func main() {
 			return err
 		})
 
-		se.Router.POST("/otp-create", func(e *core.RequestEvent) error {
-			data := struct {
-				PhoneNumber string `json:"phoneNumber"`
-			}{}
-
-			if err := e.BindBody(&data); err != nil {
-				log.Println("bind error", err)
-				return badRequestErr
-			}
-
-			user, err := app.FindFirstRecordByData("users", "phoneNumber", data.PhoneNumber)
-			if err != nil {
-				return notFoundErr
-			}
-			if isTestLoginUser(user) {
-				return notFoundErr
-			}
-
-			record, err := createOtp(app, user)
-
-			if err != nil {
-				return badRequestErr
-			}
-
-			sendText(data.PhoneNumber, "Din engångskod är: "+record.GetString("password"))
-
-			return e.JSON(200, record)
-		})
+		se.Router.POST("/otp-create", otpCreateHandler(sendText))
 
 		if testUserID, enabled := testLoginUserID(); enabled {
 			se.Router.GET("/test-login", func(e *core.RequestEvent) error {
@@ -958,6 +997,18 @@ func main() {
 
 	app.OnRecordAfterCreateSuccess("answers").BindFunc(func(e *core.RecordEvent) error {
 		return studysettings.SyncTreatmentEnd(e.App, e.Record)
+	})
+
+	app.OnRecordCreateRequest("answers").BindFunc(func(e *core.RecordRequestEvent) error {
+		if !e.HasSuperuserAuth() {
+			if e.Auth == nil || e.Auth.Collection().Name != "users" || e.Record.GetString("user") != e.Auth.Id {
+				return apis.NewForbiddenError("Svar kan bara sparas för ditt eget konto.", nil)
+			}
+			if err := validateDailyAnswerDate(e.App, e.Record, time.Now()); err != nil {
+				return err
+			}
+		}
+		return e.Next()
 	})
 
 	app.OnRecordAfterCreateSuccess("exports").BindFunc(func(e *core.RecordEvent) error {

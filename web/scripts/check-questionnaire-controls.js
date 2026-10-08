@@ -48,7 +48,7 @@ async (page) => {
   for (const viewport of [{ width: 320, height: 480 }, { width: 667, height: 320 }, { width: 320, height: 240 }, { width: 320, height: 568, largeText: true }]) {
     const label = `${viewport.width}x${viewport.height}${viewport.largeText ? ' enlarged text' : ''}`
     await page.setViewportSize({ width: viewport.width, height: viewport.height })
-    await page.evaluate(() => localStorage.removeItem('controls-layout'))
+    await page.evaluate(() => localStorage.removeItem('questionnaire-draft:v2:layout-user:controls-layout'))
     await page.goto('http://127.0.0.1:4173/forms/controls-layout')
     if (viewport.largeText) await page.evaluate(() => { document.documentElement.style.fontSize = '32px' })
     await check(page.getByRole('button', { name: 'Gå vidare', exact: true }), `${label} intro`, true)
@@ -102,18 +102,18 @@ async (page) => {
     contentType: 'text/html', body: '<meta charset="utf-8"><h1>Previous page</h1><a href="/forms/controls-layout">Open form</a>',
   }))
   await page.goto('http://127.0.0.1:4173/form-return-target')
-  await page.evaluate(() => localStorage.removeItem('controls-layout'))
+  await page.evaluate(() => localStorage.removeItem('questionnaire-draft:v2:layout-user:controls-layout'))
   await page.getByRole('link', { name: 'Open form' }).click()
   await page.getByRole('button', { name: 'Gå vidare', exact: true }).click()
   await page.getByTestId('questionnaire-next').click()
   await page.locator('label[for="choices-option-11"]').click()
-  await page.waitForFunction(() => localStorage.getItem('controls-layout')?.includes('Alternativ 12'))
-  const draft = await page.evaluate(() => localStorage.getItem('controls-layout'))
+  await page.waitForFunction(() => localStorage.getItem('questionnaire-draft:v2:layout-user:controls-layout')?.includes('Alternativ 12'))
+  const draft = await page.evaluate(() => localStorage.getItem('questionnaire-draft:v2:layout-user:controls-layout'))
   await page.getByRole('button', { name: 'Se alla frågor', exact: true }).click()
   await page.getByRole('dialog').locator('.questionnaire-dialog-scroll').evaluate(el => { el.scrollTop = el.scrollHeight })
   await page.getByRole('button', { name: 'Lämna formuläret', exact: true }).click()
   await page.waitForURL('**/form-return-target')
-  if (await page.evaluate(() => localStorage.getItem('controls-layout')) !== draft) failures.push({ name: 'Leaving the form changed the saved draft' })
+  if (await page.evaluate(() => localStorage.getItem('questionnaire-draft:v2:layout-user:controls-layout')) !== draft) failures.push({ name: 'Leaving the form changed the saved draft' })
   if (failures.length) throw Error(JSON.stringify({ checked, failures }))
   return { checked, failures, navigationChecks: ['returns to previous page', 'retains saved draft'] }
 }

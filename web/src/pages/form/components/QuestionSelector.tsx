@@ -21,6 +21,7 @@ import { Button } from '@/components/ui/button'
 import Select from './Select'
 import { ResourceDrawer } from '@/components/resource'
 import AdaptiveQuestionPanel from './AdaptiveQuestionPanel'
+import { answerError, emptyAnswer } from '../answers'
 
 const answerChipClassName =
   'question-chip cursor-pointer rounded-xl bg-primary font-bold text-foreground transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-card peer-data-[state=checked]:bg-study-teal-dark peer-data-[state=checked]:text-white'
@@ -45,6 +46,8 @@ const renderQuestionType = (
           }
           aria-describedby={question.type === 'number' && ['år', 'cm', 'kg'].includes(question.placeholder ?? '') ? `${question.id}-unit` : undefined}
           type={question.type}
+          min={question.type === 'number' ? 0 : undefined}
+          step={question.type === 'number' && question.placeholder !== 'år' ? 'any' : undefined}
           enterKeyHint="done"
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
@@ -183,7 +186,10 @@ const QuestionSelector = ({ question, canProceed }: { question: Question; canPro
               {renderQuestionType(question, field, onAnswer, onContinue, optionInputRefs)}
             </div>
           </FormControl>
-          <FormMessage />
+          {!question.required && question.type !== 'section' && <p className="text-sm">Frivillig fråga – du kan gå vidare utan att svara.</p>}
+          {!emptyAnswer(field.value) && answerError(question, field.value)
+            ? <p role="alert" className="text-sm font-medium text-destructive">{answerError(question, field.value)}</p>
+            : answerError(question, field.value) ? <FormMessage /> : null }
         </FormItem>
       )} />
       {needsContinueButton(question) && (

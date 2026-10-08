@@ -38,11 +38,12 @@ function CheckInCard({
   const content = (
     <article
       className={cn(
-        'relative grid aspect-[350/268] overflow-hidden rounded-xl text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:aspect-[462/214] sm:text-center',
+        'relative grid overflow-hidden rounded-xl text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:text-center',
+        'min-h-32 sm:min-h-40',
         !href && 'hover:translate-y-0'
       )}
     >
-      <picture>
+      <picture className="absolute inset-0">
         <source media="(min-width: 640px)" srcSet={art} />
         <img
           src={mobileArt ?? art}
@@ -60,7 +61,6 @@ function CheckInCard({
         <h2
           className={cn(
             'max-w-[82%] text-sm font-black leading-tight text-foreground [overflow-wrap:anywhere] sm:text-xl sm:leading-none',
-            complete && 'pr-8 sm:pr-0',
             titleClassName
           )}
         >
@@ -69,7 +69,7 @@ function CheckInCard({
         {(badge || buttonLabel) && (
           <span
             className={cn(
-              'self-center rounded-full px-5 py-2 text-sm font-bold text-foreground [overflow-wrap:anywhere] sm:px-6 sm:text-base',
+              'max-w-full self-center rounded-full px-3 py-2 text-sm font-bold text-foreground [overflow-wrap:anywhere] sm:px-6 sm:text-base',
               buttonLabel ? 'bg-study-header' : 'bg-card/85'
             )}
           >
@@ -133,7 +133,7 @@ export default function CheckInPage() {
 
       <section
         aria-label="Daglig check-in"
-        className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,8.5rem),1fr))] gap-3 sm:gap-x-7 sm:gap-y-5"
+        className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,10rem),1fr))] gap-3 sm:grid-cols-2 sm:gap-x-7 sm:gap-y-5"
       >
         <CheckInCard
           title="Fyll i formulär - idag"

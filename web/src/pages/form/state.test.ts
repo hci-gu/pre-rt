@@ -12,6 +12,23 @@ const question = (id: string, type: Question['type']): Question => ({
 })
 
 describe('questionnaire navigation state helpers', () => {
+  it('allows optional unanswered questions but rejects invalid provided answers', () => {
+    const optional = { ...question('age', 'number'), required: false, placeholder: 'år' }
+    expect(getCanProceed({ page: 0, questions: [optional], answers: {} })).toBe(true)
+    expect(getCanProceed({ page: 0, questions: [optional], answers: { age: '-12' } })).toBe(false)
+    expect(getCanProceed({ page: 0, questions: [optional], answers: { age: '2.5' } })).toBe(false)
+    expect(getCanProceed({ page: 0, questions: [optional], answers: { age: '57' } })).toBe(true)
+  })
+
+  it('does not treat an empty selection as a required answer', () => {
+    expect(getCanProceed({ page: 0, questions: [question('choice', 'multipleChoice')], answers: { choice: [] } })).toBe(false)
+  })
+
+  it('blocks an incomplete typed amount even when the question is optional', () => {
+    const amount = { ...question('amount', 'singleChoice'), required: false, options: { value: ['Aldrig', 'Vid {AMOUNT} års ålder'], followup: [] } }
+    expect(getCanProceed({ page: 0, questions: [amount], answers: { amount: 'Vid {AMOUNT} års ålder' } })).toBe(false)
+    expect(getCanProceed({ page: 0, questions: [amount], answers: { amount: 'Vid {-2} års ålder' } })).toBe(false)
+  })
   it.each([
     ['multipleChoice', true], ['text', true], ['number', true],
     ['singleChoice', false], ['painScale', false], ['date', false], ['section', false],
@@ -26,7 +43,7 @@ describe('questionnaire navigation state helpers', () => {
     })).toBe(true)
   })
   const questions = [
-    question('intro_text', 'text'),
+    { ...question('intro_text', 'text'), required: false },
     question('intro_section', 'section'),
     question('first_required', 'singleChoice'),
     question('second_required', 'painScale'),

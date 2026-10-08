@@ -3,7 +3,7 @@ import { atomFamily, atomWithRefresh, atomWithStorage, unwrap } from 'jotai/util
 // @ts-ignore
 import Cookies from 'js-cookie'
 import { atom, useAtom } from 'jotai'
-import { z } from 'zod'
+import { clearOtherParticipantDrafts } from './lib/questionnaire-drafts'
 import { dayStringFromDate } from './utils'
 import { useEffect } from 'react'
 import { ResourceSessionError } from './lib/resource-errors'
@@ -13,6 +13,10 @@ import { parseContent, type Content, type Bindings } from './components/resource
 export const pb = new Pocketbase(import.meta.env.VITE_API_URL)
 const IS_PROD = import.meta.env.VITE_API_URL.startsWith('https')
 pb.autoCancellation(false)
+pb.authStore.onChange((_token, model) => {
+  clearOtherParticipantDrafts(model?.id)
+  Cookies.remove('pb_auth')
+})
 
 const setCookie = (key: string, value: string) =>
   Cookies.set(key, value, {
@@ -26,6 +30,7 @@ export const authAtom = atomWithStorage<AuthModel | null>(
   null,
   {
     getItem: (key, initialValue) => {
+      if (typeof localStorage === "undefined") return initialValue
       let stored: string | undefined | null = Cookies.get(key)
 
       // Fallback to localStorage if cookie is missing
@@ -36,7 +41,10 @@ export const authAtom = atomWithStorage<AuthModel | null>(
         }
       }
 
-      if (!stored) return initialValue
+      if (!stored) {
+        clearOtherParticipantDrafts()
+        return initialValue
+      }
 
       try {
         const parsedAuth = JSON.parse(stored)
@@ -44,6 +52,7 @@ export const authAtom = atomWithStorage<AuthModel | null>(
         return pb.authStore.model
       } catch (error) {
         console.error('Error parsing auth storage:', error)
+        pb.authStore.clear()
         Cookies.remove(key)
         localStorage.removeItem(key)
         return initialValue
@@ -70,6 +79,8 @@ export const authAtom = atomWithStorage<AuthModel | null>(
       Cookies.remove(key)
       localStorage.removeItem(key)
     },
+    // PocketBase also reports logout/account changes from another browser tab.
+    subscribe: (_key, callback) => pb.authStore.onChange((_token, model) => callback(model)),
   },
   { getOnInit: true }
 )
@@ -382,55 +393,25 @@ export const questionnaireAtom = atomFamily((id: string) =>
   })
 )
 
-export const formStateAtom = atomFamily((id: string) =>
-  atom(async (get) => {
-    const questionnaire = await get(questionnaireAtom(id))
-
-    const formSchema = z.object(
-      questionnaire.questions.reduce((acc, q) => {
-        switch (q.type) {
-          case 'singleChoice':
-          case 'multipleChoice':
-            acc[q.id] = z.any()
-            break
-          case 'painScale':
-            acc[q.id] = z.number().int().min(0).max(10)
-            break
-          case 'date':
-            acc[q.id] = z.date()
-            break
-          default:
-            acc[q.id] = q.type === 'text' ? z.string() : z.string().nullable()
-        }
-
-        if (!q.required) {
-          acc[q.id] = acc[q.id].optional()
-        }
-        return acc
-      }, {} as Record<string, z.ZodType<any>>)
-    )
-
-    return formSchema
-  })
-)
-
 export const answersForQuestionnaireAtom = atomFamily((id: string) => {
   const dataAtom = atom<Answer[]>([])
 
-  const fetchAtom = atom(null, async (_get, set) => {
+  const fetchAtom = atom(null, async (get, set) => {
+    const userId = get(authAtom)?.id
+    if (!userId) { set(dataAtom, []); return }
     try {
-      const response = await pb.collection('answers').getList(0, 100, {
+      const response = await pb.collection('answers').getFullList({
         filter: `questionnaire = "${id}"`,
       })
-      set(dataAtom, response.items.map(mapAnswer))
+      if (get(authAtom)?.id === userId) set(dataAtom, response.map(mapAnswer))
     } catch (e) {
       console.error(e)
-      set(dataAtom, [])
+      if (get(authAtom)?.id === userId) set(dataAtom, [])
     }
   })
 
   const combinedAtom = atom(
-    (get) => get(dataAtom),
+    (get) => get(dataAtom).filter(answer => answer.user === get(authAtom)?.id),
     (_get, set) => set(fetchAtom)
   )
 
@@ -438,6 +419,7 @@ export const answersForQuestionnaireAtom = atomFamily((id: string) => {
 })
 
 export const useAnswers = (questionnaireId: string) => {
+  const [auth] = useAtom(authAtom)
   const [answers, refreshAnswers] = useAtom(
     answersForQuestionnaireAtom(questionnaireId)
   )
@@ -446,7 +428,7 @@ export const useAnswers = (questionnaireId: string) => {
     if (questionnaireId) {
       refreshAnswers()
     }
-  }, [questionnaireId, refreshAnswers])
+  }, [questionnaireId, auth?.id, refreshAnswers])
 
   return answers
 }

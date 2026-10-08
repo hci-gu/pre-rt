@@ -6,11 +6,20 @@ the question. Navigation buttons, answer auto-advance, and the question menu
 continue to control the active question. React Hook Form retains unmounted
 questions' answers.
 
+Drafts use a versioned participant/questionnaire/answer-date key and store both
+answers and the current page, including recurring forms. Legacy unowned drafts
+are discarded. Logout/account changes clear other participants' drafts. Hidden
+answers may be retained while editing, but submission is constructed from the
+final active question graph, including selected composite follow-up keys.
+Validation and navigation honor the production `required` flag: optional
+questions can be skipped, but provided values must still be valid.
+
 Multiple choice, open text, numeric answers, and single-choice questions with
 typed amounts also have a “Gå vidare” button below the white answer card, on the
 page background. It uses the same navigation eligibility as the footer arrows
 and occupies its own row within measured content, never overlaying the card.
-Normal single-choice, pain-scale, and date answers still auto-advance.
+Normal single-choice, pain-scale, and date answers still auto-advance. Optional
+ones also have a continue button so participants can leave them unanswered.
 
 `questionnaire-shell` is a three-row grid: header, `minmax(0, 1fr)` content, and
 footer. Its single column is also `minmax(0, 1fr)` so enlarged text cannot force

@@ -26,7 +26,7 @@ const FooterContent = () => {
 const LoginWrapper = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <div className="flex items-center justify-center bg-stone-800 p-2 md:hidden fixed w-full">
+      <div className="flex items-center justify-center bg-stone-800 p-2 md:hidden w-full">
         <img
           src="/gu-logo.svg" // Adjust the path as needed for the dark logo variant
           alt="Göteborgs Universitet Icon"
@@ -34,7 +34,7 @@ const LoginWrapper = ({ children }: { children: ReactNode }) => {
         />
       </div>
 
-      <div className="relative h-screen flex flex-col lg:grid lg:grid-cols-2 lg:max-w-none lg:px-0 overflow-hidden">
+      <div className="relative min-h-[calc(100svh-3rem)] md:min-h-svh flex flex-col lg:grid lg:grid-cols-2 lg:max-w-none lg:px-0">
         {/* Sidebar Section */}
         <div className="flex-1 relative hidden lg:flex flex-col bg-muted p-10 text-white dark:border-r">
           <div className="absolute inset-0 bg-zinc-900" />
@@ -54,11 +54,11 @@ const LoginWrapper = ({ children }: { children: ReactNode }) => {
         </div>
 
         {/* Main Content Section */}
-        <div className="flex flex-col items-center justify-center p-4 lg:p-8 h-3/4 lg:h-full">
+        <div className="flex min-w-0 flex-1 flex-col items-center justify-center px-4 py-8 lg:p-8">
           {children}
         </div>
 
-        <div className="bg-zinc-900 text-white w-full h-1/4 lg:hidden flex items-center justify-center p-4">
+        <div className="bg-zinc-900 text-white w-full min-h-36 lg:hidden flex items-center justify-center p-4">
           <blockquote className="space-y-2 text-center">
             <FooterContent />
           </blockquote>

@@ -6,8 +6,7 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import { Button } from '@/components/ui/button'
-import { CustomDay, LargeCalendar } from '@/components/ui/calendar'
+import HistoryCalendar from './history-calendar'
 import {
   Answer,
   dailyQuestionnaireScheduleAtom,
@@ -16,12 +15,9 @@ import {
   useAnswers,
   userDataAtom,
 } from '@/state'
-import { CheckIcon } from '@radix-ui/react-icons'
 import { useAtomValue } from 'jotai'
-import { startTransition, Suspense } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import { dayStringFromDate, isSameDay, isWithinPeriod } from '@/utils'
-import { DayProps } from 'react-day-picker'
+import { Suspense } from 'react'
+import { useParams } from 'react-router-dom'
 
 const FormHistoryLoaded = ({
   questionnaire,
@@ -38,8 +34,6 @@ const FormHistoryLoaded = ({
   treatmentStart?: Date
   treatmentEnd?: Date
 }) => {
-  const navigate = useNavigate()
-  const now = new Date()
 
   return (
     <div className="px-2">
@@ -74,93 +68,7 @@ const FormHistoryLoaded = ({
         </span>
       </p>
 
-      <LargeCalendar
-        className="m-0 mt-8 p-0"
-        disabled={{ after: new Date(), before: startDate ?? new Date() }}
-        onDayRender={(props: DayProps) => {
-          if (answers.some((a) => isSameDay(new Date(a.date), props.date))) {
-            return (
-              <CustomDay
-                {...props}
-                style={{
-                  color: '#16a34a',
-                  fontWeight: 'bold',
-                  border: '2px solid #16a34a',
-                }}
-              >
-                <span>
-                  <CheckIcon className="w-4 h-4" />
-                </span>
-              </CustomDay>
-            )
-          }
-
-          if (
-            startDate != null &&
-            startDate <= now &&
-            isWithinPeriod(props.date, startDate ?? now, now)
-          ) {
-            return (
-              <CustomDay {...props}>
-                <Button
-                  className="px-2 py-1 mt-1"
-                  onClick={() =>
-                    startTransition(() => {
-                      navigate(
-                        `/forms/${questionnaire.id}?date=${dayStringFromDate(
-                          props.date
-                        )}`
-                      )
-                    })
-                  }
-                >
-                  svara
-                </Button>
-              </CustomDay>
-            )
-          }
-
-          if (
-            isSameDay(props.date, treatmentStart ?? null) ||
-            isSameDay(props.date, treatmentEnd ?? null) ||
-            isSameDay(props.date, startDate) ||
-            isSameDay(props.date, endDate)
-          ) {
-            let text = <></>
-            if (isSameDay(props.date, treatmentStart ?? null)) {
-              text = (
-                <>
-                  Behandling<br></br>start
-                </>
-              )
-            } else if (isSameDay(props.date, treatmentEnd ?? null)) {
-              text = (
-                <>
-                  Behandling<br></br>slut
-                </>
-              )
-            } else if (isSameDay(props.date, startDate)) {
-              text = <>start</>
-            } else if (isSameDay(props.date, endDate)) {
-              text = <>Avslut</>
-            }
-
-            return (
-              <CustomDay
-                {...props}
-                style={{
-                  color: '#dc2626',
-                  fontWeight: 'bold',
-                }}
-              >
-                <span className="text-xs">{text}</span>
-              </CustomDay>
-            )
-          }
-
-          return <CustomDay {...props} />
-        }}
-      />
+      <HistoryCalendar questionnaireId={questionnaire.id} answers={answers} startDate={startDate} endDate={endDate} treatmentStart={treatmentStart} treatmentEnd={treatmentEnd} />
     </div>
   )
 }

@@ -17,7 +17,7 @@ vi.mock('js-cookie', () => ({
 vi.mock('pocketbase', () => ({
   default: class {
     autoCancellation() {}
-    authStore = { token: 'test-token', model: { id: 'test-user' }, save() {} }
+    authStore = { token: 'test-token', model: { id: 'test-user' }, save() {}, onChange() {} }
     files = { getURL: () => '/stored-image.svg' }
     collection(name: string) {
       return name === 'users'

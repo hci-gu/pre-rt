@@ -89,7 +89,7 @@ function HomePage() {
 
       <section
         aria-label="Studieöversikt"
-        className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,8.5rem),1fr))] gap-3 sm:gap-x-7 sm:gap-y-5"
+        className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,8.5rem),1fr))] gap-3 sm:grid-cols-[repeat(auto-fit,minmax(min(100%,17rem),1fr))] sm:gap-x-7 sm:gap-y-5"
       >
         <StudyTaskCard
           title="Registrera dig"
@@ -196,7 +196,7 @@ function HomePage() {
           <Button
             type="button"
             variant="outline"
-            className="mt-3"
+            className="mt-3 h-auto min-h-9 max-w-full whitespace-normal"
             disabled={
               resetting ||
               !newTreatmentStart ||

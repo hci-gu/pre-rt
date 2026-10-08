@@ -14,7 +14,7 @@ const compareOptionValues = (str1: string, str2: string) => {
   if (!str1 || !str2) return false
 
   const normalize = (str: string) =>
-    str.replace(/\{\w+\}/g, '{PLACEHOLDER}')
+    str.replace(/\{[^}]*\}/g, '{PLACEHOLDER}')
 
   return normalize(str1) === normalize(str2)
 }
@@ -104,10 +104,8 @@ const SelectNumericalInput = forwardRef<
   }, [updateValue])
 
   useEffect(() => {
-    if (value.length > 0 && !isNaN(Number(value))) {
-      updateValueRef.current(value)
-    }
-  }, [value])
+    if (!disabled) updateValueRef.current(value)
+  }, [value, disabled])
 
   useEffect(() => {
     if (disabled) {
@@ -226,8 +224,8 @@ export default function Select({
               )
             : field.value
           if (optionValue) {
-            const num = optionValue.match(/\d+/)?.[0]
-            optionNumericValue = num
+            const num = optionValue.match(/\{([^}]*)\}/)?.[1]
+            optionNumericValue = num === 'AMOUNT' ? '' : num ?? ''
           }
         }
 
@@ -278,7 +276,7 @@ export default function Select({
                         updateValue={(value) => {
                           const optionWithValue = option.replace(
                             '{AMOUNT}',
-                            `{${value}}`
+                            value === '' ? '{AMOUNT}' : `{${value}}`
                           )
                           updateValue(optionWithValue, true)
                         }}

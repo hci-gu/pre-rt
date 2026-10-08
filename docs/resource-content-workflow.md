@@ -17,6 +17,29 @@ The 2026-09-30 revision is applied to the actual local PocketBase database and a
 
 Commands below run from the repository root. Every database command requires an explicit `--dir`. Use an absolute path so the target is unambiguous. The wrapper takes the command first; the underlying Go binary takes flags before the command.
 
+### FAQ card artwork
+
+The five FAQ category cards use PocketBase `image` / `imageCompact` uploads.
+Their original wide/mobile artwork comes from `web/src/assets/redesign/faq-categories`,
+separately from the Word document's body illustrations. After importing resources,
+populate empty cards with:
+
+```sh
+scripts/resources/resources seed-card-images --dir /absolute/path/to/pb_data
+```
+
+This matches collections by `sourceKey`, validates the required files, and fills
+empty image fields in a transaction. Existing wide artwork takes precedence on
+both desktop and mobile, so a custom card is never paired with default compact
+artwork. Repeating the command makes no changes once the cards have images. Word
+imports preserve these file fields. The test deployment packages the originals
+and runs this step automatically after its resource/questionnaire imports.
+
+Verify actual image presence as well as successful loading at desktop, laptop,
+mobile and small-mobile widths using `web/scripts/check-faq-card-images.js` with
+an authenticated Playwright CLI session. A check of only existing `<img>`
+elements cannot detect an omitted illustration.
+
 ## 1. Extract and inspect a Word revision
 
 ```sh

@@ -82,7 +82,7 @@ async (page) => {
     await page.getByRole('gridcell', { name: '15', exact: true }).click()
     await page.getByTestId('questionnaire-submit').waitFor()
     assert(submissions === 0, 'Continue submitted the form')
-    const draft = await page.evaluate(() => JSON.parse(localStorage.getItem('continue-fixture')))
+    const draft = await page.evaluate(() => JSON.parse(localStorage.getItem('questionnaire-draft:v2:layout-user:continue-fixture')).answers)
     assert(draft.multiple.includes('Alternativ 12') && draft.comment === 'Min kommentar' && draft.age === '45' && draft.amount === 'Använt {3} gånger', 'Manual answers were not retained')
     results.push(viewport)
   }

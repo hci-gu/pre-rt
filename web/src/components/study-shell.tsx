@@ -149,7 +149,7 @@ export function StudyAppShell({
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
-      <header className="sticky top-0 z-30 w-full border-b border-foreground/15 bg-study-header">
+      <header className="sm:sticky top-0 z-30 w-full border-b border-foreground/15 bg-study-header">
         <div
           className={cn(
             'mx-auto flex w-full max-w-[57rem] items-center px-4 sm:h-[5.625rem] sm:flex-row sm:justify-start sm:gap-8 sm:px-8',
@@ -179,6 +179,9 @@ export function StudyAppShell({
             <StudyBreadcrumbs items={headerItems} />
           )}
         </div>
+        <nav aria-label="Kontonavigation" className="mx-auto flex w-full max-w-[57rem] justify-end px-4 pb-2 sm:px-8">
+          <NavLink to="/profile" className="study-focus max-w-full rounded-lg px-2 py-2 text-sm font-bold underline [overflow-wrap:anywhere]">Profil och logga ut</NavLink>
+        </nav>
       </header>
 
       <main
