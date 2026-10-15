@@ -18,6 +18,15 @@ succeed or the API cannot start. The packaged questionnaire
 snapshot contains no users or answers. Its importer requires `APP_ENV=test`,
 validates all relations in one transaction, and leaves participant data intact. No manual import, backup or approval steps.
 
+After the base content, the initializer imports
+`content/questionnaires/follow-up-3-months.json` and sets
+`studySettings.followupQuestionnaire` in the same transaction. This ensures that
+first deployments work even though schema migrations run before the form exists.
+The import does not start the scheduler or send SMS. The running API checks for
+eligible follow-ups daily at 18:00 Europe/Stockholm; see
+[reminder rules](../../docs/follow-up-reminders.md). `WEB_URL` and `API_URL` are
+explicitly configured for the test hosts.
+
 The initializer also populates empty FAQ card image fields with the original
 wide/mobile illustrations packaged in the API image. It matches the five standard
 categories by `sourceKey` and preserves existing uploaded artwork. Missing required

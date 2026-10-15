@@ -9,6 +9,7 @@ participants can read it; only PocketBase superusers can create or edit it.
 | `dailyQuestionnaire` | Check-in links and daily answer status |
 | `treatmentEndQuestionnaire` | Check-in link, reminder URL, and treatment-end answer processing |
 | `treatmentEndQuestion` | Date answer copied to the participant's `treatmentEnd` |
+| `followupQuestionnaire` (optional) | Three-month follow-up SMS; empty disables reminders |
 | `aboutCollection` | `/about` study information |
 
 The backend reads the same settings as the web app. The treatment-end question
@@ -29,6 +30,7 @@ Timing retains the existing PRE/POST audience markup. Contact information is
 taken from the stored resource, not the former hardcoded page copy; its editorial
 accuracy still needs confirmation by the study team.
 
-`/after-treatment` is intentionally an empty, authenticated page with a heading
-and the shared study shell. It does not introduce a follow-up questionnaire or
-change participant eligibility. Questionnaire quick-exit rules are unchanged.
+`/after-treatment` displays the configured after-treatment resource collection.
+The follow-up questionnaire is selected separately using `followupQuestionnaire`.
+See [follow-up reminders](../docs/follow-up-reminders.md) for scheduling,
+delivery tracking and activation after importing the form.

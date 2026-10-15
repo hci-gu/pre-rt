@@ -21,9 +21,11 @@ import { useForm } from 'react-hook-form'
 import { useParams } from 'react-router-dom'
 import { useSetAtom } from 'jotai'
 import { authAtom, pb } from '../../state'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+
+import { loginReturnPath, loginReturnSearch } from '@/lib/login-return'
 
 const loginSchema = z.object({
   password: z.string().regex(/^\d{6}$/, 'Ange den sexsiffriga koden.'),
@@ -39,6 +41,7 @@ function OTPPage() {
   })
   const setAuth = useSetAtom(authAtom)
   const navigate = useNavigate()
+  const returnTo = loginReturnPath(useLocation().search)
   const [pending, setPending] = useState(false)
   const autoAttempted = useRef(false)
 
@@ -86,7 +89,7 @@ function OTPPage() {
 
       setAuth(pb.authStore.model)
 
-      navigate('/')
+      navigate(returnTo, { replace: true })
     } catch {
       form.setError('password', { type: 'server', message: 'Det gick inte att ansluta. Kontrollera din internetanslutning och försök igen.' })
     } finally {
@@ -134,7 +137,7 @@ function OTPPage() {
           )}
         />
         <Button type="submit" disabled={pending} className="h-auto min-h-11 max-w-full whitespace-normal py-2">{pending ? "Loggar in..." : "Skicka in"}</Button>
-        <Link to="/login" className="block font-bold underline">Begär en ny kod</Link>
+        <Link to={`/login${loginReturnSearch(returnTo)}`} className="block font-bold underline">Begär en ny kod</Link>
       </form>
     </Form>
   )

@@ -10,12 +10,14 @@ import {
 import { Input } from '@/components/ui/input'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useSetAtom } from 'jotai'
 import { authAtom, pb } from '../../state'
 
 import { z } from 'zod'
+
+import { loginReturnPath, loginReturnSearch } from '@/lib/login-return'
 
 const resetSchema = z.object({
   phoneNumber: z.string().min(2, 'Ange ditt telefonnummer.').max(20, 'Kontrollera telefonnumret.'),
@@ -23,6 +25,7 @@ const resetSchema = z.object({
 
 const LoginPage = () => {
   const navigate = useNavigate()
+  const returnTo = loginReturnPath(useLocation().search)
   const setAuth = useSetAtom(authAtom)
   const [testLoginAvailable, setTestLoginAvailable] = useState(false)
   const [testLoginPending, setTestLoginPending] = useState(false)
@@ -60,7 +63,7 @@ const LoginPage = () => {
         return
       }
       const data = await response.json()
-      navigate(`/login/${data.id}`)
+      navigate(`/login/${data.id}${loginReturnSearch(returnTo)}`)
     } catch {
       form.setError('phoneNumber', { type: 'server', message: 'Det gick inte att ansluta. Kontrollera din internetanslutning och försök igen.' })
     }
@@ -82,7 +85,7 @@ const LoginPage = () => {
       const data = await response.json()
       pb.authStore.save(data.token, data.record)
       setAuth(pb.authStore.model)
-      navigate('/')
+      navigate(returnTo, { replace: true })
     } catch {
       setTestLoginError(true)
       setTestLoginPending(false)

@@ -71,6 +71,50 @@ func TestReviewedProductionGraphIsCompleteAtomicAndRepeatable(t *testing.T) {
 			t.Fatalf("%s count=%d err=%v", table, len(rows), err)
 		}
 	}
+
+	t.Run("follow-up import and scheduler binding are atomic and repeatable", func(t *testing.T) {
+		followup, err := os.ReadFile("../../../content/questionnaires/follow-up-3-months.json")
+		if err != nil {
+			t.Fatal(err)
+		}
+		const formID = "355082bf942bf57"
+		if _, err := ApplyFollowup(app, followup, formID); err == nil {
+			t.Fatal("missing settings must fail")
+		}
+		if _, err := app.FindRecordById("questionnaires", formID); err == nil {
+			t.Fatal("failed binding left a partial import")
+		}
+		collection, _ := app.FindCollectionByNameOrId("resourceCollection")
+		about := core.NewRecord(collection)
+		about.Set("name", "Test study information")
+		if err := app.Save(about); err != nil {
+			t.Fatal(err)
+		}
+		collection, _ = app.FindCollectionByNameOrId("studySettings")
+		settings := core.NewRecord(collection)
+		settings.Set("key", "default")
+		settings.Set("baselineQuestionnaire", "u6917wm639q1d01")
+		settings.Set("dailyQuestionnaire", "sdzkpd49ndccf5b")
+		settings.Set("treatmentEndQuestionnaire", "p8ow7xj8h4uuv43")
+		settings.Set("treatmentEndQuestion", "242u8ha0yn8m06d")
+		settings.Set("aboutCollection", about.Id)
+		if err := app.Save(settings); err != nil {
+			t.Fatal(err)
+		}
+		if _, err := ApplyFollowup(app, followup, "u6917wm639q1d01"); err == nil {
+			t.Fatal("unrelated form accepted")
+		}
+		if changed, err := ApplyFollowup(app, followup, formID); err != nil || changed != 26 {
+			t.Fatalf("changed=%d err=%v", changed, err)
+		}
+		if changed, err := ApplyFollowup(app, followup, formID); err != nil || changed != 0 {
+			t.Fatalf("repeat changed=%d err=%v", changed, err)
+		}
+		settings, _ = app.FindRecordById("studySettings", settings.Id)
+		if settings.GetString("followupQuestionnaire") != formID {
+			t.Fatal("scheduler not configured")
+		}
+	})
 	question, _ := app.FindRecordById("questions", "c2xmobhywcotlrq")
 	before := question.GetString("text")
 	for _, q := range snapshot.Records["questions"] {

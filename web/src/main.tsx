@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { ReactNode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider, useLocation } from 'react-router-dom'
 import './index.css'
 import HomePage from './pages/home/index.tsx'
 import LoginPage from './pages/login/index.tsx'
@@ -23,12 +23,14 @@ import FaqMorePage from './pages/faq/more.tsx'
 import FaqResourcePage from './pages/faq/resource.tsx'
 import RouteError from './components/route-error'
 import StudySettingsGate from './components/study-settings-gate.tsx'
+import { loginReturnSearch } from './lib/login-return'
 
 const WithAuthLayout = ({ children }: { children: ReactNode }) => {
   const auth = useAtomValue(authAtom)
+  const location = useLocation()
 
   if (!auth) {
-    return <Navigate to="/welcome" />
+    return <Navigate to={`/welcome${loginReturnSearch(location.pathname + location.search)}`} replace />
   }
   return <div>{children}</div>
 }

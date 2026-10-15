@@ -3,17 +3,15 @@ package main
 import (
 	"archive/zip"
 	"bytes"
-	"encoding/base64"
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"myapp/internal/answerexport"
+	"myapp/internal/followup"
+	"myapp/internal/sms"
 	"myapp/internal/studysettings"
 	_ "myapp/migrations"
-	"net/http"
-	"net/url"
 	"os"
 	"regexp"
 	"sort"
@@ -239,49 +237,10 @@ func sendText(phoneNumber string, text string) error {
 		log.Println("Sending message to", phoneNumber, ":", text)
 		return nil
 	}
-	// replace 0 with +46 for phoneNumber
-	phoneNumber = strings.Replace(phoneNumber, "0", "+46", 1)
-
-	apiUsername := os.Getenv("ELKS_API_USERNAME")
-	apiPassword := os.Getenv("ELKS_API_PASSWORD")
-	auth := base64.StdEncoding.EncodeToString([]byte(apiUsername + ":" + apiPassword))
-
-	// Prepare data
-	data := url.Values{}
-	data.Set("from", "StudiePreRT")
-	data.Set("to", phoneNumber)
-	data.Set("message", text)
-
-	// Create HTTP request
-	req, err := http.NewRequest("POST", "https://api.46elks.com/a1/sms", strings.NewReader(data.Encode()))
-	if err != nil {
-		fmt.Println("Error creating request:", err)
-		return err
-	}
-
-	// Set headers
-	req.Header.Set("Authorization", "Basic "+auth)
-	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-
-	// Send request
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		fmt.Println("Error sending request:", err)
-		return err
-	}
-	defer resp.Body.Close()
-
-	// Read response
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Println("Error reading response:", err)
-		return err
-	}
-
-	fmt.Println("Response:", string(body))
-
-	return nil
+	return (sms.Sender{
+		Username: os.Getenv("ELKS_API_USERNAME"),
+		Password: os.Getenv("ELKS_API_PASSWORD"),
+	}).Send(phoneNumber, text)
 }
 
 func sendTreatmentEndReminder(app *pocketbase.PocketBase, user *core.Record) {
@@ -960,6 +919,32 @@ func main() {
 			}
 		})
 
+		// Keep the existing jobs' clock unchanged. Follow-up invitations run at
+		// 18:00 Swedish local time, including daylight-saving changes.
+		followupScheduler := cron.New()
+		stockholm, err := time.LoadLocation("Europe/Stockholm")
+		if err != nil {
+			return err
+		}
+		followupScheduler.SetTimezone(stockholm)
+		followupScheduler.MustAdd("three-month-followup", "0 18 * * *", func() {
+			skipUserID, _ := testLoginUserID()
+			sent, err := (followup.Runner{App: app, Send: sendText,
+				WebURL: configuredURL("WEB_URL", WEB_URL), SkipUserID: skipUserID,
+			}).Run(time.Now())
+			if err != nil {
+				app.Logger().Error("Follow-up reminder check failed", "error", err)
+			}
+			if sent > 0 {
+				app.Logger().Info("Follow-up reminders accepted", "count", sent)
+			}
+		})
+		followupScheduler.Start()
+		app.OnTerminate().BindFunc(func(e *core.TerminateEvent) error {
+			followupScheduler.Stop()
+			scheduler.Stop()
+			return e.Next()
+		})
 		scheduler.Start()
 
 		return se.Next()

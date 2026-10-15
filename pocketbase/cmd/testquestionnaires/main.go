@@ -19,6 +19,7 @@ func run() error {
 	dir := flag.String("dir", "", "Explicit disposable test database directory")
 	snapshot := flag.String("snapshot", "", "Reviewed questionnaire-only JSON")
 	prepare := flag.Bool("prepare-resources", false, "Prepare graph before resources; strict import must follow before serving")
+	followup := flag.String("followup-questionnaire", "", "Configure this imported one-time form for three-month reminders")
 	flag.Parse()
 	if os.Getenv("APP_ENV") != "test" || *dir == "" || *snapshot == "" {
 		return fmt.Errorf("requires APP_ENV=test, --dir and --snapshot; never use for production")
@@ -36,10 +37,21 @@ func run() error {
 	if *prepare {
 		importDefinitions = testquestionnaires.Prepare
 	}
-	changed, err := importDefinitions(app, raw)
+	if *prepare && *followup != "" {
+		return fmt.Errorf("follow-up configuration requires a strict import")
+	}
+	var changed int
+	if *followup != "" {
+		changed, err = testquestionnaires.ApplyFollowup(app, raw, *followup)
+	} else {
+		changed, err = importDefinitions(app, raw)
+	}
 	if err != nil {
 		return err
 	}
 	fmt.Printf("Questionnaire definitions changed: %d; users, answers and resources untouched\n", changed)
+	if *followup != "" {
+		fmt.Printf("Three-month follow-up configured: %s\n", *followup)
+	}
 	return nil
 }

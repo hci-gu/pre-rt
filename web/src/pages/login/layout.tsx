@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { Fragment } from 'react'
+import { Fragment, type ReactNode } from 'react'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,21 +14,24 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 
-const LoginLayout = ({ children }: { children: any }) => {
+import { loginReturnPath, loginReturnSearch } from '@/lib/login-return'
+
+const LoginLayout = ({ children }: { children: ReactNode }) => {
   const params = useParams()
+  const returnSearch = loginReturnSearch(loginReturnPath(useLocation().search))
   const hasToken = !!params.token
 
   const breadCrumbs = hasToken
     ? [
         {
           label: 'Hem',
-          href: '/welcome',
+          href: `/welcome${returnSearch}`,
         },
         {
           label: 'Login',
-          href: '/login',
+          href: `/login${returnSearch}`,
         },
         {
           label: 'OTP',
@@ -37,7 +40,7 @@ const LoginLayout = ({ children }: { children: any }) => {
     : [
         {
           label: 'Hem',
-          href: '/welcome',
+          href: `/welcome${returnSearch}`,
         },
         {
           label: 'Login',

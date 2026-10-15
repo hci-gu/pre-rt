@@ -1,0 +1,351 @@
+{
+  "version": 1,
+  "source": {
+    "file": "Follow-up Form 3 6 12 Months.docx",
+    "sha256": "73c13e4e856276c52fdc2bf1f42bc8eb26d4a42acde3748d9d753935f2ae451e",
+    "scope": "Local review of the 3-month questionnaire; no scheduling or SMS.",
+    "base": "production-20261007.json"
+  },
+  "records": {
+    "questionOptions": [
+      {
+        "id": "44ac780be301258",
+        "name": "FollowUpDiagnosis",
+        "value": [
+          "Livmodercancer (Corpuscancer)",
+          "Livmoderhalscancer (Cervixcancer)",
+          "Analcancer"
+        ],
+        "followup": null
+      },
+      {
+        "id": "a268e0ae5c600ba",
+        "name": "FollowUpSmoking",
+        "value": [
+          "Nej",
+          "Ja, några gånger i veckan",
+          "Ja, färre än 10 cigaretter per dag",
+          "Ja, 11 cigaretter per dag eller fler"
+        ],
+        "followup": null
+      },
+      {
+        "id": "703b47b625050f0",
+        "name": "FollowUpMenopause",
+        "value": [
+          "Inte aktuellt, jag hade kommit in i menopaus före strålbehandlingen",
+          "Nej, jag har fortfarande regelbunden menstruation",
+          "Ja, jag har kommit in i menopaus under strålbehandlingen"
+        ],
+        "followup": null
+      },
+      {
+        "id": "0de15d321e10aa9",
+        "name": "FollowUpMoisturisingGel",
+        "value": [
+          "Nej",
+          "Ja",
+          "Ja, annan, nämligen:"
+        ],
+        "followup": null
+      },
+      {
+        "id": "2cf1e0e54342621",
+        "name": "FollowUpDiscomfort",
+        "value": [
+          "Inte aktuellt, jag har inte använt vaginalstav",
+          "Nej",
+          "Ja, lite",
+          "Ja, måttligt",
+          "Ja, mycket"
+        ],
+        "followup": null
+      },
+      {
+        "id": "586d33f67ccdf00",
+        "name": "FollowUpSize",
+        "value": [
+          "Inte aktuellt, jag har inte använt vaginalstav",
+          "Det är inte möjligt att föra in någon vaginalstav",
+          "Den mindre staven",
+          "Den mellanstora staven",
+          "Den större staven"
+        ],
+        "followup": null
+      },
+      {
+        "id": "a9a77871e4085fe",
+        "name": "FollowUpMarking",
+        "value": [
+          "Inte aktuellt, jag har inte använt vaginalstav",
+          "Det är inte möjligt att föra in någon vaginalstav",
+          "2",
+          "4",
+          "6",
+          "8"
+        ],
+        "followup": null
+      }
+    ],
+    "questions": [
+      {
+        "id": "de68a85e4c2fcd0",
+        "placeholder": "",
+        "text": "<p>ALLMÄNNA FRÅGOR</p>",
+        "type": "section",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "f9612d4e14bd6e3",
+        "placeholder": "",
+        "text": "<p>Har du avslutat din strålbehandling mot bäckenområdet?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "e4a834279b3a03c",
+        "placeholder": "",
+        "text": "<p>Vilken av följande cancerdiagnoser har du fått behandling för?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "44ac780be301258",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "40bca7694146e32",
+        "placeholder": "",
+        "text": "<p>Har du fått brachybehandling (inre strålbehandling)?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "e4a834279b3a03c",
+        "dependencyValue": [
+          "NOT",
+          "Analcancer"
+        ],
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "fa0117a91fceba0",
+        "placeholder": "",
+        "text": "<p>Har du fått cellgiftsbehandling?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "35597efac8503e8",
+        "placeholder": "",
+        "text": "<p>Har du opererats för cancer i bäckenområdet?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "a5a698905418488",
+        "placeholder": "",
+        "text": "<p>Har du rökt under din strålbehandling?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "a268e0ae5c600ba",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "04c172d904daf33",
+        "placeholder": "",
+        "text": "<p>SEXUALITET</p>",
+        "type": "section",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "2eeb08378d6382e",
+        "placeholder": "",
+        "text": "<p>Kvinnor som får strålbehandling mot bäckenområdet kommer vanligtvis in i menopaus (slutar menstruera regelbundet, kommer in i ett klimakterium) under behandlingstiden. Har du noterat att du kommit in i menopaus under eller efter strålbehandlingstiden?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "703b47b625050f0",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "8212e88c4386902",
+        "placeholder": "",
+        "text": "<p>Har du använt någon lokal östrogenkräm eller östrogengel (t ex Ovesterin, Blissel, Estrokad, Vagifem) i underlivet regelbundet under strålbehandlingstiden?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "wt4iu415y6bgqwa",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "abc0bd0167676bf",
+        "placeholder": "",
+        "text": "<p>Har du använt någon hormonfri fuktgivande gel i underlivet regelbundet under strålbehandlingen (t ex Repadina, Replens, Vagisan, Repair)?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "0de15d321e10aa9",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "79fc5f8e9abb56a",
+        "placeholder": "",
+        "text": "<p>Vilken annan hormonfri fuktgivande gel har du använt?</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "abc0bd0167676bf",
+        "dependencyValue": "Ja, annan, nämligen:",
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "6dac47df1eea19f",
+        "placeholder": "",
+        "text": "<p>Om du har använt vaginalstav, har du upplevt obehag i samband med det?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "2cf1e0e54342621",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {
+          "resource": "dilator.pain-discomfort"
+        }
+      },
+      {
+        "id": "d724e37b9f292a8",
+        "placeholder": "",
+        "text": "<p>När du använder vaginalstav idag, vilken storlek är då möjlig att använda?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "586d33f67ccdf00",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {
+          "resource": "dilator.size"
+        }
+      },
+      {
+        "id": "5d41294272d74fc",
+        "placeholder": "",
+        "text": "<p>När du använder vaginalstav idag, vilken nummer-markering kommer du då närmast, när du håller staven införd och håller fingret på staven på markeringen invid slidmynningen?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "a9a77871e4085fe",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {
+          "resource": "dilator.measure-length"
+        }
+      },
+      {
+        "id": "0b37df347ddd09d",
+        "placeholder": "",
+        "text": "<p>Hur viktigt är det för dig att bibehålla eller återfå vaginal längd och elasticitet?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "ktmxewvswsgpkh6",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "b4b53180b7828b5",
+        "placeholder": "",
+        "text": "<p>Hur viktigt är det för dig att bibehålla eller återfå så normal sexuell funktion som möjligt efter din cancerbehandling?</p>",
+        "type": "singleChoice",
+        "required": false,
+        "options": "ktmxewvswsgpkh6",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      },
+      {
+        "id": "03f155923db87c1",
+        "placeholder": "",
+        "text": "<p>Här kan du skriva en fri kommentar om dina upplevelser av att använda vaginalstav:</p>",
+        "type": "text",
+        "required": false,
+        "options": "",
+        "dependency": "",
+        "dependencyValue": null,
+        "followup": [],
+        "help": {}
+      }
+    ],
+    "questionnaires": [
+      {
+        "id": "355082bf942bf57",
+        "name": "Uppföljning 3 månader",
+        "description": "<p>Uppföljningsformulär tre månader efter avslutad strålbehandling.</p>",
+        "introText": "<p>Detta formulär vänder sig till deltagare i studien. Formuläret innehåller allmänna frågor, frågor om sexualitet, hur du har uppfattat användningen av vaginalstav och frågor om att använda digitalt stöd under strålbehandlingen.</p><p>Dina svar är av stort värde för att förstå hur vården kan förbättras vad gäller information och uppföljning av vaginala förändringar och påverkan på sexualitet i samband med cancerbehandling. Svara på varje fråga så gott du kan och om du inte hittar något svarsalternativ som exakt passar in på vad du känner, får du välja det som ligger närmast. En del frågor kan upplevas som känsliga, du svarar helt anonymt. Om du har frågor eller funderingar, kan du ringa eller mejla studieansvarig forskare och sjuksköterska Linda Åkeflo: <a href=\"tel:+46317866159\">031-786 6159</a>, <a href=\"mailto:linda.akeflo@gu.se\">linda.akeflo@gu.se</a> eller sjuksköterska Josefin Höynä Wessberg: <a href=\"tel:+46313439856\">031-343 9856</a>, <a href=\"mailto:josefin.hoyna@vgregion.se\">josefin.hoyna@vgregion.se</a></p>",
+        "occurrence": "once",
+        "enabled": true,
+        "questions": [
+          "de68a85e4c2fcd0",
+          "f9612d4e14bd6e3",
+          "e4a834279b3a03c",
+          "40bca7694146e32",
+          "fa0117a91fceba0",
+          "35597efac8503e8",
+          "a5a698905418488",
+          "04c172d904daf33",
+          "2eeb08378d6382e",
+          "8212e88c4386902",
+          "abc0bd0167676bf",
+          "79fc5f8e9abb56a",
+          "6dac47df1eea19f",
+          "d724e37b9f292a8",
+          "5d41294272d74fc",
+          "0b37df347ddd09d",
+          "b4b53180b7828b5",
+          "03f155923db87c1"
+        ],
+        "dependency": [],
+        "dependencyValue": null,
+        "followup": []
+      }
+    ]
+  }
+}

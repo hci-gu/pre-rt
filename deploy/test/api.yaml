@@ -35,6 +35,7 @@ spec:
                         /pb/resources --dir /pb/pb_data --run "$run_id" verify
                       fi
                       APP_ENV=test /pb/testquestionnaires --dir /pb/pb_data --snapshot /pb/content/questionnaires.json
+                      APP_ENV=test /pb/testquestionnaires --dir /pb/pb_data --snapshot /pb/content/follow-up-3-months.json --followup-questionnaire 355082bf942bf57
                       /pb/resources --dir /pb/pb_data --card-assets /pb/content/faq-cards seed-card-images
                   volumeMounts:
                       - mountPath: /pb/pb_data
@@ -55,6 +56,10 @@ spec:
                   env:
                     - name: APP_ENV
                       value: test
+                    - name: WEB_URL
+                      value: https://pre-rt.test.appadem.in
+                    - name: API_URL
+                      value: https://pre-rt-api.test.appadem.in
                     - name: TEST_LOGIN_USER_ID
                       value: publictestuser1
                     - name: ELKS_API_USERNAME
