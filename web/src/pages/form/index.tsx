@@ -47,11 +47,11 @@ const ProgressBar = ({ questionnaire }: { questionnaire: Questionnaire }) => {
   const questions = useQuestions(questionnaire)
   const page = useAtomValue(formPageAtom)
   const totalQuestions = questions.filter(
-    (q) => q.type !== 'section' && q.type !== 'text'
+    (q) => q.type !== 'section'
   ).length
   const currentQuestionNumber = questions
     .slice(0, Math.max(page + 1, 0))
-    .filter((q) => q.type !== 'section' && q.type !== 'text').length
+    .filter((q) => q.type !== 'section').length
   const scaleX = interpolate([0, Math.max(totalQuestions - 1, 1)], [0.01, 1])
   const showProgress = page >= 0
 

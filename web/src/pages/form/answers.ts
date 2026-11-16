@@ -4,8 +4,14 @@ import { buildQuestions } from './questions'
 export const emptyAnswer = (value: unknown) => value == null ||
   (typeof value === 'string' && value.trim() === '') || (Array.isArray(value) && value.length === 0)
 
+const optionTemplate = (value: string) => value
+  .replace(/\{[^}]*\}/g, '{AMOUNT}')
+  // Keep existing drafts/answers valid after the smoking-option typo correction.
+  .replace('Jag har rökt tidigare, med slutat vid {AMOUNT} års ålder',
+    'Jag har rökt tidigare, men slutat vid {AMOUNT} års ålder')
+
 export const matchesOption = (answer: unknown, option: string) => typeof answer === 'string' &&
-  answer.replace(/\{[^}]*\}/g, '{AMOUNT}') === option.replace(/\{[^}]*\}/g, '{AMOUNT}')
+  optionTemplate(answer) === optionTemplate(option)
 
 export function answerError(question: Question, value: unknown): string | undefined {
   if (question.type === 'section') return

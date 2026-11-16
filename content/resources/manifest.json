@@ -560,7 +560,7 @@
     "35a3a3690ecbd2990542ae88813dd364e71d1092c0889a600c8a91525c9a146f": "2026-09-30: Verified the updated Word organization hyperlinks and emergency telephone links are retained.",
     "e5d6ef91c41cf5b7f7e08590c7e9996e72dd26c12b728338fab20cce0c354a15": "2026-09-30: Implemented POST audience range in after-treatment.dilator-use.",
     "28a8afde1851e059dd6dfa89a342e4306b36f8bfd9fe0cb526ecb61fad90cde2": "2026-09-30: Implemented PRE audience range in after-treatment.dilator-use.",
-    "5a0e01b3eb0ed0a5ae9d6cbe629673b9ee7cf88602137761d74dbf90c83d916f": "2026-09-30: User confirmed retaining the current anal/gynaecological follow-up paragraphs for now."
+    "5a0e01b3eb0ed0a5ae9d6cbe629673b9ee7cf88602137761d74dbf90c83d916f": "2026-10-15: User requested a shared follow-up text. Combined the paragraphs, naming the contact nurse and radiotherapy specialist nurse (Profylaxmottagningen)."
   },
   "retirements": [
     {
@@ -644,8 +644,8 @@
     {
       "collection": "questions",
       "id": "yz733oqw1e7xw15",
-      "field": "resourceCollection",
-      "target": "dilator"
+      "field": "resource",
+      "target": "dilator.how-to"
     }
   ]
 }

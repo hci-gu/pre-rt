@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { Question, Questionnaire } from '@/state'
-import { answerError, prepareSubmission } from './answers'
+import { answerError, matchesOption, prepareSubmission } from './answers'
 
 const q = (id: string, overrides: Partial<Question> = {}): Question => ({ id, text: id, type: 'singleChoice', required: false, followup: [], number: 0, ...overrides })
 const form = (questions: Question[], overrides: Partial<Questionnaire> = {}): Questionnaire => ({ id: 'baseline', name: 'Baseline', description: '', occurrence: 'once', dependency: [], questions, ...overrides })
@@ -27,6 +27,15 @@ describe('final active submission', () => {
   it('re-evaluates downstream conditions after removing an inactive parent answer', () => {
     const chain = form([q('gate'), q('parent', { dependency: 'gate', dependencyValue: 'Ja' }), q('child', { dependency: 'parent', dependencyValue: 'Ja' })])
     expect(prepareSubmission(chain, { gate: 'Nej', parent: 'Ja', child: 'stale' }).answers).toEqual({ gate: 'Nej' })
+  })
+  it('accepts saved smoking answers after the med/men wording correction', () => {
+    const option = 'Jag har rökt tidigare, men slutat vid {AMOUNT} års ålder'
+    const saved = 'Jag har rökt tidigare, med slutat vid {25} års ålder'
+    const question = q('smoking', { options: { value: [option] } })
+    expect(matchesOption(saved, option)).toBe(true)
+    expect(answerError(question, saved)).toBeUndefined()
+    expect(prepareSubmission(form([question]), { smoking: saved }).answers.smoking).toBe(saved)
+    expect(answerError(question, saved.replace('{25}', '{AMOUNT}'))).toBeTruthy()
   })
   it('validates optional provided values and required empty values consistently', () => {
     expect(answerError(q('age', { type: 'number', placeholder: 'år' }), '')).toBeUndefined()

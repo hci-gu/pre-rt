@@ -6,9 +6,9 @@
     "textBoxes": 17,
     "comments": 24,
     "alternateContent": 16,
-    "rawTextNodes": 768,
-    "selectedTextNodes": 703,
-    "bodyParagraphs": 598
+    "rawTextNodes": 753,
+    "selectedTextNodes": 688,
+    "bodyParagraphs": 609
   },
   "paragraphs": [
     {
@@ -2048,7 +2048,7 @@
       "paraId": "6907CD25",
       "disposition": "blocks",
       "textNodeCount": 4,
-      "text": "När du ska göra mätningen:Håll staven med din hand/fingrar invid slidans mynning. Titta på stavens längmarkering och notera längden. Ange längden i ditt dagliga formulär",
+      "text": "När du ska göra mätningen:Håll staven med din hand/fingrar invid slidans mynning. Titta på stavens längdmarkering och notera längden. Ange längden i ditt dagliga formulär",
       "images": 0
     },
     {
@@ -4439,20 +4439,12 @@
       "paragraph": 553,
       "paraId": "1FF7AD9D",
       "disposition": "blocks",
-      "textNodeCount": 9,
-      "text": "Analcancerpat: Någon av specialistsjuksköterskorna på strålbehandlingen (Profylaxmottagningen) kommer att kontakta dig för att stämma av hur det går med vaginalstavsanvändningen. ",
+      "textNodeCount": 1,
+      "text": "Efter avslutad strålbehandling följer din kontaktsjuksköterska eller en specialistsjuksköterska på strålbehandlingen (Profylaxmottagningen) upp hur det går med vaginalstavsanvändningen och eventuella behandlingsbiverkningar.",
       "images": 0
     },
     {
       "paragraph": 554,
-      "paraId": "193D0963",
-      "disposition": "blocks",
-      "textNodeCount": 5,
-      "text": "Gyncancerpat: Du kommer att ha uppföljning via din kontaktsjuksköterska som följer upp behandlingsbiverkningar och hantering av vaginalstav. ",
-      "images": 0
-    },
-    {
-      "paragraph": 555,
       "paraId": "1E03511E",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4460,7 +4452,7 @@
       "images": 0
     },
     {
-      "paragraph": 556,
+      "paragraph": 555,
       "paraId": "139960ED",
       "disposition": "blocks",
       "textNodeCount": 8,
@@ -4468,7 +4460,7 @@
       "images": 0
     },
     {
-      "paragraph": 557,
+      "paragraph": 556,
       "paraId": "216C622D",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4476,7 +4468,7 @@
       "images": 0
     },
     {
-      "paragraph": 558,
+      "paragraph": 557,
       "paraId": "232719F4",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4484,7 +4476,7 @@
       "images": 0
     },
     {
-      "paragraph": 559,
+      "paragraph": 558,
       "paraId": "3FC968E7",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4492,63 +4484,111 @@
       "images": 0
     },
     {
-      "paragraph": 560,
-      "paraId": "F2040001",
+      "paragraph": 559,
+      "paraId": "F5200001",
       "disposition": "blocks",
-      "textNodeCount": 3,
-      "text": "Du kan under vardagar kl 08-16 kontakta forskningssjuksköterska Josefin Wessberg Höynä, specialistsjuksköterska i onkologi",
+      "textNodeCount": 1,
+      "text": "Du kan under vardagar kl 08-16 kontakta:",
+      "images": 0
+    },
+    {
+      "paragraph": 560,
+      "paraId": "F5200002",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Forskningssjuksköterskor",
       "images": 0
     },
     {
       "paragraph": 561,
-      "paraId": "F2040002",
+      "paraId": "F5200003",
       "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "Telefon: 031-343 98 56",
+      "textNodeCount": 1,
+      "text": "Therese Alm eller Josefin Höynä Wessberg",
       "images": 0
     },
     {
       "paragraph": 562,
-      "paraId": "F2040003",
+      "paraId": "F5200004",
       "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "E-post: josefin.hoyna@vgregion.se",
+      "textNodeCount": 1,
+      "text": "Specialistsjuksköterskor i onkologi",
       "images": 0
     },
     {
       "paragraph": 563,
-      "paraId": "F2040004",
+      "paraId": "F5200005",
       "disposition": "blocks",
       "textNodeCount": 1,
-      "text": "Eller studieansvarig forskare Linda Åkeflo",
+      "text": "Telefon: 031-343 98 56 (telefonsvarare)",
       "images": 0
     },
     {
       "paragraph": 564,
-      "paraId": "F2040005",
+      "paraId": "F5200006",
       "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "Med.dr och legitimerad sjuksköterska",
+      "textNodeCount": 1,
+      "text": "E-post: therese.alm@vgregion.se",
       "images": 0
     },
     {
       "paragraph": 565,
-      "paraId": "F2040006",
+      "paraId": "F5200007",
       "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "Telefon: 031-786 61 59",
+      "textNodeCount": 1,
+      "text": "E-post: josefin.hoyna@vgregion.se",
       "images": 0
     },
     {
       "paragraph": 566,
-      "paraId": "F2040007",
+      "paraId": "F5200008",
       "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "E-post: linda.akeflo@gu.se",
+      "textNodeCount": 1,
+      "text": "Eller",
       "images": 0
     },
     {
       "paragraph": 567,
+      "paraId": "F5200009",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Studieansvarig forskare",
+      "images": 0
+    },
+    {
+      "paragraph": 568,
+      "paraId": "F520000A",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Linda Åkeflo",
+      "images": 0
+    },
+    {
+      "paragraph": 569,
+      "paraId": "F520000B",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Med.dr och legitimerad sjuksköterska",
+      "images": 0
+    },
+    {
+      "paragraph": 570,
+      "paraId": "F520000C",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Telefon: 031-343 99 47",
+      "images": 0
+    },
+    {
+      "paragraph": 571,
+      "paraId": "F520000D",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "E-post: linda.akeflo@gu.se",
+      "images": 0
+    },
+    {
+      "paragraph": 572,
       "paraId": "6862475C",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4556,7 +4596,7 @@
       "images": 0
     },
     {
-      "paragraph": 568,
+      "paragraph": 573,
       "paraId": "1D09C49C",
       "disposition": "blank-spacing",
       "textNodeCount": 1,
@@ -4564,7 +4604,7 @@
       "images": 0
     },
     {
-      "paragraph": 569,
+      "paragraph": 574,
       "paraId": "58264637",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4572,7 +4612,7 @@
       "images": 0
     },
     {
-      "paragraph": 570,
+      "paragraph": 575,
       "paraId": "4C9A5B5E",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4580,7 +4620,7 @@
       "images": 0
     },
     {
-      "paragraph": 571,
+      "paragraph": 576,
       "paraId": "2D4F9D3B",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4588,7 +4628,7 @@
       "images": 0
     },
     {
-      "paragraph": 572,
+      "paragraph": 577,
       "paraId": "714E7C80",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4596,7 +4636,7 @@
       "images": 0
     },
     {
-      "paragraph": 573,
+      "paragraph": 578,
       "paraId": "75754222",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4604,7 +4644,7 @@
       "images": 0
     },
     {
-      "paragraph": 574,
+      "paragraph": 579,
       "paraId": "2DA7F494",
       "disposition": "blank-spacing",
       "textNodeCount": 0,
@@ -4612,7 +4652,7 @@
       "images": 0
     },
     {
-      "paragraph": 575,
+      "paragraph": 580,
       "paraId": "F2000001",
       "disposition": "collection-heading",
       "textNodeCount": 1,
@@ -4620,7 +4660,7 @@
       "images": 0
     },
     {
-      "paragraph": 576,
+      "paragraph": 581,
       "paraId": "F2010001",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4628,7 +4668,7 @@
       "images": 0
     },
     {
-      "paragraph": 577,
+      "paragraph": 582,
       "paraId": "F2010002",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4636,7 +4676,7 @@
       "images": 0
     },
     {
-      "paragraph": 578,
+      "paragraph": 583,
       "paraId": "F2010003",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4644,7 +4684,7 @@
       "images": 0
     },
     {
-      "paragraph": 579,
+      "paragraph": 584,
       "paraId": "F2000002",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4652,15 +4692,15 @@
       "images": 0
     },
     {
-      "paragraph": 580,
+      "paragraph": 585,
       "paraId": "F2020001",
       "disposition": "blocks",
       "textNodeCount": 2,
-      "text": "Med hjälp av dina svar kan vi få bättre förståelse för hur strål-behandlingen påverkar vagina, när och hur vaginalstav kan användas. Det hjälper oss i vården att förbättra information och uppföljning av vaginala förändringar.",
+      "text": "Med hjälp av dina svar kan vi få bättre förståelse för hur strålbehandlingen påverkar vagina, när och hur vaginalstav kan användas. Det hjälper oss i vården att förbättra information och uppföljning av vaginala förändringar.",
       "images": 0
     },
     {
-      "paragraph": 581,
+      "paragraph": 586,
       "paraId": "F2020002",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4668,7 +4708,7 @@
       "images": 0
     },
     {
-      "paragraph": 582,
+      "paragraph": 587,
       "paraId": "F2020003",
       "disposition": "blocks",
       "textNodeCount": 2,
@@ -4676,7 +4716,7 @@
       "images": 0
     },
     {
-      "paragraph": 583,
+      "paragraph": 588,
       "paraId": "F2000003",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4684,63 +4724,111 @@
       "images": 0
     },
     {
-      "paragraph": 584,
-      "paraId": "F2030001",
-      "disposition": "blocks",
-      "textNodeCount": 3,
-      "text": "Du kan under vardagar kl 08-16 kontakta forskningssjuksköterska Josefin Wessberg Höynä, specialistsjuksköterska i onkologi",
-      "images": 0
-    },
-    {
-      "paragraph": 585,
-      "paraId": "F2030002",
-      "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "Telefon: 031-343 98 56",
-      "images": 0
-    },
-    {
-      "paragraph": 586,
-      "paraId": "F2030003",
-      "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "E-post: josefin.hoyna@vgregion.se",
-      "images": 0
-    },
-    {
-      "paragraph": 587,
-      "paraId": "F2030005",
+      "paragraph": 589,
+      "paraId": "F5100001",
       "disposition": "blocks",
       "textNodeCount": 1,
-      "text": "Eller studieansvarig forskare Linda Åkeflo",
-      "images": 0
-    },
-    {
-      "paragraph": 588,
-      "paraId": "F2030007",
-      "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "Med.dr och legitimerad sjuksköterska",
-      "images": 0
-    },
-    {
-      "paragraph": 589,
-      "paraId": "F2030008",
-      "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "Telefon: 031-786 61 59",
+      "text": "Du kan under vardagar kl 08-16 kontakta:",
       "images": 0
     },
     {
       "paragraph": 590,
-      "paraId": "F2030009",
+      "paraId": "F5100002",
       "disposition": "blocks",
-      "textNodeCount": 2,
-      "text": "E-post: linda.akeflo@gu.se",
+      "textNodeCount": 1,
+      "text": "Forskningssjuksköterskor",
       "images": 0
     },
     {
       "paragraph": 591,
+      "paraId": "F5100003",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Therese Alm eller Josefin Höynä Wessberg",
+      "images": 0
+    },
+    {
+      "paragraph": 592,
+      "paraId": "F5100004",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Specialistsjuksköterskor i onkologi",
+      "images": 0
+    },
+    {
+      "paragraph": 593,
+      "paraId": "F5100005",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Telefon: 031-343 98 56 (telefonsvarare)",
+      "images": 0
+    },
+    {
+      "paragraph": 594,
+      "paraId": "F5100006",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "E-post: therese.alm@vgregion.se",
+      "images": 0
+    },
+    {
+      "paragraph": 595,
+      "paraId": "F5100007",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "E-post: josefin.hoyna@vgregion.se",
+      "images": 0
+    },
+    {
+      "paragraph": 596,
+      "paraId": "F5100008",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Eller",
+      "images": 0
+    },
+    {
+      "paragraph": 597,
+      "paraId": "F5100009",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Studieansvarig forskare",
+      "images": 0
+    },
+    {
+      "paragraph": 598,
+      "paraId": "F510000A",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Linda Åkeflo",
+      "images": 0
+    },
+    {
+      "paragraph": 599,
+      "paraId": "F510000B",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Med.dr och legitimerad sjuksköterska",
+      "images": 0
+    },
+    {
+      "paragraph": 600,
+      "paraId": "F510000C",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "Telefon: 031-343 99 47",
+      "images": 0
+    },
+    {
+      "paragraph": 601,
+      "paraId": "F510000D",
+      "disposition": "blocks",
+      "textNodeCount": 1,
+      "text": "E-post: linda.akeflo@gu.se",
+      "images": 0
+    },
+    {
+      "paragraph": 602,
       "paraId": "F4000010",
       "disposition": "collection-heading",
       "textNodeCount": 1,
@@ -4748,7 +4836,7 @@
       "images": 0
     },
     {
-      "paragraph": 592,
+      "paragraph": 603,
       "paraId": "F4000020",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4756,7 +4844,7 @@
       "images": 0
     },
     {
-      "paragraph": 593,
+      "paragraph": 604,
       "paraId": "F4000021",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4764,7 +4852,7 @@
       "images": 0
     },
     {
-      "paragraph": 594,
+      "paragraph": 605,
       "paraId": "F4000022",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4772,7 +4860,7 @@
       "images": 0
     },
     {
-      "paragraph": 595,
+      "paragraph": 606,
       "paraId": "F4000023",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -4780,7 +4868,7 @@
       "images": 0
     },
     {
-      "paragraph": 596,
+      "paragraph": 607,
       "paraId": "F4000024",
       "disposition": "resource-heading",
       "textNodeCount": 1,
@@ -4788,7 +4876,7 @@
       "images": 0
     },
     {
-      "paragraph": 597,
+      "paragraph": 608,
       "paraId": "F4000025",
       "disposition": "blocks",
       "textNodeCount": 1,
@@ -5009,7 +5097,7 @@
       ],
       "resolved": false,
       "source": {
-        "paragraph": 556,
+        "paragraph": 555,
         "paraId": "139960ED"
       }
     },

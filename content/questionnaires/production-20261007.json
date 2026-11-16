@@ -9,7 +9,7 @@
         "value": [
           "Nej, jag har aldrig rökt",
           "Ja, jag röker",
-          "Jag har rökt tidigare, med slutat vid {AMOUNT} års ålder"
+          "Jag har rökt tidigare, men slutat vid {AMOUNT} års ålder"
         ],
         "followup": null
       },
@@ -454,7 +454,7 @@
       {
         "id": "6gvveeo8k3a522b",
         "placeholder": "",
-        "text": "<p><span lang=\"SV\">Blev Du blivit klippt i omr&aring;det mellan slidan, mellang&aring;rden och &auml;ndtarms&ouml;ppningen i samband med f&ouml;rlossningen?</span></p>",
+        "text": "<p><span lang=\"SV\">Blev du blivit klippt i omr&aring;det mellan slidan, mellang&aring;rden och &auml;ndtarms&ouml;ppningen i samband med f&ouml;rlossningen?</span></p>",
         "type": "singleChoice",
         "required": false,
         "options": "zbwduuzw9ag8sdp",
@@ -517,7 +517,7 @@
       {
         "id": "7yuf0dp61p770p6",
         "placeholder": "",
-        "text": "<p><span lang=\"SV\">Har du haft besv&auml;r med&nbsp;<u>djupt liggande</u> sm&auml;rta vid vaginalt sex, dvs sm&auml;rtor fr&aring;n djupet av slidan och inne i sj&auml;lva b&auml;ckenet, det senaste &aring;ret f&ouml;re din cancerdiagnos?</span></p>",
+        "text": "<p><span lang=\"SV\">Har du haft besv&auml;r med&nbsp;djupt liggande sm&auml;rta vid vaginalt sex, dvs sm&auml;rtor fr&aring;n djupet av slidan och inne i sj&auml;lva b&auml;ckenet, det senaste &aring;ret f&ouml;re din cancerdiagnos?</span></p>",
         "type": "singleChoice",
         "required": false,
         "options": "p124eiu3ah1nfil",
@@ -606,7 +606,7 @@
       {
         "id": "9ecl9c22y6hw843",
         "placeholder": "",
-        "text": "<p>Tack f&ouml;r att du har svarat p&aring; fr&aring;gorna. Har du behov av st&ouml;d finns det information h&auml;r:</p>",
+        "text": "<p>Tack för att du har svarat på frågorna. Om du behöver stöd finns information under informationsknappen (i-symbolen).</p>",
         "type": "section",
         "required": false,
         "options": "",
@@ -632,7 +632,7 @@
       {
         "id": "9jhkenowkkqlkgm",
         "placeholder": "",
-        "text": "<p><span lang=\"SV\">Fick Du bristningar i slutmuskeln f&ouml;r &auml;ndtarmen (sfinkterskada) i samband med f&ouml;rlossningen?</span></p>",
+        "text": "<p><span lang=\"SV\">Fick du bristningar i slutmuskeln f&ouml;r &auml;ndtarmen (sfinkterskada) i samband med f&ouml;rlossningen?</span></p>",
         "type": "singleChoice",
         "required": false,
         "options": "zbwduuzw9ag8sdp",
@@ -717,7 +717,7 @@
       {
         "id": "bqtwmtkhke46pyz",
         "placeholder": "",
-        "text": "<p><!-- [if !supportLists]-->F<!--[endif]--><span lang=\"SV\">ick Du bristningar i mellang&aring;rden i samband med f&ouml;rlossningen?</span></p>",
+        "text": "<p><!-- [if !supportLists]-->F<!--[endif]--><span lang=\"SV\">ick du bristningar i mellang&aring;rden i samband med f&ouml;rlossningen?</span></p>",
         "type": "singleChoice",
         "required": false,
         "options": "zbwduuzw9ag8sdp",
@@ -910,7 +910,7 @@
       {
         "id": "kujwudwaahabsiz",
         "placeholder": "",
-        "text": "<p style=\"text-align: center;\"><span style=\"text-decoration: underline;\"><strong>FR&Aring;GOR OM V&Aring;LD</strong></span></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p>V&aring;ld i n&auml;ra relationer p&aring;verkar hur du m&aring;r b&aring;de fysiskt och psykiskt, d&auml;rf&ouml;r fr&aring;gar vi.</p>\r\n<p>&nbsp;</p>\r\n<p>Det p&aring;verkar&nbsp;&auml;ven dina barns fysiska och psykiska h&auml;lsa. Barn har r&auml;tt att v&auml;xa upp utan v&aring;ld.</p>\r\n<p>&nbsp;</p>\r\n<p>V&aring;ld kan vara att&nbsp;du blir utsatt sj&auml;lv eller ser n&aring;gon annan bli utsatt. Du kan f&aring; st&ouml;d/hj&auml;lp om du varit utsatt f&ouml;r v&aring;ld&nbsp;eller om du sett eller h&ouml;rt v&aring;ld mot en n&auml;rst&aring;ende* under din uppv&auml;xt. Du kan &auml;ven f&aring; st&ouml;d/hj&auml;lp&nbsp;om du sj&auml;lv utsatt n&aring;gon annan f&ouml;r v&aring;ld.</p>\r\n<p>&nbsp;</p>\r\n<p><em>*Med n&auml;rst&aring;ende menar vi partner, familjemedlem, sl&auml;kting eller annan viktig person.</em></p>\r\n<p><em>* \"<strong>L&auml;mna genast</strong>&rdquo;-knappen tar dig direkt till en neutral sida. Du beh&ouml;ver fylla i hela formul&auml;ret fr&aring;n b&ouml;rjan n&auml;r du &aring;terv&auml;nder.</em></p>",
+        "text": "<p style=\"text-align: center;\"><span style=\"text-decoration: underline;\"><strong>FR&Aring;GOR OM V&Aring;LD</strong></span></p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p>V&aring;ld i n&auml;ra relationer p&aring;verkar hur du m&aring;r b&aring;de fysiskt och psykiskt, d&auml;rf&ouml;r fr&aring;gar vi.</p>\r\n<p>&nbsp;</p>\r\n<p>Det p&aring;verkar&nbsp;&auml;ven dina barns fysiska och psykiska h&auml;lsa. Barn har r&auml;tt att v&auml;xa upp utan v&aring;ld.</p>\r\n<p>&nbsp;</p>\r\n<p>V&aring;ld kan vara att&nbsp;du blir utsatt sj&auml;lv eller ser n&aring;gon annan bli utsatt. Du kan f&aring; st&ouml;d/hj&auml;lp om du varit utsatt f&ouml;r v&aring;ld&nbsp;eller om du sett eller h&ouml;rt v&aring;ld mot en n&auml;rst&aring;ende* under din uppv&auml;xt. Du kan &auml;ven f&aring; st&ouml;d/hj&auml;lp&nbsp;om du sj&auml;lv utsatt n&aring;gon annan f&ouml;r v&aring;ld.</p>\r\n<p>&nbsp;</p>\r\n<p><em>*Med n&auml;rst&aring;ende menar vi partner, familjemedlem, sl&auml;kting eller annan viktig person.</em></p>\r\n<p><em>\"<strong>L&auml;mna genast</strong>&rdquo;-knappen tar dig direkt till en neutral sida. Du beh&ouml;ver fylla i hela formul&auml;ret fr&aring;n b&ouml;rjan n&auml;r du &aring;terv&auml;nder.</em></p>",
         "type": "section",
         "required": false,
         "options": "",
@@ -984,7 +984,7 @@
       {
         "id": "nirt0w1z038n1et",
         "placeholder": "",
-        "text": "<p><span lang=\"SV\">Ungef&auml;r hur ofta har Du haft orgasm i genomsnitt, det senaste &aring;ret innan din cancerdiagnos?</span></p>",
+        "text": "<p><span lang=\"SV\">Ungef&auml;r hur ofta har du haft orgasm i genomsnitt, det senaste &aring;ret innan din cancerdiagnos?</span></p>",
         "type": "singleChoice",
         "required": false,
         "options": "mmsgnaah98vpicg",
@@ -1051,7 +1051,7 @@
       {
         "id": "osu8yeqjvw00nzs",
         "placeholder": "",
-        "text": "<p><span lang=\"SV\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Segoe UI'; color: black; mso-color-alt: windowtext; mso-fareast-language: SV;\">Hur viktigt tror du att det har varit f&ouml;r din/dina&nbsp;<u>partners </u>med vaginalt sex vid sexuell aktivitet det senaste &aring;ret f&ouml;re cancerdiagnos?&nbsp;</span></p>",
+        "text": "<p><span lang=\"SV\" style=\"mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Segoe UI'; color: black; mso-color-alt: windowtext; mso-fareast-language: SV;\">Hur viktigt tror du att det har varit f&ouml;r din/dina&nbsp;partners med vaginalt sex vid sexuell aktivitet det senaste &aring;ret f&ouml;re cancerdiagnos?&nbsp;</span></p>",
         "type": "singleChoice",
         "required": false,
         "options": "ktmxewvswsgpkh6",
@@ -1249,7 +1249,7 @@
       {
         "id": "wn0wqv9hl0erwra",
         "placeholder": "",
-        "text": "<p><span lang=\"SV\" style=\"mso-ascii-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-bidi-font-family: 'Segoe UI'; color: #212121; mso-fareast-language: SV;\">Hur viktigt har det varit f&ouml;r&nbsp;<u>dig</u> med vaginalt sex vid sexuell aktivitet det senaste &aring;ret f&ouml;re din cancerdiagnos?&nbsp;</span></p>",
+        "text": "<p><span lang=\"SV\" style=\"mso-ascii-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; mso-hansi-font-family: Calibri; mso-bidi-font-family: 'Segoe UI'; color: #212121; mso-fareast-language: SV;\">Hur viktigt har det varit f&ouml;r&nbsp;dig med vaginalt sex vid sexuell aktivitet det senaste &aring;ret f&ouml;re din cancerdiagnos?&nbsp;</span></p>",
         "type": "singleChoice",
         "required": false,
         "options": "ktmxewvswsgpkh6",
@@ -1348,7 +1348,7 @@
         "dependencyValue": null,
         "followup": [],
         "help": {
-          "resourceCollection": "dilator"
+          "resource": "dilator.how-to"
         }
       },
       {

@@ -10,14 +10,7 @@ import {
   useFormContext,
 } from 'react-hook-form'
 
-const compareOptionValues = (str1: string, str2: string) => {
-  if (!str1 || !str2) return false
-
-  const normalize = (str: string) =>
-    str.replace(/\{[^}]*\}/g, '{PLACEHOLDER}')
-
-  return normalize(str1) === normalize(str2)
-}
+import { matchesOption as compareOptionValues } from '../answers'
 
 const chipClassName =
   'question-chip cursor-pointer rounded-xl bg-primary text-center font-bold text-foreground transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-card peer-disabled:cursor-not-allowed peer-disabled:opacity-40 peer-checked:bg-study-teal-dark peer-checked:text-white'

@@ -67,7 +67,7 @@ class ExtractionTests(unittest.TestCase):
         for key,number in [('violence.why-asked','tel:020505050'),('violence.answering-yes','tel:020505050'),('violence.support','tel:0313428977')]:
             self.assertTrue(any(n.get('href')==number for n in self.walk(self.resource(key))))
         for key in ['study.contacts','after-treatment.contact']:
-            self.assertTrue(any(n.get('href')=='tel:0317866159' for n in self.walk(self.resource(key))))
+            self.assertTrue(any(n.get('href')=='tel:0313439947' for n in self.walk(self.resource(key))))
     def mutated(self,mutate):
         temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup)
         path=Path(temp.name)/'source.docx'
@@ -125,7 +125,7 @@ class ExtractionTests(unittest.TestCase):
         self.assertFalse(any(i.get('evidence',{}).get('id')=='260864063' for i in self.bundle['issues'] if isinstance(i.get('evidence'),dict)))
         self.assertEqual(self.resource('radiation.partner-conversation')['collection'],'sexual-health')
         contact=r.canonical(self.resource('study.contacts'))
-        for link in ('tel:0313439856','tel:0317866159','mailto:josefin.hoyna@vgregion.se','mailto:linda.akeflo@gu.se'):
+        for link in ('tel:0313439856','tel:0313439947','mailto:therese.alm@vgregion.se','mailto:josefin.hoyna@vgregion.se','mailto:linda.akeflo@gu.se'):
             self.assertIn(link,contact)
 
     def test_timing_is_split_only_by_arm_and_does_not_mix_list_items(self):

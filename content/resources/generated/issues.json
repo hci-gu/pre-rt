@@ -94,7 +94,7 @@
     "code": "editorial-comment",
     "message": "Unresolved editorial comment: Rätt?",
     "source": {
-      "paragraph": 556,
+      "paragraph": 555,
       "paraId": "139960ED"
     },
     "resource": "after-treatment.study-follow-up",
@@ -259,7 +259,7 @@
     },
     "resource": "after-treatment.follow-up",
     "blocking": false,
-    "resolution": "2026-09-30: User confirmed retaining the current anal/gynaecological follow-up paragraphs for now.",
+    "resolution": "2026-10-15: User requested a shared follow-up text. Combined the paragraphs, naming the contact nurse and radiotherapy specialist nurse (Profylaxmottagningen).",
     "evidence": {
       "id": "196757189",
       "text": "Kan eventuellt skrivas om till en text, överlämning till team 2 på gång. "

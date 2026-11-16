@@ -76,7 +76,10 @@ test.describe('questionnaire form', () => {
     const capture = await openMockQuestionnaire(page, questionnaire)
 
     await expectPage(page, 0)
-    await expectProgress(page, '1/5')
+    await expectProgress(page, '1/6')
+    await page.getByRole('button', { name: 'Se alla frågor' }).click()
+    await expect(page.getByRole('button', { name: /6\. Date question/ })).toBeVisible()
+    await page.getByRole('button', { name: /1\. Free text question/ }).click()
     await page.getByPlaceholder('Short answer').fill('Free text answer')
     await page.getByTestId('questionnaire-next').click()
 
@@ -91,21 +94,21 @@ test.describe('questionnaire form', () => {
     await page.getByTestId('questionnaire-next').click()
 
     await expectPage(page, 3)
-    await expectProgress(page, '2/5')
+    await expectProgress(page, '3/6')
     await page.locator('label[for="q_pain_pain_7"]').click()
 
     await expectPage(page, 4)
-    await expectProgress(page, '3/5')
+    await expectProgress(page, '4/6')
     await page.getByText('Beta', { exact: true }).click()
 
     await expectPage(page, 5)
-    await expectProgress(page, '4/5')
+    await expectProgress(page, '5/6')
     await page.getByText('One', { exact: true }).click()
     await page.getByText('Three', { exact: true }).click()
     await page.getByTestId('questionnaire-next').click()
 
     await expectPage(page, 6)
-    await expectProgress(page, '5/5')
+    await expectProgress(page, '6/6')
     await page.getByRole('button', { name: 'Välj datum' }).click()
     await page.getByRole('gridcell', { name: '15' }).click()
 
